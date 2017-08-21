@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/*---初始化---*/
+*{padding: 0;margin: 0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {margin:0; padding:0;}
+td,th,caption {font-size:14px;}
+h1, h2, h3, h4, h5, h6 { font-weight:normal;}
+address, caption, cite, code, dfn, th, var,label { font-style:normal; font-weight:normal;}
+a {color:#666;text-decoration:none;}
+a:hover,a:focus{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:link{text-decoration:none;}
+i{font-style: normal;}
+img{border:none;}
+
+ol,ul,li {list-style:none;}
+.clear{clear: both;}
+.f-14{  font-size: 14px;  }
+.f-13{  font-size: 13px;  }
+.f-12{  font-size: 12px;  }
+.f-15{  font-size: 15px;  }
+.f-16{  font-size: 16px;  }
+.f-24{  font-size: 24px;  }
+.f-20{  font-size: 20px;  }
+.f-18{  font-size: 18px;  }
+.f-48{  font-size: 48px;  }
+.f-32{  font-size: 32px;  }
+.red-color{  color: #da1d12;  }
+.color-3{  color: #333;  }
+/*---初始化---*/
+body{
+    font-family: Microsoft Yahei,微软雅黑, arial;
+    font-size: 14px;
+    color:#666;
+}
+input:focus,textarea:focus{
+    border: 1px solid #da1d12!important;
+    box-shadow: none!important;
+}
+input,textarea{
+    box-shadow: none!important;
+}
+
+@media(min-width: 320px)and (max-width:479px){
+
+}
+@media(min-width: 480px)and (max-width:767px){
+
+}
+@media(min-width: 768px)and (max-width:939px){
+
+}
+@media(min-width: 940px)and (max-width:1240px){
+
+}
+@media(min-width: 1240px)and (max-width:1600px){
+
+}
+@media(min-width: 1600px)and (max-width:1899px){
+
+}
+@media(min-width: 1900px){
+
+}
