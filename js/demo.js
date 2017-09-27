@@ -165,7 +165,6 @@ window.onload = function () {
                 if (reselt) {
                     element.remove();
                 } else {
-                    
                 }
             }
         });
