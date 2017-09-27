@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="title" content="音特"/>
+    <meta name="keywords" content="音特，音特电子，话筒"/>
+    <meta name="description" content="音特电子，话筒"/>
+    <title>音特电子</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" href="app.css" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+    <!-- 通用头部-->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png"></a>
+        </div>
+        <!--导航条-->
+        <nav class="navTop">
+            <div class="container">
+                <ul id="navTopList" class="clearfix">
+                    <li><a href="#">家庭娱乐</a></li>
+                    <li><a href="#">ktv娱乐</a></li>
+                    <li><a href="#">音箱</a></li>
+                    <li><a href="#">无线蓝牙麦克风</a></li>
+                    <li><a href="#">音频处理器</a></li>
+                    <li><a href="#">BOX KTV</a></li>
+                    <li><a href="#">人人唱</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- 内容区-->
+    <section class="content">
+        <div class="container">
+            <!--位置导航-->
+            <div class="navAdd">
+                <div class="navAdd-block">
+                    <a class="navAdd-a" href="index.html">首页</a>
+                    <span class="navAdd-dot"></span>
+                    <a class="navAdd-a" href="#">购物车</a>
+                    <span class="navAdd-dot"></span>
+                    <a class="navAdd-a" href="#">确认订单</a>
+                </div>
+            </div>
+            <!--标题-->
+            <div class="shopCart-top clearfix">
+                <span class="f-24">确认订单</span>
+            </div>
+            <!--确认订单内容区--收货地址-->
+            <div class="orderAdd">
+                <p class="f-24">收货地址</p>
+                <div class="orderAddList clearfix">
+                    <div class="row">
+                        <div class="col-lg-3 defaultAdd">
+                            <div class="addMenu">
+                                <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
+                                <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
+                                <p class="defaultTip"><span class="change_tip">【默认地址】</span><span class="edit_tip">编辑</span><span class="delete_tip">删除</span></p>
+                                <img class="addGou" src="images/addgou.png">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="addMenu">
+                                <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
+                                <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
+                                <p class="defaultTip"><span class="change_tip">【设为默认地址】</span><span class="edit_tip">编辑</span><span class="delete_tip">删除</span></p>
+                                <img class="addGou" src="images/addgou.png">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="addMenu">
+                                <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
+                                <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
+                                <p class="defaultTip"><span class="change_tip">【设为默认地址】</span><span class="edit_tip">编辑</span><span class="delete_tip">删除</span></p>
+                                <img class="addGou" src="images/addgou.png">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="addMenu-new">
+                                <div class="addMenu-div">
+                                    <i class="iconfont icon-jiahao"></i>
+                                    <p>添加新地址</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--支付方式-->
+            <div class="orderAdd">
+                <p class="f-24">支付方式</p>
+                <ul id="payWay" class="choose clearfix">
+                    <li>
+                        <input name="way" type="radio" id="way1" value="在线支付">
+                        <label for="way1">
+                            在线支付
+                        </label>
+                    </li>
+                    <li>
+                        <input name="way" type="radio" id="way2" value="货到付款">
+                        <label for="way2">
+                            货到付款
+                        </label>
+                    </li>
+                </ul>
+                <div id="paywayAli">支持支付宝支付、微信支付</div>
+            </div>
+            <!--电子发票-->
+            <div class="orderAdd">
+                <p class="f-24">电子发票</p>
+                <ul id="invoice" class="choose clearfix">
+                    <li>
+                        <input name="invoice" type="radio" id="invoice1" value="个人发票" checked>
+                        <label for="invoice1">
+                            个人发票
+                        </label>
+                    </li>
+                    <li>
+                        <input name="invoice" type="radio" id="invoice2" value="公司发票">
+                        <label for="invoice2">
+                            公司发票
+                        </label>
+                    </li>
+                </ul>
+                <div class="invoiceTip">
+                    <div class="invoiceForm">
+                        <label for="personal" class="invoiceLabel"><span class="redColor">*</span>发票抬头：</label>
+                        <div class="inputDiv">
+                            <input type="text" class="invoiceInput" id="personal">
+                        </div>
+                    </div>
+                    <div class="invoiceForm" id="companyInvoice">
+                        <label for="company" class="invoiceLabel"><span class="redColor">*</span>纳税人识别号：</label>
+                        <div class="inputDiv">
+                            <input type="text" class="invoiceInput" id="company">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--确认订单信息-->
+            <div class="orderAdd">
+                <div class="sureOrder-t"><span class="f-24">确认订单信息</span><a class="pull-right" href="#"><span class="goBack">返回购物车修改</span> <i class="iconfont icon-right f-24"></i> </a></div>
+                <table class="table" id="sureOrderTable">
+                    <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="sureOrder-goods clearfix">
+                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                            <div class="goods-info">
+                                <p class="goods-name">卡拉OK E5</p>
+                                <p class="goods-color">颜色：黑色</p>
+                            </div>
+                        </td>
+                        <td>5999.88</td>
+                        <td>1</td>
+                        <td>5999.88</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--支付方式-->
+            <div class="orderAdd">
+                <p class="f-24">使用优惠券</p>
+                <div class="addSaleOff">+添加优惠券</div>
+                <div id="saleOff">您现在还没有可以使用的优惠券，请活动期间及时领取</div>
+            </div>
+            <!--订单备注-->
+            <div class="orderAdd">
+                <p class="f-24">订单备注</p>
+                <textarea rows="5" class="sureOrder-text" style="color:#898888" onfocus="if(this.value=='限200字（若有特殊需求，请联系商城在线客服）') {this.value='';}this.style.color='#030304';" onblur="if(this.value=='') {this.value='限200字（若有特殊需求，请联系商城在线客服）';this.style.color='#898888';}" maxlength="200">限200字（若有特殊需求，请联系商城在线客服）</textarea>
+            </div>
+            <!--提交订单-->
+            <div class="orderAdd onlinePayWay">
+                <div class="offerOrder">
+                    <p>已选<span class="offerOrder-num">1</span>件商品 , 合计（不含运费）：<span class="offerOrder-money">¥1999.00</span></p>
+                    <p>运费：<span class="delivery-money">¥0.00</span></p>
+                    <p>优惠卷抵扣：<span class="off-money">-¥0.00</span></p>
+                    <p class="totalMoney">应付总额：<span class="allMoney">¥1999.00</span></p>
+                    <p>收件人：<span class="offerOrder-name">吴滴用</span>      <span class="offerOrder-call">180****3329</span></p>
+                    <p>配送地址：<span class="offerOrder-add">广东省深圳市宝安区西乡街道永丰社区9区</span></p>
+                    <p><a class="goPay-a" href="#">提交订单</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- aside -->
+    <aside id="aside">
+        <ul id="asideList">
+            <li><i class="iconfont icon-gerenzhongxin"></i></li>
+            <li><i class="iconfont icon-gouwuche3"></i></li>
+            <li><i class="iconfont icon-kefu"></i></li>
+            <li id="toTop"><i class="iconfont icon-zhiding"></i></li>
+        </ul>
+    </aside>
+    <!-- footer-->
+    <footer id="footer">
+        <div class="container">
+            <ul class="footer-top clearfix">
+                <li>
+                    <i class="iconfont icon-tianwuliyoubaotui"></i>
+                    <span class="footerService">7天无理由退货</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-tianbaohuan"></i>
+                    <span class="footerService">30天包换</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-quanguobaoyou"></i>
+                    <span class="footerService">全国包邮</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-quanguobaoxiu"></i>
+                    <span class="footerService">全国联保</span>
+                </li>
+            </ul>
+            <div class="footerContent clearfix">
+                <ul id="footerList" class="clearfix">
+                    <li class="footerNav">
+                        热门链接
+                        <ul class="footerLinks">
+                            <li><a href="#">E1</a></li>
+                            <li><a href="#">蓝牙无线麦克风</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li class="footerNav">
+                        帮助中心
+                        <ul class="footerLinks">
+                            <li><a href="#">购物流程</a></li>
+                            <li><a href="#">售后服务</a></li>
+                            <li><a href="#">相关下载</a></li>
+                        </ul>
+                    </li>
+                    <li class="footerNav">
+                        音特商城
+                        <ul class="footerLinks">
+                            <li><a href="#">家庭娱乐</a></li>
+                            <li><a href="#">KTV娱乐</a></li>
+                            <li><a href="#">音响</a></li>
+                            <li><a href="#">蓝牙无线麦克风</a></li>
+                            <li><a href="#">音频处理器</a></li>
+                            <li><a href="#">BOX KTV</a></li>
+                            <li><a href="#">人人唱</a></li>
+                            <li><a href="#">歌库</a></li>
+                        </ul>
+                    </li>
+                    <li class="footerNav">
+                        关于音特
+                        <ul class="footerLinks">
+                            <li><a href="#">了解音特</a></li>
+                            <li><a href="#">新闻资讯</a></li>
+                            <li><a href="#">加入我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li class="footerNav">
+                        语言
+                        <ul class="footerLinks">
+                            <li><a href="#">简体中文</a></li>
+                            <li><a href="#">繁体中文</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">한국어</a></li>
+                            <li><a href="#">日本语</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="footerContact">
+                    <strong class="footer-call">400-119-5555</strong>
+                    <p class="footer-text">( 24小时全国服务热线 )</p>
+                    <a class="serviceCall" href="#"><i class="iconfont icon-kefu"></i><span>24小时在线客服</span></a>
+                    <div class="footerCode">
+                        <img src="images/weibo-img.jpg">
+                        <img src="images/weixin-img.jpg">
+                        <img src="images/timg.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
+    </footer>
+</div>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // 收货地址点击删除效果
+        $('.delete_tip').click(function (e) {
+            e.stopPropagation();
+            $(this).parents('.col-lg-3').remove();
+        });
+        // 收货地址点击'设为默认地址'效果
+        $('.change_tip').click(function (e) {
+            $('.change_tip').not(this).text("【设为默认地址】");
+            $(this).text("【默认地址】");
+        })
+    })
+</script>
+</body>
+</html>
