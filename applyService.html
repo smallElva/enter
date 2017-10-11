@@ -12,7 +12,7 @@
     <title>音特电子</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
-    <link rel="stylesheet" type="text/css" href="css/laydate.css">
+    <link rel="stylesheet" type="text/css" href="js/theme/default/laydate.css">
     <link rel="stylesheet" href="app.css" type="text/css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -112,7 +112,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
-                                                <div class="myOrderGift">——</div>
+                                                <div class="myOrderGift"><span class="no_gift"></span></div>
                                             </div>
                                             <div class="col-lg-2">
                                                 <div class="myOrderQuality">1</div>
@@ -166,7 +166,7 @@
                                     <p class="orderDetail_content_t">商品退回方式</p>
                                     <ul class="choose clearfix" id="returnKind">
                                         <li>
-                                            <input name="return" type="radio" id="return1" value="上门取件">
+                                            <input name="return" type="radio" id="return1" value="上门取件" checked>
                                             <label for="return1">
                                                 上门取件
                                             </label>
@@ -178,15 +178,15 @@
                                             </label>
                                         </li>
                                     </ul>
-                                    <p class="orderDetail_tips">
+                                    <div class="orderDetail_tips" id="orderDetail_tips1">
                                         取件时间：
                                         <input type="text" id="date" class="calendarInput"><label for="date"><i class="iconfont icon-rili"></i></label>
-                                    </p>
+                                    </div>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">收货地址 <a class="edit" href="#">编辑</a></p>
+                                    <p class="orderDetail_content_t"><span class="address_t">取件地址</span> <a class="edit" href="#" id="js_edit" data-toggle="modal" data-target="#addModal">编辑</a></p>
                                     <p>收货人：<span class="clientName">吴滴用</span></p>
-                                    <p>手机： <span class="clientNum">18022823329</span></p>
+                                    <p>手机号： <span class="clientNum">18022823329</span></p>
                                     <p>收货地址：<span class="clientAdd">广东省深圳市宝安区西乡街道永丰社区9区</span></p>
                                 </div>
                                 <div class="orderDetail_content">
@@ -299,6 +299,62 @@
         <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
     </footer>
 </div>
+<!-- addModal -->
+<div class="modal myInfoModal addressModal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="addModalLabel">添加新地址</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputUser" class="col-sm-2 control-label"><span class="redColor">*</span>收货人：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputUser">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone" class="col-sm-2 control-label"><span class="redColor">*</span>手机号码：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="redColor">*</span>收货地址：</label>
+                        <div class="col-sm-10">
+                            <div class="address-box clearfix" id="select-area">
+                                <select class="form-control" id="province"></select>
+                                <select class="form-control" id="city"></select>
+                                <select class="form-control" id="country"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddDetail" class="col-sm-2 control-label"><span class="redColor">*</span>详细地址：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAddDetail">
+                        </div>
+                    </div>
+                    <div class="form-group addModal_form">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <input class="check-one check" type="checkbox" id="choose1"/>
+                                <label for="choose1"><span></span>设为默认地址</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/laydate.js"></script>
@@ -360,6 +416,25 @@
             //console.log(url);
             return url;
         }
+
+
+        /**商品退回方式选择**/
+        $('#returnKind li').eq(0).click(function () {
+             $('#orderDetail_tips1').css('display','block');
+            $('.address_t').html('取件地址');
+            $('#js_edit').css('display','inline');
+        });
+        $('#returnKind li').eq(1).click(function () {
+            $('#orderDetail_tips1').css('display','none');
+            $('.address_t').html('退货地址');
+            $('#js_edit').css('display','none');
+        });
+        /**商品退回方式选择---end!**/
+
+        // 点击添加新地址弹窗
+        $('#addModal').on('show.bs.modal', function() {
+            $("#select-area").selectAddress();
+        })
     });
     /*上传图片附带删除 再次地方可以加上一个ajax进行提交到后台进行删除 */
     function removeImg(r){

@@ -12,6 +12,7 @@
     <title>音特电子</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="js/theme/default/laydate.css">
     <link rel="stylesheet" href="app.css" type="text/css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -77,48 +78,55 @@
                             <div class="orderTitle">
                                 <span class="f-24">进度详情</span>
                             </div>
-                            <div class="orderDetailBlock">
-                                <div class="orderDetailProcess">
+                            <div class="orderDetailBlock failOrder">
+                                <div class="orderDetailProcess" id="orderStation">
                                     <div class="line">
-                                        <div class="redLine1"></div>
-                                        <!--<div class="redLine2"></div>-->
-                                        <!--<div class="redLine3"></div>-->
-                                        <!--<div class="redLine4"></div>-->
+                                        <div class="redLine51"></div>
+                                        <div class="redLine52"></div>
+                                        <div class="redLine53"></div>
+                                        <div class="redLine54"></div>
+                                        <div class="redLine55"></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-20">
                                             <div class="detailOfferOrder">
                                                 <div class="detailCircle"></div>
                                                 <p>提交审核</p>
                                                 <p class="offerTime">2017-09-14  13：36：45</p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-20">
                                             <div class="detailFendOrder">
                                                 <div class="detailCircle"></div>
                                                 <p>审核完成</p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-20">
                                             <div class="detailDeliverOrder">
                                                 <div class="detailCircle"></div>
                                                 <p>音特收货</p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-20">
+                                            <div class="detailDoOrder">
+                                                <div class="detailCircle"></div>
+                                                <p>正在处理</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-20">
                                             <div class="detailFinishOrder">
                                                 <div class="detailCircle"></div>
-                                                <p>退款成功</p>
+                                                <p>完成</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="orderDetailDo clearfix">
                                         <div class="detail_state pull-left">
-                                            <p>订单状态：<span class="serviceDetail_state">提交审核</span> 服务类型：<span class="serviceDetail_type">退货</span></p>
-                                            <p class="order_bc service_bc">售后服务人员正在审核中，审核完成后审核结果会以短信形式告知您。您也可以在售后服务中进行查询</p>
+                                            <p>订单状态：<span class="serviceDetail_state">待审核</span> 服务类型：<span class="serviceDetail_type">退货</span></p>
+                                            <p class="order_bc service_bc">订单正在审核中，审核完成后结果会以短信形式告知您。您也可以在售后服务中进行查询</p>
                                         </div>
                                         <div class="orderDetailDo_btns pull-right">
-                                            <a class="gotoBuy" href="#">取消服务</a>
+                                            <a class="gotoBuy" href="#" id="js_delete_service">取消服务</a>
                                         </div>
                                     </div>
                                 </div>
@@ -127,14 +135,14 @@
                                         <div class="col-lg-5">
                                             <div>商品</div>
                                         </div>
-                                        <div class="col-lg-2">
-                                            <div>单价（元）</div>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <div>数量</div>
-                                        </div>
                                         <div class="col-lg-3">
-                                            <div>状态</div>
+                                            <div>包装清单</div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div>赠品</div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <div>购买数量</div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,43 +153,63 @@
                                 <div class="tableContent">
                                     <div class="myOrderList">
                                         <div class="row">
-                                            <div class="col-lg-5">
+                                            <div class="col-lg-4">
                                                 <div class="goods orderGoods clearfix">
                                                     <div class="goods-img"><img src="images/product1.png" alt=""/></div>
                                                     <p class="goods-name">卡拉OK E5</p>
                                                     <p class="goods-color">颜色：黑色</p>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <div class="myOrderMoney">1999.00</div>
+                                            <div class="col-lg-4">
+                                                <div class="myOrderAccess">
+                                                    麦克风×1、底座×1、遥控器×1、电源适配器×1、
+                                                    音频线×1、U盘×1、使用手册×1、电池×6
+                                                </div>
                                             </div>
                                             <div class="col-lg-2">
-                                                <div class="myOrderNumber">1</div>
+                                                <div class="myOrderGift"><span class="no_gift"></span></div>
                                             </div>
-                                            <div class="col-lg-3">
-                                                <div class="myOrderState orderDetail_state">待付款</div>
+                                            <div class="col-lg-2">
+                                                <div class="myOrderQuality">1</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">问题描述 <a class="edit" href="#">跟新描述</a></p>
+                                    <p class="orderDetail_content_t">问题描述 <a class="edit" href="javascript:;" data-toggle="modal" data-target="#orderWordsModal">更新描述</a></p>
                                     <p class="problemType">7天无理由包退</p>
                                     <div class="problemImgs">
                                         <img src="images/problem-img.jpg">
                                     </div>
                                 </div>
-                                <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">上门取件</p>
-                                    <p>取件时间：<span class="takeTime">2017-09-21</span></p>
+                                <div class="orderDetail_content" id="delivery_door">
+                                    <p class="orderDetail_content_t"><span class="delivery_method">上门取件</span><a class="edit" href="javascript:;" id="changeWay1">更换退回方式</a></p>
+                                    <p id="other_delivery">取件时间：<input type="text" id="date" class="calendarInput"><label for="date" id="calender"><i class="iconfont icon-rili"></i></label></p>
+                                </div>
+                                <div class="orderDetail_content" id="delivery_self">
+                                    <p class="orderDetail_content_t"><span class="delivery_method">自找快递</span><a class="edit" href="javascript:;" id="changeWay2">更换退回方式</a></p>
+                                    <div class="form-inline">
+                                        <div class="form-group">
+                                            <label for="delivery_select">物流公司：</label>
+                                            <select class="form-control delivery_select" id="delivery_select">
+                                                <option value="1">顺丰快递</option>
+                                                <option value="2">圆通快递</option>
+                                                <option value="3">中通快递</option>
+                                                <option value="4">韵达快递</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="delivery_select">物流公司：</label>
+                                            <input id="delivery_num" class="form-control delivery_num" type="text" placeholder="请填写快递单号">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">取件地址</p>
+                                    <p class="orderDetail_content_t"><span class="address_t">取件地址</span> <a class="edit" href="#" id="js_edit" data-toggle="modal" data-target="#addModal">编辑</a></p>
                                     <p>收货人：<span class="clientName">吴滴用</span></p>
-                                    <p>手机： <span class="clientNum">18022823329</span></p>
+                                    <p>手机号： <span class="clientNum">18022823329</span></p>
                                     <p>收货地址：<span class="clientAdd">广东省深圳市宝安区西乡街道永丰社区9区</span></p>
                                 </div>
-
                                 <div class="orderDetail_content">
                                     <p class="orderDetail_content_t">审核留言</p>
                                     <p class="checkWord">尊敬的客户，很抱歉给您添麻烦了，谢谢！</p>
@@ -292,9 +320,218 @@
         <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
     </footer>
 </div>
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
+<!-- addModal -->
+<div class="modal myInfoModal addressModal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="addModalLabel">添加新地址</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputUser" class="col-sm-2 control-label"><span class="redColor">*</span>收货人：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputUser">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone" class="col-sm-2 control-label"><span class="redColor">*</span>手机号码：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="redColor">*</span>收货地址：</label>
+                        <div class="col-sm-10">
+                            <div class="address-box clearfix" id="select-area">
+                                <select class="form-control" id="province"></select>
+                                <select class="form-control" id="city"></select>
+                                <select class="form-control" id="country"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddDetail" class="col-sm-2 control-label"><span class="redColor">*</span>详细地址：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAddDetail">
+                        </div>
+                    </div>
+                    <div class="form-group addModal_form">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <input class="check-one check" type="checkbox" id="choose1"/>
+                                <label for="choose1"><span></span>设为默认地址</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- orderWordsModal -->
+<div class="modal myInfoModal addressModal fade" id="orderWordsModal" tabindex="-1" role="dialog" aria-labelledby="orderWordsModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="orderWordsModalLabel">订单备注</h4>
+            </div>
+            <div class="modal-body">
+                <div id="orderWordsDiv">
+                    <form class="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <textarea rows="5" class="sureOrder-text sureOrder-words" maxlength="200">7天无理由退货</textarea>
+                            </div>
+                        </div>
+                        <div class="uploadImg">
+                            <div class="img_div"><img class="default_img" src="images/problem-img.jpg" width="80" height="80"></div>
+                            <a href="javascript:;" class="a-upload">
+                                <input type="file" name="myFile" id="myFile" multiple="multiple" /><i class="iconfont icon-add"></i>
+                            </a>
+                        </div>
+                        <p class="orderDetail_tips">为了更快帮您解决问题，请上传图片（最多可上传5张）</p>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="button" class="btn-red" data-dismiss="modal">更新描述</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/laydate.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var objUrl;
+        var img_html;
+        $("#myFile").change(function() {
+            var img_div = $(".img_div");
+            var filepath = $("input[name='myFile']").val();
+            for(var i = 0; i < this.files.length; i++) {
+                objUrl = getObjectURL(this.files[i]);
+                var extStart = filepath.lastIndexOf(".");
+                var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+                /*鉴定每个图片上传尾椎限制 */
+                if(ext != ".BMP" && ext != ".PNG" && ext != ".GIF" && ext != ".JPG" && ext != ".JPEG") {
+                    $(".shade").fadeIn(500);
+                    $(".text_span").text("图片限于bmp,png,gif,jpeg,jpg格式");
+                    this.value = "";
+                    $(".img_div").html("");
+                    return false;
+                } else{
+                    /*
+                     若规则全部通过则在此提交url到后台数据库
+                     * */
+                    img_html = "<div class='isImg'><img src='" + objUrl + "' style='height: 100%; width: 100%;' /><button class='removeBtn' onclick='javascript:removeImg(this)'>x</button></div>";
+                    img_div.append(img_html);
+                }
 
+            }
+            /*鉴定每个图片大小总和*/
+            var file_size = 0;
+            var all_size = 0;
+            for(var j = 0; j < this.files.length; j++) {
+                file_size = this.files[j].size;
+                all_size = all_size + this.files[j].size;
+                var size = all_size / 1024;
+                if(size > 500) {
+                    $(".shade").fadeIn(500);
+                    $(".text_span").text("上传的图片大小不能超过100k！");
+                    this.value = "";
+                    $(".img_div").html("");
+                    return false;
+                }
+            }
+            return true;
+        });
+        /*鉴定每个浏览器上传图片url 目前没有合并到Ie*/
+        function getObjectURL(file) {
+            var url = null;
+            if(window.createObjectURL != undefined) { // basic
+                url = window.createObjectURL(file);
+            } else if(window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if(window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            //console.log(url);
+            return url;
+        }
+
+        // 点击添加新地址弹窗
+        $('#addModal').on('show.bs.modal', function() {
+            $("#select-area").selectAddress();
+        });
+
+        //  点击更换退回方式---上门取件
+        $('#changeWay1').click(function () {
+            $('#delivery_self').css('display','block');
+            $('#delivery_door').css('display','none');
+            $('.address_t').html('退货地址');
+            $('#js_edit').css('display','none');
+        });
+        //  点击更换退回方式---自找快递
+        $('#changeWay2').click(function () {
+            $('#delivery_self').css('display','none');
+            $('#delivery_door').css('display','block');
+            $('.address_t').html('取件地址');
+            $('#js_edit').css('display','inline');
+        });
+        //  2，审核完成状态
+        $('.alreadyOrder').find('.serviceDetail_state').html('已审核');
+        $('.alreadyOrder').find('.service_bc').html('').append('<span class="order_tips">审核已经通过，请填写相关的快递信息！</span>');
+        $('.alreadyOrder').find('.orderDetailDo_btns').append('<a class="gotoBuy pull-left" href="deliveryInfo.html">'+'查看物流'+'</a>');
+        //  3，音特收货状态
+        $('.pickOrder').find('.serviceDetail_state').html('正在处理');
+        $('.pickOrder').find('.service_bc').html('').append('<span class="order_tips">该订单正在处理中，请留意售后服务进度！</span>');
+        $('.pickOrder').find('.orderDetailDo_btns').remove();
+        $('.pickOrder').find('.edit').remove();
+        $('.pickOrder').find('#calender').remove();
+        //  4，正在处理状态
+        $('.dealOrder').find('.serviceDetail_state').html('正在处理');
+        $('.dealOrder').find('.service_bc').html('').append('<span class="order_tips">该订单正在处理中，请留意售后服务进度！</span>');
+        $('.dealOrder').find('.orderDetailDo_btns').remove();
+        $('.dealOrder').find('.edit').remove();
+        $('.dealOrder').find('#calender').remove();
+        //  5，已完成状态
+        $('.doneOrder').find('.serviceDetail_state').html('已完成');
+        $('.doneOrder').find('.service_bc').html('').append('<span class="order_tips">该订单已完成，请留意查看物流信息！</span>');
+        $('.doneOrder').find('.orderDetailDo_btns').remove();
+        $('.doneOrder').find('.edit').remove();
+        $('.doneOrder').find('#calender').remove();
+        //  6，已关闭状态
+        $('.failOrder').find('.serviceDetail_state').html('已关闭');
+        $('.failOrder').find('.service_bc').html('').append('<span class="order_tips">订单已关闭，如有问题，欢迎您点击</span>'+'<a class="yellowColor" href="#">'+'客服'+'</a>'+'<span class="order_tips">与我们沟通，非常感谢您的支持！</span>');
+        $('.failOrder').find('.orderDetailDo_btns').remove();
+        $('.failOrder').append('<div class="orderDetail_content">'+' <a class="gotoBuy offerReview" href="#">重新提交</a>'+'<span>请再次确认信息后提交服务订单，之后售后专员会与您电话沟通，请保持手机畅通</span>'+' </div>');
+    });
+    /*上传图片附带删除 再次地方可以加上一个ajax进行提交到后台进行删除 */
+    function removeImg(r){
+        $(r).parent().remove();
+    }
+
+    laydate.render({
+        elem: '#date', //指定元素
+        theme:'#ff5400',
+        value: new Date(),
+        showWeeks: true
+    });
+</script>
 </body>
 </html>

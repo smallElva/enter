@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3">
-                            <div class="addMenu-new">
+                            <div class="addMenu-new" data-toggle="modal" data-target="#addModal">
                                 <div class="addMenu-div">
                                     <i class="iconfont icon-jiahao"></i>
                                     <p>添加新地址</p>
@@ -151,30 +151,38 @@
             <!--确认订单信息-->
             <div class="orderAdd">
                 <div class="sureOrder-t"><span class="f-24">确认订单信息</span><a class="pull-right" href="#"><span class="goBack">返回购物车修改</span> <i class="iconfont icon-right f-24"></i> </a></div>
-                <table class="table" id="sureOrderTable">
-                    <thead>
-                    <tr>
-                        <th>商品</th>
-                        <th>单价</th>
-                        <th>数量</th>
-                        <th>小计</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="sureOrder-goods clearfix">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <div class="goods-info">
-                                <p class="goods-name">卡拉OK E5</p>
-                                <p class="goods-color">颜色：黑色</p>
+                <div class="table" id="sureOrderTable">
+                    <div class="sureOrderTable_head">
+                        <div class="row">
+                            <div class="col-lg-5">商品</div>
+                            <div class="col-lg-2">单价</div>
+                            <div class="col-lg-2">数量</div>
+                            <div class="col-lg-3">小计</div>
+                        </div>
+                    </div>
+                    <div class="sureOrderTable_body">
+                        <div class="sureOrderTable_item">
+                            <div class="row">
+                                <div class="col-lg-5 sureOrder-goods clearfix">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <div class="goods-info">
+                                        <p class="goods-name">卡拉OK E5</p>
+                                        <p class="goods-color">颜色：黑色</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="perPrice">5999.88</div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="perNumber">1</div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="perTotalPrice">5999.88</div>
+                                </div>
                             </div>
-                        </td>
-                        <td>5999.88</td>
-                        <td>1</td>
-                        <td>5999.88</td>
-                    </tr>
-                    </tbody>
-                </table>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--支付方式-->
             <div class="orderAdd">
@@ -196,7 +204,7 @@
                     <p class="totalMoney">应付总额：<span class="allMoney">¥1999.00</span></p>
                     <p>收件人：<span class="offerOrder-name">吴滴用</span>      <span class="offerOrder-call">180****3329</span></p>
                     <p>配送地址：<span class="offerOrder-add">广东省深圳市宝安区西乡街道永丰社区9区</span></p>
-                    <p><a class="goPay-a" href="#">提交订单</a></p>
+                    <p><a class="goPay-a" href="onlinePay.html">提交订单</a></p>
                 </div>
             </div>
         </div>
@@ -298,7 +306,88 @@
         <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
     </footer>
 </div>
+<!-- deleteModal -->
+<input type="hidden" id="common_confirm_btn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#deleteModal">
+<div class="modal myInfoModal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title deleteModal_t" id="deleteModalLabel">确定删除该地址?</h4>
+                <div class="modal-btns">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <button type="button" class="btn-qx ok" data-dismiss="modal">确定</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="button" class="btn-red cancel" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- addModal -->
+<div class="modal myInfoModal addressModal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="addModalLabel">添加新地址</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputUser" class="col-sm-2 control-label"><span class="redColor">*</span>收货人：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputUser">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone" class="col-sm-2 control-label"><span class="redColor">*</span>手机号码：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="redColor">*</span>收货地址：</label>
+                        <div class="col-sm-10">
+                            <div class="address-box clearfix" id="select-area">
+                                <select class="form-control" id="province"></select>
+                                <select class="form-control" id="city"></select>
+                                <select class="form-control" id="country"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddDetail" class="col-sm-2 control-label"><span class="redColor">*</span>详细地址：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAddDetail">
+                        </div>
+                    </div>
+                    <div class="form-group addModal_form">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <input class="check-one check" type="checkbox" id="choose1"/>
+                                <label for="choose1"><span></span>设为默认地址</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
 <script type="text/javascript">
@@ -306,14 +395,45 @@
         // 收货地址点击删除效果
         $('.delete_tip').click(function (e) {
             e.stopPropagation();
-            $(this).parents('.col-lg-3').remove();
+            var element = $(this).parents('.col-lg-3');
+            Common.confirm({
+                operate: function (reselt) {
+                    if (reselt) {
+                        element.remove();
+                    } else {
+                    }
+                }
+            })
         });
         // 收货地址点击'设为默认地址'效果
         $('.change_tip').click(function (e) {
             $('.change_tip').not(this).text("【设为默认地址】");
             $(this).text("【默认地址】");
+        });
+        // 点击添加新地址弹窗
+        $('#addModal').on('show.bs.modal', function() {
+            $("#select-area").selectAddress();
         })
-    })
+    });
+    //  自定义提示框
+    var Common = {
+        confirm:function(params){
+            var model = $("#deleteModal");
+            $("#common_confirm_btn").click();
+            //每次都将监听先关闭，防止多次监听发生，确保只有一次监听
+            model.find(".cancel").die("click");
+            model.find(".ok").die("click");
+            model.find(".ok").live("click",function(){
+                params.operate(true)
+            });
+
+            model.find(".cancel").live("click",function(){
+                params.operate(false)
+            })
+        }
+    }
+
+
 </script>
 </body>
 </html>

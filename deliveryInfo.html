@@ -76,7 +76,7 @@
                             <div class="orderTitle">
                                 <span class="f-24">物流信息</span>
                             </div>
-                            <div class="orderDetailBlock">
+                            <div class="orderDetailBlock successPick">
                                 <div class="deliveryInfo_block">
                                     <div class="row">
                                         <div class="col-lg-4">
@@ -92,12 +92,12 @@
                                 </div>
                                 <div class="orderDetailProcess" id="deliveryInfo">
                                     <div class="line">
-                                        <!--<div class="redLine1"></div>-->
-                                        <!--<div class="redLine2"></div>-->
+                                        <div class="redLine1"></div>
+                                        <div class="redLine2"></div>
                                         <div class="redLine3"></div>
-                                        <!--<div class="redLine4"></div>-->
+                                        <div class="redLine4"></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row stateRow">
                                         <div class="col-lg-3">
                                             <div class="detailOfferOrder">
                                                 <div class="detailCircle"></div>
@@ -290,9 +290,19 @@
         <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
     </footer>
 </div>
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+    $(function () {
+    // 不同运输状态下的表现
+    // 1，等待揽件
+        $('.unPickup').find('.trackingMsg_t').html('您的包裹正在等待快递揽件，暂无物流信息，请稍等！');
+        $('.unPickup').find('.trackingTips').html('暂无物流信息');
+        $('.unPickup').find('.trackingBlock').html('').append('<img class="deliveryCar" src="images/deliveryCar.png">'+'<p class="unPickup-text">'+'该商品暂无没有物流信息，请稍等！'+'</p>');
+    // 4，签收成功
+        $('.successPick').find('.trackingMsg_t').html('您的包裹已成功签收！');
+    })
+</script>
 </body>
 </html>

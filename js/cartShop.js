@@ -17,12 +17,13 @@ window.onload = function () {
     var table = document.getElementById('cartTable'); // 购物车表格
     var selectInputs = document.getElementsByClassName('check'); // 所有勾选框
     var checkAllInputs = document.getElementsByClassName('check-all') // 全选框
-    var tr = table.children[1].rows; //行
+    var tr = document.getElementsByClassName('item'); //行
     var selectedTotal = document.getElementById('selectedTotal'); //已选商品数目容器
     var priceTotal = document.getElementById('priceTotal'); //总计
     var deleteAll = document.getElementById('deleteAll'); // 删除全部按钮
     var selected = document.getElementById('selected'); //已选商品
     var foot = document.getElementById('foot');
+    var prices = document.getElementById('price');
     var checkbox = document.getElementsByClassName('checkbox');
     var chooseAll = document.getElementById('chooseAll');
     var checkedSelectNum = 0;
@@ -31,36 +32,34 @@ window.onload = function () {
     // 更新总数和总价格，已选浮层
     var getTotal = function() {
         var totalCount = 0;
-		var seleted = 0;
-		var price = 0;
-		var HTMLstr = '';
-		for (var i = 0, len = tr.length; i < len; i++) {
+        var seleted = 0;
+        var price = 0;
+        for (var i = 0, len = tr.length; i < len; i++) {
             totalCount += parseInt(tr[i].getElementsByTagName('input')[1].value);
-			if (tr[i].getElementsByTagName('input')[0].checked) {
-				tr[i].className = 'on';
-				seleted += parseInt(tr[i].getElementsByTagName('input')[1].value);
-				price += parseFloat(tr[i].cells[4].innerHTML);
-				HTMLstr += '<div><img src="' + tr[i].getElementsByTagName('img')[0].src + '"><span class="del" index="' + i + '">取消选择</span></div>'
-			}
-			else {
-				tr[i].className = '';
-			}
-		}
+            if (tr[i].getElementsByTagName('input')[0].checked) {
+                // tr[i].className = 'on';
+                seleted += parseInt(tr[i].getElementsByTagName('input')[1].value);
+                price += parseFloat(tr[i].getElementsByClassName('subtotal')[0].innerHTML);
+            }
+            else {
+                tr[i].className = 'item';
+            }
+        }
         chooseAll.innerHTML = totalCount;
-		selectedTotal.innerHTML = seleted;
-		priceTotal.innerHTML = price.toFixed(2);
+        selectedTotal.innerHTML = seleted;
+        priceTotal.innerHTML = price.toFixed(2);
 
-		if (seleted == 0) {
-			foot.className = 'foot';
-		}
-	}
+        if (seleted == 0) {
+            foot.className = 'foot';
+        }
+    };
     // 计算单行价格
     function getSubtotal(tr) {
-        var cells = tr.cells;
-        var price = cells[2]; //单价
-        var subtotal = cells[4]; //小计td
+        // var cells = tr.cells;
+        var price = tr.getElementsByClassName('price')[0]; //单价
+        var subtotal = tr.getElementsByClassName('subtotal')[0]; //小计td
         var countInput = tr.getElementsByTagName('input')[1]; //数目input
-        var span = tr.getElementsByTagName('span')[1]; //-号
+        var span = tr.getElementsByClassName('reduce')[0]; //-号
         //写入HTML
         subtotal.innerHTML = (parseInt(countInput.value) * parseFloat(price.innerHTML)).toFixed(2);
         //如果数目只有一个，把-号去掉

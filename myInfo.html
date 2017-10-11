@@ -85,7 +85,7 @@
                                     </p>
                                     <p class="myInfoBlock_p clearfix">账户昵称：
                                         <span class="accountName">吴迪</span>
-                                        <a class="pull-right" id="js_changeName">修改昵称</a>
+                                        <a class="pull-right" id="js_changeName" data-toggle="modal" data-target="#nameModal">修改昵称</a>
                                     </p>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                                         <p class="myInfoBlock_p">账户密码</p>
                                         <p class="myInfoBlock_s">可通过原密码修改密码</p>
                                     </div>
-                                    <a class="myInfoBlock_a pull-right" id="changePwd">修改</a>
+                                    <a class="myInfoBlock_a pull-right" id="changePwd" data-toggle="modal" data-target="#pwdModal">修改</a>
                                 </div>
                             </div>
                             <div class="myInfoContent">
@@ -159,120 +159,7 @@
 
             </div>
         </div>
-
     </section>
-    <!-- nameModal -->
-    <div class="modal myInfoModal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
-                    <h4 class="modal-title" id="nameModalLabel">修改昵称</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="second_name" placeholder="请输入新的昵称">
-                        </div>
-                    </form>
-                    <button type="button" class="btn-red" data-dismiss="modal">完成</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- pwdModal -->
-    <div class="modal myInfoModal fade" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
-                    <h4 class="modal-title" id="pwdModalLabel">修改密码</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label class="form-label" for="originPwd">原密码</label>
-                            <input type="text" class="form-control" id="originPwd" placeholder="请输入原密码">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="newPwd">新密码</label>
-                            <input type="password" class="form-control" id="newPwd" placeholder="请输入新密码（6-16位字母和数字组合）">
-                            <input type="password" class="form-control" id="newPwd2" placeholder="请再次确认密码">
-                        </div>
-                    </form>
-                    <button type="button" class="btn-red" data-dismiss="modal">完成</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- callModal -->
-    <div class="modal myInfoModal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
-                    <h4 class="modal-title" id="callModalLabel">绑定手机</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="callNum" placeholder="请输入要绑定的手机号">
-                        </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="请输入短信验证码">
-                            <span class="input-group-btn"><button class="btn btn-yz" type="button">获取验证码</button></span>
-                        </div>
-                    </form>
-                    <button type="button" class="btn-red" data-dismiss="modal">完成</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- codeModal -->
-    <div class="modal myInfoModal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
-                    <h4 class="modal-title" id="codeModalLabel">身份验证</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <label class="form-label">验证码已经发送至<span class="bd_call">188****3369</span></label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="请输入短信验证码">
-                            <span class="input-group-btn"><button class="btn btn-yz btn-grey" type="button">重新获取（60）</button></span>
-                        </div>
-                    </form>
-                    <button type="button" class="btn-red" data-dismiss="modal">验证</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- qqModal -->
-    <div class="modal myInfoModal fade" id="qqModal" tabindex="-1" role="dialog" aria-labelledby="qqModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title" id="qqModalLabel">确定解除绑定QQ?</h4>
-                    <p class="modal-tips">解除绑定后将不能用此QQ快捷登录音特账号</p>
-                    <div class="modal-btns">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <button type="button" class="btn-red">确定</button>
-                            </div>
-                            <div class="col-lg-6">
-                                <button type="button" class="btn-qx" data-dismiss="modal">取消</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- aside -->
     <aside id="aside">
         <ul id="asideList">
@@ -369,23 +256,152 @@
         <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
     </footer>
 </div>
+<!-- nameModal -->
+<div class="modal myInfoModal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="nameModalLabel">修改昵称</h4>
+            </div>
+            <div class="modal-body">
+                <form id="nameForm" data-toggle="validator" role="form">
+                    <div class="form-group has-feedback newPwd-group">
+                        <input type="text" class="form-control" id="second_name" placeholder="请输入新的昵称" data-error="昵称已有人使用" data-delay="50" required>
+                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </form>
+                <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pwdModal -->
+<div class="modal myInfoModal fade" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="pwdModalLabel">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <form id="pwdForm" role="form">
+                    <div class="form-group has-feedback">
+                        <label class="form-label" for="originPwd">原密码</label>
+                        <input type="password" class="form-control" id="originPwd" placeholder="请输入原密码" data-minlength="6" data-maxlength="16" data-delay="500" data-error="密码输入不正确" data-required-error="密码不能为空" required>
+                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label class="form-label" for="newPwd">新密码</label>
+                        <input type="password" class="form-control" id="newPwd" placeholder="请输入新密码（6-16位字母和数字组合）" data-minlength="6" data-maxlength="16" data-required-error="密码不能为空" required>
+                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group has-feedback newPwd-group">
+                        <input type="password" class="form-control" id="newPwd2" placeholder="请再次确认密码" data-match="#newPwd" data-match-error="两次输入密码不一致" data-required-error="密码不能为空" required>
+                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </form>
+                <button type="submit" class="btn-red">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- callModal -->
+<div class="modal myInfoModal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="callModalLabel">绑定手机</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" data-toggle="validator">
+                    <div class="form-group has-feedback newPwd-group">
+                        <input type="text" class="form-control" id="callNum" placeholder="请输入要绑定的手机号" pattern="^[1][358][0-9]{9}$" data-error="请输入有效的手机号" required>
+                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入短信验证码" id="codeMsg">
+                        <span class="input-group-btn"><button class="btn btn-yz" type="button" id="sendCode" onclick="sends.send();">获取验证码</button></span>
+                    </div>
+                </form>
+                <button type="button" class="btn-red" data-dismiss="modal" onclick="sends.conform();" id="submitBtn">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- codeModal -->
+<div class="modal myInfoModal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="codeModalLabel">身份验证</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label class="form-label">验证码已经发送至<span class="bd_call">188****3369</span></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入短信验证码">
+                        <span class="input-group-btn"><button class="btn btn-yz btn-grey" type="button" id="newYzBtn" onclick="sendsYz.send();">重新获取（60）</button></span>
+                    </div>
+                </form>
+                <button type="button" class="btn-red" data-dismiss="modal" onclick="sendsYz.conform();" id="yzBtn">验证</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- qqModal -->
+<div class="modal myInfoModal fade" id="qqModal" tabindex="-1" role="dialog" aria-labelledby="qqModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title" id="qqModalLabel">确定解除绑定QQ?</h4>
+                <p class="modal-tips">解除绑定后将不能用此QQ快捷登录音特账号</p>
+                <div class="modal-btns">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <button type="button" class="btn-red">确定</button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="button" class="btn-qx" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/validator.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript">
     $(function () {
         // 修改账户昵称
-        $('#js_changeName').click(function () {
-            $('#nameModal').modal()
-        });
+
+
         // 修改账户密码
-        $('#changePwd').click(function () {
-            $('#pwdModal').modal()
+        $('#pwdForm').validator().on('submit', function (e) {
+            if (e.isDefaultPrevented()) {
+                // handle the invalid form...
+            } else {
+                $('#pwdModal').modal('hide')
+            }
         });
         // 绑定手机和邮箱
         $('#changeCall').click(function () {
             $('#callModal').modal();
         });
+
 
         // 验证手机和邮箱
         $('#changeEmail').click(function () {
@@ -396,9 +412,60 @@
             $('#qqModal').modal();
         });
 
-
-
     });
+    var sends = {
+        checked:1,
+        send:function(){
+            var numbers = /^1\d{10}$/;
+            var val = $('#callNum').val().replace(/\s+/g,""); //获取输入手机号码
+            if(numbers.test(val)){
+                var time = 60;
+                function timeCountDown(){
+                    if(time==0){
+                        clearInterval(timer);
+                        $('#sendCode').removeClass('btn-grey').html("发送验证码");
+                        $('#submitBtn').removeAttr('disabled');
+                        sends.checked = 1;
+                        return true;
+                    }
+                    $('#sendCode').html("重新获取" + "（ " + time +" ）");
+                    time--;
+                    return false;
+                    sends.checked = 0;
+                }
+                $('#sendCode').addClass('btn-grey');
+
+                $('#submitBtn').attr('disabled','disabled');
+                timeCountDown();
+                var timer = setInterval(timeCountDown,1000);
+            }
+        }
+    };
+    var sendsYz = {
+        checked:1,
+
+        send:function(){
+                var time = 60;
+                function timeCountDown(){
+                    if(time==0){
+                        clearInterval(timer);
+                        $('#newYzBtn').removeClass('btn-grey').html("发送验证码");
+                        $('#yzBtn').removeAttr('disabled');
+                        sends.checked = 1;
+                        return true;
+                    }
+                    $('#newYzBtn').html("重新获取" + "（ " + time +" ）");
+                    time--;
+                    return false;
+                    sends.checked = 0;
+                }
+                $('#newYzBtn').addClass('btn-grey');
+
+                $('#yzBtn').attr('disabled','disabled');
+                timeCountDown();
+                var timer = setInterval(timeCountDown,1000);
+            }
+    }
 
 </script>
 </body>

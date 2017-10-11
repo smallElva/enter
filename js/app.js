@@ -3,17 +3,17 @@
  */
 
 $(function () {
-    var num = $('#cartTable tbody tr').length;
-    var numB = num-4;
+    var num = $('#cartTable .item').length;
+    var numB = num-3;
     if(numB <= 0){
         $('#foot').removeClass('fixed-bottom');
     }
-    //µ±ÆÁÄ»ÏòÏÂ¹öÊ±£¬µ¼º½À¸¹Ì¶¨ÔÚ¶¥²¿
+    //å½“å±å¹•å‘ä¸‹æ»šæ—¶ï¼Œå¯¼èˆªæ å›ºå®šåœ¨é¡¶éƒ¨
     $(document).scroll(function () {
         var scrollHeight = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
 
         if(numB > 0){
-            if (scrollHeight >= numB*120) {
+            if (scrollHeight >= (numB*150+80)) {
                 $('#foot').removeClass('fixed-bottom');
             }else{
                 $('#foot').addClass('fixed-bottom');
@@ -29,22 +29,22 @@ $(function () {
             $('.content').css('marginTop','0')
         }
     });
-    // µã»÷²àÀ¸ÖÃ¶¥±êÇ©Ò³Ãæ¹ö¶¯ÖÁ¶¥²¿
+    // ç‚¹å‡»ä¾§æ ç½®é¡¶æ ‡ç­¾é¡µé¢æ»šåŠ¨è‡³é¡¶éƒ¨
     $('#toTop').click(function () {
         $("html, body").animate({ scrollTop: 0 }, 300);
     });
-    // ÊÕ»õµØÖ·Ñ¡Ôñ
+    // æ”¶è´§åœ°å€é€‰æ‹©
     $('.addMenu').click(function () {
         $(this).parent().addClass('defaultAdd').siblings().removeClass('defaultAdd');
     });
-    //µã»÷ÔÚÏßÖ§¸¶£¬³öÏÖÌáÊ¾£¬µã»÷»õµ½¸¶¿î£¬ÌáÊ¾ÏûÊ§
+    //ç‚¹å‡»åœ¨çº¿æ”¯ä»˜ï¼Œå‡ºç°æç¤ºï¼Œç‚¹å‡»è´§åˆ°ä»˜æ¬¾ï¼Œæç¤ºæ¶ˆå¤±
     $('#payWay li:first-child').click(function () {
         $('#paywayAli').show();
     });
     $('#payWay li:nth-child(2)').click(function () {
         $('#paywayAli').hide();
     });
-    //µã»÷¹«Ë¾·¢Æ±£¬³öÏÖÄÉË°ÈËÊ¶±ğºÅ£¬µã»÷¸öÈË·¢Æ±£¬ÄÉË°ÈËÊ¶±ğºÅÏûÊ§
+    //ç‚¹å‡»å…¬å¸å‘ç¥¨ï¼Œå‡ºç°çº³ç¨äººè¯†åˆ«å·ï¼Œç‚¹å‡»ä¸ªäººå‘ç¥¨ï¼Œçº³ç¨äººè¯†åˆ«å·æ¶ˆå¤±
     $('#invoice li:first-child').click(function () {
         $('#companyInvoice').hide();
     });
@@ -52,23 +52,23 @@ $(function () {
         $('#companyInvoice').show();
     });
 
-    //Ä£Ì¬¿ò¾ÓÖĞµ÷ÓÃ·½·¨
+    //æ¨¡æ€æ¡†å±…ä¸­è°ƒç”¨æ–¹æ³•
     $('.modal').on('show.bs.modal', centerModals);
     $(window).on('resize', centerModals);
 
 });
-//  µã»÷¼ÓºÅ£¬Êı×Ö¼ÓÒ»
+//  ç‚¹å‡»åŠ å·ï¼Œæ•°å­—åŠ ä¸€
 function m_subtract(t) {
     var obj = t.parentNode.getElementsByTagName('input')[0];
     if (obj.value>1)
         obj.value--;
 }
-//  µã»÷¼õºÅ£¬Êı×Ö¼õÒ»
+//  ç‚¹å‡»å‡å·ï¼Œæ•°å­—å‡ä¸€
 function m_add(t) {
     var obj = t.parentNode.getElementsByTagName('input')[0];
     obj.value++;
 }
-//Ä£Ì¬¿ò¾ÓÖĞ
+//æ¨¡æ€æ¡†å±…ä¸­
 function centerModals() {
     $('.modal').each(function(i) {
         var $clone = $(this).clone().css('display', 'block').appendTo('body');
@@ -78,3 +78,104 @@ function centerModals() {
         $(this).find('.modal-content').css("margin-top", top);
     });
 }
+
+// ç¡®è®¤æ¡†è‡ªå®šä¹‰å…¬å…±æ–¹æ³•
+var Common = {
+    confirm:function(params){
+        var model = $(params.nameId);
+        $(params.btnId).click();
+        //æ¯æ¬¡éƒ½å°†ç›‘å¬å…ˆå…³é—­ï¼Œé˜²æ­¢å¤šæ¬¡ç›‘å¬å‘ç”Ÿï¼Œç¡®ä¿åªæœ‰ä¸€æ¬¡ç›‘å¬
+        model.find(".cancel").die("click");
+        model.find(".ok").die("click");
+        model.find(".ok").live("click",function(){
+            params.operate(true)
+        });
+
+        model.find(".cancel").live("click",function(){
+            params.operate(false)
+        })
+    }
+};
+
+function delete_ok(element,params2,getTotal){
+    Common.confirm({
+        nameId: params2.nameId,
+        btnId: params2.btnId,
+        operate: function (reselt) {
+            if (reselt) {
+                element.remove();
+                getTotal();
+            } else {
+            }
+        }
+    });
+
+}
+
+// çœå¸‚åŒºè”åŠ¨æ•ˆæœ
+(function($){
+    $.fn.selectAddress=function(options){
+        //é»˜è®¤selectçš„id
+        var defaults={
+            province: '#province',
+            city: '#city',
+            country: '#country'
+        };
+        var opts=$.extend({}, defaults, options),
+            province=$(opts.province),
+            city=$(opts.city),
+            country=$(opts.country);
+        //ajaxå…¬ç”¨å‡½æ•°
+        function ajaxFun(url,type,obj,selectOption){
+            $.ajax({
+                url:url,
+                datatype:type,
+                type:"GET",
+                success:function(xmlDoc){
+                    var valueList = $(xmlDoc).find(selectOption);
+                    if(obj==city || obj==country ){
+                        valueList = $(xmlDoc).find(selectOption).children(obj);
+                    }
+                    $(valueList).each(function(){
+                        obj.append("<option value='"+$(this).attr("name")+"'>"+$(this).attr("name")+"</option>");
+                    });
+                }
+            });
+        }
+        //åˆå§‹åŒ–æ•°æ®
+        function init(){
+            province.append("<option value='0'>è¯·é€‰æ‹©çœä»½..</option>");
+            city.append("<option value='0'>è¯·é€‰æ‹©åŸå¸‚..</option>");
+            country.append("<option value='0'>è¯·é€‰æ‹©å¿åŒº..</option>");
+            var selectOption="province";
+            ajaxFun("area.xml","xml",province,selectOption);
+        }
+        //é€‰æ‹©çœä»½
+        province.on('change', function() {
+            if($(this).val() == "0") {
+                city.find("option").remove();
+                country.find("option").remove();
+                city.append("<option value='0'>è¯·é€‰æ‹©åŸå¸‚..</option>");
+                country.append("<option value='0'>è¯·é€‰æ‹©å¿åŒº..</option>");
+            }else{
+                city.find("option").remove();
+                country.find("option").remove();
+                var selectVal = $(this).val();
+                //è¢«é€‰æ‹©çš„çœä»½
+                var provinceOption="province[name="+selectVal+"]";
+                //å½“é€‰æ‹©çœä»½æ—¶åˆå§‹è”åŠ¨æ˜¾ç¤ºçš„ç¬¬ä¸€ä¸ªåŸå¸‚
+                var cityOption="province[name="+selectVal+"] city:first";
+                ajaxFun("area.xml","xml",city,provinceOption); //åŸå¸‚
+                ajaxFun("area.xml","xml",country,cityOption);  //å¿åŒº
+            }
+        });
+        //é€‰æ‹©åŸå¸‚
+        city.on('change', function() {
+            country.find("option").remove();
+            var selectVal = $(this).val();
+            var selectOption="city[name="+selectVal+"]";
+            ajaxFun("area.xml","xml",country,selectOption);
+        });
+        init();
+    }
+})(jQuery);

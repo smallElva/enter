@@ -286,7 +286,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane" id="prepare">
+                                    <div role="tabpanel" class="tab-pane noThisOrder" id="prepare">
                                         <div class="tableHead">
                                             <div class="row">
                                                 <div class="col-lg-4">
@@ -687,6 +687,10 @@
 <script type="text/javascript">
     $(function () {
         $('#serviceTab a:first').tab('show');
+        // 没有相关订单的状态
+        $('.noService').find('.tab-content').html('').append('<img class="noOrder" src="images/noService.png">'+'<p class="noOrder_tips">'+'您还没有申请任何商品的售后服务！'+'</p>');
+        // 没有某一类订单的状态
+        $('.noThisOrder').html('').append('<img class="noOrder" src="images/noService.png">'+'<p class="noOrder_tips">'+'您还没有相关的订单状态的售后服务的商品'+'</p>');
     })
 </script>
 </body>

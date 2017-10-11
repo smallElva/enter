@@ -77,15 +77,15 @@
                             <div class="orderTitle">
                                 <span class="f-24">订单详情</span>
                             </div>
-                            <div class="orderDetailBlock">
+                            <div class="orderDetailBlock unpaid">
                                 <div class="orderDetailProcess">
                                     <div class="line">
                                         <div class="redLine1"></div>
-                                        <!--<div class="redLine2"></div>-->
-                                        <!--<div class="redLine3"></div>-->
-                                        <!--<div class="redLine4"></div>-->
+                                        <div class="redLine2"></div>
+                                        <div class="redLine3"></div>
+                                        <div class="redLine4"></div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row stateRow">
                                         <div class="col-lg-3">
                                             <div class="detailOfferOrder">
                                                 <div class="detailCircle"></div>
@@ -96,30 +96,30 @@
                                         <div class="col-lg-3">
                                             <div class="detailFendOrder">
                                                 <div class="detailCircle"></div>
-                                                <p>付款成功</p>
+                                                <p>付款成功、商品发货</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="detailDeliverOrder">
                                                 <div class="detailCircle"></div>
-                                                <p>发货中</p>
+                                                <p>交易成功</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="detailFinishOrder">
                                                 <div class="detailCircle"></div>
-                                                <p>交易成功</p>
+                                                <p>关闭订单</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="orderDetailDo clearfix">
                                         <div class="pull-left">
-                                            <p>订单状态：<span class="orderDetailDo_state">待付款</span> 应付金额：<span class="orderDetailDo_money">¥1999.00</span></p>
-                                            <p class="order_bc"><span class="orderDetailDo_time">23小时04分钟44秒</span>  内未付款，将自动取消订单。</p>
+                                            <p>订单状态：<span class="orderDetailDo_state">待付款</span><span class="orderDetailDo_name">应付金额：</span> <span class="orderDetailDo_money">¥1999.00</span></p>
+                                            <p class="order_bc"><span class="orderDetailDo_time">23小时04分钟44秒</span>  <span class="order_tips">内未付款，将自动取消订单。</span></p>
                                         </div>
                                         <div class="orderDetailDo_btns pull-right">
-                                            <a class="gotoBuy" href="shopCart.html">去结算</a>
-                                            <a class="gotoBuy cancelOrder" href="#">取消订单</a>
+                                            <a class="gotoBuy" href="shopCart.html" id="goPay">去结算</a>
+                                            <a class="gotoBuy cancelOrder" href="#" id="cancelOrder">取消订单</a>
                                         </div>
                                     </div>
                                 </div>
@@ -169,18 +169,18 @@
                                     </div>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">收货地址 <a class="edit" href="sureOrder.html">编辑</a></p>
+                                    <p class="orderDetail_content_t">收货地址 <span class="edit" data-toggle="modal" data-target="#addModal">编辑</span></p>
                                     <p>收货人：<span class="clientName">吴滴用</span></p>
                                     <p>手机号： <span class="clientNum">18022823329</span></p>
                                     <p>收货地址：<span class="clientAdd">广东省深圳市宝安区西乡街道永丰社区9区</span></p>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">电子发票 <a class="edit" href="sureOrder.html">编辑</a></p>
+                                    <p class="orderDetail_content_t">电子发票 <span class="edit" data-toggle="modal" data-target="#invoiceModal">编辑</span></p>
                                     <p>发票抬头：<span class="clientInvoice">深圳市滴用有限公司</span></p>
                                     <p>纳税人识别号：<span class="clientAdd">123456789012345</span></p>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <p class="orderDetail_content_t">订单备注 <a class="edit" href="sureOrder.html">编辑</a></p>
+                                    <p class="orderDetail_content_t">订单备注 <span class="edit" data-toggle="modal" data-target="#bzModal">编辑</span></p>
                                     <p class="clientWord">请开纸质发票，谢谢！</p>
                                 </div>
                             </div>
@@ -287,9 +287,202 @@
         <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
     </footer>
 </div>
+<!-- addModal -->
+<div class="modal myInfoModal addressModal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="addModalLabel">更改地址</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputUser" class="col-sm-2 control-label"><span class="redColor">*</span>收货人：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputUser" value="吴迪">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone" class="col-sm-2 control-label"><span class="redColor">*</span>手机号码：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone" value="18022823329">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><span class="redColor">*</span>收货地址：</label>
+                        <div class="col-sm-10">
+                            <div class="address-box clearfix" id="select-area">
+                                <select class="form-control" id="province"></select>
+                                <select class="form-control" id="city"></select>
+                                <select class="form-control" id="country"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddDetail" class="col-sm-2 control-label"><span class="redColor">*</span>详细地址：</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAddDetail">
+                        </div>
+                    </div>
+                    <div class="form-group addModal_form">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <input class="check-one check" type="checkbox" id="choose1"/>
+                                <label for="choose1"><span></span>设为默认地址</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- invoiceModal -->
+<div class="modal myInfoModal addressModal fade" id="invoiceModal" tabindex="-1" role="dialog" aria-labelledby="invoiceModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="invoiceModalLabel">电子发票</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="invoice" class="col-sm-3 control-label"><span class="redColor">*</span>发票类型：</label>
+                        <div class="col-sm-9">
+                            <ul id="invoice" class="choose clearfix">
+                                <li>
+                                    <input name="invoice" type="radio" id="invoice1" value="个人发票" checked>
+                                    <label for="invoice1">
+                                        个人发票
+                                    </label>
+                                </li>
+                                <li>
+                                    <input name="invoice" type="radio" id="invoice2" value="公司发票">
+                                    <label for="invoice2">
+                                        公司发票
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="perInvoice">
+                        <div class="form-group">
+                            <label for="inputInvoice" class="col-sm-3 control-label"><span class="redColor">*</span>发票抬头：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputInvoice" value="吴迪">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comInvoice">
+                        <div class="form-group">
+                            <label for="inputInvoice1" class="col-sm-3 control-label"><span class="redColor">*</span>发票抬头：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputInvoice1" value="珠海滴用有限公司">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputInvoice2" class="col-sm-3 control-label"><span class="redColor">*</span>纳税人识别号：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputInvoice2" value="12345678910123456">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="button" class="btn-red" data-dismiss="modal">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bzModal -->
+<div class="modal myInfoModal addressModal fade" id="bzModal" tabindex="-1" role="dialog" aria-labelledby="bzModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="bzModalLabel">订单备注</h4>
+            </div>
+            <div class="modal-body">
+                <div id="orderWordsDiv">
+                    <form class="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <textarea rows="5" class="sureOrder-text sureOrder-words" maxlength="200">请开纸质发票，谢谢！</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="button" class="btn-red" data-dismiss="modal">更新描述</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // 点击编辑地址弹窗
+        $('#addModal').on('show.bs.modal', function() {
+            $("#select-area").selectAddress();
+        });
+        // 发票选择
+        //点击公司发票，出现纳税人识别号，点击个人发票，纳税人识别号消失
+        $('#invoice li').eq(0).click(function () {
+            $('#comInvoice').hide();
+            $('#perInvoice').show();
+        });
+        $('#invoice li').eq(1).click(function () {
+            $('#comInvoice').show();
+            $('#perInvoice').hide();
+        });
+        // 不同的状态下的显示不一样
+        // 1，付款成功、商品发货状态
+        $('.paid').find('.orderDetailDo_state').html('待收货');
+        $('.paid').find('.orderDetailDo_name').html('已付金额');
+        $('.paid').find('.orderDetailDo_time').html('预计2017-09-26号送达');
+        $('.paid').find('.order_tips').html('签收商品时，请当面检查商品，如在运输过程中有损坏，请拒收商品');
+        $('.paid').find('#goPay').remove();
+        $('.paid').find('#cancelOrder').remove();
+        $('.paid').find('.orderDetailDo_btns').append('<a class="gotoBuy" href="deliveryInfo.html">'+'查看物流'+'</a>');
+        $('.paid').find('.edit').remove();
+        $('.paid').find('.orderDetail_state').html('已发货');
+        // 2，交易成功状态
+        $('.successOrder').find('.orderDetailDo_state').html('已完成');
+        $('.successOrder').find('.orderDetailDo_name').html('已付金额');
+        $('.successOrder').find('.orderDetailDo_time').html('吴滴用已签收商品');
+        $('.successOrder').find('.order_tips').html('').append('<span class="order_tips">欢迎使用我们的商品，如有售后问题请点击</span>'+'<a class="yellowColor" href="applyService.html">'+'申请售后'+'</a>'+'<span class="order_tips">或者</span>'+'<a class="yellowColor" href="#">'+'客服'+'</a>'+'<span class="order_tips">非常感谢！</span>');
+        $('.successOrder').find('#goPay').remove();
+        $('.successOrder').find('#cancelOrder').remove();
+        $('.successOrder').find('.orderDetailDo_btns').append('<a class="gotoBuy" href="applyService.html">'+'申请售后'+'</a>');
+        $('.successOrder').find('.edit').remove();
+        $('.successOrder').find('.orderDetail_state').html('已完成');
+        // 3，关闭订单状态
+        $('.closedOrder').find('.orderDetailDo_state').html('已关闭');
+        $('.closedOrder').find('.orderDetailDo_name').html('已付金额');
+        $('.closedOrder').find('.order_bc').html('').append('<span class="order_tips">订单已关闭，为了给您提供更好的产品和服务，欢迎您点击</span>'+'<a class="yellowColor" href="#">'+'客服'+'</a>'+'<span class="order_tips">给我们提供建议，非常感谢您的支持！</span>');
+        $('.closedOrder').find('.orderDetailDo_btns').remove();
+        $('.closedOrder').find('.edit').remove();
+        $('.closedOrder').find('.orderDetail_state').html('已关闭');
+    })
 
+</script>
 </body>
 </html>

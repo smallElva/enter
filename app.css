@@ -517,34 +517,35 @@ input, textarea {
   height: 82px;
   line-height: 82px; }
 
-.catbox table {
-  margin: 30px auto;
+#cartTable {
   background: #fff;
   text-align: center;
-  width: 100%; }
+  margin: 38px 0 82px; }
 
-.catbox table th, .catbox table td {
-  border-bottom: 1px solid #f3f3f3; }
-
-.catbox table th {
+.carHead {
   height: 62px;
   line-height: 62px;
-  text-align: center; }
+  border-bottom: 1px solid #f3f3f3; }
 
-.catbox table th:first-child {
-  padding-left: 30px;
-  text-align: left; }
+.carHead_left {
+  margin-left: -45px; }
 
-.catbox table th:last-child {
-  padding-right: 30px;
-  text-align: right; }
+.item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f3f3; }
 
-.catbox table td {
-  padding-top: 10px;
-  padding-bottom: 10px; }
+.item_left {
+  padding: 0;
+  height: 102px;
+  line-height: 102px; }
 
-.catbox table tbody tr td:first-child {
-  padding-left: 20px; }
+.item_height {
+  height: 102px;
+  line-height: 102px; }
+
+.carHead_right {
+  padding-right: 30px; }
 
 .checkbox {
   width: 48px;
@@ -569,6 +570,13 @@ input[type="checkbox"] + label span {
 
 input[type="checkbox"]:checked + label span {
   background: url(images/checked.jpg) center no-repeat; }
+
+.item_left input[type="checkbox"] + label span {
+  margin: -2px auto 0; }
+
+.item_left .checkbox {
+  width: auto;
+  margin-left: 15px; }
 
 .check-all {
   vertical-align: middle; }
@@ -595,7 +603,7 @@ input[type="checkbox"]:checked + label span {
   line-height: 102px;
   border: 1px solid #f3f3f3;
   text-align: center;
-  margin-right: 50px;
+  margin-right: 35px;
   float: left; }
 
 .price {
@@ -604,7 +612,7 @@ input[type="checkbox"]:checked + label span {
 .count {
   width: 100px; }
 
-.count .add, .count input, .count .reduce {
+.count .add, .count-input, .count .reduce {
   float: left;
   margin-right: -1px;
   position: relative;
@@ -622,7 +630,7 @@ input[type="checkbox"]:checked + label span {
   z-index: 3;
   cursor: pointer; }
 
-.count input {
+.count-input {
   width: 40px;
   height: 30px;
   line-height: 30px;
@@ -632,6 +640,9 @@ input[type="checkbox"]:checked + label span {
   padding: 4px 0;
   background-color: #fff;
   z-index: 2; }
+
+.count-input:focus {
+  outline: none; }
 
 .subtotal {
   width: 150px; }
@@ -644,6 +655,32 @@ input[type="checkbox"]:checked + label span {
 .operation span:hover, a:hover {
   cursor: pointer;
   color: #ff5400; }
+
+.item_img .goods-img {
+  margin-left: 20px; }
+
+.item_height .count {
+  width: 100px;
+  height: 30px;
+  margin: 36px auto; }
+
+.item_height .operation {
+  text-align: center; }
+
+.gifts {
+  margin-top: 30px; }
+
+.gifts .myOrderList_gifts {
+  padding: 0 0 0 20px; }
+
+.gifts .gifts_t {
+  width: 160px;
+  text-align: right;
+  margin-left: 0;
+  padding-right: 15px; }
+
+.gifts .gifts_name {
+  padding-left: 15px; }
 
 .foot {
   height: 82px;
@@ -835,20 +872,18 @@ input[type="checkbox"]:checked + label span {
   margin-top: 30px;
   margin-bottom: 0; }
 
-#sureOrderTable thead tr {
-  border-top: 2px solid #f3f3f3; }
-
-#sureOrderTable > thead > tr > th, #sureOrderTable > tbody > tr > th, #sureOrderTable > tfoot > tr > th, #sureOrderTable > thead > tr > td, #sureOrderTable > tbody > tr > td, #sureOrderTable > tfoot > tr > td {
+#sureOrderTable .sureOrderTable_head {
+  border-top: 1px solid #f3f3f3;
   padding: 0;
   height: 60px;
   line-height: 60px;
   text-align: center;
-  border-bottom: none;
-  border-color: #f3f3f3; }
+  border-bottom: 1px solid #f3f3f3; }
 
-#sureOrderTable > tbody > tr > td {
+#sureOrderTable .sureOrderTable_item {
   height: 176px;
-  line-height: 176px; }
+  line-height: 176px;
+  text-align: center; }
 
 .sureOrder-goods .goods-name {
   text-align: left;
@@ -941,9 +976,28 @@ input[type="checkbox"]:checked + label span {
 .payOrder-p span {
   color: #ff5400; }
 
+.moreOrderDetail {
+  color: #898888;
+  line-height: 2;
+  display: none; }
+
+.dis_block {
+  display: block; }
+
+.scale_img {
+  -moz-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+  /*IE*/
+  filter: FlipV; }
+
+.payOrder_tips {
+  margin: 20px 0 15px; }
+
 .orderInfo {
-  margin: 26px 0 15px;
-  color: #898888; }
+  color: #898888;
+  margin-top: 5px; }
 
 .orderInfo span {
   padding-right: 10px; }
@@ -1158,16 +1212,81 @@ input[type="checkbox"]:checked + label span {
 .myOrderList {
   border-bottom: 1px solid #f3f3f3; }
 
+.myOrderList_gifts {
+  padding: 0 40px 28px 40px;
+  margin-top: 10px; }
+
+.myOrderList_gifts_out {
+  background: #f7f7f7;
+  padding: 24px 0; }
+
+.gifts_t {
+  color: #000;
+  vertical-align: top;
+  width: 42px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 137px; }
+
+.gifts_img {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  text-align: center;
+  line-height: 50px; }
+
+.gifts_name {
+  color: #000;
+  vertical-align: middle; }
+
+.myOrderList_gifts_out .row {
+  margin-bottom: 28px;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0; }
+
+.myOrderList_gifts_out .row:last-child {
+  margin-bottom: 0; }
+
 .myOrderNum {
   height: 50px;
   line-height: 50px;
   background: #ebe9e9; }
+
+.myGiftMoney, .myGiftNumber {
+  text-align: center;
+  height: 50px;
+  line-height: 50px; }
 
 .orderNumber {
   padding: 0 120px 0 40px; }
 
 .orderGoods {
   padding: 24px 0 24px 40px; }
+
+.myOrderList_gifts_out {
+  position: relative; }
+
+.myOrderList_gifts_out .goods-img {
+  border: none; }
+
+.myOrderList_gifts_out .col-lg-6 {
+  padding: 0;
+  margin-right: 20px; }
+
+.myOrderList_gifts_out .orderGoods {
+  padding: 0; }
+
+.myOrderList_up {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  z-index: 0; }
 
 .myOrderMoney, .myOrderNumber, .myOrderState {
   height: 150px;
@@ -1206,18 +1325,49 @@ input[type="checkbox"]:checked + label span {
   line-height: 40px;
   background: #fe3232;
   border-radius: 6px;
-  margin-left: 40px; }
+  margin-left: 20px;
+  margin-top: 15px; }
 
 .gotoBuy:hover, .gotoBuy:focus {
   background: #fe4b4b;
   color: #fff; }
+
+.noOrder .tab-content, .noThisOrder, .noService .tab-content {
+  padding: 50px 0;
+  text-align: center;
+  background: #f3f3f3; }
+
+.noOrder_tips {
+  font-size: 18px;
+  margin-bottom: 28px; }
+
+.goOrder {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #ff5400;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px; }
+
+.goOrder:hover, .goOrder:focus {
+  background: #ff651a;
+  color: #fff; }
+
+.goSee {
+  color: #898888;
+  font-size: 15px;
+  margin-top: -18px; }
 
 .orderDetailProcess {
   text-align: center;
   padding: 30px 40px;
   position: relative; }
 
-.detailOfferOrder {
+.unpaid .detailOfferOrder, .paid .detailFendOrder, .paid .detailOfferOrder, .successOrder .detailOfferOrder, .successOrder .detailFendOrder, .successOrder .detailDeliverOrder, .closedOrder .stateRow {
   color: #ff5400; }
 
 .line {
@@ -1237,7 +1387,7 @@ input[type="checkbox"]:checked + label span {
   position: relative;
   z-index: 99; }
 
-.detailOfferOrder .detailCircle {
+.unpaid .detailOfferOrder .detailCircle, .paid .detailFendOrder .detailCircle, .paid .detailOfferOrder .detailCircle, .successOrder .detailFendOrder .detailCircle, .successOrder .detailOfferOrder .detailCircle, .successOrder .detailDeliverOrder .detailCircle, .closedOrder .detailCircle {
   border-color: #ff5400; }
 
 .orderDetailDo {
@@ -1262,7 +1412,7 @@ input[type="checkbox"]:checked + label span {
   padding-right: 20px; }
 
 .detail_state {
-  width: 70%; }
+  width: 65%; }
 
 .orderDetailDo_btns {
   height: 64px;
@@ -1294,10 +1444,36 @@ input[type="checkbox"]:checked + label span {
   margin-bottom: 15px;
   color: #030304; }
 
-.edit {
+.edit, .yellowColor {
   font-size: 14px;
   color: #ff5400;
-  padding-left: 20px; }
+  padding-left: 20px;
+  cursor: pointer; }
+
+.yellowColor {
+  padding: 0; }
+
+.edit:focus, .yellowColor:focus {
+  outline: none;
+  color: #ff5400; }
+
+#invoiceModal #invoice li {
+  margin-top: 0;
+  margin-bottom: 28px;
+  width: 230px; }
+
+#invoiceModal #invoice li:last-child {
+  margin-right: 0;
+  float: right; }
+
+#comInvoice {
+  display: none; }
+
+#bzModal .form-group {
+  margin-top: 28px; }
+
+.unPickup .redLine1, .delivering .redLine2, .unpaid .redLine1, .paid .redLine2, .successOrder .redLine3, .closedOrder .redLine4, .sending .redLine3, .successPick .redLine4 {
+  visibility: visible; }
 
 .applyServiceHead {
   border-bottom: 1px solid #f3f3f3; }
@@ -1314,6 +1490,15 @@ input[type="checkbox"]:checked + label span {
   padding-top: 50px;
   line-height: inherit;
   height: 150px; }
+
+.no_gift {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 15px;
+  height: 1px;
+  background: #898888;
+  margin: 0 auto; }
 
 #serviceKind li, #returnKind li {
   margin-top: 0; }
@@ -1377,6 +1562,9 @@ input[type="checkbox"]:checked + label span {
   *display: inline;
   *zoom: 1; }
 
+.default_img {
+  margin-right: 20px; }
+
 .isImg {
   width: 132px;
   height: 132px;
@@ -1398,10 +1586,38 @@ input[type="checkbox"]:checked + label span {
   line-height: 22px;
   color: white; }
 
+.removeBtn:focus {
+  outline: none; }
+
 .orderDetail_tips {
   color: #898888;
   margin-top: 10px;
   position: relative; }
+
+#orderDetail_tips1 {
+  display: block;
+  margin-top: 15px; }
+
+.orderDetail_tips2 {
+  color: #898888;
+  display: none;
+  margin-top: 28px; }
+
+.delivery_select {
+  color: #ff5400;
+  margin-right: 30px;
+  box-shadow: none; }
+
+#delivery_self {
+  display: none; }
+
+.delivery_num {
+  box-shadow: none; }
+
+.delivery_select:focus, .delivery_num:focus {
+  outline: none;
+  border-color: #ccc;
+  box-shadow: none; }
 
 .offerReview {
   margin: 0 28px 0 0; }
@@ -1411,11 +1627,15 @@ input[type="checkbox"]:checked + label span {
   border: none;
   border-radius: 4px; }
 
-.orderDetail_tips .icon-rili {
+#other_delivery {
+  position: relative; }
+
+.orderDetail_tips .icon-rili, .orderDetail_content .icon-rili {
   position: absolute;
   left: 200px;
   top: 4px;
-  color: #ff5400; }
+  color: #ff5400;
+  cursor: pointer; }
 
 .calendarInput:focus {
   outline: none;
@@ -1451,6 +1671,13 @@ input[type="checkbox"]:checked + label span {
   padding: 0 10px;
   vertical-align: middle; }
 
+.col-20 {
+  width: 20%;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left; }
+
 .service_bc {
   color: #898888; }
 
@@ -1460,14 +1687,15 @@ input[type="checkbox"]:checked + label span {
 .problemImgs img {
   margin-right: 5px; }
 
-.redLine1, .redLine2, .redLine3, .redLine4 {
+.redLine1, .redLine2, .redLine3, .redLine4, .redLine51, .redLine52, .redLine53, .redLine54, .redLine55 {
   width: calc(12.5% - 16px);
   height: 1px;
   background: #ff5400;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2; }
+  z-index: 2;
+  visibility: hidden; }
 
 .redLine2 {
   width: calc(37.5% - 8px); }
@@ -1476,12 +1704,61 @@ input[type="checkbox"]:checked + label span {
   width: 62.5%; }
 
 .redLine4 {
-  width: calc(87.5% + 8px); }
+  width: 100%; }
 
-#deliveryInfo .detailOfferOrder .detailCircle, #deliveryInfo .detailFendOrder .detailCircle, #deliveryInfo .detailDeliverOrder .detailCircle {
+.redLine51 {
+  width: calc(10% - 16px); }
+
+.redLine52 {
+  width: calc(30% - 8px); }
+
+.redLine53 {
+  width: 50%; }
+
+.redLine54 {
+  width: calc(70% + 8px); }
+
+.redLine55 {
+  width: 100%; }
+
+.sureOrder-words {
+  margin-top: 0;
+  color: #030304;
+  padding: 28px; }
+
+#orderWordsDiv .a-upload {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  margin-bottom: 0; }
+
+#orderWordsDiv .isImg {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+  margin-right: 30px; }
+
+#orderWordsDiv .orderDetail_tips {
+  margin-bottom: 27px;
+  margin-top: 20px; }
+
+.order_tips {
+  color: #898888; }
+
+.reviewOrder .redLine51, .failOrder .redLine51, .alreadyOrder .redLine52, .pickOrder .redLine53, .dealOrder .redLine54, .doneOrder .redLine55 {
+  visibility: visible; }
+
+.reviewOrder .detailOfferOrder .detailCircle, .failOrder .detailOfferOrder .detailCircle, .alreadyOrder .detailOfferOrder .detailCircle, .alreadyOrder .detailFendOrder .detailCircle, .pickOrder .detailOfferOrder .detailCircle, .pickOrder .detailFendOrder .detailCircle, .pickOrder .detailDeliverOrder .detailCircle, .dealOrder .detailOfferOrder .detailCircle, .dealOrder .detailFendOrder .detailCircle, .dealOrder .detailDeliverOrder .detailCircle, .dealOrder .detailDoOrder .detailCircle, .doneOrder .detailOfferOrder .detailCircle, .doneOrder .detailFendOrder .detailCircle, .doneOrder .detailDeliverOrder .detailCircle, .doneOrder .detailDoOrder .detailCircle, .doneOrder .detailFinishOrder .detailCircle {
   border-color: #ff5400; }
 
-#deliveryInfo .detailDeliverOrder, #deliveryInfo .detailOfferOrder, #deliveryInfo .detailFendOrder {
+.reviewOrder .detailOfferOrder, .failOrder .detailOfferOrder, .alreadyOrder .detailOfferOrder, .alreadyOrder .detailFendOrder, .pickOrder .detailOfferOrder, .pickOrder .detailFendOrder, .pickOrder .detailDeliverOrder, .dealOrder .detailOfferOrder, .dealOrder .detailFendOrder, .dealOrder .detailDeliverOrder, .dealOrder .detailDoOrder, .doneOrder .detailOfferOrder, .doneOrder .detailFendOrder, .doneOrder .detailDeliverOrder, .doneOrder .detailDoOrder, .doneOrder .detailFinishOrder {
+  color: #ff5400; }
+
+.unPickup .detailOfferOrder .detailCircle, .delivering .detailOfferOrder .detailCircle, .delivering .detailFendOrder .detailCircle, .sending .detailOfferOrder .detailCircle, .sending .detailFendOrder .detailCircle, .sending .detailDeliverOrder .detailCircle, .successPick .detailOfferOrder .detailCircle, .successPick .detailFendOrder .detailCircle, .successPick .detailDeliverOrder .detailCircle, .successPick .detailFinishOrder .detailCircle {
+  border-color: #ff5400; }
+
+.unPickup .detailOfferOrder, .sending, .sending .detailDeliverOrder, .sending .detailOfferOrder, .sending .detailFendOrder, .successPick .stateRow {
   color: #ff5400; }
 
 .deliveryInfo_block {
@@ -1494,11 +1771,23 @@ input[type="checkbox"]:checked + label span {
   padding: 20px 40px 30px 40px;
   position: relative; }
 
-.angle_up {
+.sending .angle_up, .unPickup .angle_up, .delivering .angle_up, .successPick .angle_up {
   position: absolute;
   top: -10px;
   left: 62.5%;
   margin-left: -26px; }
+
+.unPickup .angle_up {
+  left: 12.5%;
+  margin-left: -8px; }
+
+.delivering .angle_up {
+  left: 37.5%;
+  margin-left: -16px; }
+
+.successPick .angle_up {
+  left: 87.5%;
+  margin-left: -42px; }
 
 .trackingMsgBlock {
   padding: 28px;
@@ -1549,6 +1838,17 @@ input[type="checkbox"]:checked + label span {
 
 .trackingList:first-child li:first-child .trackingCircle {
   background: #ff5400; }
+
+.unPickup .trackingBlock {
+  text-align: center; }
+
+.unPickup-text {
+  font-size: 18px;
+  margin-bottom: 62px; }
+
+.deliveryCar {
+  margin-top: 42px;
+  margin-bottom: 18px; }
 
 .discountTitle {
   padding-right: 40px; }
@@ -1661,6 +1961,90 @@ input[type="checkbox"]:checked + label span {
   background: #f0eeee;
   outline: none; }
 
+.has-error .help-block {
+  color: #fe3232;
+  font-size: 12px;
+  padding-left: 29px; }
+
+.has-error .form-control, .has-error .form-control:focus, .has-success .form-control, .has-success .form-control:focus {
+  border-color: #dfdfdf; }
+
+.form-control-feedback {
+  position: absolute;
+  right: 19px; }
+
+.has-feedback label ~ .form-control-feedback {
+  top: 62px; }
+
+.has-error .form-control-feedback {
+  color: #000; }
+
+.has-success .form-control-feedback {
+  color: #ff5400; }
+
+.form-group {
+  position: relative; }
+
+.newPwd-group .form-control-feedback {
+  top: 7px; }
+
+.btn-red[disabled]:hover {
+  cursor: not-allowed; }
+
+.login_header {
+  padding: 40px 0; }
+
+.login_content {
+  overflow: hidden;
+  background: url("images/loginBg.jpg") center center no-repeat;
+  height: 780px;
+  position: relative; }
+
+.login {
+  width: 360px;
+  background: rgba(250, 250, 250, 0.9);
+  position: absolute;
+  right: 18%;
+  top: 180px;
+  padding: 28px; }
+
+.login_footer {
+  text-align: center; }
+
+.ser_footer {
+  font-size: 16px;
+  color: #898888;
+  padding: 24px 0 10px; }
+
+.ser_kefu {
+  padding: 0 40px 0 10px; }
+
+.ser_num {
+  padding: 0 0 0 10px; }
+
+.line_footer {
+  font-size: 12px;
+  color: #bbbaba;
+  padding-bottom: 20px; }
+
+.login_t {
+  font-size: 20px;
+  color: #030304;
+  text-align: center;
+  margin-bottom: 28px; }
+
+.other_t {
+  font-size: 14px;
+  color: #898888;
+  text-align: center; }
+
+.login_other {
+  color: #ff874c;
+  padding: 0 10px; }
+
+.login_other .iconfont {
+  font-size: 30px !important; }
+
 @media (min-width: 768px) {
   .addressModal .form-horizontal .control-label {
     padding-top: 0;
@@ -1715,19 +2099,28 @@ input[type="checkbox"]:checked + label span {
   .myInfoModal .form-group {
     margin-bottom: 28px; }
 
+  #login .form-group {
+    margin-top: 28px; }
+
+  #login .form-links {
+    margin-bottom: 20px; }
+
   .myInfoModal .input-group {
     margin-bottom: 8px; }
 
-  .myInfoModal .form-control {
+  .myInfoModal .form-control, #login .form-control {
     width: 100%;
     height: 50px;
-    line-height: 50px;
     padding: 12px 29px;
     border: 1px solid #dfdfdf;
     -webkit-box-shadow: none;
     box-shadow: none;
     margin-bottom: 20px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    background: transparent; }
+
+  #login .form-group {
+    margin-bottom: 0; }
 
   .btn-red {
     width: 100%;
@@ -1746,7 +2139,13 @@ input[type="checkbox"]:checked + label span {
     background: #ff651a; }
 
   .addressModal .form-group {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+
+  #login .mobile-number {
+    padding: 12px 29px 12px 95px; }
+
+  #login .form-control, #login .btn-yz {
+    margin-bottom: 28px; } }
 @media (min-width: 768px) and (max-width: 939px) {
   #navTopList li {
     padding: 10px 20px; } }

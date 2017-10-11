@@ -57,144 +57,244 @@
                 <a class="goBuy pull-right" href="#">继续购物 <i class="iconfont icon-right f-24"></i> </a>
             </div>
             <!--购物车结算-->
-            <div class="catbox">
-                <table id="cartTable">
-                    <thead>
-                    <tr>
-                        <th>
-                            <input class="check-all check" type="checkbox" id="all"/>
-                            <label for="all"><span></span>全选</label>
-                        </th>
-                        <th>商品</th>
-                        <th>单价</th>
-                        <th>数量</th>
-                        <th>小计</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="item">
-                        <td>
-                            <div class="checkbox">
-                                <input class="check-one check" type="checkbox" id="choose1"/>
-                                <label for="choose1"><span></span></label>
+            <div class="catbox shopCartBox">
+                <div id="cartTable">
+                    <div class="carHead">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="carHead_left">
+                                    <input class="check-all check" type="checkbox" id="all"/>
+                                    <label for="all"><span></span>全选</label>
+                                </div>
                             </div>
-                        </td>
-                        <td class="goods">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <p class="goods-name">卡拉OK E5</p>
-                            <p class="goods-color">颜色：黑色</p>
-                        </td>
-                        <td class="price">5999.88</td>
-                        <td class="count">
-                            <span class="reduce"></span>
-                            <input class="count-input" type="text" value="1"/>
-                            <span class="add">+</span></td>
-                        <td class="subtotal">5999.88</td>
-                        <td class="operation"><span class="delete iconfont icon-close"></span></td>
-                    </tr>
-                    <tr class="item">
-                        <td>
-                            <div class="checkbox">
-                                <input class="check-one check" type="checkbox" id="choose2"/>
-                                <label for="choose2"><span></span></label>
+                            <div class="col-lg-3">商品</div>
+                            <div class="col-lg-2">单价</div>
+                            <div class="col-lg-2">数量</div>
+                            <div class="col-lg-2">小计</div>
+                            <div class="col-lg-1"><div class="carHead_right">操作</div></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-1 item_left">
+                                <div class="checkbox">
+                                    <input class="check-one check" type="checkbox" id="choose1"/>
+                                    <label for="choose1"><span></span></label>
+                                </div>
                             </div>
-                        </td>
-                        <td class="goods">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <p class="goods-name">卡拉OK E5</p>
-                            <p class="goods-color">颜色：黑色</p>
-                        </td>
-                        <td class="price">3888.50</td>
-                        <td class="count">
-                            <span class="reduce"></span>
-                            <input class="count-input" type="text" value="1"/>
-                            <span class="add">+</span></td>
-                        <td class="subtotal">3888.50</td>
-                        <td class="operation"><span class="delete iconfont icon-close"></span></td>
-                    </tr>
-                    <tr class="item">
-                        <td>
-                            <div class="checkbox">
-                                <input class="check-one check" type="checkbox" id="choose3"/>
-                                <label for="choose3"><span></span></label>
+                            <div class="col-lg-4 item_img">
+                                <div class="goods">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <p class="goods-name">卡拉OK E5</p>
+                                    <p class="goods-color">颜色：黑色</p>
+                                </div>
                             </div>
-                        </td>
-                        <td class="goods">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <p class="goods-name">卡拉OK E5</p>
-                            <p class="goods-color">颜色：黑色</p>
-                        </td>
-                        <td class="price">1428.50</td>
-                        <td class="count">
-                            <span class="reduce"></span>
-                            <input class="count-input" type="text" value="1"/>
-                            <span class="add">+</span></td>
-                        <td class="subtotal">1428.50</td>
-                        <td class="operation"><span class="delete iconfont icon-close"></span></td>
-                    </tr>
-                    <tr class="item">
-                        <td>
-                            <div class="checkbox">
-                                <input class="check-one check" type="checkbox" id="choose4"/>
-                                <label for="choose4"><span></span></label>
+                            <div class="col-lg-2 item_height"><span class="price" id="price">5999.88</span></div>
+                            <div class="col-lg-2 item_height">
+                                <div class="count">
+                                    <span class="reduce"></span>
+                                    <input class="count-input" type="text" value="1"/>
+                                    <span class="add">+</span>
+                                </div>
                             </div>
-                        </td>
-                        <td class="goods">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <p class="goods-name">卡拉OK E5</p>
-                            <p class="goods-color">颜色：黑色</p>
-                        </td>
-                        <td class="price">640.60</td>
-                        <td class="count">
-                            <span class="reduce"></span>
-                            <input class="count-input" type="text" value="1"/>
-                            <span class="add">+</span></td>
-                        <td class="subtotal">640.60</td>
-                        <td class="operation"><span class="delete iconfont icon-close"></span></td>
-                    </tr>
-                    <tr class="item">
-                        <td>
-                            <div class="checkbox">
-                                <input class="check-one check" type="checkbox" id="choose6"/>
-                                <label for="choose6"><span></span></label>
+                            <div class="col-lg-2 item_height"><span class="subtotal" id="subtotal">5999.88</span></div>
+                            <div class="col-lg-1 item_height">
+                                <div class="operation"><span class="delete iconfont icon-close"></span></div>
                             </div>
-                        </td>
-                        <td class="goods">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <p class="goods-name">卡拉OK E5</p>
-                            <p class="goods-color">颜色：黑色</p>
-                        </td>
-                        <td class="price">640.60</td>
-                        <td class="count">
-                            <span class="reduce"></span>
-                            <input class="count-input" type="text" value="1"/>
-                            <span class="add">+</span></td>
-                        <td class="subtotal">640.60</td>
-                        <td class="operation"><span class="delete iconfont icon-close"></span></td>
-                    </tr>
-                    <tr class="item">
-                        <td>
-                            <div class="checkbox">
-                                <input class="check-one check" type="checkbox" id="choose5"/>
-                                <label for="choose5"><span></span></label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-1 item_left">
+                                <div class="checkbox">
+                                    <input class="check-one check" type="checkbox" id="choose2"/>
+                                    <label for="choose2"><span></span></label>
+                                </div>
                             </div>
-                        </td>
-                        <td class="goods">
-                            <div class="goods-img"><img src="images/product1.png" alt=""/></div>
-                            <p class="goods-name">卡拉OK E5</p>
-                            <p class="goods-color">颜色：黑色</p>
-                        </td>
-                        <td class="price">640.60</td>
-                        <td class="count">
-                            <span class="reduce"></span>
-                            <input class="count-input" type="text" value="1"/>
-                            <span class="add">+</span></td>
-                        <td class="subtotal">640.60</td>
-                        <td class="operation"><span class="delete iconfont icon-close"></span></td>
-                    </tr>
-                    </tbody>
-                </table>
+                            <div class="col-lg-4 item_img">
+                                <div class="goods">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <p class="goods-name">卡拉OK E5</p>
+                                    <p class="goods-color">颜色：黑色</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="price">5999.88</span></div>
+                            <div class="col-lg-2 item_height">
+                                <div class="count">
+                                    <span class="reduce"></span>
+                                    <input class="count-input" type="text" value="1"/>
+                                    <span class="add">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="subtotal">1999.00</span></div>
+                            <div class="col-lg-1 item_height">
+                                <div class="operation"><span class="delete iconfont icon-close"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-1 item_left">
+                                <div class="checkbox">
+                                    <input class="check-one check" type="checkbox" id="choose3"/>
+                                    <label for="choose3"><span></span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 item_img">
+                                <div class="goods">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <p class="goods-name">卡拉OK E5</p>
+                                    <p class="goods-color">颜色：黑色</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="price">5999.88</span></div>
+                            <div class="col-lg-2 item_height">
+                                <div class="count">
+                                    <span class="reduce"></span>
+                                    <input class="count-input" type="text" value="1"/>
+                                    <span class="add">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="subtotal">1999.00</span></div>
+                            <div class="col-lg-1 item_height">
+                                <div class="operation"><span class="delete iconfont icon-close"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-1 item_left">
+                                <div class="checkbox">
+                                    <input class="check-one check" type="checkbox" id="choose4"/>
+                                    <label for="choose4"><span></span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 item_img">
+                                <div class="goods">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <p class="goods-name">卡拉OK E5</p>
+                                    <p class="goods-color">颜色：黑色</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="price">5999.88</span></div>
+                            <div class="col-lg-2 item_height">
+                                <div class="count">
+                                    <span class="reduce"></span>
+                                    <input class="count-input" type="text" value="1"/>
+                                    <span class="add">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="subtotal">1999.00</span></div>
+                            <div class="col-lg-1 item_height">
+                                <div class="operation"><span class="delete iconfont icon-close"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-1 item_left">
+                                <div class="checkbox">
+                                    <input class="check-one check" type="checkbox" id="choose5"/>
+                                    <label for="choose5"><span></span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 item_img">
+                                <div class="goods">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <p class="goods-name">卡拉OK E5</p>
+                                    <p class="goods-color">颜色：黑色</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="price">5999.88</span></div>
+                            <div class="col-lg-2 item_height">
+                                <div class="count">
+                                    <span class="reduce"></span>
+                                    <input class="count-input" type="text" value="1"/>
+                                    <span class="add">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="subtotal">1999.00</span></div>
+                            <div class="col-lg-1 item_height">
+                                <div class="operation"><span class="delete iconfont icon-close"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-1 item_left">
+                                <div class="checkbox">
+                                    <input class="check-one check" type="checkbox" id="choose6"/>
+                                    <label for="choose6"><span></span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 item_img">
+                                <div class="goods">
+                                    <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                                    <p class="goods-name">卡拉OK E5</p>
+                                    <p class="goods-color">颜色：黑色</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="price">5999.88</span></div>
+                            <div class="col-lg-2 item_height">
+                                <div class="count">
+                                    <span class="reduce"></span>
+                                    <input class="count-input" type="text" value="1"/>
+                                    <span class="add">+</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 item_height"><span class="subtotal">1999.00</span></div>
+                            <div class="col-lg-1 item_height">
+                                <div class="operation"><span class="delete iconfont icon-close"></span></div>
+                            </div>
+                        </div>
+                        <!--有赠品-->
+                        <div class="gifts">
+                            <div class="row">
+                                <div class="col-lg-10 col-lg-offset-1">
+                                    <div class="myOrderList_gifts">
+                                        <div class="myOrderList_gifts_out">
+                                            <img class="myOrderList_up" src="images/up-angle.png">
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="orderGoods clearfix">
+                                                        <span class="gifts_t">赠品：</span>
+                                                        <div class="gifts_img"><img src="images/gifts.jpg" width="36" height="45"></div>
+                                                        <span class="gifts_name">E5充电锂电池</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="myGiftMoney">13.5</div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="myGiftNumber">1</div>
+                                                </div>
+                                                <div class="col-lg-1"></div>
+                                                <div class="col-lg-1"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-5">
+                                                    <div class="orderGoods clearfix">
+                                                        <span class="gifts_t"></span>
+                                                        <div class="gifts_img"><img src="images/gifts.jpg" width="36" height="45"></div>
+                                                        <span class="gifts_name">E5充电锂电池</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <div class="myGiftMoney">13.5</div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="myGiftNumber">1</div>
+                                                </div>
+                                                <div class="col-lg-1"></div>
+                                                <div class="col-lg-1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="foot fixed-bottom" id="foot">
                     <div class="container">
                         <label class="pull-left select-all"><input class="check-all check" type="checkbox" id="all2"/><label for="all2"><span></span></label>全选</label>
@@ -230,6 +330,19 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--tipsModal-->
+    <div class="modal myInfoModal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="tipsModalLabel">对不起，您尚未选中任何商品</h4>
                 </div>
             </div>
         </div>
@@ -333,16 +446,8 @@
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/demo.js"></script>
+<script type="text/javascript" src="js/cartShop.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript">
-//    $(function () {
-//
-//
-//
-//    });
 
-
-</script>
 </body>
 </html>
