@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73213e6d-31bd-4781-bd4a-6cb00c3d2bbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sy-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/flags@1x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/flags@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/slippry.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrows.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/slippry.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/swiper.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/flags.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/demo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/intlTelInput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/swiper.jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/wow.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/shopCart2.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.css" afterPath="$PROJECT_DIR$/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.css.map" afterPath="$PROJECT_DIR$/app.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.scss" afterPath="$PROJECT_DIR$/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/intlTelInput.css" afterPath="$PROJECT_DIR$/css/intlTelInput.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/intlTelInput.js" afterPath="$PROJECT_DIR$/js/intlTelInput.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -137,29 +120,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="332" column="45" lean-forward="false" selection-start-line="332" selection-start-column="45" selection-end-line="332" selection-end-column="45" />
+            <state relative-caret-position="350">
+              <caret line="160" column="56" lean-forward="false" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="56" />
               <folding>
                 <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1507888480948" expanded="false" signature="10244:10551" ph="..." />
-                <marker date="1507888480948" expanded="false" signature="10595:14378" ph="..." />
+                <marker date="1507889400411" expanded="false" signature="10362:10669" ph="..." />
+                <marker date="1507889400411" expanded="false" signature="10713:14496" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="354" column="21" lean-forward="true" selection-start-line="354" selection-start-column="21" selection-end-line="354" selection-end-column="21" />
+            <state relative-caret-position="440">
+              <caret line="356" column="18" lean-forward="false" selection-start-line="356" selection-start-column="18" selection-end-line="356" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -277,8 +260,8 @@
         <option value="$PROJECT_DIR$/css/intlTelInput2.css" />
         <option value="$PROJECT_DIR$/css/intlTelInput.css" />
         <option value="$PROJECT_DIR$/login.html" />
-        <option value="$PROJECT_DIR$/app.scss" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app.scss" />
       </list>
     </option>
   </component>
@@ -501,12 +484,12 @@
       <workItem from="1507682884958" duration="21862000" />
       <workItem from="1507770405573" duration="2074000" />
       <workItem from="1507786315203" duration="17873000" />
-      <workItem from="1507855992746" duration="22660000" />
+      <workItem from="1507855992746" duration="23890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="514102000" />
+    <option name="totallyTimeSpent" value="515332000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,14 +501,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32735425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -917,27 +900,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="354" column="21" lean-forward="true" selection-start-line="354" selection-start-column="21" selection-end-line="354" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="332" column="45" lean-forward="false" selection-start-line="332" selection-start-column="45" selection-end-line="332" selection-end-column="45" />
+        <state relative-caret-position="350">
+          <caret line="160" column="56" lean-forward="false" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="56" />
           <folding>
             <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1507888480948" expanded="false" signature="10244:10551" ph="..." />
-            <marker date="1507888480948" expanded="false" signature="10595:14378" ph="..." />
+            <marker date="1507889400411" expanded="false" signature="10362:10669" ph="..." />
+            <marker date="1507889400411" expanded="false" signature="10713:14496" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="356" column="18" lean-forward="false" selection-start-line="356" selection-start-column="18" selection-end-line="356" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

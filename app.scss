@@ -354,7 +354,7 @@ input,textarea{
   font-size: 24px;
   color: $hoverColor;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .product:hover{
   transform: translate3d(0,-2px,0);
@@ -376,12 +376,24 @@ input,textarea{
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
-.index-ktv{
-  padding-bottom: 25px;
-}
+
 .index-ktv{
   width: 100%;
   overflow: hidden;
+  padding-bottom: 25px;
+  position: relative;
+}
+.shop-left{
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  z-index: 9;
+}
+.shop-right{
+  position: absolute;
+  right: 30%;
+  top: 50%;
+  z-index: 9;
 }
 @media only screen and (min-width: 401px) {
   .index-ktv .sy-box .sy-slides-wrap {
@@ -455,7 +467,7 @@ input,textarea{
 .index-ktv .product-info{
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 10px;
   z-index: 999;
   color: #fff;
   width: 100%;
@@ -504,6 +516,7 @@ input,textarea{
   width: 270px;
   font-size: 16px;
   vertical-align: middle;
+  line-height: 2;
 }
 .product-yuan{
   @include dib();
@@ -525,7 +538,7 @@ input,textarea{
   background: $hoverColor;
   border-radius: 5px;
   vertical-align: middle;
-  margin-top: 5px;
+  margin-top: 15px;
   box-shadow: 0 0 27px rgba(0,0,0,0.3);
 }
 .pro_moreDetail:hover{
