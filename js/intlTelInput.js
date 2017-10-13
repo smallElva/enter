@@ -218,7 +218,7 @@
             });
             selectedFlag.appendTo(this.flagsContainer);
             this.selectedFlagInner = $("<div>", {
-                "class": "iti-flag"
+                "class": "codes"
             }).appendTo(selectedFlag);
             if (this.options.separateDialCode) {
                 this.selectedDialCode = $("<div>", {
@@ -230,7 +230,7 @@
                 selectedFlag.attr("tabindex", "0");
                 // CSS triangle
                 $("<div>", {
-                    "class": "iti-arrow"
+                    "class": "iconfont"
                 }).appendTo(selectedFlag);
                 // country dropdown: preferred countries, then divider, then all countries
                 this.countryList = $("<ul>", {
@@ -506,7 +506,7 @@
             // bind all the dropdown-related listeners: mouseover, click, click-off, keydown
             this._bindDropdownListeners();
             // update the arrow
-            this.selectedFlagInner.children(".iti-arrow").addClass("up");
+            this.selectedFlagInner.children(".iconfont").removeClass('icon-down-trangle').addClass("icon-up");
         },
         // decide where to position dropdown (depends on position within viewport, and scroll)
         _setDropdownPosition: function() {
@@ -720,9 +720,10 @@
             if (this.selectedCountryData.iso2) {
                 this.defaultCountry = this.selectedCountryData.iso2;
             }
-            this.selectedFlagInner.attr("class", "iti-flag " + countryCode);
+            this.selectedFlagInner.attr("class", "codes " + countryCode);
             // update the selected country's title attribute
             var title = countryCode ? this.selectedCountryData.name + ": +" + this.selectedCountryData.dialCode : "Unknown";
+            this.selectedFlagInner.html("+" + this.selectedCountryData.dialCode + "<span class='iconfont icon-down-trangle'></span>");
             this.selectedFlagInner.parent().attr("title", title);
             if (this.options.separateDialCode) {
                 var dialCode = this.selectedCountryData.dialCode ? "+" + this.selectedCountryData.dialCode : "", parent = this.telInput.parent();
@@ -733,8 +734,11 @@
                     parent.addClass("iti-sdc-" + dialCode.length);
                 }
                 this.selectedDialCode.text(dialCode);
+
             }
-            // and the input's placeholder
+
+            // a
+            // nd the input's placeholder
             this._updatePlaceholder();
             // update the active list item
             this.countryListItems.removeClass("active");
@@ -777,7 +781,7 @@
         _closeDropdown: function() {
             this.countryList.addClass("hide");
             // update the arrow
-            this.selectedFlagInner.children(".iti-arrow").removeClass("up");
+            this.selectedFlagInner.children(".iconfont").removeClass("icon-up").addClass('icon-down-trangle');
             // unbind key events
             $(document).off(this.ns);
             // unbind click-off-to-close
