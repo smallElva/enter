@@ -155,6 +155,43 @@
         $('#regEmail_form').hide();
         $('#regPhone_form').show();
     }
+    // 传递手机号获取验证码
+    function postPhoneToGetCode(phone) {
+        $.ajax({
+            url:'www.enter.com/api/user/getVerlifyCode',
+            type:"POST",
+            data:{'mobile':phone},
+            success: function (data) {
+                //成功
+                // “获取验证码”按钮变成倒计时，并取消按钮的点击发送验证码事件
+            },
+            error:function (error) {
+                //弹出错误信息
+            }
+        })
+    }
+
+    //注册点击事件
+    function signUp(){
+        var mobile=123,code=4561;
+        $.ajax({
+            url:'www.enter.com/api/user/signIn',
+            type:"POST",
+            data:{'mobile':mobile,"code":code},
+            success: function (data) {
+                //成功,刷新页面到首页
+                if(data.status = 200){
+
+                }else if(data.status = 0){
+                    //显示错误信息
+                    alert(data.msg);
+                }
+            },
+            error:function (error) {
+                //弹出错误信息
+            }
+        })
+    }
 
 
 </script>
