@@ -155,7 +155,7 @@ function IsPC()
     }
     return flag;
 }
-//µ±ÆÁÄ»ÏòÏÂ¹öÊ±£¬µ¼º½À¸¹Ì¶¨ÔÚ¶¥²¿
+//å½“å±å¹•å‘ä¸‹æ»šæ—¶ï¼Œå¯¼èˆªæ å›ºå®šåœ¨é¡¶éƒ¨
 $(document).scroll(function () {
     var scrollHeight = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
     var scrollNavTop = $('#content')[0].offsetTop;
@@ -174,7 +174,7 @@ $(document).scroll(function () {
         $('#aside').css('top','146px');
     }
 });
-// µã»÷²àÀ¸ÖÃ¶¥±êÇ©Ò³Ãæ¹ö¶¯ÖÁ¶¥²¿
+// ç‚¹å‡»ä¾§æ ç½®é¡¶æ ‡ç­¾é¡µé¢æ»šåŠ¨è‡³é¡¶éƒ¨
 $('#toTop').click(function () {
     $("html, body").animate({ scrollTop: 0 }, 300);
 });

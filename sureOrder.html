@@ -62,7 +62,7 @@
                 <p class="f-24">收货地址</p>
                 <div class="orderAddList clearfix">
                     <div class="row">
-                        <div class="col-lg-3 defaultAdd">
+                        <div class="col-md-3 defaultAdd">
                             <div class="addMenu">
                                 <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
                                 <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
@@ -70,7 +70,7 @@
                                 <img class="addGou" src="images/addgou.png">
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-3">
                             <div class="addMenu">
                                 <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
                                 <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
@@ -78,7 +78,7 @@
                                 <img class="addGou" src="images/addgou.png">
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-3">
                             <div class="addMenu">
                                 <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
                                 <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
@@ -86,7 +86,7 @@
                                 <img class="addGou" src="images/addgou.png">
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-3">
                             <div class="addMenu-new" data-toggle="modal" data-target="#addModal">
                                 <div class="addMenu-div">
                                     <i class="iconfont icon-jiahao"></i>
@@ -154,29 +154,29 @@
                 <div class="table" id="sureOrderTable">
                     <div class="sureOrderTable_head">
                         <div class="row">
-                            <div class="col-lg-5">商品</div>
-                            <div class="col-lg-2">单价</div>
-                            <div class="col-lg-2">数量</div>
-                            <div class="col-lg-3">小计</div>
+                            <div class="col-md-5">商品</div>
+                            <div class="col-md-2">单价</div>
+                            <div class="col-md-2">数量</div>
+                            <div class="col-md-3">小计</div>
                         </div>
                     </div>
                     <div class="sureOrderTable_body">
                         <div class="sureOrderTable_item">
                             <div class="row">
-                                <div class="col-lg-5 sureOrder-goods clearfix">
+                                <div class="col-md-5 sureOrder-goods clearfix">
                                     <div class="goods-img"><img src="images/product1.png" alt=""/></div>
                                     <div class="goods-info">
                                         <p class="goods-name">卡拉OK E5</p>
                                         <p class="goods-color">颜色：黑色</p>
                                     </div>
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-md-2">
                                     <div class="perPrice">5999.88</div>
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-md-2">
                                     <div class="perNumber">1</div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-3">
                                     <div class="perTotalPrice">5999.88</div>
                                 </div>
                             </div>
@@ -318,10 +318,10 @@
                 <h4 class="modal-title deleteModal_t" id="deleteModalLabel">确定删除该地址?</h4>
                 <div class="modal-btns">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <button type="button" class="btn-qx ok" data-dismiss="modal">确定</button>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <button type="button" class="btn-red cancel" data-dismiss="modal">取消</button>
                         </div>
                     </div>
@@ -395,7 +395,7 @@
         // 收货地址点击删除效果
         $('.delete_tip').click(function (e) {
             e.stopPropagation();
-            var element = $(this).parents('.col-lg-3');
+            var element = $(this).parents('.col-md-3');
             Common.confirm({
                 operate: function (reselt) {
                     if (reselt) {

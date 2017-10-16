@@ -30,60 +30,83 @@
     <div class="login_content">
         <div class="login" id="login">
             <!--login-->
-            <div class="login_form" id="login_form" style="display: none;">
+            <div class="login_form" id="login_form" style="display: none;" data-toggle="validator">
                 <p class="login_t">账号登录</p>
-                <div class="form-group">
-                    <input class="form-control" id="login_num" placeholder="手机号码/邮箱">
+                <div class="form-group has-feedback">
+                    <input class="form-control" id="login_num" placeholder="手机号码/邮箱" data-required-error="账号不能为空" required>
+                    <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
                 </div>
-                <div class="form-group">
-                    <input class="form-control" id="login_pwd" placeholder="密码">
+                <div class="form-group has-feedback">
+                    <input class="form-control" id="login_pwd" placeholder="密码" data-required-error="密码不能为空" required>
+                    <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-links clearfix">
                     <a class="yellowColor pull-left" href="javascript:void(0);" onclick="showRegEmail();">注册</a>
                     <a class="yellowColor pull-right" href="javascript:void(0);" onclick="showRegEmail();">忘记密码？</a>
                 </div>
                 <button type="button" class="btn-red">登录</button>
-                <div class="form-group">
+                <div class="form-p">
                     <p class="other_t">其他登录方式</p>
                 </div>
-                <div class="text-center">
+                <div class="form-p text-center">
                     <a class="login_other" href="#"><i class="iconfont icon-qq"></i></a>
                     <a class="login_other" href="#"><i class="iconfont icon-weixin1"></i></a>
                     <a class="login_other" href="#"><i class="iconfont icon-weibo1"></i></a>
                 </div>
             </div>
             <!--reg_phone-->
-            <div class="regPhone_form" id="regPhone_form" >
+            <div class="regPhone_form" id="regPhone_form" style="display: none;" data-toggle="validator">
                 <p class="login_t">手机注册</p>
-                <div class="form-group">
+                <div class="form-group has-feedback">
                     <input id="mobile-number" class="form-control mobile-number" type="tel" placeholder="手机号码">
                     <p id="error-msg" class="hide">号码格式不正确</p>
+                    <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group input-group">
                     <input type="text" class="form-control" placeholder="验证码" id="codeMsg">
                     <span class="input-group-btn"><button class="btn btn-yz" type="button" id="sendCode" onclick="sends.send();">获取验证码</button></span>
                 </div>
                 <button type="button" class="btn-red">下一步</button>
-                <div class="form-links form-group clearfix">
+                <div class="form-p form-group clearfix">
                     <a class="yellowColor pull-left" href="javascript:void(0);" onclick="showLogin();">登录</a>
                     <a class="yellowColor pull-right" href="javascript:void(0);" onclick="showRegEmail();">邮箱注册</a>
                 </div>
             </div>
             <!--regEmail_form-->
-            <div class="regEmail_form" id="regEmail_form" style="display: none;">
+            <div class="regEmail_form" id="regEmail_form" role="form" data-toggle="validator">
                 <p class="login_t">邮箱注册</p>
-                <div class="form-group">
-                    <input class="form-control" placeholder="邮箱账号">
+                <div class="form-group has-feedback">
+                    <input class="form-control" type="email" placeholder="邮箱账号" required data-required-error="邮箱不能为空">
+                    <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group input-group">
                     <input type="text" class="form-control" placeholder="验证码" id="codeMsgEmail">
                     <span class="input-group-btn"><button class="btn btn-yz" type="button" id="sendCodeEmail" onclick="sends.send();">获取验证码</button></span>
                 </div>
                 <button type="button" class="btn-red">下一步</button>
-                <div class="form-links form-group clearfix">
+                <div class="form-p form-group clearfix">
                     <a class="yellowColor pull-left" href="javascript:void(0);" onclick="showLogin();">登录</a>
                     <a class="yellowColor pull-right" href="javascript:void(0);" onclick="showRegPhone();">手机注册</a>
                 </div>
+            </div>
+            <!--pwd_form-->
+            <div class="pwd_form" id="pwd_form" style="display: none;" data-toggle="validator">
+                <p class="login_t">输入密码</p>
+                <div class="form-group has-feedback">
+                    <input class="form-control" type="password" placeholder="请输入密码(6-16位字母和数字组合)" id="pwd" data-minlength="6" data-maxlength="16" data-delay="500" data-error="密码输入不正确" data-required-error="密码不能为空" required>
+                    <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                    <input class="form-control" type="password" placeholder="请再次确认密码" id="rePwd" data-match="#pwd" data-error="两次密码不一致" data-required-error="密码不能为空" required>
+                    <span class="iconfont form-control-feedback" aria-hidden="true"></span>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <button type="button" class="btn-red">完成</button>
             </div>
         </div>
     </div>
@@ -112,7 +135,6 @@
         var telInput = $("#mobile-number"),
             errorMsg = $("#error-msg");
         // 初始化
-
         telInput.intlTelInput({
             nationalMode: true,
             initialCountry: "cn"
@@ -121,7 +143,6 @@
             telInput.removeClass("error");
             errorMsg.addClass("hide");
         };
-
         //  验证号码是否符合规范
         telInput.blur(function() {
             reset();
@@ -132,11 +153,13 @@
                 }
             }
         });
-
         // on keyup / change flag: reset
         telInput.on("keyup change", reset);
     });
-
+    // 初始化验证
+    $('#regEmail_form').validator();
+    $('#regPhone_form').validator();
+    $('#login_form').validator();
     // 登录
     function showLogin() {
         $('#login_form').show();
@@ -154,6 +177,44 @@
         $('#login_form').hide();
         $('#regEmail_form').hide();
         $('#regPhone_form').show();
+    }
+
+    // 传递手机号获取验证码
+    function postPhoneToGetCode(phone) {
+        $.ajax({
+            url:'www.enter.com/api/user/getVerlifyCode',
+            type:"POST",
+            data:{'mobile':phone},
+            success: function (data) {
+                //成功
+                // “获取验证码”按钮变成倒计时，并取消按钮的点击发送验证码事件
+            },
+            error:function (error) {
+                //弹出错误信息
+            }
+        })
+    }
+
+    //注册点击事件
+    function signUp(){
+        var mobile=123,code=4561;
+        $.ajax({
+            url:'www.enter.com/api/user/signIn',
+            type:"POST",
+            data:{'mobile':mobile,"code":code},
+            success: function (data) {
+                //成功,刷新页面到首页
+                if(data.status = 200){
+
+                }else if(data.status = 0){
+                    //显示错误信息
+                    alert(data.msg);
+                }
+            },
+            error:function (error) {
+                //弹出错误信息
+            }
+        })
     }
 
 
