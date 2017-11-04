@@ -1,1 +1,23 @@
-# lierhong
+//更改内容
+2017.10.26
+1，首页banner换掉，即<div class="index-banner"></div>部分换掉
+2，首页介绍人人唱的部分已更改，以最新的为准，即<div class="apps"></div>部分替换掉
+3，首页我们的产品部分，即<div class="index-shop"></div>下的<div class=row></div>的部分换掉
+4，文件iconfont.css，fonts文件
+5，js和css，image文件都以最新的为准，没有引用到的css和js文件删除,保留images文件，删除img文件
+6，底部的js引用文件根据最新的来，包括下面自己写的js部分都换掉
+
+7，更改了page.html关于滚动监听的部分，改<body data-spy="scroll" data-target="#scrollNav" data-offset="82"></body>，将nav类名加入<ul class="detailNav clearfix"></div>变成<ul class="nav detailNav clearfix"></div>
+8，并将main.js中关于page.html的部分转移到了page里面,page.html页面底部的js文件包括自写js全部替换
+9，关于page.html下方商品详情还是按照最新的换掉，至少看起来好看点儿，不乱
+10，新闻中的详情弹窗中将slippry的滑动效果改成了bootstrap自带的效果，即给class="popup-link"的a标签加 data-toggle="modal" data-target="#newsModal"
+   并在<script>标签前，即<div class=wrapper></div>标签外增加modal部分，同样js文件和底部自写js都按照最新的替换掉
+11，新增联系我们页面，即contact.html
+
+2017.10.27
+1，address.html省市区联动的更改（已交代）
+2，login.html点击发送验证码状态
+3，在线支付页面（online_pay.html）未选择支付方式情况下的提示框效果，js部分更改
+
+
+ps:做完了我看下效果，有样式问题我来改

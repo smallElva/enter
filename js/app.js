@@ -19,16 +19,19 @@ $(function () {
                 $('#foot').addClass('fixed-bottom');
             }
         }
-        if (scrollHeight >  80) {
-            $('.navTop').addClass('fixed-top');
-            $('#aside').css('top','81px');
-            $('.content').css('marginTop','86px')
+        if (scrollHeight >  83) {
+            $('.header').addClass('fixed-top');
+            $('.sideBar').css('top','88px');
         }else{
-            $('.navTop').removeClass('fixed-top');
-            $('#aside').css('top','145px');
-            $('.content').css('marginTop','0')
+            $('.header').removeClass('fixed-top');
+            $('.sideBar').css('top','82px');
         }
     });
+    // 头部个人中心列表动画
+    $(".personList").each(function( index ) {
+        $( this ).css({'animation-delay': (index/10)+'s'});
+    });
+
     // 点击侧栏置顶标签页面滚动至顶部
     $('#toTop').click(function () {
         $("html, body").animate({ scrollTop: 0 }, 300);
@@ -52,6 +55,47 @@ $(function () {
         $('#companyInvoice').show();
     });
 
+    /*--点击购物车部分--*/
+    var $el = $("#js_showCart");
+    var $cart = $('#shopCartBlock');
+    var $showPerson = $("#js_showPerson");
+    var $person = $("#personBlock");
+    var $showNav = $('#showNav');
+    var $sideBar = $('#sideBar');
+    $el.click(function(e){
+        e.stopPropagation();
+        $cart.fadeToggle('fast');//  点击购物车标志，出现购物车
+        $person.fadeOut('fast');
+    });
+    $showPerson.click(function(e){
+        e.stopPropagation();
+        $person.fadeToggle('fast');//  点击购物车标志，出现个人中心列表
+        $cart.fadeOut('fast');
+    });
+    // 删除购物车中的商品
+    $('.js_deleteGoods').click(function (e) {
+        e.stopPropagation();
+        $(this).parent('li').remove();
+    });
+    //侧导航动画
+    $showNav.click(function (e) {
+        e.stopPropagation();
+        $(this).toggleClass('icon-click icon-out');
+        $sideBar.toggleClass('sideBarLeft');
+    });
+    $(document).on('click',function(e){
+        if(($(e.target) != $el) && (!$cart.is(':hidden'))){
+            $cart.fadeOut('fast'); // 点击页面任何其他地方，购物车消失
+        }
+        if(($(e.target) != $showPerson) && (!$person.is(':hidden'))){
+            $person.fadeOut('fast'); // 点击页面任何其他地方，个人中心
+        }
+        if(($(e.target) != $showNav) && ($sideBar.hasClass('sideBarLeft'))){
+            $sideBar.removeClass('sideBarLeft');
+            $showNav.removeClass('icon-click').addClass('icon-out');
+        }
+    });
+    /*--点击购物车部分-end!--*/
     //模态框居中调用方法
     $('.modal').on('show.bs.modal', centerModals);
     $(window).on('resize', centerModals);
@@ -119,12 +163,12 @@ function delete_ok(element,params2,getTotal){
         var defaults={
             province: '#province',
             city: '#city',
-            country: '#country'
+            area: '#area'
         };
         var opts=$.extend({}, defaults, options),
             province=$(opts.province),
             city=$(opts.city),
-            country=$(opts.country);
+            area=$(opts.area);
         //ajax公用函数
         function ajaxFun(url,type,obj,selectOption){
             $.ajax({
@@ -133,12 +177,15 @@ function delete_ok(element,params2,getTotal){
                 type:"GET",
                 success:function(xmlDoc){
                     var valueList = $(xmlDoc).find(selectOption);
-                    if(obj==city || obj==country ){
+                    if(obj==city || obj==area ){
                         valueList = $(xmlDoc).find(selectOption).children(obj);
                     }
                     $(valueList).each(function(){
-                        obj.append("<option value='"+$(this).attr("name")+"'>"+$(this).attr("name")+"</option>");
+                        obj.append("<option value='"+$(this).attr("postcode")+"'>"+$(this).attr("name")+"</option>");
                     });
+                    $('#provinceVal').val($("#province option:selected").text());
+                    $('#cityVal').val($("#city option:selected").text());
+                    $('#areaVal').val($("#area option:selected").text());
                 }
             });
         }
@@ -146,36 +193,41 @@ function delete_ok(element,params2,getTotal){
         function init(){
             province.append("<option value='0'>请选择省份..</option>");
             city.append("<option value='0'>请选择城市..</option>");
-            country.append("<option value='0'>请选择县区..</option>");
+            area.append("<option value='0'>请选择县区..</option>");
             var selectOption="province";
-            ajaxFun("area.xml","xml",province,selectOption);
+            ajaxFun("areas.xml","xml",province,selectOption);
+
         }
+
         //选择省份
         province.on('change', function() {
             if($(this).val() == "0") {
                 city.find("option").remove();
-                country.find("option").remove();
+                area.find("option").remove();
                 city.append("<option value='0'>请选择城市..</option>");
-                country.append("<option value='0'>请选择县区..</option>");
+                area.append("<option value='0'>请选择县区..</option>");
             }else{
                 city.find("option").remove();
-                country.find("option").remove();
+                area.find("option").remove();
                 var selectVal = $(this).val();
+
                 //被选择的省份
-                var provinceOption="province[name="+selectVal+"]";
+                var provinceOption="province[postcode="+selectVal+"]";
                 //当选择省份时初始联动显示的第一个城市
-                var cityOption="province[name="+selectVal+"] city:first";
-                ajaxFun("area.xml","xml",city,provinceOption); //城市
-                ajaxFun("area.xml","xml",country,cityOption);  //县区
+                var cityOption="province[postcode="+selectVal+"] city:first";
+                ajaxFun("areas.xml","xml",city,provinceOption); //城市
+                ajaxFun("areas.xml","xml",area,cityOption);  //县区
             }
+
         });
         //选择城市
         city.on('change', function() {
-            country.find("option").remove();
+            area.find("option").remove();
             var selectVal = $(this).val();
-            var selectOption="city[name="+selectVal+"]";
-            ajaxFun("area.xml","xml",country,selectOption);
+            var selectOption="city[postcode="+selectVal+"]";
+            ajaxFun("areas.xml","xml",area,selectOption);
         });
         init();
+
     }
 })(jQuery);

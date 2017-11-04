@@ -1,7 +1,5 @@
-//鍗庝负 鍏敤
 (function ($) {
     sdw_hw = function (options) {
-//灏嗙敤鎴蜂紶杩涙潵鐨勫弬鏁版墿灞曡鐩栭粯璁ゅ弬鏁�
         this.obj = $.extend({}, sdw_hw.Defaults, options);
         this.gb = {
             containerObj: this.obj.containerObj || $(".block"),
@@ -14,19 +12,18 @@
     };
     sdw_hw.Defaults = {
         mainObj: '',
-        containerObj: '', //
-        animateObj: "", //闇€瑕佽繍鍔ㄧ殑瀵硅薄
-        easing: "easeIn", //杩愬姩閫熷害鍙樺寲
-        imgCompEvent: '', //鍥剧墖鍔犺浇瀹屾墽琛�
+        containerObj: '',
+        animateObj: "",
+        easing: "easeIn",
+        imgCompEvent: '',
         addEvent: '',
         removeEvent: '',
-        topHalf: 0.5, //涓婂崐閮ㄥ垎 婕忓嚭 澶氬皯 鍚庢墽琛�
-        bottomHalf: 0.5, // 涓嬪崐閮ㄥ垎 婕忓嚭 澶氬皯 鍚庢墽琛�
-        proportion: 1, //鏁翠釜椤甸潰鐨勯珮瀹芥瘮 锛� 楂�/瀹�
-        single: [], //閽堝鎬� 浜嬩欢
+        topHalf: 0.5,
+        bottomHalf: 0.5,
+        proportion: 1,
+        single: [],
     };
     sdw_hw.prototype = {
-//        鍒濆鍖�
         init: function () {
             var _this = this;
             _this.obj.containerObj.find(_this.obj.animateObj).each(function () {
@@ -92,7 +89,6 @@
                     });
                 }
             }
-//            fontResize();
             _this.imgInit();
             _this.setHeight();
             $(window).scroll(function () {
@@ -111,7 +107,6 @@
                 }
             }, 1000);
         },
-//        璁剧疆楂樺害姣斾緥      ratio = 楂樺害/瀹藉害
         setHeight: function () {
             var _this = this;
             var width = _this.obj.mainObj.width();
@@ -123,13 +118,7 @@
                 var sf = $(this);
                 sf.height(width * parseFloat(sf.data("ratio")));
             });
-
-//            var height = width * _this.obj.proportion;
-//            _this.obj.mainObj.css({
-//                height: height
-//            });
         },
-//        鍥剧墖鍒濆鍖栵細棰勫姞杞�
         imgInit: function () {
             var _this = this;
             var imgs = $("img");
@@ -153,10 +142,6 @@
                         var sf = $(this);
                         sf.height(width * parseFloat(sf.data("ratio")));
                     });
-//                    var height = width * _this.obj.proportion;
-//                    _this.obj.mainObj.css({
-//                        height: height
-//                    });
                     if (_this.obj.single.length > 0) {
                         for (var i = 0; i < _this.obj.single.length; i++) {
                             var o = _this.obj.single[i];
@@ -211,7 +196,6 @@
             topArray.each(function (i) {
                 var _self = $(this);
                 var div_b = _self.offset().top;
-//                婊氬姩鏉￠珮搴�
                 var ds = $(document).scrollTop();
                 if ((div_b <= ds && (div_b + _self.height()) >= (ds + _self.height() * _this.obj.topHalf)) //涓婂崐閮ㄥ垎 澶氫綑 0.5 鍙
                     || (div_b <= (ds + $(window).height() - _self.height() * _this.obj.bottomHalf)) && (div_b + _self.height()) >= (ds + $(window).height())//涓嬬彮閮ㄥ垎 澶氫綑 0.5 鍙
@@ -258,7 +242,6 @@
                     if (typeof o.addEvent === 'function') {
                         o.addEvent(o.eq);
                     }
-//                } else if ((v + vh <= s) || v >= (s + $(window).height())) {
                 } else {
                     if (typeof o.removeEvent === 'function') {
                         o.removeEvent(o.eq);
@@ -271,7 +254,6 @@
             var occur = div.data("occur");
             if (StartOrEnd || occur === 1) {
                 var speed = (div.data("speed") ? parseInt(div.data("speed")) : 2000);
-//                console.log(StartOrEnd ? div.data("end") : div.data("start"))
                 var weiyi = new Object(StartOrEnd ? div.data("end") : div.data("start"));
                 if (weiyi.transform != undefined) {
                     weiyi["-webkit-transform"] = weiyi.transform;
@@ -279,9 +261,6 @@
                     weiyi["-o-transform"] = weiyi.transform;
                     weiyi["-ms-transform"] = weiyi.transform;
                 }
-//                if ($("html").hasClass("normal")) {
-//                    speed = 0;
-//                }
                 if (div.is(":animated")) {
                     div.stop();
                 }
@@ -337,7 +316,6 @@
 
             }
         },
-//        浜嬩欢缁戝畾
         events: function () {
 
         },

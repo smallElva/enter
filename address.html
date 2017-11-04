@@ -22,23 +22,18 @@
 <div class="wrapper">
     <!-- 通用头部-->
     <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png"></a>
-        </div>
-        <!--导航条-->
-        <nav class="navTop">
-            <div class="container">
-                <ul id="navTopList" class="clearfix">
-                    <li><a href="#">家庭娱乐</a></li>
-                    <li><a href="#">ktv娱乐</a></li>
-                    <li><a href="#">音箱</a></li>
-                    <li><a href="#">无线蓝牙麦克风</a></li>
-                    <li><a href="#">音频处理器</a></li>
-                    <li><a href="#">BOX KTV</a></li>
-                    <li><a href="#">人人唱</a></li>
-                </ul>
+        <div class="container">
+            <div class="navIcons pull-left">
+                <span class="line_icons"></span>
+                <span class="line_icons"></span>
+                <span class="line_icons"></span>
             </div>
-        </nav>
+            <a class="logo" href="index.html"><img src="images/logo.png"></a>
+            <div class="navShopBar pull-right">
+                <i class="iconfont icon-gerenzhongxin1"></i>
+                <i class="iconfont icon-gouwuche1"></i>
+            </div>
+        </div>
     </header>
     <!-- 内容区-->
     <section class="content">
@@ -48,7 +43,7 @@
                 <div class="navAdd-block">
                     <a class="navAdd-a" href="index.html">首页</a>
                     <span class="navAdd-dot"></span>
-                    <a class="navAdd-a" href="personCenter.html">会员中心</a>
+                    <a class="navAdd-a" href="person_center.html">会员中心</a>
                     <span class="navAdd-dot"></span>
                     <a class="navAdd-a" href="address.html">收货地址</a>
                 </div>
@@ -63,8 +58,8 @@
                                 <p class="userName">吴迪</p>
                             </div>
                             <ul class="personNav">
-                                <li><a class="personNav_a" href="personCenter.html">我的订单</a></li>
-                                <li><a class="personNav_a" href="serviceAfter.html">售后服务</a></li>
+                                <li><a class="personNav_a" href="person_center.html">我的订单</a></li>
+                                <li><a class="personNav_a" href="service_after.html">售后服务</a></li>
                                 <li><a class="personNav_a" href="discount.html">优惠券</a></li>
                                 <li><a class="personNav_a active" href="address.html">收货地址</a></li>
                                 <li><a class="personNav_a" href="myInfo.html">账户资料</a></li>
@@ -83,7 +78,7 @@
                                         <div class="addMenu">
                                             <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
                                             <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
-                                            <p class="defaultTip"><span class="change_tip">【默认地址】</span><span class="edit_tip">编辑</span><span class="delete_tip">删除</span></p>
+                                            <p class="defaultTip"><span class="change_tip">【默认地址】</span><span class="edit_tip js_editModal">编辑</span><span class="delete_tip">删除</span></p>
                                             <img class="addGou" src="images/addgou.png">
                                         </div>
                                     </div>
@@ -91,7 +86,7 @@
                                         <div class="addMenu">
                                             <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
                                             <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
-                                            <p class="defaultTip"><span class="change_tip">【设为默认地址】</span><span class="edit_tip">编辑</span><span class="delete_tip" data-toggle="modal" data-target="#deleteModal">删除</span></p>
+                                            <p class="defaultTip"><span class="change_tip">【设为默认地址】</span><span class="edit_tip js_editModal">编辑</span><span class="delete_tip">删除</span></p>
                                             <img class="addGou" src="images/addgou.png">
                                         </div>
                                     </div>
@@ -99,19 +94,18 @@
                                         <div class="addMenu">
                                             <p class="clearfix"><span class="addName">吴狄</span><span class="addNum pull-right">185****5674</span></p>
                                             <p class="addMenu-add">广东省 深圳市 宝安区 西乡街道 永丰社区9区</p>
-                                            <p class="defaultTip"><span class="change_tip">【设为默认地址】</span><span class="edit_tip">编辑</span><span class="delete_tip">删除</span></p>
+                                            <p class="defaultTip"><span class="change_tip">【设为默认地址】</span><span class="edit_tip js_editModal">编辑</span><span class="delete_tip">删除</span></p>
                                             <img class="addGou" src="images/addgou.png">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="addMenu-new" data-toggle="modal" data-target="#addModal">
+                                        <div class="addMenu-new js_addMenu">
                                             <div class="addMenu-div">
                                                 <i class="iconfont icon-jiahao"></i>
                                                 <p>添加新地址</p>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -121,101 +115,70 @@
         </div>
 
     </section>
-
-    <!-- aside -->
-    <aside id="aside">
-        <ul id="asideList">
-            <li><i class="iconfont icon-gerenzhongxin"></i></li>
-            <li><i class="iconfont icon-gouwuche3"></i></li>
-            <li><i class="iconfont icon-kefu"></i></li>
-            <li id="toTop"><i class="iconfont icon-zhiding"></i></li>
-        </ul>
-    </aside>
     <!-- footer-->
     <footer id="footer">
         <div class="container">
-            <ul class="footer-top clearfix">
-                <li>
-                    <i class="iconfont icon-tianwuliyoubaotui"></i>
-                    <span class="footerService">7天无理由退货</span>
-                </li>
-                <li>
-                    <i class="iconfont icon-tianbaohuan"></i>
-                    <span class="footerService">30天包换</span>
-                </li>
-                <li>
-                    <i class="iconfont icon-quanguobaoyou"></i>
-                    <span class="footerService">全国包邮</span>
-                </li>
-                <li>
-                    <i class="iconfont icon-quanguobaoxiu"></i>
-                    <span class="footerService">全国联保</span>
-                </li>
-            </ul>
-            <div class="footerContent clearfix">
-                <ul id="footerList" class="clearfix">
-                    <li class="footerNav">
-                        热门链接
-                        <ul class="footerLinks">
-                            <li><a href="#">E1</a></li>
-                            <li><a href="#">蓝牙无线麦克风</a></li>
-                            <li><a href="#">常见问题</a></li>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="footerSer">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="footer-top">
+                                    <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                    <span class="footerService">7天无理由退货</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footer-top">
+                                    <i class="iconfont icon-tianbaohuan"></i>
+                                    <span class="footerService">30天包换</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footer-top">
+                                    <i class="iconfont icon-quanguobaoyou"></i>
+                                    <span class="footerService">全国包邮</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footer-top">
+                                    <i class="iconfont icon-quanguobaoxiu"></i>
+                                    <span class="footerService">全国联保</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footerLinks">
+                        <ul class="footerList clearfix">
+                            <li class="footerListLi"><a class="footer_a" href="#">新闻资讯</a></li>
+                            <li class="footerListLi"><a class="footer_a" href="#">活动中心</a></li>
+                            <li class="footerListLi"><a class="footer_a" href="#">关于我们</a></li>
+                            <li class="footerListLi"><a class="footer_a" href="#">联系我们</a></li>
+                            <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
                         </ul>
-                    </li>
-                    <li class="footerNav">
-                        帮助中心
-                        <ul class="footerLinks">
-                            <li><a href="#">购物流程</a></li>
-                            <li><a href="#">售后服务</a></li>
-                            <li><a href="#">相关下载</a></li>
-                        </ul>
-                    </li>
-                    <li class="footerNav">
-                        音特商城
-                        <ul class="footerLinks">
-                            <li><a href="#">家庭娱乐</a></li>
-                            <li><a href="#">KTV娱乐</a></li>
-                            <li><a href="#">音响</a></li>
-                            <li><a href="#">蓝牙无线麦克风</a></li>
-                            <li><a href="#">音频处理器</a></li>
-                            <li><a href="#">BOX KTV</a></li>
-                            <li><a href="#">人人唱</a></li>
-                            <li><a href="#">歌库</a></li>
-                        </ul>
-                    </li>
-                    <li class="footerNav">
-                        关于音特
-                        <ul class="footerLinks">
-                            <li><a href="#">了解音特</a></li>
-                            <li><a href="#">新闻资讯</a></li>
-                            <li><a href="#">加入我们</a></li>
-                            <li><a href="#">联系我们</a></li>
-                        </ul>
-                    </li>
-                    <li class="footerNav">
-                        语言
-                        <ul class="footerLinks">
-                            <li><a href="#">简体中文</a></li>
-                            <li><a href="#">繁体中文</a></li>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">한국어</a></li>
-                            <li><a href="#">日本语</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div id="footerContact">
-                    <strong class="footer-call">400-119-5555</strong>
-                    <p class="footer-text">( 24小时全国服务热线 )</p>
-                    <a class="serviceCall" href="#"><i class="iconfont icon-kefu"></i><span>24小时在线客服</span></a>
-                    <div class="footerCode">
-                        <img src="images/weibo-img.jpg">
-                        <img src="images/weixin-img.jpg">
-                        <img src="images/timg.jpg">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="footerContact">
+                        <strong class="footer-call">400-119-5555</strong>
+                        <p class="footer-text">( 24小时全国服务热线 )</p>
+                        <div class="footerCodes">
+                            <i class="iconfont icon-weibo"></i>
+                            <img class="weibo" src="images/weibo-img.jpg">
+                            <i class="iconfont icon-weixin2"></i>
+                            <img class="weixin" src="images/weixin-img.jpg">
+                            <i class="iconfont icon-qq1"></i>
+                            <img class="qq" src="images/timg.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
+        <div class="footerBar">
+            <div class="container">
+                © dameigong.cn 2017 皖ICP备17012709号
+            </div>
+        </div>
     </footer>
 </div>
 <!-- deleteModal -->
@@ -251,7 +214,7 @@
                 <h4 class="modal-title" id="addModalLabel">添加新地址</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" id="addAddress_form">
                     <div class="form-group">
                         <label for="inputUser" class="col-sm-2 control-label"><span class="redColor">*</span>收货人：</label>
                         <div class="col-sm-10">
@@ -268,9 +231,12 @@
                         <label class="col-sm-2 control-label"><span class="redColor">*</span>收货地址：</label>
                         <div class="col-sm-10">
                             <div class="address-box clearfix" id="select-area">
+                                <input type="hidden" id="provinceVal"/>
+                                <input type="hidden" id="cityVal"/>
+                                <input type="hidden" id="areaVal"/>
                                 <select class="form-control" id="province"></select>
                                 <select class="form-control" id="city"></select>
-                                <select class="form-control" id="country"></select>
+                                <select class="form-control" id="area"></select>
                             </div>
                         </div>
                     </div>
@@ -309,7 +275,7 @@
         // 收货地址点击删除效果
         $('.delete_tip').click(function (e) {
             e.stopPropagation();
-            var element = $(this).parents('.col-lg-4');
+            var element = $(this).parents('.col-md-4');
             Common.confirm({
                 operate: function (reselt) {
                     if (reselt) {
@@ -320,13 +286,39 @@
             })
         });
         // 收货地址点击'设为默认地址'效果
-        $('.change_tip').click(function (e) {
+        $('.change_tip').click(function () {
             $('.change_tip').not(this).text("【设为默认地址】");
             $(this).text("【默认地址】");
         });
         // 点击添加新地址弹窗
-        $('#addModal').on('show.bs.modal', function() {
-            $("#select-area").selectAddress();
+        var addModals = $('#addModal');
+        var provinceVal = $('#provinceVal');
+        var cityVal = $('#cityVal');
+        var areaVal = $('#areaVal');
+        $("#select-area").selectAddress();//初始化省市区联动select
+
+        $('#select-area').on('change',function () {
+            provinceVal.val($("#province option:selected").text());
+            cityVal.val($("#city option:selected").text());
+            areaVal.val($("#area option:selected").text());
+        });
+        $('.js_addMenu').click(function () {
+            addModals.modal();
+            $("#addAddress_form")[0].reset(); //表单弹出前初始化表单
+            $("#city option:selected").text('请选择城市..');
+            $("#area option:selected").text('请选择县区..');
+            $('#addModalLabel').text('添加新地址');
+        });
+
+
+        // 点击编辑地址弹窗
+        $('.js_editModal').click(function (e) {
+            e.stopPropagation();
+            addModals.modal();
+            $("#addAddress_form")[0].reset(); //表单弹出前初始化表单
+            $("#city option:selected").text('请选择城市..');
+            $("#area option:selected").text('请选择县区..');
+            $('#addModalLabel').text('编辑地址');
         })
     });
     //  自定义提示框

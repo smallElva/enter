@@ -135,7 +135,7 @@ function fontResize() {
     $(".ps").css({"font-size": ps * fs + "px","line-height": ps * 1.3  + "px"});
     $(".sup").css({"font-size": 14 * fs + "px"});
     $(".sup2").css({"font-size": 16 * fs + "px"});
-    $(".ctx").css({"font-size": ctx + "px", "margin-bottom": 50 * w, "line-height": ctx * 1.4 + "px"});
+    $(".ctx").css({"font-size": ctx + "px",  "line-height": ctx * 1.4 + "px"});
     $(".ctx3").css({"font-size": ctx + "px", "margin-bottom": 140 * w, "line-height": ctx * 1.4 + "px"});
     $(".ctx2").css({"font-size": ctx + "px","line-height": ctx * 1.4 + "px"});
     $(".ctx4").css({"font-size": ctx + "px", "margin-bottom": 50 * w, "line-height": ctx * 1.4 + "px"});
@@ -155,26 +155,4 @@ function IsPC()
     }
     return flag;
 }
-//当屏幕向下滚时，导航栏固定在顶部
-$(document).scroll(function () {
-    var scrollHeight = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-    var scrollNavTop = $('#content')[0].offsetTop;
-    if(scrollHeight >=  scrollNavTop){
-        $('.navTop').removeClass('fixed-top');
-        $('.pageNav').addClass('scrollNavFixed');
-        $('.scrollBuyTo').css('visibility','visible');
-    }else if (scrollHeight >  80 ) {
-        $('.navTop').addClass('fixed-top');
-        $('#aside').css('top','81px');
-        $('.pageNav').removeClass('scrollNavFixed');
-        $('.scrollBuyTo').css('visibility','hidden');
-    }else{
-        $('.navTop').removeClass('fixed-top');
-        $('.pageNav').removeClass('scrollNavFixed');
-        $('#aside').css('top','146px');
-    }
-});
-// 点击侧栏置顶标签页面滚动至顶部
-$('#toTop').click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 300);
-});
+

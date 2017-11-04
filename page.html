@@ -29,74 +29,130 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<div class="wrapper">
-    <!-- 通用头部-->
-    <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png"></a>
+<body data-spy="scroll" data-target="#scrollNav" data-offset="82">
+<!-- 通用头部-->
+<header class="header">
+    <div class="container">
+        <div class="navIcons pull-left">
+            <span class="line_icons"></span>
+            <span class="line_icons"></span>
+            <span class="line_icons"></span>
         </div>
-        <!--导航条-->
-        <nav class="navTop">
-            <div class="container">
-                <ul id="navTopList" class="clearfix">
-                    <li><a href="#">家庭娱乐</a></li>
-                    <li><a href="#">ktv娱乐</a></li>
-                    <li><a href="#">音箱</a></li>
-                    <li><a href="#">无线蓝牙麦克风</a></li>
-                    <li><a href="#">音频处理器</a></li>
-                    <li><a href="#">BOX KTV</a></li>
-                    <li><a href="#">人人唱</a></li>
+        <a class="logo" href="index.html"><img src="images/logo.png"></a>
+        <div class="navShopBar pull-right">
+            <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
+            <div id="personBlock" class="personCenterBlock">
+                <img class="upup" src="images/upup.png">
+                <ul>
+                    <li class="personList">
+                        <a class="clearfix" href="shop_cart.html"><i class="iconfont icon-gouwuche"></i>购物车</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="person_center.html"><i class="iconfont icon-dingdan"></i>我的订单</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="index.html"><i class="iconfont icon-shangcheng"></i>我的商城</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="login.html"><i class="iconfont icon-gerenzhongxin"></i>登录/注册</a>
+                    </li>
                 </ul>
             </div>
-        </nav>
-    </header>
-    <!-- 内容区-->
-    <section class="page">
-        <div class="container-fluid page-product">
-            <div class="col-lg-5 clearfix">
-                <div class="productLeft pull-left">
-                    <div class="ban" id="demo1">
-                        <div class="ban2" id="ban_pic1">
-                            <ul>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-s.jpg" alt=""></a></li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-2-s.jpg" alt=""></a>
-                                </li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-3-s.jpg" alt=""></a>
-                                </li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-4-s.jpg" alt=""></a>
-                                </li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-s.jpg" alt=""></a></li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-2-s.jpg" alt=""></a>
-                                </li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-3-s.jpg" alt=""></a>
-                                </li>
-                                <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-4-s.jpg" alt=""></a>
-                                </li>
+            <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
+            <!--购物车-->
+            <div class="shopCartBlock" id="shopCartBlock">
+                <img class="upup2" src="images/upup.png">
+                <!--购物车有商品的状态-->
+                <div class="withGoods" id="withGoods">
+                    <div class="shopCart_pro">
+                        <ul class="cartList">
+                            <li class="clearfix">
+                                <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                <div class="cartRight">
+                                    <p class="cartInfo">
+                                        <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                        <span class="cartGoodsNum">X1</span>
+                                    </p>
+                                    <p class="cartGoodsMoney">¥1999.00</p>
+                                </div>
+                                <i class="iconfont icon-close js_deleteGoods"></i>
+                            </li>
+                            <li class="clearfix">
+                                <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                <div class="cartRight">
+                                    <p>
+                                        <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                        <span class="cartGoodsNum">X1</span>
+                                    </p>
+                                    <p class="cartGoodsMoney">¥1999.00</p>
+                                </div>
+                                <i class="iconfont icon-close js_deleteGoods"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shopCart_goBuy clearfix">
+                        <div class="cartFooter">
+                            <p>共<span class="totalNum">2</span>件商品</p>
+                            <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
+                        </div>
+                        <a class="addCart_a" href="shop_cart.html">立即结算</a>
+                    </div>
+                </div>
+                <!--购物车没有商品的状态-->
+                <div class="f-16 text-center" id="noGoods" style="display: none;">
+                    购物车还没有商品，赶紧选购吧！
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 内容区-->
+<section class="page">
+    <div class="page-product">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="ban" id="demo1">
+                    <div class="ban2" id="ban_pic1">
+                        <ul>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-s.jpg"
+                                                                     alt=""></a></li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-2-s.jpg" alt=""></a>
+                            </li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-3-s.jpg" alt=""></a>
+                            </li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-4-s.jpg" alt=""></a>
+                            </li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-s.jpg"
+                                                                     alt=""></a></li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-2-s.jpg" alt=""></a>
+                            </li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-3-s.jpg" alt=""></a>
+                            </li>
+                            <li><a href="images/product1-l.jpg"><img class="zoom" src="images/product1-4-s.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min_pic">
+                        <div class="prev_btn1" id="prev_btn1"><img src="img/feel3.png" width="9" height="18" alt="">
+                        </div>
+                        <div class="num clearfix" id="ban_num1">
+                            <ul class="clearfix">
+                                <li><a href="javascript:;"><img src="images/product1-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-2-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-3-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-4-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-2-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-3-s.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/product1-4-s.jpg" alt=""></a></li>
                             </ul>
                         </div>
-                        <div class="min_pic">
-                            <div class="prev_btn1" id="prev_btn1"><img src="img/feel3.png" width="9" height="18" alt="">
-                            </div>
-                            <div class="num clearfix" id="ban_num1">
-                                <ul class="clearfix">
-                                    <li><a href="javascript:;"><img src="images/product1-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-2-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-3-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-4-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-2-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-3-s.jpg" alt=""></a></li>
-                                    <li><a href="javascript:;"><img src="images/product1-4-s.jpg" alt=""></a></li>
-                                </ul>
-                            </div>
-                            <div class="next_btn1" id="next_btn1"><img src="img/feel4.png" width="9" height="18" alt="">
-                            </div>
+                        <div class="next_btn1" id="next_btn1"><img src="img/feel4.png" width="9" height="18" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-12">
+            <div class="col-lg-7">
                 <div class="productRight">
                     <p class="productTags"><span class="productTag">音特商城</span> · <span class="productTag">家庭KARAOKE</span>
                         · <span class="productTag">KARAOKE  E2</span></p>
@@ -147,7 +203,7 @@
                     <div class="proBuy">
                         <div class="btn-group" role="group" aria-label="...">
                             <button type="button" class="btn btn-default" onclick="m_subtract(this)">-</button>
-                            <input type="text" class="btn btn-default inputBtn" value="1" id="inputNum">
+                            <input type="text" class="btn btn-default inputBtn" value="1" id="inputNum" onkeyup="value=(parseInt((value=value.replace(/\D/g,''))==''||parseInt((value=value.replace(/\D/g,''))==0)?'1':value,10))">
                             <button type="button" class="btn btn-default" onclick="m_add(this)">+</button>
                         </div>
                         <a class="addTo" id="addToCart" onclick="addCart(this)">加入购物车</a>
@@ -156,332 +212,272 @@
                 </div>
             </div>
         </div>
-        <div class="page-detail">
-            <div class="pageNav">
-                <div class="container clearfix">
-                    <ul class="detailNav clearfix" id="scrollNav">
-                        <li class="active">
-                            <a class="details" href="#proDetail">商品详情</a>
-                        </li>
-                        <li>
-                            <a class="details" href="#spec">规格参数</a>
-                        </li>
-                        <li>
-                            <a class="details" href="#askQ">常见问题</a>
-                        </li>
-                        <li class="pull-right">
-                            <a class="addTo scrollBuyTo" href="login.html">立即购买</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-            <div id="content" data-spy="scroll" data-target="#scrollNav" data-offset="82" style="position: relative;">
-                <div id="proDetail">
-                    <div id="sdw-wrap">
-                        <div class="sdw-container sdw-container10 block" data-ratio="0.46875">
-                            <div class="bg sdw-pc sdw-animate" data-start='{"opacity":"0"}' data-end='{"opacity":"1"}'
-                                 data-speed="3000" data-delay="0.2s" data-occur="1"><img src="img/section9Bg.jpg"
-                                                                                         alt="华为P10"/></div>
-                            <div class="bg sdw-mobile sdw-animate" data-start='{"opacity":"0"}'
-                                 data-end='{"opacity":"1"}' data-speed="3000" data-delay="0.2s" data-occur="1"><img
-                                    src="img/section9Bgmin.jpg" alt="华为P10"/></div>
-                            <div class="container">
-                                <div class="row ">
-                                    <div class="col-5 ">
-                                        <p class="title30 sdw-animate"
-                                           data-start='{"transform":"translate3d(0,50px,0) "}'
-                                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"
-                                           data-delay="0s" data-occur="1">科技</p>
-                                        <p class="line c-red sdw-animate"
-                                           data-start='{"transform":"translate3d(0,50px,0) "}'
-                                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"
-                                           data-delay="0s" data-occur="1">━━━━</p>
-                                        <p class="title sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"
-                                           data-delay="0s" data-occur="1">快<br/>令人惊叹</p>
-                                        <p class="ctx sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"
-                                           data-delay="0.2s" data-occur="1">HUAWEI P10采用新一代EMUI
-                                            5.1系统，搭载麒麟960芯片，成功实现了性能提升与功耗平衡的再次突破，带来难以想象的高速与流畅。同时，金融级安全芯片和Huawei Pay<sup
-                                                    class="sup">*1</sup>一指闪付功能，为你的便捷生活保驾护航。HUAWEI
-                                            SuperCharge技术，快速充电，“治愈”你的低电量焦虑症。</p>
-                                    </div>
-                                </div>
-                                <div class="row ">
-                                    <div class="icons  sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                         data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"
-                                         data-delay="0.2s" data-occur="1">
-                                        <img class="sdw-animate icon1" data-start='{"opacity":"0"}'
-                                             data-end='{"opacity":"1"}' data-speed="800" data-delay="0.7s"
-                                             data-occur="1" src="img/p10-science-icon-section1.png" alt="华为P10"/>
-                                        <img class="pa sdw-animate icon2" data-start='{"opacity":"0"}'
-                                             data-end='{"opacity":"1"}' data-speed="800" data-delay="1.1s"
-                                             data-occur="1" src="img/p10-science-icon-section2.png" alt="华为P10"/>
-                                        <img class="pa sdw-animate icon3" data-start='{"opacity":"0"}'
-                                             data-end='{"opacity":"1"}' data-speed="800" data-delay="1.5s"
-                                             data-occur="1" src="img/p10-science-icon-section3.png" alt="华为P10"/>
-                                        <img class="pa sdw-animate icon4" data-start='{"opacity":"0"}'
-                                             data-end='{"opacity":"1"}' data-speed="800" data-delay="1.9s"
-                                             data-occur="1" src="img/p10-science-icon-section4.png" alt="华为P10"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block block1">
-                        <img src="img/bg-design-small.jpg">
-                        <div class="block-words">
-                            <p class="title30 sdw-animate" data-start='{"transform":"translate3d(50px,0,0) "}'
-                               data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
-                               data-occur="1">麒麟960芯片+EMUI 5.1<br/>刚柔并济，久用如新</p>
-                            <p class="ctx sdw-animate" data-start='{"transform":"translate3d(50px,0,0) "}'
-                               data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s"
-                               data-occur="1">
-                                EMUI 5.1智能系统和HUAWEI Ultra
-                                Memory技术，支持实时碎片整理、智能内存压缩、自动内存回收等功能，应用启动速度较上一代提升30%*，持久流畅，久用如新。搭载麒麟960芯片，性能大幅提升，众多APP同时运作，也能保持系统的高速运行。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="block block2">
-                        <div class="elva">
-                            <img src="img/fragment-perfor-sec01-small.jpg">
-                            <img src="img/bg-design-small.jpg">
-                        </div>
-                        <div class="circle" id="change">
-                            <img src="img/btn-more.png">
-                        </div>
-                        <div class="block2-div">
-                            <img src="img/bg-camera-small.jpg">
-                            <div class="block-words">
-                                <p class="title30 sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                   data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
-                                   data-occur="1">科技</p>
-                                <p class="line c-red sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                   data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
-                                   data-occur="1">━━━━</p>
-                                <p class="title sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                   data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
-                                   data-occur="1">快<br/>令人惊叹</p>
-                                <p class="ctx sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
-                                   data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s"
-                                   data-occur="1">HUAWEI P10采用新一代EMUI
-                                    5.1系统，搭载麒麟960芯片，成功实现了性能提升与功耗平衡的再次突破，带来难以想象的高速与流畅。同时，金融级安全芯片和Huawei Pay<sup
-                                            class="sup">*1</sup>一指闪付功能，为你的便捷生活保驾护航。HUAWEI
-                                    SuperCharge技术，快速充电，“治愈”你的低电量焦虑症。</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block block3">
-                        <img src="img/bg-screen-small.jpg">
-                    </div>
-                    <div class="block block4">
-                        <img src="img/bg-game.jpg">
-                    </div>
-                </div>
-                <div id="spec">
-                    <div class="container">
-                        <div style="line-height: 3;font-size: 18px;">
-                            <h3>规格参数</h3>
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                        <div style="line-height: 3;font-size: 18px;">
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                        <div style="line-height: 3;font-size: 18px;">
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                        <div style="line-height: 3;font-size: 18px;">
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="askQ">
-                    <div class="container">
-                        <div style="line-height: 3;font-size: 18px;">
-                            <h3>常见问题</h3>
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                        <div style="line-height: 3;font-size: 18px;">
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                        <div style="line-height: 3;font-size: 18px;">
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                        <div style="line-height: 3;font-size: 18px;">
-                            <p>5.15 英寸（对角线）</p>
-                            <p> 600nit 高亮度</p>
-                            <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
-                            <p> 94.4% NTSC色域，高色彩饱和度</p>
-                            <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
-                            <p> 支持夜光屏</p>
-                            <p> 支持护眼模式</p>
-                            <p> 支持色温调节</p>
-                            <p> 支持标准模式，颜色更准确</p>
-                        </div>
-                    </div>
-                    <div class="block block4">
-                        <img src="img/bg-game.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- aside -->
-    <aside id="aside">
-        <ul id="asideList">
-            <li><i class="iconfont icon-gerenzhongxin"></i></li>
-            <li><span class="cartNum">（<span id="addCartNum">0</span>）</span><i class="iconfont icon-gouwuche3"></i>
-            </li>
-            <li><i class="iconfont icon-kefu"></i></li>
-            <li id="toTop"><i class="iconfont icon-zhiding"></i></li>
-        </ul>
-    </aside>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <ul class="footer-top clearfix">
-                <li>
-                    <i class="iconfont icon-tianwuliyoubaotui"></i>
-                    <span class="footerService">7天无理由退货</span>
-                </li>
-                <li>
-                    <i class="iconfont icon-tianbaohuan"></i>
-                    <span class="footerService">30天包换</span>
-                </li>
-                <li>
-                    <i class="iconfont icon-quanguobaoyou"></i>
-                    <span class="footerService">全国包邮</span>
-                </li>
-                <li>
-                    <i class="iconfont icon-quanguobaoxiu"></i>
-                    <span class="footerService">全国联保</span>
-                </li>
-            </ul>
-            <div class="footerContent clearfix">
-                <ul id="footerList" class="clearfix">
-                    <li class="footerNav">
-                        热门链接
-                        <ul class="footerLinks">
-                            <li><a href="#">E1</a></li>
-                            <li><a href="#">蓝牙无线麦克风</a></li>
-                            <li><a href="#">常见问题</a></li>
-                        </ul>
+    </div>
+    <div class="page-detail">
+        <div class="pageNav" id="scrollNav">
+            <div class="container clearfix">
+                <ul class="nav detailNav clearfix">
+                    <li class="active">
+                        <a class="details" href="#proDetail">商品详情</a>
                     </li>
-                    <li class="footerNav">
-                        帮助中心
-                        <ul class="footerLinks">
-                            <li><a href="#">购物流程</a></li>
-                            <li><a href="#">售后服务</a></li>
-                            <li><a href="#">相关下载</a></li>
-                        </ul>
+                    <li>
+                        <a class="details" href="#spec">规格参数</a>
                     </li>
-                    <li class="footerNav">
-                        音特商城
-                        <ul class="footerLinks">
-                            <li><a href="#">家庭娱乐</a></li>
-                            <li><a href="#">KTV娱乐</a></li>
-                            <li><a href="#">音响</a></li>
-                            <li><a href="#">蓝牙无线麦克风</a></li>
-                            <li><a href="#">音频处理器</a></li>
-                            <li><a href="#">BOX KTV</a></li>
-                            <li><a href="#">人人唱</a></li>
-                            <li><a href="#">歌库</a></li>
-                        </ul>
+                    <li>
+                        <a class="details" href="#askQ">常见问题</a>
                     </li>
-                    <li class="footerNav">
-                        关于音特
-                        <ul class="footerLinks">
-                            <li><a href="#">了解音特</a></li>
-                            <li><a href="#">新闻资讯</a></li>
-                            <li><a href="#">加入我们</a></li>
-                            <li><a href="#">联系我们</a></li>
-                        </ul>
-                    </li>
-                    <li class="footerNav">
-                        语言
-                        <ul class="footerLinks">
-                            <li><a href="#">简体中文</a></li>
-                            <li><a href="#">繁体中文</a></li>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">한국어</a></li>
-                            <li><a href="#">日本语</a></li>
-                        </ul>
+                    <li class="pull-right">
+                        <a class="addTo scrollBuyTo" href="#">立即购买</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div id="proDetail">
+                <div class="block">
+                    <img class="img-responsive" src="images/page-img1.jpg" alt="E2"/>
+                </div>
+                <div class="block block1">
+                    <img class="img-responsive" src="images/page-img2.jpg">
+                </div>
+                <div class="block block2">
+                    <div class="elva">
+                        <div class="block2-div e2Bg1">
+                            <div class="container">
+                                <div class="row">
+                                    <p class="title sdw-animate e2Title" data-start='{"transform":"translate3d(0,50px,0) "}'
+                                       data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
+                                       data-occur="1">乐谱</p>
+                                    <p class="title30 sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
+                                       data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s"
+                                       data-occur="1">每首歌都有相应的乐谱
+                                        <br>让K歌更专业</p>
+                                    <img class="pageImg" src="images/page-img-5.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block4">
+                            <img class="img-responsive" src="images/page-img-6.jpg">
+                        </div>
+                    </div>
+                    <div class="circle" id="change">
+                        <img src="img/btn-more.png">
+                    </div>
+                    <div class="block2-div">
+                        <p class="title sdw-animate e2Title" data-start='{"transform":"translate3d(0,50px,0) "}'
+                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
+                           data-occur="1">进口音源</p>
+                        <p class="title30 sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
+                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s"
+                           data-occur="1">歌曲音质的好坏在于音源，我们采用世界顶级乐器制作而成的音源
+                            <br>从源头把关让您能享受顶级乐器的音质，让你唱出与众不同！</p>
+                        <img class="pageImg" src="images/page-img3.jpg">
+                    </div>
+                </div>
+                <div class="block block3">
+                    <div class="block2-div">
+                        <p class="title sdw-animate e2Title" data-start='{"transform":"translate3d(0,50px,0) "}'
+                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s"
+                           data-occur="1">极简UI界面设计</p>
+                        <p class="title30 sdw-animate" data-start='{"transform":"translate3d(0,50px,0) "}'
+                           data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s"
+                           data-occur="1">经过我们无数次用户调查、研究以及长期以来的改进
+                            <br>让我们的点歌系统的操作界面更加好用简便</p>
+                        <img class="pageImg" src="images/page-img4.png">
+                    </div>
+                </div>
+                <div class="block block4">
+                    <img class="img-responsive" src="images/page-img7.jpg">
+                </div>
+            </div>
+            <div id="spec" style="padding-top: 82px;">
+                <div class="container">
+                    <div style="line-height: 3;font-size: 18px;">
+                        <h3>规格参数</h3>
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                    <div style="line-height: 3;font-size: 18px;">
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                    <div style="line-height: 3;font-size: 18px;">
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                    <div style="line-height: 3;font-size: 18px;">
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="askQ" style="padding-top: 82px;">
+                <div class="container">
+                    <div style="line-height: 3;font-size: 18px;">
+                        <h3>常见问题</h3>
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                    <div style="line-height: 3;font-size: 18px;">
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                    <div style="line-height: 3;font-size: 18px;">
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                    <div style="line-height: 3;font-size: 18px;">
+                        <p>5.15 英寸（对角线）</p>
+                        <p> 600nit 高亮度</p>
+                        <p> 1920 x 1080 分辨率，428 PPI，1500:1 对比度</p>
+                        <p> 94.4% NTSC色域，高色彩饱和度</p>
+                        <p> 支持阳光屏，强烈阳光下清晰可见屏幕内容</p>
+                        <p> 支持夜光屏</p>
+                        <p> 支持护眼模式</p>
+                        <p> 支持色温调节</p>
+                        <p> 支持标准模式，颜色更准确</p>
+                    </div>
+                </div>
+                <img class="img-responsive" src="images/page-img-6.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="footerSer">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="footer-top">
+                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                <span class="footerService">7天无理由退货</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-top">
+                                <i class="iconfont icon-tianbaohuan"></i>
+                                <span class="footerService">30天包换</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-top">
+                                <i class="iconfont icon-quanguobaoyou"></i>
+                                <span class="footerService">全国包邮</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-top">
+                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                <span class="footerService">全国联保</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks">
+                    <ul class="footerList clearfix">
+                        <li class="footerListLi"><a class="footer_a" href="#">新闻资讯</a></li>
+                        <li class="footerListLi"><a class="footer_a" href="#">活动中心</a></li>
+                        <li class="footerListLi"><a class="footer_a" href="#">关于我们</a></li>
+                        <li class="footerListLi"><a class="footer_a" href="#">联系我们</a></li>
+                        <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div id="footerContact">
                     <strong class="footer-call">400-119-5555</strong>
                     <p class="footer-text">( 24小时全国服务热线 )</p>
-                    <a class="serviceCall" href="#"><i class="iconfont icon-kefu"></i><span>24小时在线客服</span></a>
-                    <div class="footerCode">
-                        <img src="images/weibo-img.jpg">
-                        <img src="images/weixin-img.jpg">
-                        <img src="images/timg.jpg">
+                    <div class="footerCodes">
+                        <i class="iconfont icon-weibo"></i>
+                        <img class="weibo" src="images/weibo-img.jpg">
+                        <i class="iconfont icon-weixin2"></i>
+                        <img class="weixin" src="images/weixin-img.jpg">
+                        <i class="iconfont icon-qq1"></i>
+                        <img class="qq" src="images/timg.jpg">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footerBar">© dameigong.cn 2017 皖ICP备17012709号</div>
-    </footer>
-</div>
+    </div>
+    <div class="footerBar">
+        <div class="container">
+            © dameigong.cn 2017 皖ICP备17012709号
+        </div>
+    </div>
+</footer>
+<!--addCartModal-->
+<div class="modal myInfoModal" tabindex="-1" role="dialog" id="addCartModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconfont icon-close"></span></button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="addSuccess">
+                    <i class="iconfont icon-duigou payOk"></i>
+                    <span class="f-20">商品已成功加入购物车！</span>
+                </div>
+                <div class="addCartBtn">
+                    <a class="addCart_a" href="shop_cart.html">去结算</a>
+                    <a class="goShop_a" href="index.html">再逛逛</a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -490,6 +486,7 @@
 <script type="text/javascript" src="js/pic_tab.js"></script>
 <script type="text/javascript" src="js/sdw_hw.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#demo1').banqh({
@@ -520,21 +517,21 @@
             $(this).prev('.elva').slideToggle(1500);
             $(this).next('.block2-div').toggleClass('display');
         });
-        //  滚动监听动效，并有offset效果
-        $("#scrollNav").scrollspy();
-        var offset = 82;
-        $('.detailNav li a').click(function (event) {
-            event.preventDefault();
-            $($(this).attr('href'))[0].scrollIntoView();
-            scrollBy(0, -offset);
-            $(this).parent('li').addClass('active').siblings().removeClass('active');//点击哪一项哪一项处于active状态
-        });
+
     });
     // 点击加入购物车，购物车数量和选择的数量一致
     function addCart(t) {
+        $('#addCartModal').modal();
         var obj = t.parentNode.getElementsByTagName('input')[0];
-        $('#addCartNum').css('color', '#ff5400').html(obj.value);
+        $('.shopCart_badge').html(obj.value);
     }
+
+
+
+
+
+
+
     //  点击加号，数字加一
     function m_subtract(t) {
         var obj = t.parentNode.getElementsByTagName('input')[0];
@@ -546,64 +543,23 @@
         var obj = t.parentNode.getElementsByTagName('input')[0];
         obj.value++;
     }
-
-
-    //进入页面，先通过地址栏取得当前产品的id
-    var a = location.href;
-    var pid = a.split('id=')[1];
-    //发送获取产品信息的接口
-    $.ajax({
-        url: '',
-        data: {id: pid},
-        success: function (info) {
-            //假设info
-            info = {
-                status: 200,
-                msg: 'succ',
-                product: {
-                    id: '2',
-                    name: 'maikefeng',
-                    name_info: "dd",
-                    price: "1999",
-                    peijian: [
-                        {
-                            name: '',
-                            img: '',
-                            id: '',
-                            num: '',
-                        }, {
-                            name: '',
-                            img: '',
-                            id: '',
-                            num: '',
-                        }, {
-                            name: '',
-                            img: '',
-                            id: '',
-                            num: '',
-                        }
-                    ],
-                    pro_imgs: ['2.jpg', '3.jpg'],
-                    property: {
-                        type_name:"颜色",
-                        list: [
-                            {color: '#000', name: '黑色'},
-                            {color: '#be8fa2', name: '玫瑰金'}
-                        ]
-                    }
-                }
-            }
-            //成功
-            if (info.status == 200) {
-
-            } else if (data.status == 0) {
-                //eg：产品id不存在
-            }
-        },
-        error: function () {
-
+    //当屏幕向下滚时，导航栏固定在顶部
+    $(window).scroll(function () {
+        var scrollHeight = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        var scrollNavTop = $('#content')[0].offsetTop;
+        if(scrollHeight >=  scrollNavTop-82){
+            $('.header').removeClass('fixed-top');
+            $('.pageNav').addClass('scrollNavFixed');
+            $('.scrollBuyTo').css('visibility','visible');
+        }else if (scrollHeight >  82 ) {
+            $('.header').addClass('fixed-top');
+            $('.pageNav').removeClass('scrollNavFixed');
+            $('.scrollBuyTo').css('visibility','hidden');
+        }else{
+            $('.header').removeClass('fixed-top');
+            $('.pageNav').removeClass('scrollNavFixed');
         }
-    })
+    });
 </script>
 </body>
 </html>
