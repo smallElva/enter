@@ -27,30 +27,12 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <style type="text/css">
-        /* Menu style */
-        .about_time{
-            padding: 82px 0;
-        }
-        #timeline{width:100%;overflow:hidden;height:640px;position:relative;background:url('../images/time.png') center 130px repeat-x;}
-        #dates{width:100%;overflow:hidden;}
-        #dates li{float:left;width:600px;height: 180px;text-align:center;}
-        #dates a{display:block;height: 180px;}
-        #dates .selected{color:#ff6600;background:url(../images/time_circle.png) center bottom no-repeat;}
-        #dates .selected .historyYear{font-size: 48px;}
-        #dates .selected .historyEvents{font-size: 24px;}
-        #issues{width:100%;overflow:hidden;margin-top: 82px;}
-        #issues .issues_li{width:1920px;float:left;}
-        #issues .issues_li .eventList{width: 600px;margin:0 auto;text-align: center;}
-        .about_time .arrow-right{right: 25%;}
-        .about_time .arrow-left{left: 25%;}
-    </style>
 </head>
 <body>
 <div class="wrapper">
     <!-- 通用头部-->
     <header class="header">
-        <div class="container">
+        <div class="container clearfix">
             <div class="navIcons icon-out pull-left" id="showNav">
                 <span class="line_icons"></span>
                 <span class="line_icons"></span>
@@ -176,6 +158,7 @@
             </div>
         </div>
         <div id="about">
+            <!--关于我们-->
             <div class="aboutUS">
                 <img class="aboutUsBg" src="../images/about1.jpg" alt="aboutUs">
                 <div class="aboutUs_words">
@@ -194,7 +177,8 @@
                     </div>
                 </div>
             </div>
-            <div class="about2">
+            <!--我们的愿景-->
+            <div class="aboutFuture">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -209,172 +193,388 @@
                     </div>
                 </div>
             </div>
-            <div class="about_history">
-                <div class="about_time">
-                    <div id="timeline">
-                        <ul id="dates">
-                            <li>
-                                <a href="#1900">
-                                    <p class="historyYear">2012</p>
-                                    <p class="historyEvents">Assa和Enter-Tech完成合并</p>
+            <!--历史进程-->
+            <div class="history_section">
+                <img class="timeImg" src="../images/time.png">
+                <div class="container">
+                    <div class="about_history">
+                        <div class="about_time">
+                            <div id="timeline">
+                                <ul id="dates">
+                                    <li>
+                                        <a href="#2012">
+                                            <p class="historyYear">2012</p>
+                                            <p class="historyEvents">AK系列开发完成</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2013">
+                                            <p class="historyYear">2013</p>
+                                            <p class="historyEvents">Assa和Enter-Tech完成合并</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2014">
+                                            <p class="historyYear">2014</p>
+                                            <p class="historyEvents">无线麦克风开发完成</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2015">
+                                            <p class="historyYear">2015</p>
+                                            <p class="historyEvents">AK系列开发完成</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2016">
+                                            <p class="historyYear">2016</p>
+                                            <p class="historyEvents">Assa和Enter-Tech完成合并</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2017">
+                                            <p class="historyYear">2017</p>
+                                            <p class="historyEvents">无线麦克风开发完成</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul id="issues">
+                                    <li class="issues_li" id="2012">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
+                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
+                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
+                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
+                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2013">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
+                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
+                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
+                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
+                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2014">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
+                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
+                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
+                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
+                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2015">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
+                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
+                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
+                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
+                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2016">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
+                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
+                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
+                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
+                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2017">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
+                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
+                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
+                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
+                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#" id="next" class="arrows arrow-right events_arrows">
+                                    <i class="iconfont icon-xia"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#1944">
-                                    <p class="historyYear">2011</p>
-                                    <p class="historyEvents">无线麦克风开发完成</p>
+                                <a href="#" id="prev" class="arrows arrow-left events_arrows">
+                                    <i class="iconfont icon-you-copy"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="#1950">
-                                    <p class="historyYear">2011</p>
-                                    <p class="historyEvents">无线麦克风开发完成</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#1971">
-                                    <p class="historyYear">2011</p>
-                                    <p class="historyEvents">无线麦克风开发完成</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#1999">
-                                    <p class="historyYear">2011</p>
-                                    <p class="historyEvents">无线麦克风开发完成</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#2001">
-                                    <p class="historyYear">2011</p>
-                                    <p class="historyEvents">无线麦克风开发完成</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#2011">
-                                    <p class="historyYear">2011</p>
-                                    <p class="historyEvents">无线麦克风开发完成</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul id="issues">
-                            <li class="issues_li" id="1900">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="issues_li" id="1944">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="issues_li" id="1950">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="issues_li" id="1971">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="issues_li" id="1999">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="issues_li" id="2001">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="issues_li" id="2011">
-                                <div class="events">
-                                    <ul class="eventList">
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <a href="#" id="next" class="arrows arrow-left events_arrows">
-                            <i class="iconfont icon-you-copy"></i>
-                        </a>
-                        <a href="#" id="prev" class="arrows arrow-right events_arrows">
-                            <i class="iconfont icon-xia"></i>
-                        </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!--产品优势-->
+            <div class="about_advantage">
+                <div class="container">
+                    <p class="aboutUs_t">产品优势</p>
+                    <ul class="adv_list">
+                        <li>MIDI歌曲</li>
+                        <li>专利芯片</li>
+                        <li>最全歌库</li>
+                        <li>卓越设计</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="about_adv_block">
+                                <img class="advIcon" src="../images/advIcon1.png">
+                                <p class="about_adv_title">专利芯片</p>
+                                <div class="about_adv_text">
+                                    <p class="about_adv_p">音特电子的硬件研发团队，经过多年的努力研发改进，研发出<br>
+                                        独立的音源芯片，并且成功申请专利，完美兼容音特产品<br>
+                                        高音质得到充分的保障。</p>
+                                </div>
+                                <img class="advImg" src="../images/advImg1.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about_adv_block">
+                                <img class="advIcon" src="../images/advIcon2.png">
+                                <p class="about_adv_title">卓越设计</p>
+                                <div class="about_adv_text">
+                                    <p class="about_adv_p">音特电子的所有的产品为了保证最好的用户体验以及最舒服的<br>
+                                        最适合的手感，设计师都是由韩国最好的设计师权先生设计<br>
+                                        保证到用户手机的产品都是最美的以及最舒适的</p>
+                                </div>
+                                <img class="advImg" src="../images/advImg2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--规模现状-->
+            <div class="about_scale">
+                <div class="container">
+                    <p class="aboutUs_t">规模现状</p>
+                    <div class="about_scale_cont">
+                        <ul class="clearfix">
+                            <li class="scaleList">
+                                <p class="about_scale_t">总部</p>
+                                <img class="companyIcon" src="../images/companyIcon1.png">
+                                <p class="about_scale_add">深圳</p>
+                            </li>
+                            <li class="scaleList">
+                                <p class="about_scale_t">分部</p>
+                                <img class="companyIcon" src="../images/companyIcon2.png">
+                                <p class="about_scale_add">惠州</p>
+                            </li>
+                            <li class="scaleList">
+                                <p class="about_scale_t">分部</p>
+                                <img class="companyIcon" src="../images/companyIcon3.png">
+                                <p class="about_scale_add">上海</p>
+                            </li>
+                            <li class="scaleList">
+                                <p class="about_scale_t">分部</p>
+                                <img class="companyIcon" src="../images/companyIcon4.png">
+                                <p class="about_scale_add">韩国</p>
+                            </li>
+                            <li class="scaleList">
+                                <p class="about_scale_t">分部</p>
+                                <img class="companyIcon" src="../images/companyIcon5.png">
+                                <p class="about_scale_add">美国</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="about_scale_block">
+                                <div class="about_scale_text">
+                                    <p class="companyNum">500<span class="ge">个</span></p>
+                                    <p class="companyText">覆盖全球城市</p>
+                                </div>
+                                <img class="advImg" src="../images/netImg1.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="about_scale_block">
+                                <div class="about_scale_text">
+                                    <p class="companyNum">100,000<span class="ge">个</span></p>
+                                    <p class="companyText">线下销售和售后网点</p>
+                                </div>
+                                <img class="advImg" src="../images/netImg2.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="about_scale_block">
+                                <div class="about_scale_text">
+                                    <p class="companyNum">60,000<span class="ge">个</span></p>
+                                    <p class="companyText">全球专属品牌销售人员</p>
+                                </div>
+                                <img class="advImg" src="../images/netImg3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--世界分布-->
             <div class="about_fb">
-                <img class="aboutImg4" src="../images/about4.png">
+                <div class="container">
+                    <div class="about_fb_cont">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="about_fb_block">
+                                    <img class="fbIcon" src="../images/fbIcon1.png">
+                                    <p class="about_fb_t">全球5个国家</p>
+                                    <p class="about_fb_p">发布品牌</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about_fb_block">
+                                    <img class="fbIcon" src="../images/fbIcon2.png">
+                                    <p class="about_fb_t">全球5个国家</p>
+                                    <p class="about_fb_p">建设生产基地</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about_fb_block">
+                                    <img class="fbIcon" src="../images/fbIcon3.png">
+                                    <p class="about_fb_t">全球3大城市</p>
+                                    <p class="about_fb_p">建设研发中心</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about_fb_map">
+                            <img class="about_map" src="../images/about_map.png">
+                            <div class="map_add1">
+                                <div class="circleDot"></div>
+                                <div class="map_dot"></div>
+                                <div class="map_dot1"></div>
+                                <div class="map_dot2"></div>
+                                <span class="about_map_add">韩国</span>
+                            </div>
+                            <div class="map_add2">
+                                <div class="circleDot"></div>
+                                <div class="map_dot"></div>
+                                <div class="map_dot1"></div>
+                                <div class="map_dot2"></div>
+                                <span class="about_map_add">惠州</span>
+                            </div>
+                            <div class="map_add3">
+                                <div class="circleDot"></div>
+                                <div class="map_dot"></div>
+                                <div class="map_dot1"></div>
+                                <div class="map_dot2"></div>
+                                <span class="about_map_add">越南</span>
+                            </div>
+                            <div class="map_add4">
+                                <div class="circleDot"></div>
+                                <div class="map_dot"></div>
+                                <div class="map_dot1"></div>
+                                <div class="map_dot2"></div>
+                                <span class="about_map_add">菲律宾</span>
+                            </div>
+                            <div class="map_add5">
+                                <div class="circleDot"></div>
+                                <div class="map_dot"></div>
+                                <div class="map_dot1"></div>
+                                <div class="map_dot2"></div>
+                                <span class="about_map_add">美国</span>
+                            </div>
+                            <div class="about_fb_logo">
+                                <img src="../images/about_logo.png">
+                                <span class="about_fb_logo_t">音特全球生产基地</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- footer-->
     <footer id="footer">
-        <div class="footerOut">
-            <div class="container">
+        <div class="container">
+            <div class="footerOut">
                 <div class="footer_container">
                     <div class="row">
                         <div class="col-md-8">
@@ -434,6 +634,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="footerBar">
             © dameigong.cn 2017 皖ICP备17012709号

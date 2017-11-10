@@ -124,7 +124,9 @@ function fontResize() {
         title3 = ((title3 * fs) <25 ? 25 : (title3 * fs));
         title30 = ((title30 * fs) <18 ? 18 : (title30 * fs));
     }
-
+    if (sdw_width > 768 && sdw_width < 1200) {
+        fs = 0.8;
+    }
     $(".block").css({"font-size": 30 * (sdw_width < 769 ? (sdw_width / 750) : w) + "px"});
     $(".title").css({"font-size": title + "px", "margin-bottom": 35 * w,"line-height": title * 1.3  + "px"});
     $(".title2").css({"font-size": title + "px", "margin-bottom": 30 * w,"line-height": title * 1.3  + "px"});

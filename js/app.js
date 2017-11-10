@@ -231,3 +231,4 @@ function delete_ok(element,params2,getTotal){
 
     }
 })(jQuery);
+

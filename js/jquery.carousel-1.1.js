@@ -877,7 +877,7 @@
         top:0,
         bottom:0,
         backZoom:0.8,
-        slidesPerScroll:5,
+        slidesPerScroll:6,
         speed:500,
         directionNav:false,
         autoplay:true,

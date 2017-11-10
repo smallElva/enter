@@ -30,464 +30,475 @@
     <![endif]-->
 </head>
 <body>
-<div class="wrapper">
-    <!-- 通用头部-->
-    <header class="header">
-        <div class="container">
-            <div class="navIcons icon-out pull-left" id="showNav">
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
+<!-- 通用头部-->
+<header class="header">
+    <div class="container">
+        <div class="navIcons icon-out pull-left" id="showNav">
+            <span class="line_icons"></span>
+            <span class="line_icons"></span>
+            <span class="line_icons"></span>
+        </div>
+        <a class="logo" href="index.html"><img src="images/logo.png"></a>
+        <div class="navShopBar pull-right">
+            <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
+            <div id="personBlock" class="personCenterBlock">
+                <img class="upup" src="images/upup.png">
+                <ul>
+                    <li class="personList">
+                        <a class="clearfix" href="person_center.html">我的订单</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="service_after.html">售后服务</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="discount.html">优惠券</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="address.html">收货地址</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="myInfo.html">账户资料</a>
+                    </li>
+                    <li class="personList">
+                        <a class="clearfix" href="javascript:void(0);">退出账号</a>
+                    </li>
+                </ul>
             </div>
-            <a class="logo" href="index.html"><img src="images/logo.png"></a>
-            <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
-                <div id="personBlock" class="personCenterBlock">
-                    <img class="upup" src="images/upup.png">
-                    <ul>
-                        <li class="personList">
-                            <a class="clearfix" href="person_center.html">我的订单</a>
-                        </li>
-                        <li class="personList">
-                            <a class="clearfix" href="service_after.html">售后服务</a>
-                        </li>
-                        <li class="personList">
-                            <a class="clearfix" href="discount.html">优惠券</a>
-                        </li>
-                        <li class="personList">
-                            <a class="clearfix" href="address.html">收货地址</a>
-                        </li>
-                        <li class="personList">
-                            <a class="clearfix" href="myInfo.html">账户资料</a>
-                        </li>
-                        <li class="personList">
-                            <a class="clearfix" href="javascript:void(0);">退出账号</a>
-                        </li>
-                    </ul>
+            <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
+            <!--购物车-->
+            <div class="shopCartBlock" id="shopCartBlock">
+                <img class="upup2" src="images/upup.png">
+                <!--购物车有商品的状态-->
+                <div class="withGoods" id="withGoods">
+                    <div class="shopCart_pro">
+                        <ul class="cartList">
+                            <li class="clearfix">
+                                <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                <div class="cartRight">
+                                    <p class="cartInfo">
+                                        <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                        <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                    </p>
+                                    <p class="cartGoodsMoney">¥1999.00</p>
+                                </div>
+                                <i class="iconfont icon-close js_deleteGoods"></i>
+                            </li>
+                            <li class="clearfix">
+                                <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                <div class="cartRight">
+                                    <p>
+                                        <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                        <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                    </p>
+                                    <p class="cartGoodsMoney">¥1999.00</p>
+                                </div>
+                                <i class="iconfont icon-close js_deleteGoods"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shopCart_goBuy clearfix">
+                        <div class="cartFooter">
+                            <p>共<span class="totalNum">2</span>件商品</p>
+                            <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
+                        </div>
+                        <a class="addCart_a" href="shop_cart.html">立即结算</a>
+                    </div>
                 </div>
-                <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
-                <!--购物车-->
-                <div class="shopCartBlock" id="shopCartBlock">
-                    <img class="upup2" src="images/upup.png">
-                    <!--购物车有商品的状态-->
-                    <div class="withGoods" id="withGoods">
-                        <div class="shopCart_pro">
-                            <ul class="cartList">
-                                <li class="clearfix">
-                                    <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
-                                    <div class="cartRight">
-                                        <p class="cartInfo">
-                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
-                                            <span class="cartGoodsNum">X1</span>
-                                        </p>
-                                        <p class="cartGoodsMoney">¥1999.00</p>
+                <!--购物车没有商品的状态-->
+                <div class="f-16 text-center" id="noGoods" style="display: none;">
+                    购物车还没有商品，赶紧选购吧！
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--侧导航-->
+<aside class="sideBar" id="sideBar">
+    <div class="sideNav">
+        <ul>
+            <li class="sideNav_li">
+                <a class="sideNav_a" href="news/news.html">新闻资讯</a>
+            </li>
+            <li class="sideNav_li">
+                <a class="sideNav_a" href="activity/activity.html">活动中心</a>
+            </li>
+            <li class="sideNav_li">
+                <a class="sideNav_a" href="product.html">音特商城</a>
+            </li>
+            <li class="sideNav_li">
+                <a class="sideNav_a" href="about/about.html">关于我们</a>
+            </li>
+            <li class="sideNav_li">
+                <a class="sideNav_a" href="contact.html">联系我们</a>
+            </li>
+        </ul>
+        <div class="aside_footer">
+            <p class="aside_enter">音特电子（深圳）有限公司</p>
+            <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+            <p class="aside_call">0755-83513870</p>
+            <p class="aside_email">enter.media@gamil.com</p>
+            <div class="footerCodes">
+                <i class="iconfont icon-weibo"></i>
+                <img class="weibo" src="images/weibo-img.jpg">
+                <i class="iconfont icon-weixin2"></i>
+                <img class="weixin" src="images/weixin-img.jpg">
+                <i class="iconfont icon-qq1"></i>
+                <img class="qq" src="images/timg.jpg">
+            </div>
+        </div>
+    </div>
+</aside>
+<!--banner-->
+<section class="index-banner">
+    <div id="carousel-index" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-index" data-slide-to="0" class="active"><a class="dot" href="javascript:void(0)"></a></li>
+            <li data-target="#carousel-index" data-slide-to="1"><a class="dot" href="javascript:void(0)"></a></li>
+            <li data-target="#carousel-index" data-slide-to="2"><a class="dot" href="javascript:void(0)"></a></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/banner4.jpg" alt="banner1">
+            </div>
+            <div class="item">
+                <img src="images/banner4.jpg" alt="banner1">
+            </div>
+            <div class="item">
+                <img src="images/banner4.jpg" alt="banner1">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="arrows arrow-left" href="#carousel-index" role="button" data-slide="prev">
+            <span class="iconfont icon-zuofanhui" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="arrows arrow-right" href="#carousel-index" role="button" data-slide="next">
+            <span class="iconfont icon-right-arrow" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<!-- 内容区-->
+<section class="content_index">
+    <div class="sings">
+        <!--APP应用-->
+        <div class="app">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a class="app_a" href="songs.html">
+                            <div class="app_div">
+                                <img class="app_div_bg" src="images/yd_bg.jpg">
+                                <div class="app_div_text">
+                                    <i class="iconfont icon-yunxiazai"></i>
+                                    <div class="app_div_p">
+                                        <p class="app_div_t">云端歌库</p>
+                                        <p class="app_div_adv">全球最全云端歌库</p>
                                     </div>
-                                    <i class="iconfont icon-close js_deleteGoods"></i>
-                                </li>
-                                <li class="clearfix">
-                                    <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
-                                    <div class="cartRight">
-                                        <p>
-                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
-                                            <span class="cartGoodsNum">X1</span>
-                                        </p>
-                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                </div>
+                                <div class="shadow">
+                                    <div class="app_div_text">
+                                        <i class="iconfont icon-yunxiazai"></i>
+                                        <div class="app_div_p">
+                                            <p class="app_div_t">云端歌库</p>
+                                            <p class="app_div_adv">全球最全云端歌库</p>
+                                        </div>
                                     </div>
-                                    <i class="iconfont icon-close js_deleteGoods"></i>
-                                </li>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="app_a" href="media.html">
+                            <div class="app_div">
+                                <img class="app_div_bg" src="images/yd_bg.jpg">
+                                <div class="app_div_text">
+                                    <i class="iconfont icon-liumeiti"></i>
+                                    <div class="app_div_p">
+                                        <p class="app_div_t">流媒体技术</p>
+                                        <p class="app_div_adv">边传边播，更加高效</p>
+                                    </div>
+                                </div>
+                                <div class="shadow">
+                                    <div class="app_div_text">
+                                        <i class="iconfont icon-liumeiti"></i>
+                                        <div class="app_div_p">
+                                            <p class="app_div_t">流媒体技术</p>
+                                            <p class="app_div_adv">边传边播，更加高效</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="app_a" href="music.html">
+                            <div class="app_div">
+                                <img class="app_div_bg" src="images/yd_bg.jpg">
+                                <div class="app_div_text">
+                                    <i class="iconfont icon-yinfu_"></i>
+                                    <div class="app_div_p">
+                                        <p class="app_div_t">乐器演奏</p>
+                                        <p class="app_div_adv">让K歌更加有趣、专业</p>
+                                    </div>
+                                </div>
+                                <div class="shadow">
+                                    <div class="app_div_text">
+                                        <i class="iconfont icon-yinfu_"></i>
+                                        <div class="app_div_p">
+                                            <p class="app_div_t">乐器演奏</p>
+                                            <p class="app_div_adv">让K歌更加有趣、专业</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--APP介绍-->
+        <img class="sing_t" src="images/sing.png">
+        <div class="sing_text">
+            <div class="sing_p" id="sliderText1">人人唱歌库均为独家精心编曲制作，拥有各国海量高品质音乐伴奏！</div>
+            <div class="sing_p" id="sliderText2">拥有智能评分、主旋律导唱、自由调节速度/音调/混响/主旋律等专业功能，为您带来不一样的K歌体验！</div>
+            <div class="sing_p" id="sliderText3">伴奏中可自主调节喜好的乐器，包括弦乐器、铜管、钢琴、吉他、贝斯、鼓等各类乐器，进行乐器独奏/集体演奏，为您的业余生活增添色彩！</div>
+            <div class="sing_p" id="sliderText4">户外K歌神器，0加载，少流量、多功能、高音质</div>
+            <div class="sing_p" id="sliderText5">人人唱是一款K歌 · 乐器演奏专业应用</div>
+            <div class="sing_p" id="sliderText6">大学社团，演奏爱好者，带有对乐器演奏兴趣的孩子的家长，乐器演奏培训班 学 · 练 · 秀</div>
+        </div>
+        <div class="sing_slider">
+            <div class="carousels">
+                <img class="phoneImg" src="images/iphone.png" alt="phone"/>
+                <div class="slides">
+                    <div><img alt="" src="images/rr-img1.png"><span class="cover"></span></div>
+                    <div><img alt="" src="images/rr-img2.png"><span class="cover"></span></div>
+                    <div><img alt="" src="images/rr-img3.png"><span class="cover"></span></div>
+                    <div><img alt="" src="images/rr-img4.png"><span class="cover"></span></div>
+                    <div><img alt="" src="images/rr-img3.png"><span class="cover"></span></div>
+                    <div><img alt="" src="images/rr-img2.png"><span class="cover"></span></div>
+                    <div><img alt="" src="images/rr-img3.png"><span class="cover"></span></div>
+                </div>
+            </div>
+        </div>
+        <a class="prev_btn" href="https://shouji.baidu.com/software/22599722.html">
+            <div class="circle_btn">
+                <div class="out1"></div>
+                <div class="out2"></div>
+                <div class="out3">
+                    <i class="iconfont icon-right-arrow"></i>
+                </div>
+            </div>
+            <p class="prev_btn_p">安装人人唱</p>
+        </a>
+    </div>
+    <!--商城-家庭娱乐-->
+    <div class="index-shop">
+        <div class="singBao">
+            <img class="makfong" src="images/feng.png" alt="maikefeng">
+            <a class="singBao_a" href="page.html">使用K歌宝唱歌<i class="iconfont icon-right"></i></a>
+        </div>
+        <div class="container">
+            <h2 class="pro_kinds">音特商城</h2>
+            <p class="pro_kinds_words">音特专利技术，造就品质生活娱乐</p>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="productDiv mp30">
+                        <a href="page.html">
+                            <div class="pro-img">
+                                <img class="product_img" src="images/mp30.jpg">
+                            </div>
+                            <div class="indexPro_info">
+                                <h3 class="indexPro_name">MP30</h3>
+                                <div class="indexPro_footer">
+                                    <p class="indexPro_adv">随时随地  想唱就唱</p>
+                                    <p class="indexPro_ass">蓝牙智能音响麦克风系列</p>
+                                    <p class="indexPro_money">¥1999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="productDiv">
+                        <a href="page.html">
+                            <div class="pro-img">
+                                <img class="product_img" src="images/e1.jpg">
+                            </div>
+                            <div class="indexPro_info">
+                                <h3 class="indexPro_name">E1</h3>
+                                <div class="indexPro_footer">
+                                    <p class="indexPro_adv">让智能生活娱乐到家</p>
+                                    <p class="indexPro_ass">智能麦克风点歌机系列</p>
+                                    <p class="indexPro_money">¥1999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="productDiv">
+                        <a href="page.html">
+                            <div class="pro-img">
+                                <img class="product_img" src="images/E3.jpg">
+                            </div>
+                            <div class="indexPro_info">
+                                <h3 class="indexPro_name">STK1</h3>
+                                <div class="indexPro_footer">
+                                    <p class="indexPro_adv">快、全、新</p>
+                                    <p class="indexPro_ass">电视盒子OTT系列</p>
+                                    <p class="indexPro_money">¥1999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="productDiv">
+                        <a href="page.html">
+                            <div class="pro-img">
+                                <img class="product_img" src="images/E2.jpg">
+                            </div>
+                            <div class="indexPro_info">
+                                <h3 class="indexPro_name">PRO8000-4</h3>
+                                <div class="indexPro_footer">
+                                    <p class="indexPro_adv">最专业   最高效</p>
+                                    <p class="indexPro_ass">专用乐谱演奏系列</p>
+                                    <p class="indexPro_money">¥1999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="productDiv">
+                        <a href="page.html">
+                            <div class="pro-img">
+                                <img class="product_img" src="images/E5.jpg">
+                            </div>
+                            <div class="indexPro_info">
+                                <h3 class="indexPro_name">AK2000</h3>
+                                <div class="indexPro_footer">
+                                    <p class="indexPro_adv">乐器伴奏   乐谱点歌</p>
+                                    <p class="indexPro_ass">业务点歌机KTV系列</p>
+                                    <p class="indexPro_money">¥1999</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="indexPro_more">
+                <a class="singBao_a" href="product.html">查看更多<i class="iconfont icon-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--迷你KTV-->
+    <div class="miniKtv">
+        <div id="content">
+            <div id="sdw-wrap">
+                <div class="block sdw-container">
+                    <div class="sdw-animate" data-speed="3000" data-delay="0" data-occur="1">
+                        <img class="miniKtvBg" src="images/miniKtv.jpg" alt="miniKtv">
+                    </div>
+                    <div class="block-words">
+                        <div class="block-words-right">
+                            <p class="title30 sdw-animate miniKtv_t" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s" data-occur="1">音特迷你KTV唱歌房</p>
+                            <p class="ctx sdw-animate miniKtv_p1" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s" data-occur="1">我和音乐有个约会，想唱就唱，一台会唱歌的房子</p>
+                            <p class="sup sdw-animate miniKtv_p2" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.4s" data-occur="1">迷你KTV房唱歌机，是一款全新的自主空间娱乐吧，以耳机体验为主集唱歌、练歌、录歌为一体，通过微信分享的物联网设备，满足消费者享受音乐和社交分享的需求！</p>
+                            <img class="sdw-animate miniktv_gn" src="images/gn.png" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.6s" data-occur="1">
+                            <p class="miniKtv_btn1 sdw-animate" data-start='{"opacity":"0"}' data-end='{"opacity":"1"}' data-speed="1500" data-delay="0.8s" data-occur="1" >
+                                <a class="btn-sing" href="https://shouji.baidu.com/software/22599722.html"><img class="iconImg" src="images/andro.png">使用人人唱点歌<img class="iconRight" src="images/right2.png"></a>
+                            </p>
+                            <p class="miniKtv_btn2 sdw-animate" data-start='{"opacity":"0"}' data-end='{"opacity":"1"}' data-speed="1500" data-delay="1s" data-occur="1"  >
+                                <a class="btn-sing" href="javascript:void(0);" data-toggle="modal" data-target="#deviceModal"><img class="iconImg" src="images/sousuo.png">查看附近的设备<img class="iconRight" src="images/right2.png"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer-->
+<footer id="footer">
+    <div class="container">
+        <div class="footerOut">
+            <div class="footer_container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="footerSer">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="footer-top">
+                                        <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                        <span class="footerService">7天无理由退货</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="footer-top">
+                                        <i class="iconfont icon-tianbaohuan"></i>
+                                        <span class="footerService">30天包换</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="footer-top">
+                                        <i class="iconfont icon-quanguobaoyou"></i>
+                                        <span class="footerService">全国包邮</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="footer-top">
+                                        <i class="iconfont icon-quanguobaoxiu"></i>
+                                        <span class="footerService">全国联保</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footerLinks">
+                            <ul class="footerList clearfix">
+                                <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
+                                <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
+                                <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
+                                <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
+                                <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
+                                <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
                             </ul>
                         </div>
-                        <div class="shopCart_goBuy clearfix">
-                            <div class="cartFooter">
-                                <p>共<span class="totalNum">2</span>件商品</p>
-                                <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
-                            </div>
-                            <a class="addCart_a" href="shop_cart.html">立即结算</a>
-                        </div>
                     </div>
-                    <!--购物车没有商品的状态-->
-                    <div class="f-16 text-center" id="noGoods" style="display: none;">
-                        购物车还没有商品，赶紧选购吧！
+                    <div class="col-md-4">
+                        <div id="footerContact">
+                            <strong class="footer-call">400-119-5555</strong>
+                            <p class="footer-text">( 24小时全国服务热线 )</p>
+                            <div class="footerCodes">
+                                <i class="iconfont icon-weibo"></i>
+                                <img class="weibo" src="images/weibo-img.jpg">
+                                <i class="iconfont icon-weixin2"></i>
+                                <img class="weixin" src="images/weixin-img.jpg">
+                                <i class="iconfont icon-qq1"></i>
+                                <img class="qq" src="images/timg.jpg">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!--侧导航-->
-    <aside class="sideBar" id="sideBar">
-          <div class="sideNav">
-              <ul>
-                  <li class="sideNav_li">
-                      <a class="sideNav_a" href="news/news.html">新闻资讯</a>
-                  </li>
-                  <li class="sideNav_li">
-                      <a class="sideNav_a" href="activity/activity.html">活动中心</a>
-                  </li>
-                  <li class="sideNav_li">
-                      <a class="sideNav_a" href="product.html">音特商城</a>
-                  </li>
-                  <li class="sideNav_li">
-                      <a class="sideNav_a" href="about/about.html">关于我们</a>
-                  </li>
-                  <li class="sideNav_li">
-                      <a class="sideNav_a" href="contact.html">联系我们</a>
-                  </li>
-              </ul>
-              <div class="aside_footer">
-                  <p class="aside_enter">音特电子（深圳）有限公司</p>
-                  <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
-                  <p class="aside_call">0755-83513870</p>
-                  <p class="aside_email">enter.media@gamil.com</p>
-                  <div class="footerCodes">
-                      <i class="iconfont icon-weibo"></i>
-                      <img class="weibo" src="images/weibo-img.jpg">
-                      <i class="iconfont icon-weixin2"></i>
-                      <img class="weixin" src="images/weixin-img.jpg">
-                      <i class="iconfont icon-qq1"></i>
-                      <img class="qq" src="images/timg.jpg">
-                  </div>
-              </div>
-          </div>
-    </aside>
-    <!--banner-->
-    <section class="index-banner">
-        <div id="focusBar" class="clearfix">
-            <a href="javascript:void(0)" class="arrL" onclick="prePage()"><i class="iconfont icon-zuofanhui"></i></a>
-            <a href="javascript:void(0)" class="arrR" onclick="nextPage()"><i class="iconfont icon-right-arrow"></i></a>
-            <ul class="mypng">
-                <li id="focusIndex1" style="background:url(images/banner3Bg.jpg) 50% 50% repeat-x;">
-                    <div class="focusL focusL3"><a href="javascript:void(0)"><img src="images/banner3-1.png"/></a></div>
-                    <div class="focusR focusR3"><a href="javascript:void(0)"><img src="images/banner3-2.png"/></a></div>
-                </li>
-                <li id="focusIndex2" style="background:url(images/banner2Bg.jpg) 60% 50% repeat-x;">
-                    <div class="focusL focusL2"><a href="javascript:void(0)"><img src="images/banner2-1.png"/></a></div>
-                    <div class="focusR focusR2"><a href="javascript:void(0)"><img src="images/banner2-2.png"/></a></div>
-                </li>
-                <li id="focusIndex3" style="background:url(images/bannerBg1.jpg) 50% 50% repeat-x;">
-                    <div class="focusL"><a href="javascript:void(0)"><img src="images/banner1-1.jpg"/></a></div>
-                    <div class="focusR"><a href="javascript:void(0)"><img src="images/banner1-2.png"/></a></div>
-                </li>
-            </ul>
-        </div>
-        <ol class="paginations">
-            <li class="liDot active"><a class="dot" href="javascript:void(0)"></a></li>
-            <li class="liDot"><a class="dot" href="javascript:void(0)"></a></li>
-            <li class="liDot"><a class="dot" href="javascript:void(0)"></a></li>
-        </ol>
-    </section>
-    <!-- 内容区-->
-    <section class="content_index">
-        <!--APP介绍-->
-        <div class="apps">
-            <div class="sings">
-                <!--APP应用-->
-                <div class="app">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a class="app_a" href="#">
-                                    <div class="app_div">
-                                        <img class="app_div_bg" src="images/yd_bg.jpg">
-                                        <div class="app_div_text">
-                                            <i class="iconfont icon-yunxiazai"></i>
-                                            <div class="app_div_p">
-                                                <p class="app_div_t">云端歌库</p>
-                                                <p class="app_div_adv">全球最全云端歌库</p>
-                                            </div>
-                                        </div>
-                                        <div class="shadow">
-                                            <div class="app_div_text">
-                                                <i class="iconfont icon-yunxiazai"></i>
-                                                <div class="app_div_p">
-                                                    <p class="app_div_t">云端歌库</p>
-                                                    <p class="app_div_adv">全球最全云端歌库</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="app_a" href="#">
-                                    <div class="app_div">
-                                        <img class="app_div_bg" src="images/yd_bg.jpg">
-                                        <div class="app_div_text">
-                                            <i class="iconfont icon-liumeiti"></i>
-                                            <div class="app_div_p">
-                                                <p class="app_div_t">流媒体技术</p>
-                                                <p class="app_div_adv">边传边播，更加高效</p>
-                                            </div>
-                                        </div>
-                                        <div class="shadow">
-                                            <div class="app_div_text">
-                                                <i class="iconfont icon-liumeiti"></i>
-                                                <div class="app_div_p">
-                                                    <p class="app_div_t">流媒体技术</p>
-                                                    <p class="app_div_adv">边传边播，更加高效</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="app_a" href="#">
-                                    <div class="app_div">
-                                        <img class="app_div_bg" src="images/yd_bg.jpg">
-                                        <div class="app_div_text">
-                                            <i class="iconfont icon-yinfu_"></i>
-                                            <div class="app_div_p">
-                                                <p class="app_div_t">乐谱演奏</p>
-                                                <p class="app_div_adv">让K歌更加有趣、专业</p>
-                                            </div>
-                                        </div>
-                                        <div class="shadow">
-                                            <div class="app_div_text">
-                                                <i class="iconfont icon-yinfu_"></i>
-                                                <div class="app_div_p">
-                                                    <p class="app_div_t">乐谱演奏</p>
-                                                    <p class="app_div_adv">让K歌更加有趣、专业</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img class="sing_t" src="images/sing.png">
-                <p class="slider_p">音特电子采用MIDI音源,高清音质,悦享高品质K歌娱乐！</p>
-                <div class="sing_slider">
-                    <div class="carousels">
-                        <img class="phoneImg" src="images/iphone.png" alt="phone"/>
-                        <div class="slides">
-                            <div><img alt="" src="images/rr-img1.png"><span class="cover"></span></div>
-                            <div><img alt="" src="images/rr-img2.png"><span class="cover"></span></div>
-                            <div><img alt="" src="images/rr-img3.png"><span class="cover"></span></div>
-                            <div><img alt="" src="images/rr-img4.png"><span class="cover"></span></div>
-                            <div><img alt="" src="images/rr-img3.png"><span class="cover"></span></div>
-                            <div><img alt="" src="images/rr-img2.png"><span class="cover"></span></div>
-                        </div>
-                    </div>
-                </div>
-                <a class="prev_btn" href="https://shouji.baidu.com/software/22599722.html">
-                    <div class="circle_btn">
-                        <div class="out1"></div>
-                        <div class="out2"></div>
-                        <div class="out3">
-                            <i class="iconfont icon-right-arrow"></i>
-                        </div>
-                    </div>
-                    <p class="prev_btn_p">安装人人唱</p>
-                </a>
-            </div>
 
-        </div>
-        <!--商城-家庭娱乐-->
-        <div class="index-shop">
-            <div class="singBao">
-                <img class="makfong" src="images/feng.png" alt="maikefeng">
-                <a class="singBao_a" href="#">使用K歌宝唱歌<i class="iconfont icon-right"></i></a>
-            </div>
-            <div class="container">
-                <h2 class="pro_kinds">音特商城</h2>
-                <p class="pro_kinds_words">音特专利技术，造就品质生活娱乐</p>
-                <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                        <div class="productDiv mp30">
-                            <a href="page.html">
-                                <div class="pro-img">
-                                    <img class="product_img" src="images/mp30.jpg">
-                                </div>
-                                <div class="indexPro_info">
-                                    <h3 class="indexPro_name">MP30</h3>
-                                    <div class="indexPro_footer">
-                                        <p class="indexPro_adv">随时随地  想唱就唱</p>
-                                        <p class="indexPro_ass">蓝牙智能音响麦克风系列</p>
-                                        <p class="indexPro_money">¥1999</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="productDiv">
-                            <a href="page.html">
-                                <div class="pro-img">
-                                    <img class="product_img" src="images/e1.jpg">
-                                </div>
-                                <div class="indexPro_info">
-                                    <h3 class="indexPro_name">E1</h3>
-                                    <div class="indexPro_footer">
-                                        <p class="indexPro_adv">让智能生活娱乐到家</p>
-                                        <p class="indexPro_ass">智能麦克风点歌机系列</p>
-                                        <p class="indexPro_money">¥1999</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="productDiv">
-                            <a href="page.html">
-                                <div class="pro-img">
-                                    <img class="product_img" src="images/E3.jpg">
-                                </div>
-                                <div class="indexPro_info">
-                                    <h3 class="indexPro_name">STK1</h3>
-                                    <div class="indexPro_footer">
-                                        <p class="indexPro_adv">快、全、新</p>
-                                        <p class="indexPro_ass">电视盒子OTT系列</p>
-                                        <p class="indexPro_money">¥1999</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="productDiv">
-                            <a href="page.html">
-                                <div class="pro-img">
-                                    <img class="product_img" src="images/E2.jpg">
-                                </div>
-                                <div class="indexPro_info">
-                                    <h3 class="indexPro_name">PRO8000-4</h3>
-                                    <div class="indexPro_footer">
-                                        <p class="indexPro_adv">最专业   最高效</p>
-                                        <p class="indexPro_ass">专用乐谱演奏系列</p>
-                                        <p class="indexPro_money">¥1999</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="productDiv">
-                            <a href="page.html">
-                                <div class="pro-img">
-                                    <img class="product_img" src="images/E5.jpg">
-                                </div>
-                                <div class="indexPro_info">
-                                    <h3 class="indexPro_name">AK2000</h3>
-                                    <div class="indexPro_footer">
-                                        <p class="indexPro_adv">乐器伴奏   乐谱点歌</p>
-                                        <p class="indexPro_ass">业务点歌机KTV系列</p>
-                                        <p class="indexPro_money">¥1999</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="indexPro_more">
-                    <a class="singBao_a" href="#">查看更多<i class="iconfont icon-right"></i></a>
-                </div>
-            </div>
-        </div>
-        <!--迷你KTV-->
-        <div class="miniKtv">
-            <div id="content">
-                <div id="sdw-wrap">
-                    <div class="block sdw-container">
-                        <div class="sdw-animate" data-speed="3000" data-delay="0" data-occur="1">
-                            <img class="miniKtvBg" src="images/miniKtv.jpg" alt="miniKtv">
-                        </div>
-                        <div class="block-words">
-                            <div class="block-words-right">
-                                <p class="title30 sdw-animate miniKtv_t" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0s" data-occur="1">音特迷你KTV唱歌房</p>
-                                <p class="ctx sdw-animate miniKtv_p1" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.2s" data-occur="1">我和音乐有个约会，想唱就唱，一台会唱歌的房子</p>
-                                <p class="sup sdw-animate miniKtv_p2" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.4s" data-occur="1">迷你KTV房唱歌机，是一款全新的自主空间娱乐吧，以耳机体验为主集唱歌、练歌、录歌为一体，通过微信分享的物联网设备，满足消费者享受音乐和社交分享的需求！</p>
-                                <img class="sdw-animate miniktv_gn" src="images/gn.png" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500" data-delay="0.6s" data-occur="1">
-                                <p class="miniKtv_btn1 sdw-animate" data-start='{"opacity":"0"}' data-end='{"opacity":"1"}' data-speed="1500" data-delay="0.8s" data-occur="1" >
-                                    <a class="btn-sing" href="https://shouji.baidu.com/software/22599722.html"><img class="iconImg" src="images/andro.png">使用人人唱点歌<img class="iconRight" src="images/right2.png"></a>
-                                </p>
-                                <p class="miniKtv_btn2 sdw-animate" data-start='{"opacity":"0"}' data-end='{"opacity":"1"}' data-speed="1500" data-delay="1s" data-occur="1"  >
-                                    <a class="btn-sing" href="javascript:void(0);" data-toggle="modal" data-target="#deviceModal"><img class="iconImg" src="images/sousuo.png">查看附近的设备<img class="iconRight" src="images/right2.png"></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <div class="footerOut">
-                <div class="footer_container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="footerSer">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-tianwuliyoubaotui"></i>
-                                            <span class="footerService">7天无理由退货</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-tianbaohuan"></i>
-                                            <span class="footerService">30天包换</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-quanguobaoyou"></i>
-                                            <span class="footerService">全国包邮</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-quanguobaoxiu"></i>
-                                            <span class="footerService">全国联保</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footerLinks">
-                                <ul class="footerList clearfix">
-                                    <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div id="footerContact">
-                                <strong class="footer-call">400-119-5555</strong>
-                                <p class="footer-text">( 24小时全国服务热线 )</p>
-                                <div class="footerCodes">
-                                    <i class="iconfont icon-weibo"></i>
-                                    <img class="weibo" src="images/weibo-img.jpg">
-                                    <i class="iconfont icon-weixin2"></i>
-                                    <img class="weixin" src="images/weixin-img.jpg">
-                                    <i class="iconfont icon-qq1"></i>
-                                    <img class="qq" src="images/timg.jpg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="footerBar">
-            © dameigong.cn 2017 皖ICP备17012709号
-        </div>
-    </footer>
-</div>
+    </div>
+    <div class="footerBar">
+        © dameigong.cn 2017 皖ICP备17012709号
+    </div>
+</footer>
 <!-- Modal -->
 <div class="modal newsModal" id="deviceModal" tabindex="-1" role="dialog" aria-labelledby="deviceModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="activityContent">
-                <img src="images/index-map.jpg">
+            <div class="map_content" style="border: 3px solid #ff6000;">
+                <iframe src='gdMap.html' width='100%' height='650' frameborder='0' name="_blank" id="_blank"></iframe>
             </div>
         </div>
     </div>
-    <a class="closeImg" data-dismiss="modal" aria-label="Close"><img class="close-img" src="images/closeBg.png"></a>
+    <a class="closeImg" data-dismiss="modal" aria-label="Close"><img class="close-img" src="images/closeImg.png"></a>
 </div>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
@@ -496,7 +507,6 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/sdw_hw.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/bannerSlider.js"></script>
 <script type="text/javascript" src="js/jquery.carousel-1.1.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
@@ -505,8 +515,9 @@
         $('.carousels').carousels({ //人人唱app轮播
             directionNav:true,
             speed:200,
-            carouselsWidth:950,
+            carouselsWidth:1000,
             carouselsHeight:390,
+            slidesPerScroll:6,
             frontWidth:223,
             frontHeight:390,
             hAlign:'center',
@@ -521,8 +532,20 @@
             description:false,
             descriptionContainer:'.carousels_description'
         });
+        change_div(6);
+
     });
 
+    //  人人唱介绍图片轮换时文字介绍也相应变换方法
+    function change_div(num){
+        document.getElementById("sliderText"+(num-1)).style.display="none";
+        if(num==6){
+            num=1;
+        }
+        document.getElementById("sliderText"+num).style.display="block";
+        num++;
+        setTimeout("change_div("+num+")",2000);//2秒切换一次
+    }
 
 </script>
 </body>

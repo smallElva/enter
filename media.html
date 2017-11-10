@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html lang="zh-cn" class="ie6 ie ltie8"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="zh-cn" class="ie7 ie ltie8"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="zh-cn" class="ie8 ie ltie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="zh-cn" class="ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-cn" class="normal"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="title" content="音特"/>
+    <meta name="keywords" content="音特，音特电子，话筒"/>
+    <meta name="description" content="音特电子，话筒"/>
+    <title>音特电子</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="app.css" >
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="wrapper">
+    <!-- 通用头部-->
+    <header class="header">
+        <div class="container">
+            <div class="navIcons icon-out pull-left" id="showNav">
+                <span class="line_icons"></span>
+                <span class="line_icons"></span>
+                <span class="line_icons"></span>
+            </div>
+            <a class="logo" href="index.html"><img src="images/logo.png"></a>
+            <div class="navShopBar pull-right">
+                <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
+                <div id="personBlock" class="personCenterBlock">
+                    <img class="upup" src="images/upup.png">
+                    <ul>
+                        <li class="personList">
+                            <a class="clearfix" href="person_center.html">我的订单</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="service_after.html">售后服务</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="discount.html">优惠券</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="address.html">收货地址</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="myInfo.html">账户资料</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="javascript:void(0);">退出账号</a>
+                        </li>
+                    </ul>
+                </div>
+                <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
+                <!--购物车-->
+                <div class="shopCartBlock" id="shopCartBlock">
+                    <img class="upup2" src="images/upup.png">
+                    <!--购物车有商品的状态-->
+                    <div class="withGoods" id="withGoods">
+                        <div class="shopCart_pro">
+                            <ul class="cartList">
+                                <li class="clearfix">
+                                    <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                    <div class="cartRight">
+                                        <p class="cartInfo">
+                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                            <span class="cartGoodsNum">X1</span>
+                                        </p>
+                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                    </div>
+                                    <i class="iconfont icon-close js_deleteGoods"></i>
+                                </li>
+                                <li class="clearfix">
+                                    <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                    <div class="cartRight">
+                                        <p>
+                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                            <span class="cartGoodsNum">X1</span>
+                                        </p>
+                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                    </div>
+                                    <i class="iconfont icon-close js_deleteGoods"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shopCart_goBuy clearfix">
+                            <div class="cartFooter">
+                                <p>共<span class="totalNum">2</span>件商品</p>
+                                <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
+                            </div>
+                            <a class="addCart_a" href="shop_cart.html">立即结算</a>
+                        </div>
+                    </div>
+                    <!--购物车没有商品的状态-->
+                    <div class="f-16 text-center" id="noGoods" style="display: none;">
+                        购物车还没有商品，赶紧选购吧！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--侧导航-->
+    <aside class="sideBar" id="sideBar">
+        <div class="sideNav">
+            <ul>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="news/news.html">新闻资讯</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="activity/activity.html">活动中心</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="product.html">音特商城</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="about/about.html">关于我们</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="contact.html">联系我们</a>
+                </li>
+            </ul>
+            <div class="aside_footer">
+                <p class="aside_enter">音特电子（深圳）有限公司</p>
+                <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                <p class="aside_call">0755-83513870</p>
+                <p class="aside_email">enter.media@gamil.com</p>
+                <div class="footerCodes">
+                    <i class="iconfont icon-weibo"></i>
+                    <img class="weibo" src="images/weibo-img.jpg">
+                    <i class="iconfont icon-weixin2"></i>
+                    <img class="weixin" src="images/weixin-img.jpg">
+                    <i class="iconfont icon-qq1"></i>
+                    <img class="qq" src="images/timg.jpg">
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- 内容区-->
+    <section class="medias">
+        <div id="content">
+            <div class="block block_songs">
+                <img class="blockBg" src="images/media_bg.jpg">
+                <div class="songs_server">
+                    <div class="container">
+                        <div class="media_tech_text">
+                            <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">流媒体技术</p>
+                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子采用流媒体技术，流媒体技术也称流式媒体技术.就是把</p>
+                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">连续的影像和声音信息经过压缩处理后放上网站服务器,由视频服务器向用户计算机顺序或实时地传送各个压缩包</p>
+                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.6s" data-occur="1">让用户一边下载一边观看、收听，而不要等整个压缩文件下载</p>
+                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.8s" data-occur="1">到自己的计算机上才可以观看的网络传输技术。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block_songs">
+                <div class="container">
+                    <div class="medias_block">
+                        <div class="medias_adv">
+                            <img class="blockBg" src="images/medias_adv_bg.jpg">
+                            <div class="medias_adv_text">
+                                <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">用户体验更加好</p>
+                                <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子采用了流媒体技术，实现用户实时K歌，而不用</p>
+                                <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">等待歌曲下载完成，用户体验更加好</p>
+                                <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.6s" data-occur="1">真正意义上的想唱就唱!</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="medias_adv_block">
+                                    <img class="media_icon" src="images/media_icon1.png">
+                                    <p class="media_adv_title">节约时间</p>
+                                    <p class="ps server_p">传统媒体K歌需要时间下载完成后才可以K歌，浪费时间</p>
+                                    <p class="ps server_p">音特电子采用流媒体技术，完美解决这个问题，不仅使启动延时</p>
+                                    <p class="ps server_p">大大缩短，减少了用户在线等待的时间。</p>
+                                    <img class="mediaImg" src="images/mediaImg1.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="medias_adv_block">
+                                    <img class="media_icon" src="images/media_icon2.png">
+                                    <p class="media_adv_title">节省空间</p>
+                                    <p class="ps server_p">传统媒体K歌需要把歌曲下载完成后才可以K歌，浪费</p>
+                                    <p class="ps server_p">储存空间，音特电子采用流媒体技术，不需要太大的缓存容量</p>
+                                    <p class="ps server_p">节省硬盘的空间。</p>
+                                    <img class="mediaImg" src="images/mediaImg2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block block_songs">
+                <div class="container">
+                    <div class="medias_pro">
+                        <img class="blockBg" src="images/media_bg2.jpg">
+                        <div class="medias_pro_text">
+                            <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">做用户想要的产品</p>
+                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子长期一来一直坚持把用户体验放在首位，做用户想要的产品，</p>
+                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">采用流媒体技术更加体现这一点。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="footerOut">
+                <div class="footer_container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="footerSer">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                            <span class="footerService">7天无理由退货</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-tianbaohuan"></i>
+                                            <span class="footerService">30天包换</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-quanguobaoyou"></i>
+                                            <span class="footerService">全国包邮</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-quanguobaoxiu"></i>
+                                            <span class="footerService">全国联保</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footerLinks">
+                                <ul class="footerList clearfix">
+                                    <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="footerContact">
+                                <strong class="footer-call">400-119-5555</strong>
+                                <p class="footer-text">( 24小时全国服务热线 )</p>
+                                <div class="footerCodes">
+                                    <i class="iconfont icon-weibo"></i>
+                                    <img class="weibo" src="images/weibo-img.jpg">
+                                    <i class="iconfont icon-weixin2"></i>
+                                    <img class="weixin" src="images/weixin-img.jpg">
+                                    <i class="iconfont icon-qq1"></i>
+                                    <img class="qq" src="images/timg.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footerBar">
+            © dameigong.cn 2017 皖ICP备17012709号
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/sdw_hw.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+
+
+</script>
+</body>
+</html>

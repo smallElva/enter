@@ -32,18 +32,121 @@
     <!-- 通用头部-->
     <header class="header">
         <div class="container">
-            <div class="navIcons pull-left">
+            <div class="navIcons icon-out pull-left" id="showNav">
                 <span class="line_icons"></span>
                 <span class="line_icons"></span>
                 <span class="line_icons"></span>
             </div>
             <a class="logo" href="../index.html"><img src="../images/logo.png"></a>
             <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1"></i>
-                <i class="iconfont icon-gouwuche1"></i>
+                <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
+                <div id="personBlock" class="personCenterBlock">
+                    <img class="upup" src="../images/upup.png">
+                    <ul>
+                        <li class="personList">
+                            <a class="clearfix" href="../person_center.html">我的订单</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="../service_after.html">售后服务</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="../discount.html">优惠券</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="../address.html">收货地址</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="../myInfo.html">账户资料</a>
+                        </li>
+                        <li class="personList">
+                            <a class="clearfix" href="javascript:void(0);">退出账号</a>
+                        </li>
+                    </ul>
+                </div>
+                <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
+                <!--购物车-->
+                <div class="shopCartBlock" id="shopCartBlock">
+                    <img class="upup2" src="../images/upup.png">
+                    <!--购物车有商品的状态-->
+                    <div class="withGoods" id="withGoods">
+                        <div class="shopCart_pro">
+                            <ul class="cartList">
+                                <li class="clearfix">
+                                    <a class="pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
+                                    <div class="cartRight">
+                                        <p class="cartInfo">
+                                            <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
+                                            <span class="cartGoodsNum">X1</span>
+                                        </p>
+                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                    </div>
+                                    <i class="iconfont icon-close js_deleteGoods"></i>
+                                </li>
+                                <li class="clearfix">
+                                    <a class="pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
+                                    <div class="cartRight">
+                                        <p>
+                                            <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
+                                            <span class="cartGoodsNum">X1</span>
+                                        </p>
+                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                    </div>
+                                    <i class="iconfont icon-close js_deleteGoods"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shopCart_goBuy clearfix">
+                            <div class="cartFooter">
+                                <p>共<span class="totalNum">2</span>件商品</p>
+                                <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
+                            </div>
+                            <a class="addCart_a" href="../shop_cart.html">立即结算</a>
+                        </div>
+                    </div>
+                    <!--购物车没有商品的状态-->
+                    <div class="f-16 text-center" id="noGoods" style="display: none;">
+                        购物车还没有商品，赶紧选购吧！
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+    <!--侧导航-->
+    <aside class="sideBar" id="sideBar">
+        <div class="sideNav">
+            <ul>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="../news/news.html">新闻资讯</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="../activity/activity.html">活动中心</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="../product.html">音特商城</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="../about/about.html">关于我们</a>
+                </li>
+                <li class="sideNav_li">
+                    <a class="sideNav_a" href="../contact.html">联系我们</a>
+                </li>
+            </ul>
+            <div class="aside_footer">
+                <p class="aside_enter">音特电子（深圳）有限公司</p>
+                <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                <p class="aside_call">0755-83513870</p>
+                <p class="aside_email">enter.media@gamil.com</p>
+                <div class="footerCodes">
+                    <i class="iconfont icon-weibo"></i>
+                    <img class="weibo" src="../images/weibo-img.jpg">
+                    <i class="iconfont icon-weixin2"></i>
+                    <img class="weixin" src="../images/weixin-img.jpg">
+                    <i class="iconfont icon-qq1"></i>
+                    <img class="qq" src="../images/timg.jpg">
+                </div>
+            </div>
+        </div>
+    </aside>
     <!-- 内容区-->
     <div class="content">
         <section id="activity">
@@ -231,11 +334,11 @@
                                 <p class="footer-text">( 24小时全国服务热线 )</p>
                                 <div class="footerCodes">
                                     <i class="iconfont icon-weibo"></i>
-                                    <img class="weibo" src="images/weibo-img.jpg">
+                                    <img class="weibo" src="../images/weibo-img.jpg">
                                     <i class="iconfont icon-weixin2"></i>
-                                    <img class="weixin" src="images/weixin-img.jpg">
+                                    <img class="weixin" src="../images/weixin-img.jpg">
                                     <i class="iconfont icon-qq1"></i>
-                                    <img class="qq" src="images/timg.jpg">
+                                    <img class="qq" src="../images/timg.jpg">
                                 </div>
                             </div>
                         </div>
@@ -253,7 +356,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="activityContent">
-                <img src="../images/activityPageImg.jpg">
+                <img class="activityBg" src="../images/activityPageImg.jpg">
             </div>
         </div>
     </div>
