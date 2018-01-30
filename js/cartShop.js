@@ -62,12 +62,6 @@ window.onload = function () {
         var span = tr.getElementsByClassName('reduce')[0]; //-号
         //写入HTML
         subtotal.innerHTML = (parseInt(countInput.value) * parseFloat(price.innerHTML)).toFixed(2);
-        //如果数目只有一个，把-号去掉
-        if (countInput.value == 1) {
-            span.innerHTML = '';
-        }else{
-            span.innerHTML = '-';
-        }
     }
 
     // 点击选择框
@@ -186,6 +180,7 @@ window.onload = function () {
     }else{
         deleteAll.style.color = "#898888";
     }
+
 
 
 };

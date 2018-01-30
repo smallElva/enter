@@ -21,7 +21,8 @@
     <title>音特电子</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/iconfont.css">
-    <link rel="stylesheet" href="../app.css" type="text/css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../css/news.css" type="text/css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -30,241 +31,128 @@
 <body>
 <div class="wrapper">
     <!-- 通用头部-->
-    <header class="header">
-        <div class="container">
-            <div class="navIcons pull-left">
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-            </div>
-            <a class="logo" href="../index.html"><img src="../images/logo.png"></a>
-            <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1"></i>
-                <i class="iconfont icon-gouwuche1"></i>
-            </div>
-        </div>
-    </header>
-    <!-- 内容区-->
-    <div class="content">
-        <section id="news">
+    <header>
+        <!--pc-->
+        <div class="header navbar-fixed-top hidden-sm hidden-xs">
             <div class="container">
-                <!--位置导航-->
-                <div class="navAdd">
-                    <div class="navAdd-block">
-                        <a class="navAdd-a" href="../index.html">首页</a>
-                        <span class="navAdd-dot"></span>
-                        <a class="navAdd-a active" href="news.html">新闻资讯</a>
-                    </div>
+                <div class="navIcons icon-out pull-left" id="showNav">
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsDiv">
-                            <div class="newsDate">
-                                <i class="iconfont icon-rili"></i>
-                                <span class="newsTime">2017.10.17</span>
-                            </div>
-                            <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                <img src="../images/newsImg.jpg" alt="MP30">
-                            </a>
-                            <div class="newsBlock">
-                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
-                                    <span class="newsTitle">K歌宝“MP30”正式上市</span>
-                                </a>
-                                <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="addMore text-center" id="addMore">
-                    <button class="load_more" id="load_more_button"><img src="../images/addMore.png" class="addMoreImg" alt="加载更多"></button>
-                    <div class="animation_image" style="display:none;"><img src="../images/sy-loader.gif"></div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="footerSer">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-tianwuliyoubaotui"></i>
-                                    <span class="footerService">7天无理由退货</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-tianbaohuan"></i>
-                                    <span class="footerService">30天包换</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-quanguobaoyou"></i>
-                                    <span class="footerService">全国包邮</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-quanguobaoxiu"></i>
-                                    <span class="footerService">全国联保</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footerLinks">
-                        <ul class="footerList clearfix">
-                            <li class="footerListLi"><a class="footer_a" href="#">新闻资讯</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">活动中心</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">关于我们</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">联系我们</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
+                <a class="logo" href="../index.html"><img class="nav-icon" src="../images/logo.png"></a>
+                <div class="navShopBar pull-right">
+                    <a class="goProBlock" href="../product.html" title="音特商城"><img class="nav-icon" src="../images/nav-icon1.png"></a>
+                    <a class="goProBlock" href="../myOrder.html"  id="js_showPerson"><img class="nav-icon" src="../images/nav-icon2.png"><span class="badge shopCart_badge">2</span></a>
+                    <div id="personBlock" class="personCenterBlock">
+                        <img class="upup" src="../images/upup.png">
+                        <ul>
+                            <li class="personList">
+                                <a href="../myOrder.html"><span class="personList_nav">我的订单</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../service_after.html"><span class="personList_nav">售后服务</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../discount.html"><span class="personList_nav">优惠券</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../address.html"><span class="personList_nav">收货地址</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../myInfo.html"><span class="personList_nav">账户资料</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="javascript:void(0);"><span class="personList_nav">退出账号</span></a>
+                            </li>
                         </ul>
                     </div>
+                    <a class="goProBlock" href="../shop_cart.html" title="购物车" id="js_showCart"><img class="nav-icon" src="../images/nav-icon3.png"></a>
+                    <!--购物车-->
+                    <div class="shopCartBlock" id="shopCartBlock">
+                        <img class="upup2" src="../images/upup.png">
+                        <!--购物车有商品的状态-->
+                        <div class="withGoods" id="withGoods" style="display: block;">
+                            <div class="shopCart_pro">
+                                <ul class="cartList">
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p class="cartInfo">
+                                                <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                            <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p>
+                                                <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
+                                                <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shopCart_goBuy clearfix">
+                                <div class="cartFooter">
+                                    <p>共<span class="totalNum">2</span>件商品</p>
+                                    <p class="totalYuan">¥3998.00</p>
+                                </div>
+                                <a class="addCart_a" href="../shop_cart.html">去结算</a>
+                            </div>
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoods" style="display: none;">
+                            登录后可显示<br>
+                            您账号中已加入的商品哦~
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoodsLogin" style="display: none;">
+                            您的购物车还没有商品，<br>
+                            赶紧去选购吧~
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div id="footerContact">
-                        <strong class="footer-call">400-119-5555</strong>
-                        <p class="footer-text">( 24小时全国服务热线 )</p>
+            </div>
+            <!--侧导航-->
+            <aside class="sideBar" id="sideBar">
+                <div class="sideNav">
+                    <ul>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../news/news.html">新闻资讯</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../activity/activity.html">活动中心</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../product.html">音特商城</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../about/about.html">关于我们</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../contact.html">联系我们</a>
+                            <div class="aside_line"></div>
+                        </li>
+                    </ul>
+                    <div class="aside_footer">
+                        <div class="aside_footer_img">
+                            <img src="../images/aside_logo.png">
+                        </div>
+                        <p class="aside_enter">音特电子（深圳）有限公司</p>
+                        <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                        <p class="aside_call">0755-83513870</p>
+                        <p class="aside_email">enter.media@gamil.com</p>
                         <div class="footerCodes">
                             <i class="iconfont icon-weibo"></i>
                             <img class="weibo" src="../images/weibo-img.jpg">
@@ -275,17 +163,371 @@
                         </div>
                     </div>
                 </div>
+            </aside>
+        </div>
+        <!--移动端-->
+        <div class="header-xs visible-xs visible-sm">
+            <div class="container">
+                <div class="header-xs-block">
+                    <div class="navIcons-xs icon-out pull-left">
+                        <span class="line_icons"></span>
+                        <span class="line_icons"></span>
+                        <span class="line_icons"></span>
+                    </div>
+                    <a class="header-logo" href="../index.html"><img class="logo-xs" src="../images-xs/logo-xs.png"></a>
+                    <div class="header-xs-r pull-right">
+                        <a class="header-xs-a" href="../product.html"><img class="shopCart-xs" src="../images-xs/shop-xs.png"></a>
+                        <a class="header-xs-a header-xs-person" href="../myOrder.html"><img class="person-xs" src="../images-xs/person-xs.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-inner-nav">
+                <div class="container">
+                    <ul>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../news/news.html">新闻资讯</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../activity/activity.html">活动中心</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../product.html">音特商城</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../about/about.html">关于我们</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../contact.html">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-        <div class="footerBar">
+    </header>
+    <!-- 内容区-->
+    <div class="content">
+        <section id="news">
             <div class="container">
+                <!--位置导航-->
+                <div class="navAdd hidden-sm hidden-xs">
+                    <div class="navAdd-block">
+                        <a class="navAdd-a" href="../index.html">首页</a>
+                        <span class="navAdd-dot"></span>
+                        <a class="navAdd-a active" href="news.html">新闻资讯</a>
+                    </div>
+                </div>
+                <div class="newsSession">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 hidden-sm col-xs-12">
+                            <div class="newsDiv">
+                                <div class="newsDate">
+                                    <i class="iconfont icon-rili"></i>
+                                    <span class="newsTime">2017.10.17</span>
+                                </div>
+                                <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                    <img src="../images/newsImg.jpg" alt="MP30">
+                                </a>
+                                <div class="newsBlock">
+                                    <a href="javascript:void(0);" class="popup-link" data-toggle="modal" data-target="#newsModal">
+                                        <span class="newsTitle">K歌宝“MP30”正式上市</span>
+                                    </a>
+                                    <p class="newsDetail">音特电子新产品K歌宝“MP30”的新品发布会今天在宝安体育馆场地进行......</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addMore text-center" id="addMore">
+                        <button class="load_more" id="load_more_button"><img src="../images/addMore.png" class="addMoreImg" alt="加载更多"></button>
+                        <div class="animation_image" style="display:none;">
+                            <div class="spinner">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!---通用footer-->
+    <footer>
+        <!--pc--footer-->
+        <div  id="footer" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="footerOut">
+                    <div class="footer_container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="footerSer">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                                <span class="footerService">7天无理由退货</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianbaohuan"></i>
+                                                <span class="footerService">30天包换</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoyou"></i>
+                                                <span class="footerService">全国包邮</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                                <span class="footerService">全国联保</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footerLinks">
+                                    <ul class="footerList clearfix">
+                                        <li class="footerListLi"><a class="footer_a" href="../news/news.html">新闻资讯</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../activity/activity.html">活动中心</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../product.html">音特商城</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../about/about.html">关于我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../contact.html">联系我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" data-toggle="modal" data-target="#langModal">简体中文</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="footerContact">
+                                    <strong class="footer-call">400-119-5555</strong>
+                                    <p class="footer-text">( 24小时全国服务热线 )</p>
+                                    <div class="footerCodes">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <img class="weibo" src="../images/weibo-img.jpg">
+                                        <i class="iconfont icon-weixin2"></i>
+                                        <img class="weixin" src="../images/weixin-img.jpg">
+                                        <i class="iconfont icon-qq1"></i>
+                                        <img class="qq" src="../images/timg.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBar">
                 © dameigong.cn 2017 皖ICP备17012709号
+            </div>
+        </div>
+        <!--移动端--footer-->
+        <div class="footer-xs visible-xs visible-sm">
+            <div class="container">
+                <div class="footer-service-xs">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                <span class="footerService">7天无理由退货</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-tianbaohuan"></i>
+                                <span class="footerService">30天包换</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-quanguobaoyou"></i>
+                                <span class="footerService">全国包邮</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                <span class="footerService">全国联保</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks">
+                    <ul class="footerList clearfix">
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../news/news.html">新闻资讯<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../activity/activity.html">活动中心<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../product.html">音特商城<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../about/about.html">关于我们<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../contact.html">联系我们<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" data-toggle="modal" data-target="#langModal">简体中文<i class="iconfont icon-right pull-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footerContact-xs clearfix">
+                    <div class="footer_xs_l">
+                        <strong class="footer-call">400-119-5555</strong>
+                        <p class="footer-text">( 24小时全国服务热线 )</p>
+                    </div>
+                    <div class="footerCodes-xs">
+                        <i class="iconfont icon-weibo js_weibo"></i>
+                        <i class="iconfont icon-weixin2 js_weixin"></i>
+                        <i class="iconfont icon-qq1 js_qq"></i>
+                    </div>
+                </div>
+                <div class="footerBar-xs">© dameigong.cn 2017 皖ICP备17012709号</div>
+            </div>
+            <!--点击微博、微信、qq上拉二维码-->
+            <div class="overLay"></div>
+            <div id="codesDiv" class="codesDiv">
+                <p class="codesDiv_t">长按二维码保存到手机后可在微信扫码关注</p>
+                <div class="codesImg">
+                    <img class="codesImgs" src="../images-xs/weibo-img.jpg">
+                </div>
             </div>
         </div>
     </footer>
 </div>
+
 <!-- Modal -->
 <div class="modal newsModal" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="newsModalLabel">
+    <div class="modal_close">
+        <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconfont icon-close"></span></a>
+    </div>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="newsContent">
@@ -298,6 +540,9 @@
                             <li data-target="#carousel-news" data-slide-to="0" class="active"><a class="dot" href="javascript:void(0)"></a></li>
                             <li data-target="#carousel-news" data-slide-to="1"><a class="dot" href="javascript:void(0)"></a></li>
                             <li data-target="#carousel-news" data-slide-to="2"><a class="dot" href="javascript:void(0)"></a></li>
+                            <li data-target="#carousel-news" data-slide-to="3"><a class="dot" href="javascript:void(0)"></a></li>
+                            <li data-target="#carousel-news" data-slide-to="4"><a class="dot" href="javascript:void(0)"></a></li>
+                            <li data-target="#carousel-news" data-slide-to="5"><a class="dot" href="javascript:void(0)"></a></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
@@ -311,15 +556,24 @@
                             <div class="item">
                                 <img src="../images/newsSlider1.jpg" alt="news">
                             </div>
+                            <div class="item">
+                                <img src="../images/newsSlider1.jpg" alt="news">
+                            </div>
+                            <div class="item">
+                                <img src="../images/newsSlider1.jpg" alt="news">
+                            </div>
+                            <div class="item">
+                                <img src="../images/newsSlider1.jpg" alt="news">
+                            </div>
                         </div>
                     </div>
                     <!-- Controls -->
-                    <a class="arrows arrow-left" href="#carousel-news" role="button" data-slide="prev">
-                        <span class="iconfont icon-zuofanhui" aria-hidden="true"></span>
+                    <a class="arrows arrow-left hidden-sm hidden-xs" href="#carousel-news" role="button" data-slide="prev">
+                        <span class="iconfont icon-jiantou1-copy-copy-copy" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="arrows arrow-right" href="#carousel-news" role="button" data-slide="next">
-                        <span class="iconfont icon-right-arrow" aria-hidden="true"></span>
+                    <a class="arrows arrow-right hidden-sm hidden-xs" href="#carousel-news" role="button" data-slide="next">
+                        <span class="iconfont icon-jiantou1-copy-copy-copy1" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
@@ -348,7 +602,6 @@
             </div>
         </div>
     </div>
-    <a class="closeImg" data-dismiss="modal" aria-label="Close"><img class="close-img" src="../images/closeImg.png"></a>
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
@@ -358,6 +611,8 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+
+
         //  点击加载更多
         var track_click = 0; //跟踪点击事件，定义一个点击次数
 

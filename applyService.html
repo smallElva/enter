@@ -13,67 +13,202 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
     <link rel="stylesheet" type="text/css" href="js/theme/default/laydate.css">
-    <link rel="stylesheet" href="app.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/person.css" type="text/css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body>
 <div class="wrapper">
     <!-- 通用头部-->
-    <header class="header">
-        <div class="container">
-            <div class="navIcons pull-left">
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
+    <header>
+        <!--pc-->
+        <div class="header navbar-fixed-top hidden-sm hidden-xs">
+            <div class="container">
+                <div class="navIcons icon-out pull-left" id="showNav">
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                </div>
+                <a class="logo" href="index.html"><img class="nav-icon" src="images/logo.png"></a>
+                <div class="navShopBar pull-right">
+                    <a class="goProBlock" href="product.html" title="音特商城"><img class="nav-icon" src="images/nav-icon1.png"></a>
+                    <a class="goProBlock" href="myOrder.html"  id="js_showPerson"><img class="nav-icon" src="images/nav-icon2.png"><span class="badge shopCart_badge">2</span></a>
+                    <div id="personBlock" class="personCenterBlock">
+                        <img class="upup" src="images/upup.png">
+                        <ul>
+                            <li class="personList">
+                                <a href="myOrder.html"><span class="personList_nav">我的订单</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="service_after.html"><span class="personList_nav">售后服务</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="discount.html"><span class="personList_nav">优惠券</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="address.html"><span class="personList_nav">收货地址</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="myInfo.html"><span class="personList_nav">账户资料</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="javascript:void(0);"><span class="personList_nav">退出账号</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="goProBlock" href="shop_cart.html" title="购物车" id="js_showCart"><img class="nav-icon" src="images/nav-icon3.png"></a>
+                    <!--购物车-->
+                    <div class="shopCartBlock" id="shopCartBlock">
+                        <img class="upup2" src="images/upup.png">
+                        <!--购物车有商品的状态-->
+                        <div class="withGoods" id="withGoods" style="display: block;">
+                            <div class="shopCart_pro">
+                                <ul class="cartList">
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p class="cartInfo">
+                                                <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                            <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p>
+                                                <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                                <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shopCart_goBuy clearfix">
+                                <div class="cartFooter">
+                                    <p>共<span class="totalNum">2</span>件商品</p>
+                                    <p class="totalYuan">¥3998.00</p>
+                                </div>
+                                <a class="addCart_a" href="shop_cart.html">去结算</a>
+                            </div>
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoods" style="display: none;">
+                            登录后可显示<br>
+                            您账号中已加入的商品哦~
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoodsLogin" style="display: none;">
+                            您的购物车还没有商品，<br>
+                            赶紧去选购吧~
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="logo" href="index.html"><img src="images/logo.png"></a>
-            <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1"></i>
-                <i class="iconfont icon-gouwuche1"></i>
+            <!--侧导航-->
+            <aside class="sideBar" id="sideBar">
+                <div class="sideNav">
+                    <ul>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="news/news.html">新闻资讯</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="activity/activity.html">活动中心</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="product.html">音特商城</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="about/about.html">关于我们</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="contact.html">联系我们</a>
+                            <div class="aside_line"></div>
+                        </li>
+                    </ul>
+                    <div class="aside_footer">
+                        <div class="aside_footer_img">
+                            <img src="images/aside_logo.png">
+                        </div>
+                        <p class="aside_enter">音特电子（深圳）有限公司</p>
+                        <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                        <p class="aside_call">0755-83513870</p>
+                        <p class="aside_email">enter.media@gamil.com</p>
+                        <div class="footerCodes">
+                            <i class="iconfont icon-weibo"></i>
+                            <img class="weibo" src="images/weibo-img.jpg">
+                            <i class="iconfont icon-weixin2"></i>
+                            <img class="weixin" src="images/weixin-img.jpg">
+                            <i class="iconfont icon-qq1"></i>
+                            <img class="qq" src="images/timg.jpg">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!--内页移动端-->
+        <div class="header-page-xs navbar-fixed-top visible-xs visible-sm">
+            <div class="container">
+                <div class="header-xs-block clearfix">
+                    <a class="header-goBack pull-left" href="javascript:void (0)" onclick="window.history.go(-1);"><i class="iconfont icon-you-copy"></i></a>
+                    <span class="header-title">申请售后</span>
+                </div>
             </div>
         </div>
     </header>
     <!-- 内容区-->
     <section class="content">
-        <div class="container">
-            <!--位置导航-->
-            <div class="navAdd">
-                <div class="navAdd-block">
-                    <a class="navAdd-a" href="index.html">首页</a>
-                    <span class="navAdd-dot"></span>
-                    <a class="navAdd-a" href="person_center.html">会员中心</a>
-                    <span class="navAdd-dot"></span>
-                    <a class="navAdd-a" href="apply_service.html">我的订单</a>
-                </div>
-            </div>
-            <!--个人中心-->
-            <div class="person">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="personBlock">
-                            <div class="userInfo">
-                                <img class="male" src="images/male.jpg">
-                                <p class="userName">吴迪</p>
-                            </div>
-                            <ul class="personNav">
-                                <li><a class="personNav_a active" href="person_center.html">我的订单</a></li>
-                                <li><a class="personNav_a" href="serviceAfter.html">售后服务</a></li>
-                                <li><a class="personNav_a" href="discount.html">优惠券</a></li>
-                                <li><a class="personNav_a" href="address.html">收货地址</a></li>
-                                <li><a class="personNav_a" href="account_info.html">账户资料</a></li>
-                            </ul>
-                            <div class="personBg"></div>
-                        </div>
+        <!--pc-->
+        <div class="applyService_pc hidden-sm hidden-xs">
+            <div class="container">
+                <!--位置导航-->
+                <div class="navAdd">
+                    <div class="navAdd-block">
+                        <a class="navAdd-a" href="index.html">首页</a>
+                        <span class="navAdd-dot"></span>
+                        <a class="navAdd-a" href="myOrder.html">会员中心</a>
+                        <span class="navAdd-dot"></span>
+                        <a class="navAdd-a" href="myOrder.html">我的订单</a>
+                        <span class="navAdd-dot"></span>
+                        <a class="navAdd-a active" href="applyService.html">申请售后</a>
                     </div>
-                    <div class="col-md-10">
-                        <div class="myOrder">
-                            <div class="orderTitle">
-                                <span class="f-24">申请售后</span>
+                </div>
+                <!--个人中心-->
+                <div class="person">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-2">
+                            <div class="personBlock">
+                                <div class="userInfo">
+                                    <img class="male" src="images/male.jpg">
+                                    <p class="userName">吴迪</p>
+                                </div>
+                                <ul class="personNav">
+                                    <li class="personNavLi active"><a class="personNav_a" href="myOrder.html">我的订单</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="service_after.html">售后服务</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="discount.html">优惠券</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="address.html">收货地址</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="myInfo.html">账户资料</a></li>
+                                </ul>
+                                <div class="personBg"></div>
                             </div>
-                            <div class="orderDetailBlock">
+                        </div>
+                        <div class="col-lg-9 col-md-10">
+                            <div class="myOrder">
+                                <div class="orderTitle">
+                                    <span class="f-24">申请售后</span>
+                                </div>
                                 <div class="tableHead applyServiceHead">
                                     <div class="row">
                                         <div class="col-md-4">
@@ -100,7 +235,7 @@
                                                     <p class="goods-color">颜色：黑色</p>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 myOrderAccess_border">
                                                 <div class="myOrderAccess">
                                                     麦克风×1、底座×1、遥控器×1、电源适配器×1、
                                                     音频线×1、U盘×1、使用手册×1、电池×6
@@ -118,23 +253,14 @@
                                 <div class="orderDetail_content applyService_content">
                                     <p class="orderDetail_content_t">服务类型</p>
                                     <ul class="choose clearfix" id="serviceKind">
-                                        <li>
-                                            <input name="service" type="radio" id="kind1" value="退货">
-                                            <label for="kind1">
-                                                退货
-                                            </label>
+                                        <li class="on">
+                                            退货
                                         </li>
                                         <li>
-                                            <input name="service" type="radio" id="kind2" value="换货">
-                                            <label for="kind2">
-                                                换货
-                                            </label>
+                                            换货
                                         </li>
                                         <li>
-                                            <input name="service" type="radio" id="kind3" value="维修">
-                                            <label for="kind3">
-                                                维修
-                                            </label>
+                                            维修
                                         </li>
                                     </ul>
                                 </div>
@@ -142,35 +268,29 @@
                                     <p class="orderDetail_content_t">提交数量</p>
                                     <div class="btn-group" role="group" aria-label="..." id="applyNum">
                                         <button type="button" class="btn btn-default" onclick="m_subtract(this)">-</button>
-                                        <input type="text" class="btn btn-default inputNum" value="1">
+                                        <input type="text" class="btn btn-default inputNum" value="1" onkeyup="NumCheck(this);" />
                                         <button type="button" class="btn btn-default" onclick="m_add(this)">+</button>
                                     </div>
                                 </div>
                                 <div class="orderDetail_content">
                                     <p class="orderDetail_content_t">问题描述</p>
                                     <textarea rows="5" class="sureOrder-text" style="color:#898888" onfocus="if(this.value=='7天无理由包退（限200字）') {this.value='';}this.style.color='#030304';" onblur="if(this.value=='') {this.value='7天无理由包退（限200字）';this.style.color='#898888';}" maxlength="200">7天无理由包退（限200字）</textarea>
-                                    <div class="uploadImg">
-                                        <div class="img_div"></div>
-                                        <a href="javascript:;" class="a-upload">
-                                            <input type="file" name="myFile" id="myFile" multiple="multiple" /><i class="iconfont icon-add"></i>
-                                        </a>
+                                    <!--上传图片-->
+                                    <div class="z_photo clearfix" id="z_photo">
+                                        <div class="z_file">
+                                            <input type="file" name="file" id="file" value="" accept="image/*" multiple onchange="imgChange('z_photo','file');" />
+                                        </div>
                                     </div>
                                     <p class="orderDetail_tips">为了更快帮您解决问题，请上传图片（最多可上传5张）</p>
                                 </div>
                                 <div class="orderDetail_content applyService_content">
                                     <p class="orderDetail_content_t">商品退回方式</p>
                                     <ul class="choose clearfix" id="returnKind">
-                                        <li>
-                                            <input name="return" type="radio" id="return1" value="上门取件" checked>
-                                            <label for="return1">
-                                                上门取件
-                                            </label>
+                                        <li class="on">
+                                            上门取件
                                         </li>
                                         <li>
-                                            <input name="return" type="radio" id="return2" value="自找快递">
-                                            <label for="return2">
-                                                自找快递
-                                            </label>
+                                            自找快递
                                         </li>
                                     </ul>
                                     <div class="orderDetail_tips" id="orderDetail_tips1">
@@ -185,86 +305,218 @@
                                     <p>收货地址：<span class="clientAdd">广东省深圳市宝安区西乡街道永丰社区9区</span></p>
                                 </div>
                                 <div class="orderDetail_content">
-                                    <a class="gotoBuy offerReview" href="applySuccess.html">提交审核</a>
+                                    <a class="gotoBuy offerReview" href="apply_success.html">提交审核</a>
                                     <span>提交服务订单后，售后专员会与您电话沟通，请保持手机畅通</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
+        <!--移动端-->
+        <div class="applyService_xs visible-sm visible-xs">
+            <div class="orderDetail_goods">
+                <div class="container">
+                    <div class="sureOrder-goods clearfix">
+                        <div class="goods-img"><img src="images/product1.png" alt=""/></div>
+                        <div class="goods-info">
+                            <p class="goods-name">卡拉OK E5</p>
+                            <p class="goods-color">颜色：黑色 <span class="seriesInfo_xs">官方标配</span></p>
+                            <p class="perPrice clearfix">¥1999.00 <span class="perNumber pull-right"><i class="iconfont icon-close iconNum"></i>1</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="applyService_type">
+                <div class="container">
+                    <p class="applyService_type_p">服务类型</p>
+                    <ul class="choose-type">
+                        <li class="on">退货</li>
+                        <li>换货</li>
+                        <li>维修</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="applyService_type quantity">
+                <div class="container">
+                    <p class="applyService_type_p">数量</p>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" onclick="m_subtract(this)"><i class="iconfont icon-jianhao"></i></button>
+                        <input type="text" class="btn btn-default inputBtn" value="1" id="inputNum" onkeyup="NumCheck(this);">
+                        <button type="button" class="btn btn-default" onclick="m_add(this)"><i class="iconfont icon-jiahao1"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="applyService_type applyService_problem">
+                <div class="container">
+                    <p class="applyService_type_p">问题描述</p>
+                    <textarea rows="5" class="sureOrder-text" style="color:#898888" onfocus="if(this.value=='7天无理由包退（限200字）') {this.value='';}this.style.color='#030304';" onblur="if(this.value=='') {this.value='7天无理由包退（限200字）';this.style.color='#898888';}" maxlength="200">7天无理由包退（限200字）</textarea>
+                    <!--    照片添加    -->
+                    <div class="z_photo clearfix" id="z_photo-xs">
+                        <div class="z_file">
+                            <input type="file" name="fileXs" id="fileXs" value="" accept="image/*" multiple onchange="imgChange('z_photo-xs','fileXs');" />
+                        </div>
+                    </div>
+                    <p class="orderDetail_tips">为了更快帮您解决问题，请上传图片（最多可上传5张）</p>
+                </div>
+            </div>
+            <div class="applyService_type">
+                <div class="container">
+                    <p class="applyService_type_p">商品退回方式</p>
+                    <ul class="choose-type">
+                        <li class="on" data-delivery="1">上门取件</li>
+                        <li data-delivery="2">自找快递</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="applyService_type applyService_add" id="pickUpAdd">
+                <div class="container">
+                    <p class="applyService_add_p">取件地址</p>
+                    <a href="changeAddress.html">
+                        <div class="address_block_xs">
+                            <div class="address_info_xs">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="address_user">
+                                            吴迪
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <p class="address_phone">
+                                            18523654123
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="addMenu-add-xs">广东省深圳市宝安区西乡街道麻布新村101栋</p>
+                                <i class="iconfont icon-xia changeIcons"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="applyService_type applyService_add" id="shippingAdd" style="display: none;">
+                <div class="container">
+                    <p class="applyService_add_p">收货地址</p>
+                    <div class="address_block_xs">
+                        <div class="address_info_xs">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="address_user">
+                                        郑秋冬
+                                    </p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <p class="address_phone">
+                                        18523654123
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="addMenu-add-xs">广东省深圳市宝安区西乡街道麻布新村103栋</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="applyService_tips_xs">
+                <div class="container">
+                    提交服务订单后，售后专员会与您电话沟通，请保持手机畅通
+                </div>
+            </div>
+            <a class="offerCheck" href="#">提交审核</a>
+        </div>
     </section>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="footerSer">
+    <!---通用footer-->
+    <footer>
+        <!--pc-footer-->
+        <div  id="footer" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="footerOut">
+                    <div class="footer_container">
                         <div class="row">
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-tianwuliyoubaotui"></i>
-                                    <span class="footerService">7天无理由退货</span>
+                            <div class="col-md-8">
+                                <div class="footerSer">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                                <span class="footerService">7天无理由退货</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianbaohuan"></i>
+                                                <span class="footerService">30天包换</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoyou"></i>
+                                                <span class="footerService">全国包邮</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                                <span class="footerService">全国联保</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footerLinks">
+                                    <ul class="footerList clearfix">
+                                        <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" data-toggle="modal" data-target="#langModal">简体中文</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-tianbaohuan"></i>
-                                    <span class="footerService">30天包换</span>
+                            <div class="col-md-4">
+                                <div id="footerContact">
+                                    <strong class="footer-call">400-119-5555</strong>
+                                    <p class="footer-text">( 24小时全国服务热线 )</p>
+                                    <div class="footerCodes">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <img class="weibo" src="images/weibo-img.jpg">
+                                        <i class="iconfont icon-weixin2"></i>
+                                        <img class="weixin" src="images/weixin-img.jpg">
+                                        <i class="iconfont icon-qq1"></i>
+                                        <img class="qq" src="images/timg.jpg">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-quanguobaoyou"></i>
-                                    <span class="footerService">全国包邮</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-quanguobaoxiu"></i>
-                                    <span class="footerService">全国联保</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footerLinks">
-                        <ul class="footerList clearfix">
-                            <li class="footerListLi"><a class="footer_a" href="#">新闻资讯</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">活动中心</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">关于我们</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">联系我们</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div id="footerContact">
-                        <strong class="footer-call">400-119-5555</strong>
-                        <p class="footer-text">( 24小时全国服务热线 )</p>
-                        <div class="footerCodes">
-                            <i class="iconfont icon-weibo"></i>
-                            <img class="weibo" src="images/weibo-img.jpg">
-                            <i class="iconfont icon-weixin2"></i>
-                            <img class="weixin" src="images/weixin-img.jpg">
-                            <i class="iconfont icon-qq1"></i>
-                            <img class="qq" src="images/timg.jpg">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footerBar">
-            <div class="container">
+            <div class="footerBar">
                 © dameigong.cn 2017 皖ICP备17012709号
             </div>
         </div>
     </footer>
 </div>
+
+<!--deleteModal-->
+<div class="modal myInfoModal" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title deleteModal_t" id="deleteModalLabel">确定删除该图片?</h4>
+                <div class="modal-btns clearfix">
+                    <button type="button" class="btn-qx ok pull-left" id="sureDelete">确定</button>
+                    <button type="button" class="btn-red cancel pull-right" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- addModal -->
-<div class="modal myInfoModal addressModal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal">
+<div class="modal myInfoModal addressModal" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -289,9 +541,12 @@
                         <label class="col-sm-2 control-label"><span class="redColor">*</span>收货地址：</label>
                         <div class="col-sm-10">
                             <div class="address-box clearfix" id="select-area">
-                                <select class="form-control" id="province"></select>
-                                <select class="form-control" id="city"></select>
-                                <select class="form-control" id="country"></select>
+                                <input type="hidden" id="provinceVal"/>
+                                <input type="hidden" id="cityVal"/>
+                                <input type="hidden" id="areaVal"/>
+                                <select class="form-control" id="province" required></select>
+                                <select class="form-control" id="city" required></select>
+                                <select class="form-control" id="area" required></select>
                             </div>
                         </div>
                     </div>
@@ -311,7 +566,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+                            <button type="button" class="btn-red" id="finishAdd">完成</button>
                         </div>
                     </div>
                 </form>
@@ -322,64 +577,65 @@
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/laydate.js"></script>
+<script type="text/javascript" src="js/uploadImg.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript">
     $(function() {
-        var objUrl;
-        var img_html;
-        $("#myFile").change(function() {
-            var img_div = $(".img_div");
-            var filepath = $("input[name='myFile']").val();
-            for(var i = 0; i < this.files.length; i++) {
-                objUrl = getObjectURL(this.files[i]);
-                var extStart = filepath.lastIndexOf(".");
-                var ext = filepath.substring(extStart, filepath.length).toUpperCase();
-                /*鉴定每个图片上传尾椎限制 */
-                if(ext != ".BMP" && ext != ".PNG" && ext != ".GIF" && ext != ".JPG" && ext != ".JPEG") {
-                    $(".shade").fadeIn(500);
-                    $(".text_span").text("图片限于bmp,png,gif,jpeg,jpg格式");
-                    this.value = "";
-                    $(".img_div").html("");
-                    return false;
-                } else{
-                    /*
-                     若规则全部通过则在此提交url到后台数据库
-                     * */
-                    img_html = "<div class='isImg'><img src='" + objUrl + "' style='height: 100%; width: 100%;' /><button class='removeBtn' onclick='javascript:removeImg(this)'>x</button></div>";
-                    img_div.append(img_html);
-                }
-
-            }
-            /*鉴定每个图片大小总和*/
-            var file_size = 0;
-            var all_size = 0;
-            for(var j = 0; j < this.files.length; j++) {
-                file_size = this.files[j].size;
-                all_size = all_size + this.files[j].size;
-                var size = all_size / 1024;
-                if(size > 500) {
-                    $(".shade").fadeIn(500);
-                    $(".text_span").text("上传的图片大小不能超过100k！");
-                    this.value = "";
-                    $(".img_div").html("");
-                    return false;
-                }
-            }
-            return true;
-        });
-        /*鉴定每个浏览器上传图片url 目前没有合并到Ie*/
-        function getObjectURL(file) {
-            var url = null;
-            if(window.createObjectURL != undefined) { // basic
-                url = window.createObjectURL(file);
-            } else if(window.URL != undefined) { // mozilla(firefox)
-                url = window.URL.createObjectURL(file);
-            } else if(window.webkitURL != undefined) { // webkit or chrome
-                url = window.webkitURL.createObjectURL(file);
-            }
-            //console.log(url);
-            return url;
-        }
+//        var objUrl;
+//        var img_html;
+//        $(".myFile").change(function(obj) {
+//            var img_div = $(".img_div");
+//            var filepath = $("input[name='myFile']").val();
+//            for(var i = 0; i < this.files.length; i++) {
+//                objUrl = getObjectURL(this.files[i]);
+//                var extStart = filepath.lastIndexOf(".");
+//                var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+//                /*鉴定每个图片上传尾椎限制 */
+//                if(ext != ".BMP" && ext != ".PNG" && ext != ".GIF" && ext != ".JPG" && ext != ".JPEG") {
+//                    $(".shade").fadeIn(500);
+//                    $(".text_span").text("图片限于bmp,png,gif,jpeg,jpg格式");
+//                    this.value = "";
+//                    $(".img_div").html("");
+//                    return false;
+//                } else{
+//                    /*
+//                     若规则全部通过则在此提交url到后台数据库
+//                     * */
+//                    img_html = "<div class='isImg'><img src='" + objUrl + "' style='height: 100%; width: 100%;' /><button class='removeBtn' onclick='javascript:removeImg(this)'><i class='iconfont icon-close'></i></button></div>";
+//                    img_div.append(img_html);
+//                }
+//
+//            }
+//            /*鉴定每个图片大小总和*/
+//            var file_size = 0;
+//            var all_size = 0;
+//            for(var j = 0; j < this.files.length; j++) {
+//                file_size = this.files[j].size;
+//                all_size = all_size + this.files[j].size;
+//                var size = all_size / 1024;
+//                if(size > 500) {
+//                    $(".shade").fadeIn(500);
+//                    $(".text_span").text("上传的图片大小不能超过100k！");
+//                    this.value = "";
+//                    $(".img_div").html("");
+//                    return false;
+//                }
+//            }
+//            return true;
+//        });
+//        /*鉴定每个浏览器上传图片url 目前没有合并到Ie*/
+//        function getObjectURL(file) {
+//            var url = null;
+//            if(window.createObjectURL != undefined) { // basic
+//                url = window.createObjectURL(file);
+//            } else if(window.URL != undefined) { // mozilla(firefox)
+//                url = window.URL.createObjectURL(file);
+//            } else if(window.webkitURL != undefined) { // webkit or chrome
+//                url = window.webkitURL.createObjectURL(file);
+//            }
+//            //console.log(url);
+//            return url;
+//        }
 
 
         /**商品退回方式选择**/
@@ -398,12 +654,66 @@
         // 点击添加新地址弹窗
         $('#addModal').on('show.bs.modal', function() {
             $("#select-area").selectAddress();
-        })
+        });
+        /***
+         * 添加新地址表单验证-start
+         */
+
+        $(document).on('click','#finishAdd',function(){
+            var inputUser = $('#inputUser').val();
+            var inputPhone = $('#inputPhone').val();
+            var inputAddDetail = $('#inputAddDetail').val();
+            var reg = /^1[3|4|5|7|8]\d{9}$/;
+
+            $('#inputUser,#inputPhone,#inputAddDetail').next('.prompt').remove();
+            if (!inputUser) {
+                $('#inputUser').after("<p class='prompt'>请填写收货人</p>");
+                return false;
+            }
+            if(!reg.test(inputPhone)){
+                $('#inputPhone').after("<p class='prompt'>请输入正确的手机号码</p>");
+                return false;
+            }
+            if(!inputAddDetail){
+                $('#inputAddDetail').after("<p class='prompt'>请填写详细地址</p>");
+                return false;
+            }
+            else{
+                $('#addModal').modal('hide');
+            }
+        });
+        /***
+         * 添加新地址表单验证-end
+         */
+
+
+
+
+
+        /***
+         * 移动端点击选择服务类型和退回方式-start
+         */
+            $('.choose-type li').click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                var thisAdd = $(this).attr('data-delivery');
+                if($(this).hasClass('on') && thisAdd == 1){ //如果选择的是上门取件，则显示取件地址
+                    $('#pickUpAdd').show();
+                    $('#shippingAdd').hide();
+                }else{                                     //如果选择的是自找快递，则显示收货地址
+                    $('#pickUpAdd').hide();
+                    $('#shippingAdd').show();
+                }
+            });
+
+
+        /***
+         * 移动端点击选择服务类型和退回方式-end
+         */
     });
-    /*上传图片附带删除 再次地方可以加上一个ajax进行提交到后台进行删除 */
-    function removeImg(r){
-        $(r).parent().remove();
-    }
+//    /*上传图片附带删除 再次地方可以加上一个ajax进行提交到后台进行删除 */
+//    function removeImg(r){
+//        $(r).parent().remove();
+//    }
 
     laydate.render({
         elem: '#date', //指定元素

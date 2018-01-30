@@ -3,6 +3,108 @@
  */
 
 $(function () {
+
+    // 弹出框解决闪屏问题以及移动端弹窗禁止背景滑动方法初始化.
+    browserRedirect();
+
+
+    /***
+     * 移动端轮播左右滑动效果-start
+     *
+     *
+     * **/
+    // 获取手指在轮播图元素上的一个滑动方向（左右）
+    // 获取界面上轮播图容器
+    var $carousels = $('.carousel');
+    var startX,endX;
+    // 在滑动的一定范围内，才切换图片
+    var offset = 50;
+    // 注册滑动事件
+    $carousels.on('touchstart',function (e) {
+        // 手指触摸开始时记录一下手指所在的坐标x
+        startX = e.originalEvent.touches[0].clientX;
+
+    });
+    $carousels.on('touchmove',function (e) {
+        // 目的是：记录手指离开屏幕一瞬间的位置 ，用move事件重复赋值
+        endX = e.originalEvent.touches[0].clientX;
+    });
+    $carousels.on('touchend',function (e) {
+        //console.log(endX);
+        //结束触摸一瞬间记录手指最后所在坐标x的位置 endX
+        //比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是有方向的变化
+        var distance = Math.abs(startX - endX);
+        if (distance > offset){
+            //说明有方向的变化
+            //根据获得的方向 判断是上一张还是下一张出现
+            $(this).carousel(startX >endX ? 'next':'prev');
+        }
+    });
+    /***
+     * 移动端轮播左右滑动效果-end
+     *
+     *
+     * **/
+
+
+    /***
+    * 尾部点击微博、微信、qq弹出二维码--start
+    *
+    *
+    * **/
+    $(".js_weibo,.js_weixin,.js_qq").on('click',function (e) {
+        e.stopPropagation();
+        if($(event.target).is($('.js_weibo'))){
+            $('.codesImgs').attr('src','images-xs/weibo-img.jpg')//点击的对象如果是微博显示微博的二维码
+        }if($(event.target).is($('.js_weixin'))){
+            $('.codesImgs').attr('src','images-xs/wechatPay.png')//点击的对象如果是微信显示微信的二维码
+        }if($(event.target).is($('.js_qq'))){
+            $('.codesImgs').attr('src','images-xs/timg.jpg')     //点击的对象如果是qq显示qq的二维码
+        }
+
+        $('#codesDiv').addClass('codesDivBottom');
+        $('.overLay').show();
+    });
+    $(document).on('click', function(e) { //点击页面除了id="codesDiv"之外的任何区域都关闭该div
+        var e = e || window.event; //浏览器兼容性
+        var elem = e.target || e.srcElement;
+        while (elem) { //循环判断至跟节点，防止点击的是div子元素
+            if (elem.id && elem.id == 'codesDiv') {
+                return;
+            }
+            elem = elem.parentNode;
+        }
+        $('.overLay').hide(); //关闭阴影
+        $('#codesDiv').removeClass('codesDivBottom'); //关闭该div
+    });
+    /***
+     * 尾部点击微博、微信、qq弹出二维码-end
+     *
+     *
+     * **/
+
+
+
+    /***
+     * 移动端导航部分动画-start
+     *
+     *
+     * **/
+    $(".navIcons-xs").click(function(){
+        $(this).find('.nav-iconOpen').toggleClass("icon-daohang4 icon-close");
+        $('html').toggleClass('noscroll');
+        $(".mobile-inner-nav").slideToggle(250);
+    });
+    $(".mobile-inner-nav a").each(function( index ) {
+        $( this ).css({'animation-delay': (index/10)+'s'});
+    });
+    /***
+     * 移动端导航部分动画--end!
+     *
+     *
+     * **/
+
+
     var num = $('#cartTable .item').length;
     var numB = num-3;
     if(numB <= 0){
@@ -11,7 +113,15 @@ $(function () {
     //当屏幕向下滚时，导航栏固定在顶部
     $(document).scroll(function () {
         var scrollHeight = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        var bodyWidth =document.body.clientWidth;//网页可见区域宽
+        if(bodyWidth <= 991){
+            if(scrollHeight>0){
+                $('.header-page-xs').addClass('header-page-fixed');
+            }else{
+                $('.header-page-xs').removeClass('header-page-fixed');
+            }
 
+        }
         if(numB > 0){
             if (scrollHeight >= (numB*150+80)) {
                 $('#foot').removeClass('fixed-bottom');
@@ -19,12 +129,12 @@ $(function () {
                 $('#foot').addClass('fixed-bottom');
             }
         }
-        if (scrollHeight >  83) {
+        if (scrollHeight >  82) {
             $('.header').addClass('fixed-top');
-            $('.sideBar').css('top','88px');
+            $('#toTop').fadeIn();
         }else{
             $('.header').removeClass('fixed-top');
-            $('.sideBar').css('top','82px');
+            $('#toTop').fadeOut();
         }
     });
     // 头部个人中心列表动画
@@ -34,71 +144,90 @@ $(function () {
 
     // 点击侧栏置顶标签页面滚动至顶部
     $('#toTop').click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 300);
+        $("html, body").animate({ scrollTop: 0 }, 800);
+    });
+    // 收货地址点击'设为默认地址'效果
+    $('.change_tip').click(function (e) {
+        $('.change_tip').not(this).text("【设为默认地址】");
+        $(this).text("【默认地址】");
     });
     // 收货地址选择
     $('.addMenu').click(function () {
         $(this).parent().addClass('defaultAdd').siblings().removeClass('defaultAdd');
     });
-    //点击在线支付，出现提示，点击货到付款，提示消失
-    $('#payWay li:first-child').click(function () {
-        $('#paywayAli').show();
+    // 选择切换
+    $('.choose li').click(function () {
+        $(this).addClass('on').siblings().removeClass('on');
     });
-    $('#payWay li:nth-child(2)').click(function () {
-        $('#paywayAli').hide();
-    });
-    //点击公司发票，出现纳税人识别号，点击个人发票，纳税人识别号消失
-    $('#invoice li:first-child').click(function () {
-        $('#companyInvoice').hide();
-    });
-    $('#invoice li:nth-child(2)').click(function () {
-        $('#companyInvoice').show();
-    });
-
-    /*--点击购物车部分--*/
+    /***
+     * 鼠标移入导航部分动画
+     *
+     *
+     * **/
     var $el = $("#js_showCart");
     var $cart = $('#shopCartBlock');
     var $showPerson = $("#js_showPerson");
     var $person = $("#personBlock");
     var $showNav = $('#showNav');
     var $sideBar = $('#sideBar');
-    $el.click(function(e){
+    var timer;
+    //  鼠标移入购物车标志，出现购物车动画
+    $el.hover(function(){
+        $cart.stop(true).show();
+    },function (e) {
         e.stopPropagation();
-        $cart.fadeToggle('fast');//  点击购物车标志，出现购物车
-        $person.fadeOut('fast');
+        timer = setTimeout(function () {
+            $cart.stop(true).hide();
+        }, 200);
     });
-    $showPerson.click(function(e){
+    $cart.hover(function () {
+        clearTimeout(timer);
+    },function () {
+        $cart.stop(true).hide();
+    });
+    //  鼠标移入个人中心标志，出现个人中心动画
+    $showPerson.hover(function(){
+        $person.stop(true).show();
+    },function (e) {
         e.stopPropagation();
-        $person.fadeToggle('fast');//  点击购物车标志，出现个人中心列表
-        $cart.fadeOut('fast');
+        timer = setTimeout(function () {
+            $person.stop(true).hide();
+        }, 200);
     });
+    $person.hover(function () {
+        clearTimeout(timer);
+    },function () {
+        $person.stop(true).hide();
+    });
+    //  鼠标移入导航标志，出现侧导航动画
+    $showNav.hover(function(){
+        $(this).addClass('icon-click').removeClass('icon-out');
+        $sideBar.stop(true).addClass('sideBarLeft');
+    },function (e) {
+        e.stopPropagation();
+        timer = setTimeout(function () {
+            $sideBar.stop(true).removeClass('sideBarLeft');
+            $showNav.addClass('icon-out').removeClass('icon-click');
+        }, 200);
+    });
+    $sideBar.hover(function () {
+        clearTimeout(timer);
+    },function () {
+        $showNav.addClass('icon-out').removeClass('icon-click');
+        $sideBar.stop(true).removeClass('sideBarLeft');
+    });
+
     // 删除购物车中的商品
     $('.js_deleteGoods').click(function (e) {
         e.stopPropagation();
         $(this).parent('li').remove();
     });
-    //侧导航动画
-    $showNav.click(function (e) {
-        e.stopPropagation();
-        $(this).toggleClass('icon-click icon-out');
-        $sideBar.toggleClass('sideBarLeft');
-    });
-    $(document).on('click',function(e){
-        if(($(e.target) != $el) && (!$cart.is(':hidden'))){
-            $cart.fadeOut('fast'); // 点击页面任何其他地方，购物车消失
-        }
-        if(($(e.target) != $showPerson) && (!$person.is(':hidden'))){
-            $person.fadeOut('fast'); // 点击页面任何其他地方，个人中心
-        }
-        if(($(e.target) != $showNav) && ($sideBar.hasClass('sideBarLeft'))){
-            $sideBar.removeClass('sideBarLeft');
-            $showNav.removeClass('icon-click').addClass('icon-out');
-        }
-    });
-    /*--点击购物车部分-end!--*/
-    //模态框居中调用方法
-    $('.modal').on('show.bs.modal', centerModals);
-    $(window).on('resize', centerModals);
+
+    /***
+     * 鼠标移入导航部分动画***end!
+     *
+     *
+     * **/
 
 });
 //  点击加号，数字加一
@@ -107,20 +236,18 @@ function m_subtract(t) {
     if (obj.value>1)
         obj.value--;
 }
+//  点击数字输入框，只能输入非零正整数
+function NumCheck(t){
+    var num = t.value;
+    var re = /^[1-9]\d*$/;  //匹配非零正整数
+    if(!re.test(num)||num==""){
+        t.value = 1;
+    }
+}
 //  点击减号，数字减一
 function m_add(t) {
     var obj = t.parentNode.getElementsByTagName('input')[0];
     obj.value++;
-}
-//模态框居中
-function centerModals() {
-    $('.modal').each(function(i) {
-        var $clone = $(this).clone().css('display', 'block').appendTo('body');
-        var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
-        top = top > 0 ? top : 0;
-        $clone.remove();
-        $(this).find('.modal-content').css("margin-top", top);
-    });
 }
 
 // 确认框自定义公共方法
@@ -156,6 +283,12 @@ function delete_ok(element,params2,getTotal){
 
 }
 
+/***
+ * 省市区联动选择方法-start
+ *
+ *
+ *
+ * **/
 // 省市区联动效果
 (function($){
     $.fn.selectAddress=function(options){
@@ -231,4 +364,100 @@ function delete_ok(element,params2,getTotal){
 
     }
 })(jQuery);
+/***
+ * 省市区联动选择方法-end
+ *
+ *
+ *
+ * **/
 
+/***
+ ================================================================================================================================
+ * **/
+
+
+/***
+ * 弹出框垂直居中于屏幕方法-start
+ *
+ *
+ *
+ * **/
+(function ($) {
+    "use strict";
+    function centerModal() {
+        $(this).css('display', 'block');
+        var $dialog  = $(this).find(".modal-dialog"),
+            offset       = ($(window).height() - $dialog.height()) / 2,
+            bottomMargin = parseInt($dialog.css('marginBottom'), 10);
+
+        // Make sure you don't hide the top part of the modal w/ a negative margin if it's longer than the screen height, and keep the margin equal to the bottom margin of the modal
+        if(offset < bottomMargin) offset = bottomMargin;
+        $dialog.css("margin-top", offset);
+    }
+    $(document).on('show.bs.modal', '.modal', centerModal);
+    $(window).on("resize", function () {
+        $('.modal:visible').each(centerModal);
+    });
+}(jQuery));
+/***
+ * 弹出框垂直居中于屏幕方法-end
+ *
+ *
+ *
+ * **/
+
+
+/***
+================================================================================================================================
+ * **/
+
+
+/***
+ * 弹出框解决闪屏问题以及移动端弹窗禁止背景滑动方法-start
+ *
+ *
+ *
+ * **/
+function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){ //判断如果是pc端
+        $('.modal').on('show.bs.modal', function(){   // 当弹出框出现时增加padding消除闪屏
+            $('.navbar-fixed-top').css({paddingRight:'17px'});
+            $('.fixed-bottom').css({paddingRight:'17px'});
+            $('.logo').css({marginLeft:'-91.5px'});
+        }).on('hide.bs.modal', function(){            // 当弹出框消失时时移除padding消除闪屏
+            $('.navbar-fixed-top').css({paddingRight:'0'});
+            $('.fixed-bottom').css({paddingRight:'0'});
+            $('.logo').css({marginLeft:'-83px'});
+        });
+    }
+    else{                                                                                         //判断如果是移动端，当弹出层出现时，消除背景可以滑动的bug
+        // 设置目前为止
+        var cPosition = false;
+        $('.modal').on('show.bs.modal', function(){
+            cPosition = $(window).scrollTop();
+        })
+            .on('shown.bs.modal', function(){
+                $('body.modal-open').css({position:'fixed'});
+                $('body.modal-open').css({width:'100%'});
+            })
+            .on('hide.bs.modal', function(){
+                $('body.modal-open').css({position:'relative'});
+                window.scrollTo(0, cPosition);
+            });
+    }
+}
+/***
+ * 弹出框解决闪屏问题以及移动端弹窗禁止背景滑动方法-end
+ *
+ *
+ *
+ * **/

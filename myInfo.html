@@ -12,7 +12,8 @@
     <title>音特电子</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
-    <link rel="stylesheet" href="app.css" type="text/css">
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/person.css" type="text/css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -21,187 +22,128 @@
 <body>
 <div class="wrapper">
     <!-- 通用头部-->
-    <header class="header">
-        <div class="container">
-            <div class="navIcons pull-left">
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-            </div>
-            <a class="logo" href="index.html"><img src="images/logo.png"></a>
-            <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1"></i>
-                <i class="iconfont icon-gouwuche1"></i>
-            </div>
-        </div>
-    </header>
-    <!-- 内容区-->
-    <section class="content">
-        <div class="container">
-            <!--位置导航-->
-            <div class="navAdd">
-                <div class="navAdd-block">
-                    <a class="navAdd-a" href="index.html">首页</a>
-                    <span class="navAdd-dot"></span>
-                    <a class="navAdd-a" href="person_center.html">会员中心</a>
-                    <span class="navAdd-dot"></span>
-                    <a class="navAdd-a" href="myInfo.html">账户资料</a>
+    <header>
+        <!--pc-->
+        <div class="header navbar-fixed-top hidden-sm hidden-xs">
+            <div class="container">
+                <div class="navIcons icon-out pull-left" id="showNav">
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
                 </div>
-            </div>
-            <!--个人中心-->
-            <div class="person">
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="personBlock">
-                            <div class="userInfo">
-                                <img class="male" src="images/male.jpg">
-                                <p class="userName">吴迪</p>
-                            </div>
-                            <ul class="personNav">
-                                <li><a class="personNav_a" href="person_center.html">我的订单</a></li>
-                                <li><a class="personNav_a" href="serviceAfter.html">售后服务</a></li>
-                                <li><a class="personNav_a" href="discount.html">优惠券</a></li>
-                                <li><a class="personNav_a" href="address.html">收货地址</a></li>
-                                <li><a class="personNav_a active" href="account_info.html">账户资料</a></li>
-                            </ul>
-                            <div class="personBg"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div class="myOrder">
-                            <div class="orderTitle myInfoTitle">
-                                <span class="f-24">账户资料</span>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock">
-                                    <p class="myInfoBlock_p clearfix">音特账号：
-                                        <span class="accountNum">188****3369</span>
-                                        <a class="pull-right" href="login.html">退出账号</a>
-                                    </p>
-                                    <p class="myInfoBlock_p clearfix">账户昵称：
-                                        <span class="accountName">吴迪</span>
-                                        <a class="pull-right" id="js_changeName" data-toggle="modal" data-target="#nameModal">修改昵称</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock clearfix">
-                                    <div class="pull-left">
-                                        <p class="myInfoBlock_p">账户密码</p>
-                                        <p class="myInfoBlock_s">可通过原密码修改密码</p>
-                                    </div>
-                                    <a class="myInfoBlock_a pull-right" id="changePwd" data-toggle="modal" data-target="#pwdModal">修改</a>
-                                </div>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock clearfix">
-                                    <div class="pull-left">
-                                        <p class="myInfoBlock_p">绑定手机：
-                                            <span class="accountCall">188****3369</span>
-                                        </p>
-                                        <p class="myInfoBlock_s">绑定手机可用来登录音特账号，重置密码或者其他安全验证</p>
-                                    </div>
-                                    <a class="myInfoBlock_a pull-right" id="changeCall">修改</a>
-                                </div>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock clearfix">
-                                    <div class="pull-left">
-                                        <p class="myInfoBlock_p">绑定邮箱：
-                                            <span class="accountEmail">188****3369@163.com</span>
-                                        </p>
-                                        <p class="myInfoBlock_s">绑定邮箱可用来登录音特账号，重置密码或者其他安全验证</p>
-                                    </div>
-                                    <a class="myInfoBlock_a pull-right" id="changeEmail">修改</a>
-                                </div>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock clearfix">
-                                    <div class="pull-left">
-                                        <p class="myInfoBlock_p">绑定QQ：
-                                            <span class="no_qq">未绑定</span>
-                                        </p>
-                                        <p class="myInfoBlock_s">绑定QQ后可用来快速登录音特账号</p>
-                                    </div>
-                                    <a class="myInfoBlock_a pull-right" id="bd_qq">绑定</a>
-                                </div>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock clearfix">
-                                    <div class="pull-left">
-                                        <p class="myInfoBlock_p">绑定微信：
-                                            <span class="bd_weixin">已绑定</span>
-                                        </p>
-                                        <p class="myInfoBlock_s">绑定微信后可用来快速登录音特账号</p>
-                                    </div>
-                                    <a class="myInfoBlock_a pull-right" id="changeWechat">解绑</a>
-                                </div>
-                            </div>
-                            <div class="myInfoContent">
-                                <div class="myInfoBlock clearfix">
-                                    <div class="pull-left">
-                                        <p class="myInfoBlock_p">绑定微博：
-                                            <span class="bd_weixin">未绑定</span>
-                                        </p>
-                                        <p class="myInfoBlock_s">绑定微博后可用来快速登录音特账号</p>
-                                    </div>
-                                    <a class="myInfoBlock_a pull-right" id="changeWebo">绑定</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="footerSer">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-tianwuliyoubaotui"></i>
-                                    <span class="footerService">7天无理由退货</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-tianbaohuan"></i>
-                                    <span class="footerService">30天包换</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-quanguobaoyou"></i>
-                                    <span class="footerService">全国包邮</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-top">
-                                    <i class="iconfont icon-quanguobaoxiu"></i>
-                                    <span class="footerService">全国联保</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footerLinks">
-                        <ul class="footerList clearfix">
-                            <li class="footerListLi"><a class="footer_a" href="#">新闻资讯</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">活动中心</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">关于我们</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">联系我们</a></li>
-                            <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
+                <a class="logo" href="index.html"><img class="nav-icon" src="images/logo.png"></a>
+                <div class="navShopBar pull-right">
+                    <a class="goProBlock" href="product.html" title="音特商城"><img class="nav-icon" src="images/nav-icon1.png"></a>
+                    <a class="goProBlock" href="myOrder.html"  id="js_showPerson"><img class="nav-icon" src="images/nav-icon2.png"><span class="badge shopCart_badge">2</span></a>
+                    <div id="personBlock" class="personCenterBlock">
+                        <img class="upup" src="images/upup.png">
+                        <ul>
+                            <li class="personList">
+                                <a href="myOrder.html"><span class="personList_nav">我的订单</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="service_after.html"><span class="personList_nav">售后服务</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="discount.html"><span class="personList_nav">优惠券</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="address.html"><span class="personList_nav">收货地址</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="myInfo.html"><span class="personList_nav">账户资料</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="javascript:void(0);"><span class="personList_nav">退出账号</span></a>
+                            </li>
                         </ul>
                     </div>
+                    <a class="goProBlock" href="shop_cart.html" title="购物车" id="js_showCart"><img class="nav-icon" src="images/nav-icon3.png"></a>
+                    <!--购物车-->
+                    <div class="shopCartBlock" id="shopCartBlock">
+                        <img class="upup2" src="images/upup.png">
+                        <!--购物车有商品的状态-->
+                        <div class="withGoods" id="withGoods" style="display: block;">
+                            <div class="shopCart_pro">
+                                <ul class="cartList">
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p class="cartInfo">
+                                                <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                            <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p>
+                                                <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                                <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shopCart_goBuy clearfix">
+                                <div class="cartFooter">
+                                    <p>共<span class="totalNum">2</span>件商品</p>
+                                    <p class="totalYuan">¥3998.00</p>
+                                </div>
+                                <a class="addCart_a" href="shop_cart.html">去结算</a>
+                            </div>
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoods" style="display: none;">
+                            登录后可显示<br>
+                            您账号中已加入的商品哦~
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoodsLogin" style="display: none;">
+                            您的购物车还没有商品，<br>
+                            赶紧去选购吧~
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div id="footerContact">
-                        <strong class="footer-call">400-119-5555</strong>
-                        <p class="footer-text">( 24小时全国服务热线 )</p>
+            </div>
+            <!--侧导航-->
+            <aside class="sideBar" id="sideBar">
+                <div class="sideNav">
+                    <ul>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="news/news.html">新闻资讯</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="activity/activity.html">活动中心</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="product.html">音特商城</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="about/about.html">关于我们</a>
+                            <div class="aside_line"></div>
+                        </li>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="contact.html">联系我们</a>
+                            <div class="aside_line"></div>
+                        </li>
+                    </ul>
+                    <div class="aside_footer">
+                        <div class="aside_footer_img">
+                            <img src="images/aside_logo.png">
+                        </div>
+                        <p class="aside_enter">音特电子（深圳）有限公司</p>
+                        <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                        <p class="aside_call">0755-83513870</p>
+                        <p class="aside_email">enter.media@gamil.com</p>
                         <div class="footerCodes">
                             <i class="iconfont icon-weibo"></i>
                             <img class="weibo" src="images/weibo-img.jpg">
@@ -212,17 +154,267 @@
                         </div>
                     </div>
                 </div>
+            </aside>
+        </div>
+        <!--内页移动端-->
+        <div class="header-page-xs navbar-fixed-top visible-xs visible-sm">
+            <div class="container">
+                <div class="header-xs-block clearfix">
+                    <a class="header-goBack pull-left" href="javascript:void (0)" onclick="window.history.go(-1);"><i class="iconfont icon-you-copy"></i></a>
+                    <span class="header-title">账户资料</span>
+                </div>
             </div>
         </div>
-        <div class="footerBar">
+    </header>
+    <!-- 内容区-->
+    <section class="content">
+        <!--pc-->
+        <div class="myInfo_pc hidden-sm hidden-xs">
             <div class="container">
+                <!--位置导航-->
+                <div class="navAdd">
+                    <div class="navAdd-block">
+                        <a class="navAdd-a" href="index.html">首页</a>
+                        <span class="navAdd-dot"></span>
+                        <a class="navAdd-a" href="myOrder.html">会员中心</a>
+                        <span class="navAdd-dot"></span>
+                        <a class="navAdd-a active" href="myInfo.html">账户资料</a>
+                    </div>
+                </div>
+                <!--个人中心-->
+                <div class="person">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-2">
+                            <div class="personBlock">
+                                <div class="userInfo">
+                                    <img class="male" src="images/male.jpg">
+                                    <p class="userName">吴迪</p>
+                                </div>
+                                <ul class="personNav">
+                                    <li class="personNavLi"><a class="personNav_a" href="myOrder.html">我的订单</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="service_after.html">售后服务</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="discount.html">优惠券</a></li>
+                                    <li class="personNavLi"><a class="personNav_a" href="address.html">收货地址</a></li>
+                                    <li class="personNavLi active"><a class="personNav_a" href="myInfo.html">账户资料</a></li>
+                                </ul>
+                                <div class="personBg"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-10">
+                            <div class="myOrder">
+                                <div class="orderTitle myInfoTitle">
+                                    <span class="f-24">账户资料</span>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock">
+                                        <p class="myInfoBlock_p clearfix">音特账号：
+                                            <span class="accountNum">188****3369</span>
+                                            <a class="pull-right" href="login.html">退出账号</a>
+                                        </p>
+                                        <p class="myInfoBlock_p clearfix">账户昵称：
+                                            <span class="accountName">吴迪</span>
+                                            <a class="pull-right" id="js_changeName" data-toggle="modal" data-target="#nameModal">修改昵称</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock clearfix">
+                                        <div class="pull-left">
+                                            <p class="myInfoBlock_p">账户密码</p>
+                                            <p class="myInfoBlock_s">可通过原密码修改密码</p>
+                                        </div>
+                                        <a class="myInfoBlock_a pull-right" id="changePwd" data-toggle="modal" data-target="#pwdModal">修改</a>
+                                    </div>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock clearfix">
+                                        <div class="pull-left">
+                                            <p class="myInfoBlock_p">绑定手机：
+                                                <span class="accountCall" id="accountCall">未绑定</span>
+                                            </p>
+                                            <p class="myInfoBlock_s">绑定手机可用来登录音特账号，重置密码或者其他安全验证</p>
+                                        </div>
+                                        <a class="myInfoBlock_a pull-right" id="changeCall" data-toggle="modal" data-target="#callModal">绑定</a>
+                                    </div>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock clearfix">
+                                        <div class="pull-left">
+                                            <p class="myInfoBlock_p">绑定邮箱：
+                                                <span class="accountEmail" id="accountEmail">188****3369@163.com</span>
+                                            </p>
+                                            <p class="myInfoBlock_s">绑定邮箱可用来登录音特账号，重置密码或者其他安全验证</p>
+                                        </div>
+                                        <a class="myInfoBlock_a pull-right" id="changeEmail" data-toggle="modal" data-target="#codeEmailModal">修改</a>
+                                    </div>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock clearfix">
+                                        <div class="pull-left">
+                                            <p class="myInfoBlock_p">绑定QQ：
+                                                <span class="no_qq">未绑定</span>
+                                            </p>
+                                            <p class="myInfoBlock_s">绑定QQ后可用来快速登录音特账号</p>
+                                        </div>
+                                        <a class="myInfoBlock_a pull-right" href="javascript:;" id="bd_qq" data-toggle="modal" data-target="#qqModal">解绑</a>
+                                    </div>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock clearfix">
+                                        <div class="pull-left">
+                                            <p class="myInfoBlock_p">绑定微信：
+                                                <span class="bd_weixin">已绑定</span>
+                                            </p>
+                                            <p class="myInfoBlock_s">绑定微信后可用来快速登录音特账号</p>
+                                        </div>
+                                        <a class="myInfoBlock_a pull-right" href="#" id="changeWechat">绑定</a>
+                                    </div>
+                                </div>
+                                <div class="myInfoContent">
+                                    <div class="myInfoBlock clearfix">
+                                        <div class="pull-left">
+                                            <p class="myInfoBlock_p">绑定微博：
+                                                <span class="bd_weixin">未绑定</span>
+                                            </p>
+                                            <p class="myInfoBlock_s">绑定微博后可用来快速登录音特账号</p>
+                                        </div>
+                                        <a class="myInfoBlock_a pull-right" href="#" id="changeWebo">绑定</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--移动端-->
+        <div class="myInfo_xs visible-sm visible-xs">
+            <div class="myInfo__block_xs">
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix">音特账号：<span class="accountNum">188****3369</span></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="javascript:void(0)" data-toggle="modal" data-target="#nameModal">账户昵称：<span class="accountName">吴迪</span><i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="javascript:void(0)" data-toggle="modal" data-target="#pwdModal">修改密码<i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="javascript:void(0)" data-toggle="modal" data-target="#callModal">修改绑定手机：<span class="accountCall" id="accountCall-xs">未绑定</span><i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="javascript:void(0)" data-toggle="modal" data-target="#codeEmailModal">修改绑定邮箱：<span class="accountEmail" id="accountEmail-xs">188****3369@163.com</span><i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="javascript:void(0)" data-toggle="modal" data-target="#qqModal">绑定qq：<span class="no_qq">未绑定</span><i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="#">绑定微信：<span class="bd_weixin">已绑定</span><i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="#">绑定微博：<span class="bd_weixin">已绑定</span><i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="personCenterOut">
+                <div class="personCenter-div">
+                    <div class="container">
+                        <a class="personCenter-a clearfix" href="#">退出账号 <i class="iconfont icon-xia pull-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---通用footer-->
+    <footer>
+        <!--pc--footer-->
+        <div  id="footer" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="footerOut">
+                    <div class="footer_container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="footerSer">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                                <span class="footerService">7天无理由退货</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianbaohuan"></i>
+                                                <span class="footerService">30天包换</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoyou"></i>
+                                                <span class="footerService">全国包邮</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                                <span class="footerService">全国联保</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footerLinks">
+                                    <ul class="footerList clearfix">
+                                        <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" data-toggle="modal" data-target="#langModal">简体中文</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="footerContact">
+                                    <strong class="footer-call">400-119-5555</strong>
+                                    <p class="footer-text">( 24小时全国服务热线 )</p>
+                                    <div class="footerCodes">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <img class="weibo" src="images/weibo-img.jpg">
+                                        <i class="iconfont icon-weixin2"></i>
+                                        <img class="weixin" src="images/weixin-img.jpg">
+                                        <i class="iconfont icon-qq1"></i>
+                                        <img class="qq" src="images/timg.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBar">
                 © dameigong.cn 2017 皖ICP备17012709号
             </div>
         </div>
     </footer>
 </div>
 <!-- nameModal -->
-<div class="modal myInfoModal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameModal">
+<div class="modal myInfoModal" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -230,20 +422,18 @@
                 <h4 class="modal-title" id="nameModalLabel">修改昵称</h4>
             </div>
             <div class="modal-body">
-                <form id="nameForm" data-toggle="validator" role="form">
-                    <div class="form-group has-feedback newPwd-group">
-                        <input type="text" class="form-control" id="second_name" placeholder="请输入新的昵称" data-error="昵称已有人使用" data-delay="50" required>
-                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
-                        <div class="help-block with-errors"></div>
+                <form id="nameForm" role="form">
+                    <div class="form-group newPwd-group">
+                        <input type="text" class="form-control" id="second_name" placeholder="请输入新的昵称">
                     </div>
                 </form>
-                <button type="button" class="btn-red" data-dismiss="modal">完成</button>
+                <button type="button" class="btn-red btn-red-xs" id="finishName">完成</button>
             </div>
         </div>
     </div>
 </div>
 <!-- pwdModal -->
-<div class="modal myInfoModal fade" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModal">
+<div class="modal myInfoModal" id="pwdModal" tabindex="-1" role="dialog" aria-labelledby="pwdModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -252,56 +442,87 @@
             </div>
             <div class="modal-body">
                 <form id="pwdForm" role="form">
-                    <div class="form-group has-feedback">
+                    <div class="form-group">
                         <label class="form-label" for="originPwd">原密码</label>
-                        <input type="password" class="form-control" id="originPwd" placeholder="请输入原密码" data-minlength="6" data-maxlength="16" data-delay="500" data-error="密码输入不正确" data-required-error="密码不能为空" required>
-                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
-                        <div class="help-block with-errors"></div>
+                        <input type="password" class="form-control" id="originPwd" placeholder="请输入原密码">
                     </div>
-                    <div class="form-group has-feedback">
+                    <div class="form-group">
                         <label class="form-label" for="newPwd">新密码</label>
-                        <input type="password" class="form-control" id="newPwd" placeholder="请输入新密码（6-16位字母和数字组合）" data-minlength="6" data-maxlength="16" data-required-error="密码不能为空" required>
-                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
-                        <div class="help-block with-errors"></div>
+                        <input type="password" class="form-control" id="newPwd" placeholder="请输入新密码（6-16位字母和数字组合）">
                     </div>
-                    <div class="form-group has-feedback newPwd-group">
-                        <input type="password" class="form-control" id="newPwd2" placeholder="请再次确认密码" data-match="#newPwd" data-match-error="两次输入密码不一致" data-required-error="密码不能为空" required>
-                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
-                        <div class="help-block with-errors"></div>
+                    <div class="form-group newPwd-group">
+                        <input type="password" class="form-control" id="newPwd2" placeholder="请再次确认密码">
                     </div>
                 </form>
-                <button type="submit" class="btn-red">完成</button>
+                <button type="submit" class="btn-red" id="finishPassWord">完成</button>
             </div>
         </div>
     </div>
 </div>
-<!-- callModal -->
-<div class="modal myInfoModal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModal">
+<!-- 绑定手机callModal -->
+<div class="modal myInfoModal" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModal">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content" id="yzEmailContent">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title">身份验证</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <label class="form-label">验证码已经发送至<span class="bd_call">188****3369@163.com</span></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入邮箱验证码" id="phoneEmailInput">
+                        <span class="input-group-btn"><button class="btn btn-yz btn-grey" type="button" id="phoneEmailYzBtn">60s后点击重新获取</button></span>
+                    </div>
+                    <button type="button" class="btn-red" id="phoneEmailBtn">验证</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-content" id="bindPhoneContent" style="display: none;">
             <div class="modal-header">
                 <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
                 <h4 class="modal-title" id="callModalLabel">绑定手机</h4>
             </div>
             <div class="modal-body">
-                <form role="form" data-toggle="validator">
-                    <div class="form-group has-feedback newPwd-group">
-                        <input type="text" class="form-control" id="callNum" placeholder="请输入要绑定的手机号" pattern="^[1][358][0-9]{9}$" data-error="请输入有效的手机号" required>
-                        <span class="iconfont form-control-feedback" aria-hidden="true"></span>
-                        <div class="help-block with-errors"></div>
+                <form role="form">
+                    <div class="form-group newPwd-group">
+                        <input type="text" class="form-control" id="callNum" placeholder="请输入要绑定的手机号">
                     </div>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="请输入短信验证码" id="codeMsg">
-                        <span class="input-group-btn"><button class="btn btn-yz" type="button" id="sendCode" onclick="sends.send();">获取验证码</button></span>
+                        <span class="input-group-btn"><button class="btn btn-yz" type="button" id="sendCode">获取验证码</button></span>
                     </div>
+                    <button type="button" class="btn-red" id="submitBtn">完成</button>
                 </form>
-                <button type="button" class="btn-red" data-dismiss="modal" onclick="sends.conform();" id="submitBtn">完成</button>
             </div>
         </div>
     </div>
 </div>
-<!-- codeModal -->
-<div class="modal myInfoModal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModal">
+<!-- 绑定邮箱emailModal -->
+<div class="modal myInfoModal" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="emailModalLabel">绑定邮箱</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group newPwd-group">
+                        <input type="text" class="form-control" id="emailNum" placeholder="请输入要绑定的邮箱">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入邮箱验证码" id="emailCodeMsg">
+                        <span class="input-group-btn"><button class="btn btn-yz" type="button" id="sendEmailCode">获取验证码</button></span>
+                    </div>
+                </form>
+                <button type="button" class="btn-red" id="submitBtnEmail">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 手机验证codeModal -->
+<div class="modal myInfoModal" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -321,8 +542,47 @@
         </div>
     </div>
 </div>
+<!-- 邮箱验证codeEmailModal -->
+<div class="modal myInfoModal" id="codeEmailModal" tabindex="-1" role="dialog" aria-labelledby="codeEmailModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="codeEmailContent">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title" id="codeEmailModalLabel">身份验证</h4>
+            </div>
+            <div class="modal-body">
+                <form id="yzEmailForm">
+                    <label class="form-label">验证码已经发送至<span class="bd_call">188****3369@163.com</span></label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入邮箱验证码" id="yzEmailInput">
+                        <span class="input-group-btn"><button class="btn btn-yz btn-grey" type="button" id="newEmailYzBtn">60s后点击重新获取</button></span>
+                    </div>
+                    <button type="button" class="btn-red" id="yzEmailBtn">验证</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-content" id="bindEmailContent" style="display: none;">
+            <div class="modal-header">
+                <i class="close iconfont icon-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i>
+                <h4 class="modal-title">绑定邮箱</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group newPwd-group">
+                        <input type="text" class="form-control" id="bindEmailNum" placeholder="请输入要绑定的邮箱">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入邮箱验证码" id="bindEmailCodeMsg">
+                        <span class="input-group-btn"><button class="btn btn-yz" type="button" id="bindEmailCode">获取验证码</button></span>
+                    </div>
+                </form>
+                <button type="button" class="btn-red" id="submitBtnBindEmail">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- qqModal -->
-<div class="modal myInfoModal fade" id="qqModal" tabindex="-1" role="dialog" aria-labelledby="qqModal">
+<div class="modal myInfoModal" id="qqModal" tabindex="-1" role="dialog" aria-labelledby="qqModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -331,15 +591,9 @@
             <div class="modal-body">
                 <h4 class="modal-title" id="qqModalLabel">确定解除绑定QQ?</h4>
                 <p class="modal-tips">解除绑定后将不能用此QQ快捷登录音特账号</p>
-                <div class="modal-btns">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="button" class="btn-red">确定</button>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn-qx" data-dismiss="modal">取消</button>
-                        </div>
-                    </div>
+                <div class="modal-btns clearfix">
+                    <button type="button" class="btn-red pull-left">确定</button>
+                    <button type="button" class="btn-qx pull-right" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
@@ -347,91 +601,92 @@
 </div>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/validator.js"></script>
+<script type="text/javascript" src="js/accountInfo.js"></script>
+<script type="text/javascript" src="js/countDown.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript">
-    $(function () {
-        // 修改账户昵称
+<!--<script type="text/javascript">-->
+    <!--$(function () {-->
+        <!--// 修改账户昵称-->
 
 
-        // 修改账户密码
-        $('#pwdForm').validator().on('submit', function (e) {
-            if (e.isDefaultPrevented()) {
-                // handle the invalid form...
-            } else {
-                $('#pwdModal').modal('hide')
-            }
-        });
-        // 绑定手机和邮箱
-        $('#changeCall').click(function () {
-            $('#callModal').modal();
-        });
+        <!--// 修改账户密码-->
+        <!--$('#pwdForm').validator().on('submit', function (e) {-->
+            <!--if (e.isDefaultPrevented()) {-->
+                <!--// handle the invalid form...-->
+            <!--} else {-->
+                <!--$('#pwdModal').modal('hide')-->
+            <!--}-->
+        <!--});-->
+        <!--// 绑定手机和邮箱-->
+        <!--$('#changeCall').click(function () {-->
+            <!--$('#callModal').modal();-->
+        <!--});-->
 
 
-        // 验证手机和邮箱
-        $('#changeEmail').click(function () {
-            $('#codeModal').modal();
-        });
-        // 解绑qq/微信/微博
-        $('#changeWechat').click(function () {
-            $('#qqModal').modal();
-        });
+        <!--// 验证手机和邮箱-->
+        <!--$('#changeEmail').click(function () {-->
+            <!--$('#codeModal').modal();-->
+        <!--});-->
+        <!--// 解绑qq/微信/微博-->
+        <!--$('#changeWechat').click(function () {-->
+            <!--$('#qqModal').modal();-->
+        <!--});-->
 
-    });
-    var sends = {
-        checked:1,
-        send:function(){
-            var numbers = /^1\d{10}$/;
-            var val = $('#callNum').val().replace(/\s+/g,""); //获取输入手机号码
-            if(numbers.test(val)){
-                var time = 60;
-                function timeCountDown(){
-                    if(time==0){
-                        clearInterval(timer);
-                        $('#sendCode').removeClass('btn-grey').html("发送验证码");
-                        $('#submitBtn').removeAttr('disabled');
-                        sends.checked = 1;
-                        return true;
-                    }
-                    $('#sendCode').html("重新获取" + "（ " + time +" ）");
-                    time--;
-                    return false;
-                    sends.checked = 0;
-                }
-                $('#sendCode').addClass('btn-grey');
+    <!--});-->
+    <!--var sends = {-->
+        <!--checked:1,-->
+        <!--send:function(){-->
+            <!--var numbers = /^1\d{10}$/;-->
+            <!--var val = $('#callNum').val().replace(/\s+/g,""); //获取输入手机号码-->
+            <!--if(numbers.test(val)){-->
+                <!--var time = 60;-->
+                <!--function timeCountDown(){-->
+                    <!--if(time==0){-->
+                        <!--clearInterval(timer);-->
+                        <!--$('#sendCode').removeClass('btn-grey').html("发送验证码");-->
+                        <!--$('#submitBtn').removeAttr('disabled');-->
+                        <!--sends.checked = 1;-->
+                        <!--return true;-->
+                    <!--}-->
+                    <!--$('#sendCode').html("重新获取" + "（ " + time +" ）");-->
+                    <!--time&#45;&#45;;-->
+                    <!--return false;-->
+                    <!--sends.checked = 0;-->
+                <!--}-->
+                <!--$('#sendCode').addClass('btn-grey');-->
 
-                $('#submitBtn').attr('disabled','disabled');
-                timeCountDown();
-                var timer = setInterval(timeCountDown,1000);
-            }
-        }
-    };
-    var sendsYz = {
-        checked:1,
+                <!--$('#submitBtn').attr('disabled','disabled');-->
+                <!--timeCountDown();-->
+                <!--var timer = setInterval(timeCountDown,1000);-->
+            <!--}-->
+        <!--}-->
+    <!--};-->
+    <!--var sendsYz = {-->
+        <!--checked:1,-->
 
-        send:function(){
-                var time = 60;
-                function timeCountDown(){
-                    if(time==0){
-                        clearInterval(timer);
-                        $('#newYzBtn').removeClass('btn-grey').html("发送验证码");
-                        $('#yzBtn').removeAttr('disabled');
-                        sends.checked = 1;
-                        return true;
-                    }
-                    $('#newYzBtn').html("重新获取" + "（ " + time +" ）");
-                    time--;
-                    return false;
-                    sends.checked = 0;
-                }
-                $('#newYzBtn').addClass('btn-grey');
+        <!--send:function(){-->
+                <!--var time = 60;-->
+                <!--function timeCountDown(){-->
+                    <!--if(time==0){-->
+                        <!--clearInterval(timer);-->
+                        <!--$('#newYzBtn').removeClass('btn-grey').html("发送验证码");-->
+                        <!--$('#yzBtn').removeAttr('disabled');-->
+                        <!--sends.checked = 1;-->
+                        <!--return true;-->
+                    <!--}-->
+                    <!--$('#newYzBtn').html("重新获取" + "（ " + time +" ）");-->
+                    <!--time&#45;&#45;;-->
+                    <!--return false;-->
+                    <!--sends.checked = 0;-->
+                <!--}-->
+                <!--$('#newYzBtn').addClass('btn-grey');-->
 
-                $('#yzBtn').attr('disabled','disabled');
-                timeCountDown();
-                var timer = setInterval(timeCountDown,1000);
-            }
-    }
+                <!--$('#yzBtn').attr('disabled','disabled');-->
+                <!--timeCountDown();-->
+                <!--var timer = setInterval(timeCountDown,1000);-->
+            <!--}-->
+    <!--}-->
 
-</script>
+<!--</script>-->
 </body>
 </html>

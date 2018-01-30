@@ -21,8 +21,8 @@
     <title>音特电子</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/iconfont.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../app.css" type="text/css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/about.css" type="text/css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -31,147 +31,203 @@
 <body>
 <div class="wrapper">
     <!-- 通用头部-->
-    <header class="header">
-        <div class="container clearfix">
-            <div class="navIcons icon-out pull-left" id="showNav">
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
+    <header>
+        <!--pc-->
+        <div class="header navbar-fixed-top hidden-sm hidden-xs">
+            <div class="container">
+                <div class="navIcons icon-out pull-left" id="showNav">
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                </div>
+                <a class="logo" href="../index.html"><img class="nav-icon" src="../images/logo.png"></a>
+                <div class="navShopBar pull-right">
+                    <a class="goProBlock" href="../product.html" title="音特商城"><img class="nav-icon" src="../images/nav-icon1.png"></a>
+                    <a class="goProBlock" href="../myOrder.html"  id="js_showPerson"><img class="nav-icon" src="../images/nav-icon2.png"><span class="badge shopCart_badge">2</span></a>
+                    <div id="personBlock" class="personCenterBlock">
+                        <img class="upup" src="../images/upup.png">
+                        <ul>
+                            <li class="personList">
+                                <a href="../myOrder.html"><span class="personList_nav">我的订单</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../service_after.html"><span class="personList_nav">售后服务</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../discount.html"><span class="personList_nav">优惠券</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../address.html"><span class="personList_nav">收货地址</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="../myInfo.html"><span class="personList_nav">账户资料</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="javascript:void(0);"><span class="personList_nav">退出账号</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="goProBlock" href="../shop_cart.html" title="购物车" id="js_showCart"><img class="nav-icon" src="../images/nav-icon3.png"></a>
+                    <!--购物车-->
+                    <div class="shopCartBlock" id="shopCartBlock">
+                        <img class="upup2" src="../images/upup.png">
+                        <!--购物车有商品的状态-->
+                        <div class="withGoods" id="withGoods" style="display: block;">
+                            <div class="shopCart_pro">
+                                <ul class="cartList">
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p class="cartInfo">
+                                                <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                            <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p>
+                                                <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
+                                                <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shopCart_goBuy clearfix">
+                                <div class="cartFooter">
+                                    <p>共<span class="totalNum">2</span>件商品</p>
+                                    <p class="totalYuan">¥3998.00</p>
+                                </div>
+                                <a class="addCart_a" href="../shop_cart.html">去结算</a>
+                            </div>
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoods" style="display: none;">
+                            登录后可显示<br>
+                            您账号中已加入的商品哦~
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoodsLogin" style="display: none;">
+                            您的购物车还没有商品，<br>
+                            赶紧去选购吧~
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="logo" href="../index.html"><img src="../images/logo.png"></a>
-            <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
-                <div id="personBlock" class="personCenterBlock">
-                    <img class="upup" src="../images/upup.png">
+            <!--侧导航-->
+            <aside class="sideBar" id="sideBar">
+                <div class="sideNav">
                     <ul>
-                        <li class="personList">
-                            <a class="clearfix" href="../person_center.html">我的订单</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../news/news.html">新闻资讯</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="../service_after.html">售后服务</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../activity/activity.html">活动中心</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="../discount.html">优惠券</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../product.html">音特商城</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="../address.html">收货地址</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../about/about.html">关于我们</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="../myInfo.html">账户资料</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="../contact.html">联系我们</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="javascript:void(0);">退出账号</a>
+                    </ul>
+                    <div class="aside_footer">
+                        <div class="aside_footer_img">
+                            <img src="../images/aside_logo.png">
+                        </div>
+                        <p class="aside_enter">音特电子（深圳）有限公司</p>
+                        <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                        <p class="aside_call">0755-83513870</p>
+                        <p class="aside_email">enter.media@gamil.com</p>
+                        <div class="footerCodes">
+                            <i class="iconfont icon-weibo"></i>
+                            <img class="weibo" src="../images/weibo-img.jpg">
+                            <i class="iconfont icon-weixin2"></i>
+                            <img class="weixin" src="../images/weixin-img.jpg">
+                            <i class="iconfont icon-qq1"></i>
+                            <img class="qq" src="../images/timg.jpg">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!--移动端-->
+        <div class="header-xs visible-xs visible-sm">
+            <div class="container">
+                <div class="header-xs-block">
+                    <div class="navIcons-xs icon-out pull-left">
+                        <span class="line_icons"></span>
+                        <span class="line_icons"></span>
+                        <span class="line_icons"></span>
+                    </div>
+                    <a class="header-logo" href="../index.html"><img class="logo-xs" src="../images-xs/logo-xs.png"></a>
+                    <div class="header-xs-r pull-right">
+                        <a class="header-xs-a" href="../product.html"><img class="shopCart-xs" src="../images-xs/shop-xs.png"></a>
+                        <a class="header-xs-a header-xs-person" href="../myOrder.html"><img class="person-xs" src="../images-xs/person-xs.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-inner-nav">
+                <div class="container">
+                    <ul>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../news/news.html">新闻资讯</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../activity/activity.html">活动中心</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../product.html">音特商城</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../about/about.html">关于我们</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="../contact.html">联系我们</a>
                         </li>
                     </ul>
                 </div>
-                <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
-                <!--购物车-->
-                <div class="shopCartBlock" id="shopCartBlock">
-                    <img class="upup2" src="../images/upup.png">
-                    <!--购物车有商品的状态-->
-                    <div class="withGoods" id="withGoods">
-                        <div class="shopCart_pro">
-                            <ul class="cartList">
-                                <li class="clearfix">
-                                    <a class="pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
-                                    <div class="cartRight">
-                                        <p class="cartInfo">
-                                            <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
-                                            <span class="cartGoodsNum">X1</span>
-                                        </p>
-                                        <p class="cartGoodsMoney">¥1999.00</p>
-                                    </div>
-                                    <i class="iconfont icon-close js_deleteGoods"></i>
-                                </li>
-                                <li class="clearfix">
-                                    <a class="pull-left" href="../page.html"><img src="../images/pro-acc-1.jpg"></a>
-                                    <div class="cartRight">
-                                        <p>
-                                            <a class="cartGoodsName" href="../page.html">无线蓝牙麦克风E2</a>
-                                            <span class="cartGoodsNum">X1</span>
-                                        </p>
-                                        <p class="cartGoodsMoney">¥1999.00</p>
-                                    </div>
-                                    <i class="iconfont icon-close js_deleteGoods"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="shopCart_goBuy clearfix">
-                            <div class="cartFooter">
-                                <p>共<span class="totalNum">2</span>件商品</p>
-                                <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
-                            </div>
-                            <a class="addCart_a" href="../shop_cart.html">立即结算</a>
-                        </div>
-                    </div>
-                    <!--购物车没有商品的状态-->
-                    <div class="f-16 text-center" id="noGoods" style="display: none;">
-                        购物车还没有商品，赶紧选购吧！
-                    </div>
-                </div>
+
             </div>
         </div>
     </header>
-    <!--侧导航-->
-    <aside class="sideBar" id="sideBar">
-        <div class="sideNav">
-            <ul>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="../news/news.html">新闻资讯</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="../activity/activity.html">活动中心</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="../about/about.html">关于我们</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="../contact.html">联系我们</a>
-                </li>
-            </ul>
-            <div class="aside_footer">
-                <p class="aside_enter">音特电子（深圳）有限公司</p>
-                <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
-                <p class="aside_call">0755-83513870</p>
-                <p class="aside_email">enter.media@gamil.com</p>
-                <div class="footerCodes">
-                    <i class="iconfont icon-weibo"></i>
-                    <img class="weibo" src="../images/weibo-img.jpg">
-                    <i class="iconfont icon-weixin2"></i>
-                    <img class="weixin" src="../images/weixin-img.jpg">
-                    <i class="iconfont icon-qq1"></i>
-                    <img class="qq" src="../images/timg.jpg">
-                </div>
-            </div>
-        </div>
-    </aside>
     <!-- 内容区-->
     <div class="content">
-        <div class="container">
-            <!--位置导航-->
-            <div class="navAdd">
-                <div class="navAdd-block">
-                    <a class="navAdd-a" href="../index.html">首页</a>
-                    <span class="navAdd-dot"></span>
-                    <a class="navAdd-a active" href="about.html">关于我们</a>
-                </div>
-            </div>
-        </div>
         <div id="about">
             <!--关于我们-->
             <div class="aboutUS">
-                <img class="aboutUsBg" src="../images/about1.jpg" alt="aboutUs">
+                <img class="aboutUsBg hidden-xs hidden-sm" src="../images/about1.jpg" alt="aboutUs">
+                <img class="aboutUsBg visible-sm visible-xs" src="../images-xs/about1-xs.jpg" alt="aboutUs">
                 <div class="aboutUs_words">
                     <div class="container">
                         <div class="aboutUs-left">
-                            <p class="aboutUs_t">关于我们</p>
+                            <p class="aboutUs_t aboutUs_t1">关于我们</p>
                             <div class="aboutUs_text">
-                                <p class="aboutUs_p">为客户提供生活乐趣一直是我们的首要任务。在建立了音特之后，该公司迅速成为便携式卡拉OK系统中</p>
-                                <p class="aboutUs_p">规模最大，最受人尊敬的制造商之一。通过专注于提供高度愉快的娱乐体验，音特电子自1994年成立以来</p>
-                                <p class="aboutUs_p">一直保持着无与伦比的品质声誉。我们现在服务于30多个国家，并且持续增长速度比以往任何时候都快。</p>
-                                <p class="aboutUs_p">感谢我们忠实的客户和合作伙伴，使我们成为了顶尖。</p>
-                                <p class="aboutUs_p">我们决心为您的朋友和家人提供最好的娱乐产品。</p>
-                                <p class="aboutUs_p">感谢您的支持。</p>
+                                <div class="hidden-xs hidden-sm">
+                                    <p class="aboutUs_p">音特电子科技有限公司是一家专门从事娱乐行业IT产品的首要开发商和制造商。</p>
+                                    <p class="aboutUs_p">我们为客户的生活提供了极大的便利，给他们带来了极大的乐趣。</p>
+                                    <p class="aboutUs_p">音特电子成立后，公司很快成为便携式卡拉OK娱乐系统最大和最受尊敬的开发商之一。</p>
+                                    <p class="aboutUs_p">通过专注于提供愉快的娱乐体验，我司自1994年成立以来一直保持着无与伦比的质量声誉。</p>
+                                    <p class="aboutUs_p">我们的忠诚客户和合作伙伴帮助音特为30多个国家服务，并继续以更快的速度增长。</p>
+                                    <p class="aboutUs_p">我们致力于为您的朋友和家人提供最好的娱乐产品。</p>
+                                </div>
+                                <div class="visible-sm visible-xs">
+                                    <p class="aboutUs_p">音特电子科技有限公司是一家专门从事娱乐行业IT产品的首要开发商和制造商。我们为客户的生活提供了极大的便利，给他们带来了极大的乐趣。音特电子成立后，公司很快成为便携式卡拉OK娱乐系统最大和最受尊敬的开发商之一。通过专注于提供愉快的娱乐体验，我司自1994年成立以来一直保持着无与伦比的质量声誉。我们的忠诚客户和合作伙伴帮助音特为30多个国家服务，并继续以更快的速度增长。我们致力于为您的朋友和家人提供最好的娱乐产品。</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,12 +245,12 @@
                     </div>
                     <div class="about_hope">
                         <p class="aboutUs_t">我们的愿景</p>
-                        <p class="aboutHope_p">成为全球最好的最专业的娱乐产品的制造商，研发最有趣的、用户体验最好的便携式卡拉OK系统，为用户提供最全的音质最好的歌曲歌库，为每一个家庭提供最好的娱乐产品.</p>
+                        <p class="aboutHope_p">在音特，我们自豪于我们对现代娱乐系统的不断研究和发展。我们的愿景是利用我们拥有的技术将家人和朋友聚集在一起，并通过提供优秀的卡拉OK娱乐系统来进一步丰富他们的生活。</p>
                     </div>
                 </div>
             </div>
-            <!--历史进程-->
-            <div class="history_section">
+            <!--历史进程-pc-->
+            <div class="history_section hidden-xs hidden-sm">
                 <img class="timeImg" src="../images/time.png">
                 <div class="container">
                     <div class="about_history">
@@ -202,43 +258,350 @@
                             <div id="timeline">
                                 <ul id="dates">
                                     <li>
-                                        <a href="#2012">
+                                        <a href="#1994">
+                                            <p class="historyYear">1994</p>
+                                            <p class="historyEvents">音特电子科技有限公司成立</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1995">
+                                            <p class="historyYear">1995</p>
+                                            <p class="historyEvents">建立了第一个工厂</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1997">
+                                            <p class="historyYear">1997</p>
+                                            <p class="historyEvents">完成开发ET1000半导体</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1999">
+                                            <p class="historyYear">1999</p>
+                                            <p class="historyEvents">被更名为“音特电子科技有限公司”</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2000">
+                                            <p class="historyYear">2000</p>
+                                            <p class="historyEvents">在韩国注册为风险投资公司</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2001">
+                                            <p class="historyYear">2001</p>
+                                            <p class="historyEvents">在美国获得便携式卡拉OK设备专利</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2002">
+                                            <p class="historyYear">2002</p>
+                                            <p class="historyEvents">MagicSing产品通过了美国FCC</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2003">
+                                            <p class="historyYear">2003</p>
+                                            <p class="historyEvents">由韩国证券交易商协会在KOSDAQ注册</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2005">
+                                            <p class="historyYear">2005</p>
+                                            <p class="historyEvents">成功开发ICS5100半导体</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2006">
+                                            <p class="historyYear">2006</p>
+                                            <p class="historyEvents">成功开发GMX1000半导体</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2007">
+                                            <p class="historyYear">2007</p>
+                                            <p class="historyEvents">开始使用Retaw1-05</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2008">
+                                            <p class="historyYear">2008</p>
+                                            <p class="historyEvents">成功研制出CT-500半导体</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2009">
+                                            <p class="historyYear">2009</p>
+                                            <p class="historyEvents">完成开发RT100半导体</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2011">
+                                            <p class="historyYear">2011</p>
+                                            <p class="historyEvents">完成了100％无线麦克风的开发</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#2011">
                                             <p class="historyYear">2012</p>
-                                            <p class="historyEvents">AK系列开发完成</p>
+                                            <p class="historyEvents">Assa和Enter-Tech完成合并</p>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#2013">
                                             <p class="historyYear">2013</p>
-                                            <p class="historyEvents">Assa和Enter-Tech完成合并</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#2014">
-                                            <p class="historyYear">2014</p>
-                                            <p class="historyEvents">无线麦克风开发完成</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#2015">
-                                            <p class="historyYear">2015</p>
-                                            <p class="historyEvents">AK系列开发完成</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#2016">
-                                            <p class="historyYear">2016</p>
-                                            <p class="historyEvents">Assa和Enter-Tech完成合并</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#2017">
-                                            <p class="historyYear">2017</p>
-                                            <p class="historyEvents">无线麦克风开发完成</p>
+                                            <p class="historyEvents">商业级系统AK系列开发完成</p>
                                         </a>
                                     </li>
                                 </ul>
                                 <ul id="issues">
+                                    <li class="issues_li" id="1994">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">05</span><span class="history_text">音特电子科技有限公司成立，并开展麦克风 - 卡拉OK业务。</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="1995">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08</span><span class="history_text">建立了第一个工厂。</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="1997">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08</span><span class="history_text">完成开发应用于早期ET系列（ET1000，ET3000等）的ET1000半导体。</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="1999">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">09</span><span class="history_text">被更名为“音特电子科技有限公司”</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2000">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">07</span><span class="history_text">在韩国注册为风险投资公司。</span></li>
+                                                        <li class="events_li"><span class="events_time">12</span><span class="history_text">在韩国获得便携式音乐演奏设备专利（2000年12月14日/第284049号）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2001">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">08</span><span class="history_text">在美国获得便携式卡拉OK设备专利（2001年8月21日/第6,278,048号）</span></li>
+                                                        <li class="events_li"><span class="events_time">11</span><span class="history_text">MagicSing产品通过了欧洲CE认证（2001年11月19日/ VAEE 27961 EMV）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2002">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">04</span><span class="history_text">MagicSing产品通过了美国FCC（PBNHARMONY）</span></li>
+                                                        <li class="events_li"><span class="events_time">04</span><span class="history_text">在韩国获得便携式卡拉OK设备专利（2002年4月30日/第336465号）</span></li>
+                                                        <li class="events_li"><span class="events_time">06</span><span class="history_text">获得ISO 9001认证（2001年6月1日/ UNK 20491）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2003">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">03</span><span class="history_text">获得ISO 14001认证（2003年3月28日/ UNK30203）</span></li>
+                                                        <li class="events_li"><span class="events_time">03</span><span class="history_text">通过互联网获得“新歌加法”专利（2003年3月6日，第376622号）</span></li>
+                                                        <li class="events_li"><span class="events_time">04</span><span class="history_text">韩国证券业协会通过了KOSDAQ的初步审查</span></li>
+                                                        <li class="events_li"><span class="events_time">07</span><span class="history_text">由韩国证券交易商协会在KOSDAQ注册</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2005">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">04</span><span class="history_text">与韩国三星电子，LG电子，MagnaChip半导体，核心逻辑和Gencore技术一起参加韩国科学技术院（KAIST）SoCium研究中心的合作开发项目。</span></li>
+                                                        <li class="events_li"><span class="events_time">04</span><span class="history_text">与NEMA（韩国国家应急管理局）签订合同，开发现场安全管理和控制系统。</span></li>
+                                                        <li class="events_li"><span class="events_time">08</span><span class="history_text">在伊朗获得便携式视频卡拉OK系统专利（2005年8月9日/第32291号）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2006">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">10</span><span class="history_text">在中国获得便携式卡拉OK设备专利（2006年10月18日，中国香港1040805号ZL 00134270.3）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2007">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">09</span><span class="history_text">赢得了专利便携式视频卡拉OK系统在印度（9.21）合作项目资助</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2008">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">01</span><span class="history_text">获得“数字音频播放器及其播放方法”专利（2008年3月11日，第7342522号）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2009">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">10</span><span class="history_text">国际注册专利（161件）：专利（12件），外观设计专利（121件），商标（28件）；国际执照申请（54件）：专利（25件），外观设计专利（22件） （7例）</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="issues_li" id="2011">
+                                        <div class="events">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history1.jpg">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <ul class="eventList">
+                                                        <li class="events_li"><span class="events_time">03</span><span class="history_text">完成23KH＆HDK2000高清卡拉OK系统的开发</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img class="historyImg" src="../images/history2.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li class="issues_li" id="2012">
                                         <div class="events">
                                             <div class="row">
@@ -247,14 +610,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <ul class="eventList">
-                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
-                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
-                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
-                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
-                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
+                                                        <li class="events_li"><span class="events_time">08</span><span class="history_text">经所有董事会成员批准，Assa和Enter-Tech完成合并</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-4">
@@ -271,110 +627,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <ul class="eventList">
-                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
-                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
-                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
-                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
-                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和完成合 </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history2.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="issues_li" id="2014">
-                                        <div class="events">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history1.jpg">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul class="eventList">
-                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
-                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
-                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
-                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
-                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history2.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="issues_li" id="2015">
-                                        <div class="events">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history1.jpg">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul class="eventList">
-                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
-                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
-                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
-                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
-                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history2.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="issues_li" id="2016">
-                                        <div class="events">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history1.jpg">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul class="eventList">
-                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
-                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
-                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
-                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
-                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history2.jpg">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="issues_li" id="2017">
-                                        <div class="events">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <img class="historyImg" src="../images/history1.jpg">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul class="eventList">
-                                                        <li class="events_li"><span class="events_time">08-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">07-20</span>在所有董事会成员的批准下，Assa和en </li>
-                                                        <li class="events_li"><span class="events_time">07-16</span>在所有董事会成员的批准下 </li>
-                                                        <li class="events_li"><span class="events_time">07-14</span>在所有董事会成员</li>
-                                                        <li class="events_li"><span class="events_time">07-10</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
-                                                        <li class="events_li"><span class="events_time">06-10</span>在所有董事会成员的批准下，Assa </li>
-                                                        <li class="events_li"><span class="events_time">05-20</span>在所有董事会成员的批准下，Assa和entertech完成合 </li>
+                                                        <li class="events_li"><span class="events_time">01</span><span class="history_text">商业级系统AK系列开发完成</span></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-4">
@@ -395,6 +648,256 @@
                     </div>
                 </div>
             </div>
+            <!--移动端-->
+            <div class="history_section_xs visible-sm visible-xs">
+                <img class="timeImg" src="../images/time.png">
+                <div class="about_history">
+                    <div class="about_time">
+                        <div id="timeline-xs">
+                            <ul id="dates-xs">
+                                <li>
+                                    <a href="#1994">
+                                        <p class="historyYear">1994</p>
+                                        <p class="historyEvents">音特电子科技有限公司成立</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#11995">
+                                        <p class="historyYear">1995</p>
+                                        <p class="historyEvents">建立了第一个工厂</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#11997">
+                                        <p class="historyYear">1997</p>
+                                        <p class="historyEvents">完成开发ET1000半导体</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#11999">
+                                        <p class="historyYear">1999</p>
+                                        <p class="historyEvents">被更名为“音特电子科技有限公司”</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12000">
+                                        <p class="historyYear">2000</p>
+                                        <p class="historyEvents">在韩国注册为风险投资公司</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12001">
+                                        <p class="historyYear">2001</p>
+                                        <p class="historyEvents">在美国获得便携式卡拉OK设备专利</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12002">
+                                        <p class="historyYear">2002</p>
+                                        <p class="historyEvents">MagicSing产品通过了美国FCC</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12003">
+                                        <p class="historyYear">2003</p>
+                                        <p class="historyEvents">由韩国证券交易商协会在KOSDAQ注册</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12005">
+                                        <p class="historyYear">2005</p>
+                                        <p class="historyEvents">成功开发ICS5100半导体</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12006">
+                                        <p class="historyYear">2006</p>
+                                        <p class="historyEvents">成功开发GMX1000半导体</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12007">
+                                        <p class="historyYear">2007</p>
+                                        <p class="historyEvents">开始使用Retaw1-05</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12008">
+                                        <p class="historyYear">2008</p>
+                                        <p class="historyEvents">成功研制出CT-500半导体</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12009">
+                                        <p class="historyYear">2009</p>
+                                        <p class="historyEvents">完成开发RT100半导体</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12011">
+                                        <p class="historyYear">2011</p>
+                                        <p class="historyEvents">完成了100％无线麦克风的开发</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12011">
+                                        <p class="historyYear">2012</p>
+                                        <p class="historyEvents">Assa和Enter-Tech完成合并</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#12013">
+                                        <p class="historyYear">2013</p>
+                                        <p class="historyEvents">商业级系统AK系列开发完成</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="time_circle">
+                                <img class="time_circle_img" src="../images-xs/time_circle_xs.png">
+                            </div>
+                            <ul id="issues-xs">
+                                <li class="issues_li" id="11994">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">05</span><span class="history_text">音特电子科技有限公司成立，并开展麦克风 - 卡拉OK业务。</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="11995">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">08</span><span class="history_text">建立了第一个工厂。</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="11997">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">08</span><span class="history_text">完成开发应用于早期ET系列（ET1000，ET3000等）的ET1000半导体。</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="11999">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">09</span><span class="history_text">被更名为“音特电子科技有限公司”</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12000">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">07</span><span class="history_text">在韩国注册为风险投资公司。</span></li>
+                                            <li class="events_li"><span class="events_time">12</span><span class="history_text">在韩国获得便携式音乐演奏设备专利（2000年12月14日/第284049号）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12001">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">08</span><span class="history_text">在美国获得便携式卡拉OK设备专利（2001年8月21日/第6,278,048号）</span></li>
+                                            <li class="events_li"><span class="events_time">11</span><span class="history_text">MagicSing产品通过了欧洲CE认证（2001年11月19日/ VAEE 27961 EMV）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12002">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">04</span><span class="history_text">MagicSing产品通过了美国FCC（PBNHARMONY）</span></li>
+                                            <li class="events_li"><span class="events_time">04</span><span class="history_text">在韩国获得便携式卡拉OK设备专利（2002年4月30日/第336465号）</span></li>
+                                            <li class="events_li"><span class="events_time">06</span><span class="history_text">获得ISO 9001认证（2001年6月1日/ UNK 20491）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12003">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">03</span><span class="history_text">获得ISO 14001认证（2003年3月28日/ UNK30203）</span></li>
+                                            <li class="events_li"><span class="events_time">03</span><span class="history_text">通过互联网获得“新歌加法”专利（2003年3月6日，第376622号）</span></li>
+                                            <li class="events_li"><span class="events_time">04</span><span class="history_text">韩国证券业协会通过了KOSDAQ的初步审查</span></li>
+                                            <li class="events_li"><span class="events_time">07</span><span class="history_text">由韩国证券交易商协会在KOSDAQ注册</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12005">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">04</span><span class="history_text">与韩国三星电子，LG电子，MagnaChip半导体，核心逻辑和Gencore技术一起参加韩国科学技术院（KAIST）SoCium研究中心的合作开发项目。</span></li>
+                                            <li class="events_li"><span class="events_time">04</span><span class="history_text">与NEMA（韩国国家应急管理局）签订合同，开发现场安全管理和控制系统。</span></li>
+                                            <li class="events_li"><span class="events_time">08</span><span class="history_text">在伊朗获得便携式视频卡拉OK系统专利（2005年8月9日/第32291号）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12006">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">10</span><span class="history_text">在中国获得便携式卡拉OK设备专利（2006年10月18日，中国香港1040805号ZL 00134270.3）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12007">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">09</span><span class="history_text">赢得了专利便携式视频卡拉OK系统在印度（9.21）合作项目资助</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12008">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">01</span><span class="history_text">获得“数字音频播放器及其播放方法”专利（2008年3月11日，第7342522号）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12009">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">10</span><span class="history_text">国际注册专利（161件）：专利（12件），外观设计专利（121件），商标（28件）；国际执照申请（54件）：专利（25件），外观设计专利（22件） （7例）</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12011">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">03</span><span class="history_text">完成23KH＆HDK2000高清卡拉OK系统的开发</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12012">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">08</span><span class="history_text">经所有董事会成员批准，Assa和Enter-Tech完成合并</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="issues_li" id="12013">
+                                    <div class="events">
+                                        <img class="historyImg" src="../images-xs/history1_xs.png">
+                                        <ul class="eventList">
+                                            <li class="events_li"><span class="events_time">01</span><span class="history_text">商业级系统AK系列开发完成</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--产品优势-->
             <div class="about_advantage">
                 <div class="container">
@@ -408,26 +911,34 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="about_adv_block">
-                                <img class="advIcon" src="../images/advIcon1.png">
+                                <img class="advIcon hidden-xs hidden-sm" src="../images/advIcon1.png">
+                                <div class="advIcon-xs visible-sm visible-xs">
+                                    <img class="advIcon" src="../images-xs/advIcon1-xs.png">
+                                </div>
                                 <p class="about_adv_title">专利芯片</p>
                                 <div class="about_adv_text">
-                                    <p class="about_adv_p">音特电子的硬件研发团队，经过多年的努力研发改进，研发出<br>
-                                        独立的音源芯片，并且成功申请专利，完美兼容音特产品<br>
+                                    <p class="about_adv_p">音特电子的硬件研发团队，经过多年的努力研发改进，研发出<br class="hidden-xs">
+                                        独立的音源芯片，并且成功申请专利，完美兼容音特产品<br class="hidden-xs">
                                         高音质得到充分的保障。</p>
                                 </div>
-                                <img class="advImg" src="../images/advImg1.jpg">
+                                <img class="advImg hidden-sm hidden-xs" src="../images/advImg1.jpg">
+                                <img class="advImg visible-sm visible-xs" src="../images-xs/advImg1-xs.jpg">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="about_adv_block">
-                                <img class="advIcon" src="../images/advIcon2.png">
+                                <img class="advIcon hidden-xs hidden-sm" src="../images/advIcon2.png">
+                                <div class="advIcon-xs visible-sm visible-xs">
+                                    <img class="advIcon" src="../images-xs/advIcon2-xs.png">
+                                </div>
                                 <p class="about_adv_title">卓越设计</p>
                                 <div class="about_adv_text">
-                                    <p class="about_adv_p">音特电子的所有的产品为了保证最好的用户体验以及最舒服的<br>
-                                        最适合的手感，设计师都是由韩国最好的设计师权先生设计<br>
+                                    <p class="about_adv_p">音特电子的所有的产品为了保证最好的用户体验以及最舒服的<br class="hidden-xs">
+                                        最适合的手感，设计师都是由韩国最好的设计师权先生设计<br class="hidden-xs">
                                         保证到用户手机的产品都是最美的以及最舒适的</p>
                                 </div>
-                                <img class="advImg" src="../images/advImg2.jpg">
+                                <img class="advImg hidden-sm hidden-xs" src="../images/advImg2.jpg">
+                                <img class="advImg visible-sm visible-xs" src="../images-xs/advImg2-xs.jpg">
                             </div>
                         </div>
                     </div>
@@ -441,28 +952,53 @@
                         <ul class="clearfix">
                             <li class="scaleList">
                                 <p class="about_scale_t">总部</p>
-                                <img class="companyIcon" src="../images/companyIcon1.png">
-                                <p class="about_scale_add">深圳</p>
+                                <div class="aboutIcons hidden-sm hidden-xs">
+                                    <img class="companyIcon" src="../images/companyIcon1.jpg">
+                                </div>
+                                <div class="aboutIcons-xs visible-sm visible-xs">
+                                    <img class="companyIcon" src="../images-xs/companyIcon1-xs.png">
+                                </div>
+                                <p class="about_scale_add">中国</p>
                             </li>
                             <li class="scaleList">
                                 <p class="about_scale_t">分部</p>
-                                <img class="companyIcon" src="../images/companyIcon2.png">
-                                <p class="about_scale_add">惠州</p>
-                            </li>
-                            <li class="scaleList">
-                                <p class="about_scale_t">分部</p>
-                                <img class="companyIcon" src="../images/companyIcon3.png">
-                                <p class="about_scale_add">上海</p>
-                            </li>
-                            <li class="scaleList">
-                                <p class="about_scale_t">分部</p>
-                                <img class="companyIcon" src="../images/companyIcon4.png">
+                                <div class="aboutIcons hidden-sm hidden-xs">
+                                    <img class="companyIcon" src="../images/companyIcon2.jpg">
+                                </div>
+                                <div class="aboutIcons-xs visible-sm visible-xs">
+                                    <img class="companyIcon" src="../images-xs/companyIcon2-xs.png">
+                                </div>
                                 <p class="about_scale_add">韩国</p>
                             </li>
                             <li class="scaleList">
                                 <p class="about_scale_t">分部</p>
-                                <img class="companyIcon" src="../images/companyIcon5.png">
+                                <div class="aboutIcons hidden-sm hidden-xs">
+                                    <img class="companyIcon" src="../images/companyIcon3.jpg">
+                                </div>
+                                <div class="aboutIcons-xs visible-sm visible-xs">
+                                    <img class="companyIcon" src="../images-xs/companyIcon3-xs.png">
+                                </div>
                                 <p class="about_scale_add">美国</p>
+                            </li>
+                            <li class="scaleList">
+                                <p class="about_scale_t">分部</p>
+                                <div class="aboutIcons hidden-sm hidden-xs">
+                                    <img class="companyIcon" src="../images/companyIcon4.jpg">
+                                </div>
+                                <div class="aboutIcons-xs visible-sm visible-xs">
+                                    <img class="companyIcon" src="../images-xs/companyIcon4-xs.png">
+                                </div>
+                                <p class="about_scale_add">日本</p>
+                            </li>
+                            <li class="scaleList">
+                                <p class="about_scale_t">分部</p>
+                                <div class="aboutIcons hidden-sm hidden-xs">
+                                    <img class="companyIcon" src="../images/companyIcon5.jpg">
+                                </div>
+                                <div class="aboutIcons-xs visible-sm visible-xs">
+                                    <img class="companyIcon" src="../images-xs/companyIcon5-xs.png">
+                                </div>
+                                <p class="about_scale_add">菲律宾</p>
                             </li>
                         </ul>
                     </div>
@@ -473,7 +1009,8 @@
                                     <p class="companyNum">500<span class="ge">个</span></p>
                                     <p class="companyText">覆盖全球城市</p>
                                 </div>
-                                <img class="advImg" src="../images/netImg1.jpg">
+                                <img class="advImg hidden-xs hidden-sm" src="../images/netImg1.jpg">
+                                <img class="advImg visible-sm visible-xs" src="../images-xs/netImg1-xs.png">
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -482,7 +1019,8 @@
                                     <p class="companyNum">100,000<span class="ge">个</span></p>
                                     <p class="companyText">线下销售和售后网点</p>
                                 </div>
-                                <img class="advImg" src="../images/netImg2.jpg">
+                                <img class="advImg hidden-xs hidden-sm" src="../images/netImg2.jpg">
+                                <img class="advImg visible-sm visible-xs" src="../images-xs/netImg2-xs.png">
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -491,7 +1029,8 @@
                                     <p class="companyNum">60,000<span class="ge">个</span></p>
                                     <p class="companyText">全球专属品牌销售人员</p>
                                 </div>
-                                <img class="advImg" src="../images/netImg3.jpg">
+                                <img class="advImg hidden-xs hidden-sm" src="../images/netImg3.jpg">
+                                <img class="advImg visible-sm visible-xs" src="../images-xs/netImg3-xs.png">
                             </div>
                         </div>
                     </div>
@@ -499,145 +1038,288 @@
             </div>
             <!--世界分布-->
             <div class="about_fb">
-                <div class="container">
-                    <div class="about_fb_cont">
+                <!--pc-->
+                <div class="hidden-sm hidden-xs">
+                    <div class="container">
+                        <div class="about_fb_cont">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="about_fb_block">
+                                        <img class="fbIcon" src="../images/fbIcon1.png">
+                                        <p class="about_fb_t">全球5个国家</p>
+                                        <p class="about_fb_p">发布品牌</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="about_fb_block">
+                                        <img class="fbIcon" src="../images/fbIcon2.png">
+                                        <p class="about_fb_t">全球5个国家</p>
+                                        <p class="about_fb_p">建设生产基地</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="about_fb_block">
+                                        <img class="fbIcon" src="../images/fbIcon3.png">
+                                        <p class="about_fb_t">全球3大城市</p>
+                                        <p class="about_fb_p">建设研发中心</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_fb_map">
+                                <img class="about_map" src="../images/about_map.png">
+                                <div class="map_adds1">
+                                    <div class="map_add_bg">联系人：李先生，电话：188 2232  1125</div>
+                                    <div class="map_add1">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">韩国</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds2">
+                                    <div class="map_add_bg">联系人：王先生，电话：188 2232  1125</div>
+                                    <div class="map_add2">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">惠州</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds3">
+                                    <div class="map_add_bg">联系人：陈先生，电话：188 2232  1125</div>
+                                    <div class="map_add3">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">越南</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds4">
+                                    <div class="map_add_bg">联系人：朱先生，电话：188 2232  1125</div>
+                                    <div class="map_add4">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">菲律宾</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds5">
+                                    <div class="map_add_bg">联系人：许先生，电话：188 2232  1125</div>
+                                    <div class="map_add5">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">美国</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds6">
+                                    <div class="map_add_bg">联系人：刘先生，电话：188 2232  1125</div>
+                                    <div class="map_add6">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">加拿大</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds7">
+                                    <div class="map_add_bg">联系人：胡先生，电话：188 2232  1125</div>
+                                    <div class="map_add7">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">墨西哥</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds8">
+                                    <div class="map_add_bg">联系人：秦先生，电话：188 2232  1125</div>
+                                    <div class="map_add8">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">澳大利亚</span>
+                                    </div>
+                                </div>
+                                <div class="map_adds9">
+                                    <div class="map_add_bg">联系人：武先生，电话：188 2232  1125</div>
+                                    <div class="map_add9">
+                                        <div class="circleDot"></div>
+                                        <div class="map_dot"></div>
+                                        <div class="map_dot1"></div>
+                                        <div class="map_dot2"></div>
+                                        <span class="about_map_add">英国</span>
+                                    </div>
+                                </div>
+                                <div class="about_fb_logo">
+                                    <img src="../images/about_logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--移动端-->
+                <div class="about_map_xs visible-sm visible-xs">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-xs-4">
                                 <div class="about_fb_block">
-                                    <img class="fbIcon" src="../images/fbIcon1.png">
+                                    <img class="fbIcon" src="../images-xs/fbIcon1-xs.png">
                                     <p class="about_fb_t">全球5个国家</p>
                                     <p class="about_fb_p">发布品牌</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-xs-4">
                                 <div class="about_fb_block">
-                                    <img class="fbIcon" src="../images/fbIcon2.png">
+                                    <img class="fbIcon" src="../images-xs/fbIcon2-xs.png">
                                     <p class="about_fb_t">全球5个国家</p>
                                     <p class="about_fb_p">建设生产基地</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-xs-4">
                                 <div class="about_fb_block">
-                                    <img class="fbIcon" src="../images/fbIcon3.png">
+                                    <img class="fbIcon" src="../images-xs/fbIcon3-xs.png">
                                     <p class="about_fb_t">全球3大城市</p>
                                     <p class="about_fb_p">建设研发中心</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="about_fb_map">
-                            <img class="about_map" src="../images/about_map.png">
-                            <div class="map_add1">
-                                <div class="circleDot"></div>
-                                <div class="map_dot"></div>
-                                <div class="map_dot1"></div>
-                                <div class="map_dot2"></div>
-                                <span class="about_map_add">韩国</span>
-                            </div>
-                            <div class="map_add2">
-                                <div class="circleDot"></div>
-                                <div class="map_dot"></div>
-                                <div class="map_dot1"></div>
-                                <div class="map_dot2"></div>
-                                <span class="about_map_add">惠州</span>
-                            </div>
-                            <div class="map_add3">
-                                <div class="circleDot"></div>
-                                <div class="map_dot"></div>
-                                <div class="map_dot1"></div>
-                                <div class="map_dot2"></div>
-                                <span class="about_map_add">越南</span>
-                            </div>
-                            <div class="map_add4">
-                                <div class="circleDot"></div>
-                                <div class="map_dot"></div>
-                                <div class="map_dot1"></div>
-                                <div class="map_dot2"></div>
-                                <span class="about_map_add">菲律宾</span>
-                            </div>
-                            <div class="map_add5">
-                                <div class="circleDot"></div>
-                                <div class="map_dot"></div>
-                                <div class="map_dot1"></div>
-                                <div class="map_dot2"></div>
-                                <span class="about_map_add">美国</span>
-                            </div>
-                            <div class="about_fb_logo">
-                                <img src="../images/about_logo.png">
-                                <span class="about_fb_logo_t">音特全球生产基地</span>
-                            </div>
-                        </div>
                     </div>
+                    <img class="about_map" src="../images-xs/about_map_xs.png">
                 </div>
             </div>
         </div>
     </div>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <div class="footerOut">
-                <div class="footer_container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="footerSer">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-tianwuliyoubaotui"></i>
-                                            <span class="footerService">7天无理由退货</span>
+    <!---通用footer-->
+    <footer>
+        <!--pc--footer-->
+        <div  id="footer" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="footerOut">
+                    <div class="footer_container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="footerSer">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                                <span class="footerService">7天无理由退货</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-tianbaohuan"></i>
-                                            <span class="footerService">30天包换</span>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianbaohuan"></i>
+                                                <span class="footerService">30天包换</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-quanguobaoyou"></i>
-                                            <span class="footerService">全国包邮</span>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoyou"></i>
+                                                <span class="footerService">全国包邮</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-quanguobaoxiu"></i>
-                                            <span class="footerService">全国联保</span>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                                <span class="footerService">全国联保</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="footerLinks">
+                                    <ul class="footerList clearfix">
+                                        <li class="footerListLi"><a class="footer_a" href="../news/news.html">新闻资讯</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../activity/activity.html">活动中心</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../product.html">音特商城</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../about/about.html">关于我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="../contact.html">联系我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" data-toggle="modal" data-target="#langModal">简体中文</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="footerLinks">
-                                <ul class="footerList clearfix">
-                                    <li class="footerListLi"><a class="footer_a" href="../news/news.html">新闻资讯</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="../activity/activity.html">活动中心</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="../product.html">音特商城</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="../about/about.html">关于我们</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="../contact.html">联系我们</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div id="footerContact">
-                                <strong class="footer-call">400-119-5555</strong>
-                                <p class="footer-text">( 24小时全国服务热线 )</p>
-                                <div class="footerCodes">
-                                    <i class="iconfont icon-weibo"></i>
-                                    <img class="weibo" src="../images/weibo-img.jpg">
-                                    <i class="iconfont icon-weixin2"></i>
-                                    <img class="weixin" src="../images/weixin-img.jpg">
-                                    <i class="iconfont icon-qq1"></i>
-                                    <img class="qq" src="../images/timg.jpg">
+                            <div class="col-md-4">
+                                <div id="footerContact">
+                                    <strong class="footer-call">400-119-5555</strong>
+                                    <p class="footer-text">( 24小时全国服务热线 )</p>
+                                    <div class="footerCodes">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <img class="weibo" src="../images/weibo-img.jpg">
+                                        <i class="iconfont icon-weixin2"></i>
+                                        <img class="weixin" src="../images/weixin-img.jpg">
+                                        <i class="iconfont icon-qq1"></i>
+                                        <img class="qq" src="../images/timg.jpg">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div class="footerBar">
+                © dameigong.cn 2017 皖ICP备17012709号
+            </div>
         </div>
-        <div class="footerBar">
-            © dameigong.cn 2017 皖ICP备17012709号
+        <!--移动端--footer-->
+        <div class="footer-xs visible-xs visible-sm">
+            <div class="container">
+                <div class="footer-service-xs">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                <span class="footerService">7天无理由退货</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-tianbaohuan"></i>
+                                <span class="footerService">30天包换</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-quanguobaoyou"></i>
+                                <span class="footerService">全国包邮</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                <span class="footerService">全国联保</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerLinks">
+                    <ul class="footerList clearfix">
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../news/news.html">新闻资讯<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../activity/activity.html">活动中心<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../product.html">音特商城<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../about/about.html">关于我们<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="../contact.html">联系我们<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" data-toggle="modal" data-target="#langModal">简体中文<i class="iconfont icon-right pull-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footerContact-xs clearfix">
+                    <div class="footer_xs_l">
+                        <strong class="footer-call">400-119-5555</strong>
+                        <p class="footer-text">( 24小时全国服务热线 )</p>
+                    </div>
+                    <div class="footerCodes-xs">
+                        <i class="iconfont icon-weibo"></i>
+                        <i class="iconfont icon-weixin2"></i>
+                        <i class="iconfont icon-qq1"></i>
+                    </div>
+                </div>
+                <div class="footerBar-xs">© dameigong.cn 2017 皖ICP备17012709号</div>
+            </div>
         </div>
     </footer>
 </div>
@@ -651,7 +1333,49 @@
 <script type="text/javascript" src="../js/app.js"></script>
 <script type="text/javascript">
     $(function () {
-        $("#timeline").timelinr();
+        var bodyWidth =document.body.clientWidth;//网页可见区域宽
+        if(bodyWidth <= 991){
+            $('#timeline-xs').timelinr({
+                orientation: 'horizontal',
+                containerDiv: '#timeline-xs',
+                datesDiv: '#dates-xs',
+                datesSelectedClass: 'selected',
+                datesSpeed: 'normal',
+                issuesDiv : '#issues-xs',
+                issuesSelectedClass: 'selected',
+                issuesSpeed: 'fast',
+                issuesTransparency: 0.2,
+                issuesTransparencySpeed: 500,
+                arrowKeys: 'false',
+                startAt: 9,
+                autoPlay: 'true',
+                autoPlayDirection: 'forward',
+                autoPlayPause: 2000
+            });
+
+        }else{
+            $("#timeline").timelinr({
+                orientation: 'horizontal',
+                containerDiv: '#timeline',
+                datesDiv: '#dates',
+                datesSelectedClass: 'selected',
+                datesSpeed: 'normal',
+                issuesDiv : '#issues',
+                issuesSelectedClass: 'selected',
+                issuesSpeed: 'fast',
+                issuesTransparency: 0.2,
+                issuesTransparencySpeed: 500,
+                prevButton: '#prev',
+                nextButton: '#next',
+                arrowKeys: 'false',
+                startAt: 9,
+                autoPlay: 'false',
+                autoPlayDirection: 'forward',
+                autoPlayPause: 2000
+            });
+
+        }
+
     })
 
 </script>

@@ -1,0 +1,1400 @@
+@charset "UTF-8";
+
+#about {
+    color: #2e2e2e; }
+
+.aboutUsBg {
+    width: 100%; }
+
+.aboutUS {
+    position: relative; }
+
+.aboutUs_words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+
+.aboutUs-left {
+    padding-top: 100px; }
+
+.aboutUs_t {
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 4px; }
+
+.aboutUs_text {
+    margin-top: 70px; }
+
+.aboutUs_p {
+    margin-bottom: 30px;
+    font-size: 18px; }
+
+.aboutFuture .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative; }
+
+.aboutImg2 img {
+    max-width: 100%; }
+
+.about_hope {
+    position: absolute;
+    top: 50%;
+    margin-top: -175px;
+    right: 2.3%;
+    width: 700px;
+    height: 350px;
+    background: #fff;
+    padding: 80px; }
+
+.aboutHope_p {
+    line-height: 1.8;
+    font-size: 18px;
+    margin-top: 20px; }
+
+.about_history {
+    background: url("../images/about3.jpg") center center no-repeat;
+    height: 767px; }
+
+.historyImg {
+    width: 100%; }
+
+.historyEvents {
+    font-size: 18px; }
+
+.historyYear {
+    font-size: 24px;
+    height: 68px;
+    line-height: 68px; }
+
+.events_li {
+    font-size: 17px;
+    color: #ff6000;
+    margin: 12px 0;
+    letter-spacing: 1px; }
+
+.events_time {
+    padding-right: 20px; }
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    color: #bebcbc;
+    opacity: 0.3; }
+.arrows .iconfont {
+    font-size: 50px; }
+
+.arrow-right {
+    right: 3%; }
+
+.arrow-left {
+    left: 3%; }
+
+.events_arrows {
+    margin-top: 65px;
+    color: #eee;
+    opacity: 0.3; }
+
+.events_arrows:hover{
+    color: #eee;
+    opacity: 1; }
+
+.events_arrows:active{
+    color: #eee;
+    opacity: 0.3; }
+.events_arrows:focus{
+    color: #eee;
+}
+.events_arrows .iconfont {
+    font-size: 70px; }
+
+.about_time {
+    padding: 82px 0; }
+
+#timeline {
+    width: 100%;
+    overflow: hidden;
+    height: 640px;
+    position: relative;
+    z-index: 2; }
+
+#dates {
+    width: 100%;
+    overflow: hidden; }
+
+#dates li {
+    float: left;
+    width: 620px;
+    height: 180px;
+    text-align: center; }
+
+#dates a {
+    display: block;
+    height: 180px; }
+
+#dates .selected {
+    color: #ff6600;
+    background: url(../images/time_circle.png) center bottom no-repeat; }
+
+#dates .selected .historyYear {
+    font-size: 48px; }
+
+#dates .selected .historyEvents {
+    font-size: 24px; }
+
+#issues {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 82px; }
+
+#issues .issues_li {
+    width: 1620px;
+    float: left; }
+
+#issues .issues_li .eventList {
+    margin: 60px auto; }
+
+.about_time .arrow-right {
+    right: 22%; }
+
+.about_time .arrow-left {
+    left: 24%; }
+
+.history_section {
+    position: relative; }
+
+.timeImg {
+    width: 100%;
+    position: absolute;
+    top: 205px;
+    left: 0; }
+
+.history_text {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 90%;
+    vertical-align: top; }
+
+@media (min-width: 1200px) and (max-width: 1899px) {
+    #dates li {
+        height: 160px; }
+
+    #dates a {
+        height: 160px; }
+
+    #issues .issues_li {
+        width: 1200px; }
+
+    .about_time .arrow-right {
+        right: 22%; }
+
+    .about_time .arrow-left {
+        left: 22%; }
+
+    #dates .selected .historyYear {
+        font-size: 32px; }
+
+    #dates .selected .historyEvents {
+        font-size: 20px; }
+
+    .historyEvents {
+        font-size: 16px; }
+
+    .historyYear {
+        font-size: 20px; }
+
+    .timeImg {
+        top: 200px; }
+
+    .events_li {
+        font-size: 14px;
+        margin: 10px 0; }
+
+    .events_arrows {
+        margin-top: 0; } }
+@media (min-width: 992px) and (max-width: 1240px) {
+    #dates li {
+        height: 160px; }
+
+    #dates a {
+        height: 160px; }
+
+    #issues .issues_li {
+        width: 970px; }
+
+    .about_time .arrow-right {
+        right: 22%; }
+
+    .about_time .arrow-left {
+        left: 22%; }
+
+    #dates .selected .historyYear {
+        font-size: 32px; }
+
+    #dates .selected .historyEvents {
+        font-size: 20px; }
+
+    .historyEvents {
+        font-size: 16px; }
+
+    .historyYear {
+        font-size: 20px; }
+
+    .timeImg {
+        top: 200px; }
+
+    .events_li {
+        font-size: 14px;
+        margin: 10px 0; }
+
+    .events_arrows {
+        margin-top: -20px; }
+
+    #dates li {
+        width: 330px; }
+
+    .history_text {
+        width: 85%; }
+
+    #issues .issues_li .eventList {
+        margin: 0 auto; } }
+@media (min-width: 1239px) and (max-width: 1300px) {
+    #dates li {
+        width: 410px; }
+
+    .history_text {
+        width: 80%; }
+
+    #issues .issues_li .eventList {
+        margin: 0 auto; } }
+@media (min-width: 1301px) and (max-width: 1400px) {
+    #dates li {
+        width: 440px; }
+
+    .history_text {
+        width: 80%; }
+
+    #issues .issues_li .eventList {
+        margin: 0 auto; } }
+@media (min-width: 1401px) and (max-width: 1500px) {
+    #dates li {
+        width: 460px; }
+
+    .history_text {
+        width: 85%; }
+
+    #issues .issues_li .eventList {
+        margin: 0 auto; } }
+@media (min-width: 1501px) and (max-width: 1600px) {
+    #dates li {
+        width: 520px; }
+
+    .history_text {
+        width: 85%; }
+
+    #issues .issues_li .eventList {
+        margin: 0 auto; } }
+@media (min-width: 1601px) and (max-width: 1899px) {
+    #dates li {
+        width: 540px; }
+
+    .history_text {
+        width: 85%; }
+
+    #issues .issues_li .eventList {
+        margin: 0 auto; } }
+.about_fb {
+    text-align: center;
+    padding: 82px 0; }
+
+.about_advantage {
+    text-align: center;
+    padding: 82px 0; }
+
+.adv_list {
+    margin: 28px 0 82px; }
+
+.adv_list li {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 140px;
+    font-size: 21px;
+    letter-spacing: 2px; }
+
+.about_adv_block {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding-top: 66px; }
+
+.advIcon, .companyIcon, .fbIcon {
+    max-width: 100%; }
+
+.about_adv_title {
+    font-size: 21px;
+    color: #ff6000;
+    margin: 28px 0;
+    letter-spacing: 4px; }
+
+.about_adv_p {
+    font-size: 18px;
+    margin-bottom: 28px;
+    line-height: 2; }
+
+.advImg {
+    width: 100%; }
+
+.about_scale {
+    text-align: center; }
+
+.about_scale_cont {
+    width: 100%;
+    padding: 40px 0;
+    margin: 82px 0;
+    background: #fff; }
+
+.scaleList {
+    width: 20%;
+    float: left;
+    text-align: center; }
+
+.about_scale_t {
+    font-size: 18px;
+    margin-bottom: 35px; }
+
+.about_scale_add {
+    font-size: 24px;
+    margin-top: 35px; }
+
+.about_scale_block {
+    width: 100%;
+    background: #fff;
+    text-align: center; }
+
+.about_scale_text {
+    padding: 80px 0; }
+
+.companyNum {
+    font-size: 36px;
+    color: #ff6000; }
+
+.ge {
+    font-size: 24px; }
+
+.companyText {
+    font-size: 18px; }
+
+.about_fb_cont {
+    padding: 82px 180px;
+    background: #fff;
+    text-align: center; }
+
+.about_fb_t {
+    font-size: 32px;
+    margin: 30px 0 10px; }
+
+.about_fb_p {
+    font-size: 18px; }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .aboutUs_text {
+        margin-top: 20px;
+        width: 65%; }
+
+    .aboutUs_t {
+        font-size: 28px; }
+
+    .aboutUs_p {
+        margin-bottom: 10px;
+        font-size: 13px; }
+
+    .about_hope {
+        margin-top: -110px;
+        right: 4%;
+        width: 480px;
+        height: 220px;
+        padding: 40px; }
+
+    .aboutHope_p {
+        font-size: 13px; }
+
+    .about_fb_t {
+        font-size: 24px; }
+
+    .about_adv_block {
+        padding-top: 50px; }
+
+    .about_scale_text {
+        padding: 56px 0; }
+
+    .advIcon, .companyIcon, .fbIcon {
+        max-width: 60%; } }
+@media (min-width: 1200px) and (max-width: 1280px) {
+    .aboutUs_text {
+        margin-top: 40px;
+        width: 65%; }
+
+    .aboutUs_p {
+        margin-bottom: 20px;
+        font-size: 16px; }
+
+    .about_hope {
+        margin-top: -130px;
+        right: 8%;
+        width: 500px;
+        height: 260px;
+        padding: 40px; }
+
+    .about_fb_t {
+        font-size: 24px; }
+
+    .aboutHope_p {
+        font-size: 16px; }
+
+    .aboutUs-left {
+        padding-top: 75px; } }
+@media (min-width: 1281px) and (max-width: 1600px) {
+    .about_hope {
+        margin-top: -130px;
+        right: 2.3%;
+        width: 600px;
+        height: 260px;
+        padding: 40px; }
+
+    .about_fb_t {
+        font-size: 28px; }
+
+    .aboutUs_p {
+        margin-bottom: 20px;
+        font-size: 17px; }
+
+    .aboutUs_text {
+        margin-top: 50px; } }
+@media (min-width: 1601px) and (max-width: 1920px) {
+    .aboutUs-left {
+        padding-top: 150px; } }
+.circleDot {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #ff6000;
+    border: 1px solid #ff6000;
+    border-radius: 50%; }
+
+.map_dot:before {
+    content: ' ';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #ff6000;
+    border: 1px solid #ff6000;
+    border-radius: 50%; }
+
+.map_dot:after {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ff6000;
+    border-radius: 50%;
+    -webkit-animation: ripple 6s ease-in-out infinite normal;
+    -o-animation: ripple 6s ease-in-out infinite normal;
+    animation: ripple 6s ease-in-out infinite normal; }
+
+.map_dot1, .map_dot2 {
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ff6000;
+    border-radius: 50%;
+    -webkit-animation: ripple 6s ease-in-out infinite normal;
+    -o-animation: ripple 6s ease-in-out infinite normal;
+    animation: ripple 6s ease-in-out infinite normal; }
+
+.map_dot1 {
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s; }
+
+.map_dot2 {
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s; }
+
+@-moz-keyframes ripple {
+    0% {
+        left: 5px;
+        top: 5px;
+        opacity: 0.75;
+        width: 0;
+        height: 0; }
+    100% {
+        left: -75px;
+        top: -75px;
+        opacity: 0;
+        width: 160px;
+        height: 160px; } }
+@-webkit-keyframes ripple {
+    0% {
+        left: 5px;
+        top: 5px;
+        opacity: 0.75;
+        width: 0;
+        height: 0; }
+    100% {
+        left: -75px;
+        top: -75px;
+        opacity: 0;
+        width: 160px;
+        height: 160px; } }
+@keyframes ripple {
+    0% {
+        left: 5px;
+        top: 5px;
+        opacity: 0.75;
+        width: 0;
+        height: 0; }
+    100% {
+        left: -75px;
+        top: -75px;
+        opacity: 0;
+        width: 160px;
+        height: 160px; } }
+.about_fb_map {
+    position: relative; }
+
+.about_map {
+    max-width: 100%; }
+
+.map_add1, .map_add2, .map_add3, .map_add4, .map_add8 {
+    position: absolute;
+    right: 14%;
+    top: 44%;
+    z-index: 2; }
+
+.map_add_bg {
+    position: absolute;
+    background: url("../images/map_add_bg.png") 50% 50% no-repeat;
+    width: 364px;
+    height: 60px;
+    padding-top: 15px;
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    z-index: 3; }
+
+.map_add_bg:hover {
+    opacity: 1; }
+
+.map_adds1 .map_add_bg {
+    top: 34%;
+    right: 2.7%; }
+
+.map_add2 {
+    right: 17%;
+    top: 48%; }
+
+.map_adds2 .map_add_bg {
+    top: 38%;
+    right: 5.8%; }
+
+.map_add3 {
+    right: 20%;
+    top: 52%; }
+
+.map_adds3 .map_add_bg {
+    top: 42.5%;
+    right: 8.8%; }
+
+.map_add4 {
+    right: 15%;
+    top: 60%; }
+
+.map_adds4 .map_add_bg {
+    top: 51%;
+    right: 4.8%; }
+
+.map_add8 {
+    right: 10%;
+    top: 75%; }
+
+.map_adds8 .map_add_bg {
+    top: 65%;
+    right: 1%; }
+
+.map_add5, .map_add6, .map_add7, .map_add9 {
+    position: absolute;
+    left: 14%;
+    top: 42%;
+    z-index: 2; }
+
+.map_adds5 .map_add_bg {
+    top: 33%;
+    left: -0.3%; }
+
+.map_add6 {
+    left: 15%;
+    top: 28%; }
+
+.map_adds6 .map_add_bg {
+    top: 19%;
+    left: 0.5%; }
+
+.map_add7 {
+    left: 19.2%;
+    top: 52%; }
+
+.map_adds7 .map_add_bg {
+    top: 43%;
+    left: 4.7%; }
+
+.map_add9 {
+    left: 49%;
+    top: 27%; }
+
+.map_adds9 .map_add_bg {
+    top: 17%;
+    left: 34.5%; }
+
+.map_add1 .map_dot:after, .map_add1 .map_dot1, .map_add1 .map_dot2 {
+    -webkit-animation-duration: 6s;
+    -o-animation-duration: 6s;
+    animation-duration: 6s; }
+
+.map_add2 .map_dot:after, .map_add2 .map_dot1, .map_add2 .map_dot2 {
+    -webkit-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    animation-duration: 4s; }
+
+.map_add3 .map_dot:after, .map_add3 .map_dot1, .map_add3 .map_dot2 {
+    -webkit-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s; }
+
+.map_add4 .map_dot:after, .map_add4 .map_dot1, .map_add4 .map_dot2 {
+    -webkit-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s; }
+
+.map_add5 .map_dot:after, .map_add5 .map_dot1, .map_add5 .map_dot2 {
+    -webkit-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s; }
+
+.map_add6 .map_dot:after, .map_add6 .map_dot1, .map_add6 .map_dot2 {
+    -webkit-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    animation-duration: 4s; }
+
+.map_add7 .map_dot:after, .map_add7 .map_dot1, .map_add7 .map_dot2 {
+    -webkit-animation-duration: 6s;
+    -o-animation-duration: 6s;
+    animation-duration: 6s; }
+
+.about_fb_logo {
+    font-size: 24px;
+    color: #ff6000;
+    margin-top: -50px;
+    text-align: center; }
+
+.about_fb_logo_t {
+    padding-left: 20px; }
+
+.about_map_add {
+    padding-left: 20px; }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .about_adv_p {
+        font-size: 15px; }
+
+    .map_add1, .map_add2, .map_add3, .map_add4 {
+        right: 12%; }
+
+    .map_add2 {
+        right: 15%; }
+
+    .map_add3 {
+        right: 18%; }
+
+    .map_add4 {
+        right: 13%; }
+
+    .map_add5 {
+        top: 42%; }
+
+    .map_adds1 .map_add_bg {
+        top: 32%;
+        right: -2.8%; }
+
+    .map_adds2 .map_add_bg {
+        top: 36%;
+        right: 0; }
+
+    .map_adds3 .map_add_bg {
+        top: 40%;
+        right: 3%; }
+
+    .map_adds4 .map_add_bg {
+        top: 47%;
+        right: 0; }
+
+    .map_adds5 .map_add_bg {
+        top: 30%;
+        left: -5%; }
+
+    .map_adds6 .map_add_bg {
+        top: 16%;
+        left: -4%; }
+
+    .map_adds7 .map_add_bg {
+        top: 40%;
+        left: 0.6%; }
+
+    .map_adds8 .map_add_bg {
+        top: 63%;
+        right: -1%; }
+
+    .map_adds9 .map_add_bg {
+        top: 15%;
+        left: 30%; } }
+@media (min-width: 992px) and (max-width: 1600px) {
+    .about_fb_cont {
+        padding: 82px 0; } }
+.contactContent {
+    padding: 80px 80px 0 80px;
+    background: #fff;
+    border: 1px solid #f7f7f7;
+    margin-bottom: 82px; }
+
+.contactDiv .row {
+    background: #f3f3f3;
+    padding-left: -15px;
+    padding-right: -15px; }
+
+.contactDiv .col-lg-6 {
+    padding: 0;
+    margin: 0; }
+
+.enterContact {
+    color: #000;
+    padding: 60px;
+    letter-spacing: 2px;
+    position: relative; }
+
+.enterContact .footerCodes .weibo {
+    left: 60px; }
+
+.enterContact .footerCodes .weixin {
+    left: 110px; }
+
+.enterContact .footerCodes .qq {
+    left: 190px; }
+
+.enterContact .footerCodes .weibo, .enterContact .footerCodes .weixin, .enterContact .footerCodes .qq {
+    top: 100px; }
+
+.enterContact .footerCodes .iconfont {
+    padding: 0; }
+
+.enterContact .footerCodes .icon-weixin2 {
+    padding: 0 30px; }
+
+.enterContact p {
+    margin-bottom: 10px; }
+
+.szAdd {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 400px;
+    vertical-align: top; }
+
+.contactWay {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px; }
+
+.enterName {
+    font-size: 18px; }
+
+.enterAdd {
+    font-size: 18px;
+    margin-bottom: 25px; }
+
+.mapDiv {
+    width: 100%;
+    height: 330px; }
+
+.enterJoin {
+    padding: 80px 60px;
+    background: url("../images/map_logo.png") 50% 43% no-repeat; }
+
+.service_kf_t {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; }
+
+.contact_join {
+    padding-top: 80px;
+    border-bottom: 2px dashed #a0a0a0;
+    border-top: 2px dashed #a0a0a0; }
+
+.joinItem {
+    font-size: 18px;
+    color: #000;
+    margin: 0 auto 80px;
+    line-height: 1.8; }
+
+.joinUs {
+    padding-top: 80px;
+    line-height: 1.8;
+    font-size: 18px; }
+
+.job {
+    color: #ff6000;
+    font-size: 18px; }
+
+@media (min-width: 992px) and (max-width: 1600px) {
+    .contactWay {
+        font-size: 24px;
+        margin-bottom: 15px; }
+
+    .mapDiv {
+        height: 247px; }
+
+    .enterName {
+        font-size: 18px; }
+
+    .enterAdd {
+        font-size: 16px;
+        margin-bottom: 15px; }
+
+    .joinItem {
+        font-size: 16px; }
+
+    .service_kf_t {
+        font-size: 20px;
+        margin-bottom: 10px; }
+
+    .szAdd {
+        max-width: 300px; }
+
+    .enterContact {
+        padding: 30px 60px; } }
+
+
+@media (max-width: 991px) {
+    .contactContent {
+        padding: 0;
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+    }
+    .contactDiv .row {
+        padding: 0;
+        background: #fff;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .contactDiv .col-lg-6 {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .enterContact {
+        padding: .4rem .25rem .25rem;
+    }
+    .enterContact .footerCodes{
+        padding-bottom: .2rem;
+        border-bottom: 1px dashed #a0a0a0;
+    }
+    .enterName {
+        font-size: .15rem;
+    }
+    .enterAdd {
+        font-size: .15rem;
+        margin-bottom: .22rem;
+    }
+    .footerCodes .iconfont {
+        font-size: .25rem;
+        padding: 0 .1rem;
+    }
+    .szAdd {
+        max-width: 2.2rem;
+    }
+    .enterJoin {
+        padding: 0 .25rem;
+        background: none;
+    }
+    .contactWay {
+        font-size: .18rem;
+        margin-bottom: .1rem;
+    }
+    .service_kf_t {
+        font-size: .16rem;
+        font-weight: bold;
+        margin-bottom: .05rem;
+    }
+    .joinItem {
+        font-size: .15rem;
+        margin: 0 auto .25rem;
+    }
+    .service_kf_span{
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 1rem;
+        vertical-align: middle;
+    }
+    .kfAdd{
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        max-width: 1.6rem;
+        vertical-align: top;
+    }
+    .contact_join {
+        padding-top: .25rem;
+        border-bottom: 1px dashed #a0a0a0;
+        border-top: 1px dashed #a0a0a0;
+    }
+    .joinArea{
+        font-size: .15rem;
+        font-weight: bold;
+    }
+    .joinUs {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        font-size: .18rem;
+    }
+    .joinUs_p{
+        font-size: .15rem;
+    }
+    .job {
+        font-size: .15rem;
+    }
+    /*about-xs*/
+    .aboutUs_words {
+        position: static;
+        width: 100%;
+        background: #fff;
+    }
+    .aboutUs-left {
+        padding-top: 0;
+    }
+    .aboutUs_text {
+        margin-top: 0;
+    }
+    .about_hope {
+        position: static;
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+        background: #fff;
+        padding: .25rem 0;
+        text-align: center;
+    }
+    .aboutUs_t{
+        font-size: .2rem;
+    }
+    .aboutUs_t1{
+        font-size: .24rem;
+        position: absolute;
+        top: 35%;
+    }
+    .aboutUs_p {
+        line-height: 2;
+        font-size: .15rem;
+    }
+    .aboutHope_p{
+        width: 90%;
+        margin: .1rem auto 0;
+        font-size: .15rem;
+    }
+    .about_adv_block{
+        margin-bottom: .25rem;
+    }
+    .about_scale_block {
+        margin-bottom: .25rem;
+    }
+    .aboutFuture .container {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+    }
+    .about_advantage {
+        padding: .25rem 0 0 0;
+    }
+    .adv_list {
+        margin: .18rem 0 .25rem;
+    }
+    .adv_list li {
+        width: auto;
+        padding: 0 .05rem;
+        font-size: .13rem;
+    }
+    .advIcon-xs .advIcon{
+        width: .5rem;
+    }
+    .about_adv_block {
+        padding-top: .25rem;
+    }
+    .about_adv_title {
+        font-size: .18rem;
+        margin: .15rem 0;
+        letter-spacing: 2px;
+    }
+    .about_adv_p {
+        width: 90%;
+        margin: 0 auto .2rem;
+        font-size: .15rem;
+        line-height: 1.8;
+    }
+    .about_scale_cont {
+        padding: .15rem 0 0 0;
+        margin: .25rem 0;
+        background: #fff;
+    }
+    .scaleList:nth-child(1){
+        width: 100%;
+    }
+    .scaleList:nth-child(2),.scaleList:nth-child(3),.scaleList:nth-child(4),.scaleList:nth-child(5){
+        width: 50%;
+        border-top: 2px solid #f3f3f3;
+    }
+    .scaleList:nth-child(2),.scaleList:nth-child(4){
+        border-right: 1px solid #f3f3f3;
+    }
+    .scaleList:nth-child(3),.scaleList:nth-child(5){
+        border-left: 1px solid #f3f3f3;
+    }
+    .about_scale_t{
+        font-size: .18rem;
+        margin: .22rem 0 .1rem 0;
+    }
+    .about_scale_add{
+        font-size: .18rem;
+        margin: .22rem 0;
+    }
+    .aboutIcons-xs .companyIcon{
+        height: .93rem;
+    }
+    .about_scale_text {
+        padding: .25rem 0;
+    }
+    .companyNum {
+        font-size: .2rem;
+    }
+    .ge {
+        font-size: .15rem;
+    }
+    .companyText {
+        font-size: .15rem;
+    }
+    .about_fb {
+        padding: 0;
+    }
+    .about_fb_cont {
+        padding: 0;
+
+    }
+    .about_map_xs{
+        background: #fff;
+        text-align: center;
+        padding: .25rem 0;
+        border-bottom: 2px solid #f3f3f3;
+    }
+    .about_fb_t {
+        font-size: .15rem;
+        margin: .1rem 0 .05rem;
+    }
+    .about_fb_p{
+        font-size: .13rem;
+    }
+    .fbIcon{
+        height: .4rem;
+    }
+    /*历史进程动效*/
+    .history_section_xs .about_history{
+        background: #fff;
+        height: auto;
+    }
+    .history_section_xs #timeline-xs{
+        width: 100%;
+        overflow: hidden;
+        height: auto;
+        position: relative;
+        z-index: 2;
+    }
+    .history_section_xs .historyImg {
+        width: 100%; }
+
+    .history_section_xs .historyEvents {
+        font-size: .13rem; }
+
+    .history_section_xs .historyYear {
+        font-size: .15rem;
+        height: .3rem;
+        line-height: .3rem; }
+    .history_section_xs #dates .selected .historyYear {
+        font-size: .16rem;
+    }
+    .history_section_xs .events_li {
+        font-size: .14rem;
+        color: #ff6000;
+        margin: .1rem;
+        letter-spacing: 1px; }
+
+    .history_section_xs .events_time {
+        padding-right: .1rem; }
+
+    .history_section_xs .about_time {
+        padding: .25rem 0; }
+
+    .history_section_xs #dates-xs{
+        width: 100%;
+        overflow: hidden; }
+
+    .history_section_xs #dates-xs li {
+        float: left;
+        width: 1.5rem;
+        height: .8rem;
+        text-align: center; }
+
+    .history_section_xs #dates-xs a {
+        display: block;
+        height: 1.55rem;
+    }
+
+    .history_section_xs #dates-xs .selected {
+        color: #ff6600;
+        background: none;}
+    .time_circle_img{
+        width: 10%;
+    }
+    .time_circle{
+        text-align: center;
+        position: relative;
+        top: -.2rem;
+    }
+    .history_section_xs #dates-xs .selected .historyYear {
+        font-size: .16rem; }
+
+    .history_section_xs #dates-xs .selected .historyEvents {
+        font-size: .14rem; }
+
+    .history_section_xs #issues-xs{
+        width: 100%;
+        overflow: hidden;
+        margin-top: -.2rem; }
+
+    .history_section_xs #issues-xs .issues_li {
+        width: 100vw;
+        float: left; }
+
+    .history_section_xs #issues-xs .issues_li .eventList {
+        margin: 0 auto;
+        padding: .2rem 0;
+    }
+
+    .history_section_xs{
+        position: relative; }
+
+    .history_section_xs .timeImg {
+        width: 100%;
+        position: absolute;
+        top: 1.0rem;
+        left: 0; }
+
+    .history_section_xs .history_text {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 90%;
+        vertical-align: top; }
+}
+@media (max-width: 340px) {
+    .history_section_xs #dates-xs a {
+        display: block;
+        height: 0.8rem;
+    }
+    .history_section_xs #dates-xs li {
+        width: 1.5rem;
+        height: .8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.4rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: -.55rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: 0; }
+}
+@media (min-width: 341px) and (max-width: 374px) {
+    .history_section_xs #dates-xs li {
+        width: 1.7rem;
+        height: .8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: .05rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+}
+@media (min-width: 375px) and (max-width: 419px) {
+    .history_section_xs #dates-xs li {
+        width: 1.7rem;
+        height: .8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: .05rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem;
+    }
+    .history_section_xs #dates-xs{
+        height: .8rem;
+    }
+}
+@media (min-width: 420px) and (max-width: 499px) {
+    .history_section_xs #dates-xs li {
+        width: 1.7rem;
+        height: .8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: .05rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+}
+@media (min-width: 550px) and (max-width: 991px) {
+    .szAdd {
+        max-width: 3rem;
+    }
+    .kfAdd{
+        max-width: 2.5rem;
+    }
+    .aboutHope_p{
+        width: 70%;
+    }
+    .aboutUs_t1{
+        top: 50%;
+    }
+    .advIcon-xs .advIcon{
+        width: .8rem;
+    }
+}
+@media (min-width: 500px) and (max-width: 599px) {
+    .history_section_xs #dates-xs li {
+        width: 1.8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: .04rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+}
+@media (min-width: 600px) and (max-width: 699px) {
+    .history_section_xs #dates-xs li {
+        width: 1.8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: .03rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+    .aboutUs_t1{
+        top: 45%;
+    }
+}
+@media (min-width: 700px) and (max-width: 767px) {
+    .history_section_xs #dates-xs li {
+        width: 2rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: .03rem;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+}
+@media (min-width: 768px) and (max-width: 799px) {
+    .history_section_xs #dates-xs li {
+        width: 2rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 8%;
+    }
+    .time_circle{
+        top: 0;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+}
+@media (min-width: 800px) and (max-width: 991px) {
+    .history_section_xs #dates-xs li {
+        width: 2.1rem;
+        height: .8rem;
+    }
+    .history_section_xs .timeImg {
+        top: 1.2rem;
+    }
+    .time_circle_img{
+        width: 7%;
+    }
+    .time_circle{
+        top: 0;
+    }
+    .history_section_xs #issues-xs{
+        margin-top: .1rem; }
+}

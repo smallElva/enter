@@ -21,8 +21,8 @@
     <title>音特电子</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="app.css" >
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -32,252 +32,433 @@
 <body>
 <div class="wrapper">
     <!-- 通用头部-->
-    <header class="header">
-        <div class="container">
-            <div class="navIcons icon-out pull-left" id="showNav">
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
-                <span class="line_icons"></span>
+    <header>
+        <!--pc-->
+        <div class="header navbar-fixed-top hidden-sm hidden-xs">
+            <div class="container">
+                <div class="navIcons icon-out pull-left" id="showNav">
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                    <span class="line_icons"></span>
+                </div>
+                <a class="logo" href="index.html"><img class="nav-icon" src="images/logo.png"></a>
+                <div class="navShopBar pull-right">
+                    <a class="goProBlock" href="product.html" title="音特商城"><img class="nav-icon" src="images/nav-icon1.png"></a>
+                    <a class="goProBlock" href="myOrder.html"  id="js_showPerson"><img class="nav-icon" src="images/nav-icon2.png"><span class="badge shopCart_badge">2</span></a>
+                    <div id="personBlock" class="personCenterBlock">
+                        <img class="upup" src="images/upup.png">
+                        <ul>
+                            <li class="personList">
+                                <a href="myOrder.html"><span class="personList_nav">我的订单</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="service_after.html"><span class="personList_nav">售后服务</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="discount.html"><span class="personList_nav">优惠券</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="address.html"><span class="personList_nav">收货地址</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="myInfo.html"><span class="personList_nav">账户资料</span></a>
+                            </li>
+                            <li class="personList">
+                                <a href="javascript:void(0);"><span class="personList_nav">退出账号</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="goProBlock" href="shop_cart.html" title="购物车" id="js_showCart"><img class="nav-icon" src="images/nav-icon3.png"></a>
+                    <!--购物车-->
+                    <div class="shopCartBlock" id="shopCartBlock">
+                        <img class="upup2" src="images/upup.png">
+                        <!--购物车有商品的状态-->
+                        <div class="withGoods" id="withGoods" style="display: block;">
+                            <div class="shopCart_pro">
+                                <ul class="cartList">
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="pageMP30.html"><img src="images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p class="cartInfo">
+                                                <a class="cartGoodsName" href="pageMP30.html">无线蓝牙麦克风E2</a>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                            <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                    <li class="clearfix">
+                                        <a class="shopCart_img pull-left" href="pageMP30.html"><img src="images/pro-acc-1.jpg"></a>
+                                        <div class="cartRight">
+                                            <p>
+                                                <a class="cartGoodsName" href="pageMP30.html">无线蓝牙麦克风E2</a>
+                                                <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                            </p>
+                                            <p class="cartGoodsMoney">¥1999.00</p>
+                                        </div>
+                                        <i class="iconfont icon-close js_deleteGoods"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="shopCart_goBuy clearfix">
+                                <div class="cartFooter">
+                                    <p>共<span class="totalNum">2</span>件商品</p>
+                                    <p class="totalYuan">¥3998.00</p>
+                                </div>
+                                <a class="addCart_a" href="shop_cart.html">去结算</a>
+                            </div>
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoods" style="display: none;">
+                            登录后可显示<br>
+                            您账号中已加入的商品哦~
+                        </div>
+                        <!--购物车没有商品的状态-->
+                        <div class="f-16 text-center" id="noGoodsLogin" style="display: none;">
+                            您的购物车还没有商品，<br>
+                            赶紧去选购吧~
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="logo" href="index.html"><img src="images/logo.png"></a>
-            <div class="navShopBar pull-right">
-                <i class="iconfont icon-gerenzhongxin1" title="个人中心" id="js_showPerson"></i><span class="badge shopCart_badge">2</span>
-                <div id="personBlock" class="personCenterBlock">
-                    <img class="upup" src="images/upup.png">
+            <!--侧导航-->
+            <aside class="sideBar" id="sideBar">
+                <div class="sideNav">
                     <ul>
-                        <li class="personList">
-                            <a class="clearfix" href="person_center.html">我的订单</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="news/news.html">新闻资讯</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="service_after.html">售后服务</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="activity/activity.html">活动中心</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="discount.html">优惠券</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="product.html">音特商城</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="address.html">收货地址</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="about/about.html">关于我们</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="myInfo.html">账户资料</a>
+                        <li class="sideNav_li">
+                            <a class="sideNav_a" href="contact.html">联系我们</a>
+                            <div class="aside_line"></div>
                         </li>
-                        <li class="personList">
-                            <a class="clearfix" href="javascript:void(0);">退出账号</a>
+                    </ul>
+                    <div class="aside_footer">
+                        <div class="aside_footer_img">
+                            <img src="images/aside_logo.png">
+                        </div>
+                        <p class="aside_enter">音特电子（深圳）有限公司</p>
+                        <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                        <p class="aside_call">0755-83513870</p>
+                        <p class="aside_email">enter.media@gamil.com</p>
+                        <div class="footerCodes">
+                            <i class="iconfont icon-weibo"></i>
+                            <img class="weibo" src="images/weibo-img.jpg">
+                            <i class="iconfont icon-weixin2"></i>
+                            <img class="weixin" src="images/weixin-img.jpg">
+                            <i class="iconfont icon-qq1"></i>
+                            <img class="qq" src="images/timg.jpg">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <!--移动端-->
+        <div class="header-xs visible-xs visible-sm">
+            <div class="container">
+                <div class="header-xs-block">
+                    <div class="navIcons-xs icon-out pull-left">
+                        <span class="line_icons"></span>
+                        <span class="line_icons"></span>
+                        <span class="line_icons"></span>
+                    </div>
+                    <a class="header-logo" href="index.html"><img class="logo-xs" src="images-xs/logo-xs.png"></a>
+                    <div class="header-xs-r pull-right">
+                        <a class="header-xs-a" href="shop_cart.html"><img class="shopCart-xs" src="images-xs/shopCart-xs.png"></a>
+                        <a class="header-xs-a header-xs-person" href="myOrder.html"><img class="person-xs" src="images-xs/person-xs.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-inner-nav">
+                <div class="container">
+                    <ul>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="news/news.html">新闻资讯</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="activity/activity.html">活动中心</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="product.html">音特商城</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="about/about.html">关于我们</a>
+                        </li>
+                        <li class="nav-xs-li">
+                            <a class="nav-xs-a" href="contact.html">联系我们</a>
                         </li>
                     </ul>
                 </div>
-                <i class="iconfont icon-gouwuche1" title="购物车" id="js_showCart"></i>
-                <!--购物车-->
-                <div class="shopCartBlock" id="shopCartBlock">
-                    <img class="upup2" src="images/upup.png">
-                    <!--购物车有商品的状态-->
-                    <div class="withGoods" id="withGoods">
-                        <div class="shopCart_pro">
-                            <ul class="cartList">
-                                <li class="clearfix">
-                                    <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
-                                    <div class="cartRight">
-                                        <p class="cartInfo">
-                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
-                                            <span class="cartGoodsNum">X1</span>
-                                        </p>
-                                        <p class="cartGoodsMoney">¥1999.00</p>
-                                    </div>
-                                    <i class="iconfont icon-close js_deleteGoods"></i>
-                                </li>
-                                <li class="clearfix">
-                                    <a class="pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
-                                    <div class="cartRight">
-                                        <p>
-                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
-                                            <span class="cartGoodsNum">X1</span>
-                                        </p>
-                                        <p class="cartGoodsMoney">¥1999.00</p>
-                                    </div>
-                                    <i class="iconfont icon-close js_deleteGoods"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="shopCart_goBuy clearfix">
-                            <div class="cartFooter">
-                                <p>共<span class="totalNum">2</span>件商品</p>
-                                <p class="totalYuan"><span class="yuanIcon">¥</span>3998.00</p>
-                            </div>
-                            <a class="addCart_a" href="shop_cart.html">立即结算</a>
-                        </div>
-                    </div>
-                    <!--购物车没有商品的状态-->
-                    <div class="f-16 text-center" id="noGoods" style="display: none;">
-                        购物车还没有商品，赶紧选购吧！
-                    </div>
-                </div>
+
             </div>
         </div>
     </header>
-    <!--侧导航-->
-    <aside class="sideBar" id="sideBar">
-        <div class="sideNav">
-            <ul>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="news/news.html">新闻资讯</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="activity/activity.html">活动中心</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="product.html">音特商城</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="about/about.html">关于我们</a>
-                </li>
-                <li class="sideNav_li">
-                    <a class="sideNav_a" href="contact.html">联系我们</a>
-                </li>
-            </ul>
-            <div class="aside_footer">
-                <p class="aside_enter">音特电子（深圳）有限公司</p>
-                <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
-                <p class="aside_call">0755-83513870</p>
-                <p class="aside_email">enter.media@gamil.com</p>
-                <div class="footerCodes">
-                    <i class="iconfont icon-weibo"></i>
-                    <img class="weibo" src="images/weibo-img.jpg">
-                    <i class="iconfont icon-weixin2"></i>
-                    <img class="weixin" src="images/weixin-img.jpg">
-                    <i class="iconfont icon-qq1"></i>
-                    <img class="qq" src="images/timg.jpg">
-                </div>
-            </div>
-        </div>
-    </aside>
     <!-- 内容区-->
-    <section class="songs">
-        <div id="content">
-            <div class="block block_songs">
-                <img class="blockBg" src="images/songsBg1.jpg">
-                <div class="songs_server">
+    <div class="content">
+        <section class="songs">
+            <div id="content">
+                <div class="block block_songs">
+                    <img class="blockBg hidden-xs hidden-sm" src="images/songsBg1.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/songsBg1_xs.png">
+                    <div class="songs_server">
+                        <div class="container">
+                            <div class="songs_server_text">
+                                <p class="title30 sdw-animate server_title" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">巨资打造的云端服务器</p>
+                                <div class="hidden-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">为了更好的K歌体验，音特电子投入巨资打造专属云端</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">服务器，配备了SSD高性能固态磁盘，更加稳定高效，同时支持千万用户同时在线，流畅使用，</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">确保我们用户的高品质的生活娱乐！</p>
+                                </div>
+                                <div class="songs-xs visible-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">为了更好的K歌体验，音特电子投入巨资</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">打造专属云端服务器，配备了SSD高性能固态磁盘，更加稳定高效，同时支持千万用户同时在线，流畅使用，确保我们用户的高品质的生活娱乐！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block block_songs">
                     <div class="container">
-                        <div class="songs_server_text">
-                            <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">巨资打造的云端服务器</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">为了更好的K歌体验，音特电子投入巨资打造专属云端服务器，</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">配备了SSD高性能固态磁盘，更加稳定高效，同时支持千万用户同时在线，流畅使用，</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.6s" data-occur="1">确保我们用户的高品质的生活娱乐！</p>
+                        <div class="songs_ku">
+                            <img class="blockBg hidden-xs hidden-sm" src="images/songs_ku_bg.png">
+                            <img class="blockBg visible-sm visible-xs" src="images-xs/songs_ku_bg_xs.png">
+                            <div class="songs_ku_text">
+                                <p class="title30 sdw-animate server_title" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">30万云端歌库，每月自动更新</p>
+                                <div class="hidden-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">中国歌曲的云端歌库超过30万首， 云端歌库歌曲数量超过国内</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">任何一家同行的歌曲数量。音特电子强大的音乐团队， 收纳时</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">下最热门、最流行的歌曲，每个星期准时自动更新。</p>
+                                </div>
+                                <div class="songs-xs visible-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子经过多年的发展，产品遍布全球各国，作为全球最杰出的便携式
+                                        卡拉OK制造商之一，拥有全球各个国家最全的歌库，全球各国歌曲总量
+                                        达到2,000万首以上，您找不到国外歌曲，您找到的音质不好的歌曲，您
+                                        都能在我们这里找到，并且我们能给您提供顶级音质的歌曲，我们的宗旨
+                                        就是让客户能够得到最好的生活娱乐体验！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block block_songs">
+                    <div class="container">
+                        <div class="songs_global">
+                            <img class="blockBg hidden-xs hidden-sm" src="images/song_global.jpg">
+                            <img class="blockBg visible-sm visible-xs" src="images-xs/song_global_xs.png">
+                            <div class="songs_global_text">
+                                <p class="title30 sdw-animate server_title" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">全球云端歌库2,000万  您想要唱的都有</p>
+                                <div class="hidden-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子经过多年的发展，产品遍布全球各国，作为全球最杰出的便携式</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">卡拉OK制造商之一，拥有全球各个国家最全的歌库全球各国歌曲总量达到</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">2,000万首以上，您找不到的国外歌曲和您找到的音质不好的歌曲，您都能</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.8s" data-occur="1">在我们这里找到，并且我们能给您提供顶级音质的歌曲，我们的宗旨就是让</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="1.0s" data-occur="1">客户能够得到最好的生活娱乐体验！</p>
+                                </div>
+                                <div class="songs-xs visible-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子经过多年的发展，产品遍布全球各国，作为全球最杰出的便携式
+                                        卡拉OK制造商之一，拥有全球各个国家最全的歌库，全球各国歌曲总量
+                                        达到2,000万首以上，您找不到国外歌曲，您找到的音质不好的歌曲，您
+                                        都能在我们这里找到，并且我们能给您提供顶级音质的歌曲，我们的宗旨
+                                        就是让客户能够得到最好的生活娱乐体验！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block block_songs">
+                    <div class="container">
+                        <div class="songs_midi">
+                            <img class="blockBg hidden-xs hidden-sm" src="images/songs_midi_bg.png">
+                            <img class="blockBg visible-sm visible-xs" src="images-xs/songs_midi_bg_xs.png">
+                            <div class="songs_midi_text">
+                                <p class="title30 sdw-animate server_title" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">MIDI歌曲，高清音质</p>
+                                <div class="hidden-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子云端歌曲采用了MIDI格式，MIDI是编曲界最广泛的音</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">乐标准格式可称为“计算机能理解的乐谱”，我们的音源全部采</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">用世界顶级乐器制作，音质清晰。MIDI歌曲具有容量小、音质高</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.8s" data-occur="1">清、下载迅速等等优点，一首歌曲仅仅需要<span class="yel-color">2-5</span>秒的时间就能完全</p>
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="1.0s" data-occur="1">下载，极速体验K歌乐趣。</p>
+                                </div>
+                                <div class="songs-xs visible-xs">
+                                    <p class="ps sdw-animate server_p" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子云端歌曲采用了MIDI格式，MIDI是编曲界最广泛的音乐标准格式
+                                        可称为“计算机能理解的乐谱“，我们的音源全部采用世界顶级乐器制作，音质
+                                        清晰。MIDI歌曲具有容量小、音质高清、下载迅速等等优点，一首歌曲仅仅需
+                                        要<span class="yel-color">2-5</span>秒的时间就能完全下载，极速体验K歌乐趣。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="block block_songs">
-                <div class="container">
-                    <div class="songs_ku">
-                        <img class="blockBg" src="images/songs_ku_bg.png">
-                        <div class="songs_ku_text">
-                            <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">30万云端歌库，每月自动更新</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">中国歌曲的云端歌库超过30万首， 云端歌库歌曲数量超过国内</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">任何一家同行的歌曲数量。音特电子强大的音乐团队，  收纳时</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.6s" data-occur="1">下最热门、最流行的歌曲，每个星期准时自动更新。</p>
+        </section>
+    </div>
+    <!---通用footer-->
+    <footer>
+        <!--pc--footer-->
+        <div  id="footer" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="footerOut">
+                    <div class="footer_container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="footerSer">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                                <span class="footerService">7天无理由退货</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-tianbaohuan"></i>
+                                                <span class="footerService">30天包换</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoyou"></i>
+                                                <span class="footerService">全国包邮</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="footer-top">
+                                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                                <span class="footerService">全国联保</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footerLinks">
+                                    <ul class="footerList clearfix">
+                                        <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
+                                        <li class="footerListLi"><a class="footer_a" data-toggle="modal" data-target="#langModal">简体中文</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div id="footerContact">
+                                    <strong class="footer-call">400-119-5555</strong>
+                                    <p class="footer-text">( 24小时全国服务热线 )</p>
+                                    <div class="footerCodes">
+                                        <i class="iconfont icon-weibo"></i>
+                                        <img class="weibo" src="images/weibo-img.jpg">
+                                        <i class="iconfont icon-weixin2"></i>
+                                        <img class="weixin" src="images/weixin-img.jpg">
+                                        <i class="iconfont icon-qq1"></i>
+                                        <img class="qq" src="images/timg.jpg">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="block block_songs">
-                <div class="container">
-                    <div class="songs_global">
-                        <img class="blockBg" src="images/song_global.jpg">
-                        <div class="songs_global_text">
-                            <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">全球云端歌库2,000万  您想要唱的都有</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子经过多年的发展，产品遍布全球各国，作为全球最杰出的便携式</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">卡拉OK制造商之一，拥有全球各个国家最全的歌库，全球各国歌曲总量</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.6s" data-occur="1">达到2,000万首以上，您找不到国外歌曲，您找到的音质不好的歌曲，您</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.8s" data-occur="1">都能在我们这里找到，并且我们能给您提供顶级音质的歌曲，我们的宗旨</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.8s" data-occur="1">就是让客户能够得到最好的生活娱乐体验！</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="block block_songs">
-                <div class="container">
-                    <div class="songs_midi">
-                        <img class="blockBg" src="images/songs_midi_bg.png">
-                        <div class="songs_midi_text">
-                            <p class="title30 sdw-animate server_title" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0s" data-occur="1">MIDI歌曲，高清音质</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.2s" data-occur="1">音特电子云端歌曲采用了MIDI格式，   MIDI是编曲界最广泛的音乐标准格式</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.4s" data-occur="1">可称为“计算机能理解的乐谱“，我们的音源全部采用世界顶级乐器制作，音质</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.6s" data-occur="1">清晰。MIDI歌曲具有容量小、音质高清、下载迅速等等优点，一首歌曲仅仅需</p>
-                            <p class="ps sdw-animate server_p" data-start='{"transform":"translate3d(0,50px,0) "}' data-end='{"transform":"translate3d(0,0px,0) "}' data-speed="1500"  data-delay="0.8s" data-occur="1">要2-5秒的时间就能完全下载，极速体验K歌乐趣。</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="footerBar">
+                © dameigong.cn 2017 皖ICP备17012709号
             </div>
         </div>
-    </section>
-    <!-- footer-->
-    <footer id="footer">
-        <div class="container">
-            <div class="footerOut">
-                <div class="footer_container">
+        <!--移动端--footer-->
+        <div class="footer-xs visible-xs visible-sm">
+            <div class="container">
+                <div class="footer-service-xs">
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="footerSer">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-tianwuliyoubaotui"></i>
-                                            <span class="footerService">7天无理由退货</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-tianbaohuan"></i>
-                                            <span class="footerService">30天包换</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-quanguobaoyou"></i>
-                                            <span class="footerService">全国包邮</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="footer-top">
-                                            <i class="iconfont icon-quanguobaoxiu"></i>
-                                            <span class="footerService">全国联保</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footerLinks">
-                                <ul class="footerList clearfix">
-                                    <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
-                                    <li class="footerListLi"><a class="footer_a" href="#">语言：简体中文</a></li>
-                                </ul>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                <span class="footerService">7天无理由退货</span>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div id="footerContact">
-                                <strong class="footer-call">400-119-5555</strong>
-                                <p class="footer-text">( 24小时全国服务热线 )</p>
-                                <div class="footerCodes">
-                                    <i class="iconfont icon-weibo"></i>
-                                    <img class="weibo" src="images/weibo-img.jpg">
-                                    <i class="iconfont icon-weixin2"></i>
-                                    <img class="weixin" src="images/weixin-img.jpg">
-                                    <i class="iconfont icon-qq1"></i>
-                                    <img class="qq" src="images/timg.jpg">
-                                </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-tianbaohuan"></i>
+                                <span class="footerService">30天包换</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-quanguobaoyou"></i>
+                                <span class="footerService">全国包邮</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="footer-top-xs">
+                                <i class="iconfont icon-quanguobaoxiu"></i>
+                                <span class="footerService">全国联保</span>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="footerLinks">
+                    <ul class="footerList clearfix">
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="news/news.html">新闻资讯<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="activity/activity.html">活动中心<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="product.html">音特商城<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="about/about.html">关于我们<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" href="contact.html">联系我们<i class="iconfont icon-right pull-right"></i></a></li>
+                        <li class="footerListLi-xs"><a class="footer_a clearfix" data-toggle="modal" data-target="#langModal">简体中文<i class="iconfont icon-right pull-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footerContact-xs clearfix">
+                    <div class="footer_xs_l">
+                        <strong class="footer-call">400-119-5555</strong>
+                        <p class="footer-text">( 24小时全国服务热线 )</p>
+                    </div>
+                    <div class="footerCodes-xs">
+                        <i class="iconfont icon-weibo"></i>
+                        <i class="iconfont icon-weixin2"></i>
+                        <i class="iconfont icon-qq1"></i>
+                    </div>
+                </div>
+                <div class="footerBar-xs">© dameigong.cn 2017 皖ICP备17012709号</div>
             </div>
-
-        </div>
-        <div class="footerBar">
-            © dameigong.cn 2017 皖ICP备17012709号
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal newsModal langModal" id="langModal" tabindex="-1" role="dialog" aria-labelledby="langModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-lang-header">
+                    <a class="close" data-dismiss="modal" aria-label="Close"><i class="iconfont icon-close f-32"></i></a>
+                    <h4 class="modal-lang-title">Please select your country or region</h4>
+                </div>
+                <ul class="lang_list clearfix">
+                    <li>
+                        <a href="javascript:void(0);" data-countryhref="#" data-dismiss="modal"><i class="lang-logo lang-logo-cn"></i><span>简体中文</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-countryhref="#" data-dismiss="modal"><i class="lang-logo lang-logo-hk"></i><span>繁體中文</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-countryhref="#" data-dismiss="modal"><i class="lang-logo lang-logo-en"></i><span>English</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-countryhref="#" data-dismiss="modal"><i class="lang-logo lang-logo-ru"></i><span>日本語</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-countryhref="#" data-dismiss="modal"><i class="lang-logo lang-logo-il"></i><span>한국어</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>

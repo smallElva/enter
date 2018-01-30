@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html lang="zh-cn" class="ie6 ie ltie8"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="zh-cn" class="ie7 ie ltie8"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="zh-cn" class="ie8 ie ltie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="zh-cn" class="ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-cn" class="normal"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="title" content="音特"/>
+    <meta name="keywords" content="音特，音特电子，话筒"/>
+    <meta name="description" content="音特电子，话筒"/>
+    <title>音特电子</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- 通用头部-->
+<header>
+    <!--pc-->
+    <div class="header navbar-fixed-top hidden-sm hidden-xs">
+        <div class="container">
+            <div class="navIcons icon-out pull-left" id="showNav">
+                <span class="line_icons"></span>
+                <span class="line_icons"></span>
+                <span class="line_icons"></span>
+            </div>
+            <a class="logo" href="index.html"><img class="nav-icon" src="images/logo.png"></a>
+            <div class="navShopBar pull-right">
+                <a class="goProBlock" href="product.html" title="音特商城"><img class="nav-icon" src="images/nav-icon1.png"></a>
+                <a class="goProBlock" href="myOrder.html"  id="js_showPerson"><img class="nav-icon" src="images/nav-icon2.png"><span class="badge shopCart_badge">2</span></a>
+                <div id="personBlock" class="personCenterBlock">
+                    <img class="upup" src="images/upup.png">
+                    <ul>
+                        <li class="personList">
+                            <a href="myOrder.html"><span class="personList_nav">我的订单</span></a>
+                        </li>
+                        <li class="personList">
+                            <a href="service_after.html"><span class="personList_nav">售后服务</span></a>
+                        </li>
+                        <li class="personList">
+                            <a href="discount.html"><span class="personList_nav">优惠券</span></a>
+                        </li>
+                        <li class="personList">
+                            <a href="address.html"><span class="personList_nav">收货地址</span></a>
+                        </li>
+                        <li class="personList">
+                            <a href="myInfo.html"><span class="personList_nav">账户资料</span></a>
+                        </li>
+                        <li class="personList">
+                            <a href="javascript:void(0);"><span class="personList_nav">退出账号</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="goProBlock" href="shop_cart.html" title="购物车" id="js_showCart"><img class="nav-icon" src="images/nav-icon3.png"></a>
+                <!--购物车-->
+                <div class="shopCartBlock" id="shopCartBlock">
+                    <img class="upup2" src="images/upup.png">
+                    <!--购物车有商品的状态-->
+                    <div class="withGoods" id="withGoods" style="display: block;">
+                        <div class="shopCart_pro">
+                            <ul class="cartList">
+                                <li class="clearfix">
+                                    <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                    <div class="cartRight">
+                                        <p class="cartInfo">
+                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                        </p>
+                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                        <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                    </div>
+                                    <i class="iconfont icon-close js_deleteGoods"></i>
+                                </li>
+                                <li class="clearfix">
+                                    <a class="shopCart_img pull-left" href="page.html"><img src="images/pro-acc-1.jpg"></a>
+                                    <div class="cartRight">
+                                        <p>
+                                            <a class="cartGoodsName" href="page.html">无线蓝牙麦克风E2</a>
+                                            <span class="cartGoodsNum"><i class="iconfont icon-close iconNum"></i>1</span>
+                                        </p>
+                                        <p class="cartGoodsMoney">¥1999.00</p>
+                                    </div>
+                                    <i class="iconfont icon-close js_deleteGoods"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shopCart_goBuy clearfix">
+                            <div class="cartFooter">
+                                <p>共<span class="totalNum">2</span>件商品</p>
+                                <p class="totalYuan">¥3998.00</p>
+                            </div>
+                            <a class="addCart_a" href="shop_cart.html">去结算</a>
+                        </div>
+                    </div>
+                    <!--购物车没有商品的状态-->
+                    <div class="f-16 text-center" id="noGoods" style="display: none;">
+                        登录后可显示<br>
+                        您账号中已加入的商品哦~
+                    </div>
+                    <!--购物车没有商品的状态-->
+                    <div class="f-16 text-center" id="noGoodsLogin" style="display: none;">
+                        您的购物车还没有商品，<br>
+                        赶紧去选购吧~
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--侧导航-->
+        <aside class="sideBar" id="sideBar">
+            <div class="sideNav">
+                <ul>
+                    <li class="sideNav_li">
+                        <a class="sideNav_a" href="news/news.html">新闻资讯</a>
+                        <div class="aside_line"></div>
+                    </li>
+                    <li class="sideNav_li">
+                        <a class="sideNav_a" href="activity/activity.html">活动中心</a>
+                        <div class="aside_line"></div>
+                    </li>
+                    <li class="sideNav_li">
+                        <a class="sideNav_a" href="product.html">音特商城</a>
+                        <div class="aside_line"></div>
+                    </li>
+                    <li class="sideNav_li">
+                        <a class="sideNav_a" href="about/about.html">关于我们</a>
+                        <div class="aside_line"></div>
+                    </li>
+                    <li class="sideNav_li">
+                        <a class="sideNav_a" href="contact.html">联系我们</a>
+                        <div class="aside_line"></div>
+                    </li>
+                </ul>
+                <div class="aside_footer">
+                    <div class="aside_footer_img">
+                        <img src="images/aside_logo.png">
+                    </div>
+                    <p class="aside_enter">音特电子（深圳）有限公司</p>
+                    <p class="aside_add">深圳市宝安区广兴源宝安互联网产业基地A区3栋305</p>
+                    <p class="aside_call">0755-83513870</p>
+                    <p class="aside_email">enter.media@gamil.com</p>
+                    <div class="footerCodes">
+                        <i class="iconfont icon-weibo"></i>
+                        <img class="weibo" src="images/weibo-img.jpg">
+                        <i class="iconfont icon-weixin2"></i>
+                        <img class="weixin" src="images/weixin-img.jpg">
+                        <i class="iconfont icon-qq1"></i>
+                        <img class="qq" src="images/timg.jpg">
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!--内页移动端-->
+    <div class="header-page-xs navbar-fixed-top visible-xs visible-sm">
+        <div class="container">
+            <div class="header-xs-block clearfix">
+                <a class="header-goBack pull-left" href="javascript:void (0)" onclick="window.history.go(-1);"><i class="iconfont icon-you-copy"></i></a>
+                <span class="header-title">商品详情</span>
+                <div class="header-xs-r pull-right">
+                    <a class="header-xs-a" href="shop_cart.html"><img class="shopCart-xs" src="images-xs/shopCart-xs.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--优惠券选择弹窗-->
+<div class="popup">
+    <a class="popup_close" href="javascript:void(0)">
+        <i class="iconfont icon-close f-32"></i>
+    </a>
+    <div class="popup_title">
+        <h3>领取优惠卷</h3>
+    </div>
+    <div class="popup_content">
+        <ul class="popup_discount clearfix">
+            <li class="popup_list">
+                <img src="images/popup_discountImg1.jpg">
+                <p class="popup_list_p">立即领取</p>
+            </li>
+            <li class="popup_list">
+                <img src="images/popup_discountImg2.jpg">
+                <p class="popup_list_p">立即领取</p>
+            </li>
+            <li class="popup_list">
+                <img src="images/popup_discountImg3.jpg">
+                <p class="popup_list_p">立即领取</p>
+            </li>
+            <li class="popup_list">
+                <img src="images/popup_discountImg1.jpg">
+                <p class="popup_list_p">立即领取</p>
+            </li>
+        </ul>
+    </div>
+    <div class="popup_footer">
+        <div class="popup_tips">
+            <i class="iconfont icon-check f-18"></i>
+            <span class="popup_tips_span">恭喜您成功领取<span class="discountNum">1</span>张<span class="discountYuan">5</span>元优惠券，稍后请到“个人中心-<a class="popup_a" href="discount.html">优惠券</a>”中查收~</span>
+        </div>
+    </div>
+</div>
+<!-- 内容区-->
+<section class="page">
+    <div class="page_navAdd hidden-sm hidden-xs">
+        <div class="container">
+            <!--位置导航-->
+            <div class="navAdd">
+                <div class="navAdd-block">
+                    <a class="navAdd-a" href="index.html">首页</a>
+                    <span class="navAdd-dot"></span>
+                    <a class="navAdd-a" href="product.html">音特商城</a>
+                    <span class="navAdd-dot"></span>
+                    <a class="navAdd-a">蓝牙麦克风音箱系列</a>
+                    <span class="navAdd-dot"></span>
+                    <a class="navAdd-a active" href="pageKP650.html">KP650</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--pc-->
+    <div class="page-product hidden-sm hidden-xs">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="ban" id="demo1">
+                    <div class="ban2" id="ban_pic1">
+                        <ul>
+                            <li><a href="images/kp650-l1.jpg"><img class="zoom" src="images/kp650-s1.jpg" alt=""></a></li>
+                            <li><a href="images/kp650-l2.jpg"><img class="zoom" src="images/kp650-s2.jpg" alt=""></a></li>
+                            <li><a href="images/kp650-l3.jpg"><img class="zoom" src="images/kp650-s3.jpg" alt=""></a></li>
+                            <li><a href="images/kp650-l4.jpg"><img class="zoom" src="images/kp650-s4.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="min_pic">
+                        <div class="prev_next prev_btn1" id="prev_btn1">
+                            <i class="iconfont icon-you-copy f-24"></i>
+                        </div>
+                        <div class="num clearfix" id="ban_num1">
+                            <ul class="clearfix">
+                                <li><a href="javascript:;"><img src="images/kp650-xs1.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/kp650-xs2.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/kp650-xs3.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="images/kp650-xs4.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="prev_next next_btn1" id="next_btn1">
+                            <i class="iconfont icon-xia f-24"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="productRight">
+                    <p class="productName">蓝牙麦克风音箱系列  KP650</p>
+                    <p class="productWords">强悍音质，K歌娱乐好帮手</p>
+                    <div class="productMoney_div"><span class="colorsWords">价格：</span><span class="productMoney">¥1999.00</span><span class="showDiscount" id="js_showDiscount"><img src="images/clickDiscount.png"></span></div>
+                    <div class="colors">
+                        <span class="colorsWords">颜色：</span>
+                        <ul class="chooseColors choose clearfix" id="chooseColor">
+                            <li class="on">
+                                <span class="colorCircle brown"></span>
+                                <span class="colorName">棕色</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="colors">
+                        <span class="colorsWords">套餐：</span>
+                        <ul class="chooseColors choose clearfix" id="chooseSeries">
+                            <li class="on">
+                                <span class="seriesName">官方标配</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="quantity">
+                        <span class="colorsWords">数量：</span>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" onclick="m_subtract(this)"><i class="iconfont icon-jianhao"></i></button>
+                            <input type="text" class="btn btn-default inputBtn" value="1" id="inputNum" onkeyup="NumCheck(this);">
+                            <button type="button" class="btn btn-default" onclick="m_add(this)"><i class="iconfont icon-jiahao1"></i></button>
+                        </div>
+                    </div>
+                    <div class="proBuy">
+                        <a class="addTo" id="addToCart" onclick="addCart(this)">加入购物车</a>
+                        <a class="addTo buyTo" id="buyNow" href="#">立即购买</a>
+                    </div>
+                    <div class="proServices">
+                        <span class="colorsWords">承诺：</span>
+                        <div class="proService">
+                            <i class="iconfont icon-tianwuliyoubaotui"></i>
+                            <span class="footerService">7天无理由退货</span>
+                            <i class="iconfont icon-tianbaohuan"></i>
+                            <span class="footerService">30天包换</span>
+                            <i class="iconfont icon-quanguobaoyou"></i>
+                            <span class="footerService">全国包邮</span>
+                            <i class="iconfont icon-quanguobaoxiu"></i>
+                            <span class="footerService">全国联保</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--移动端-->
+    <div class="page-product-xs visible-sm visible-xs">
+        <div class="page-slider-xs">
+            <div id="page-carousel-xs" class="carousel slide carousel-fade pro-banner" data-ride="carousel"  data-interval="5000">
+                <ol class="carousel-indicators">
+                    <li data-target="#page-carousel-xs" data-slide-to="0" class="active"><a class="dot" href="javascript:void(0)"></a></li>
+                    <li data-target="#page-carousel-xs" data-slide-to="1"><a class="dot" href="javascript:void(0)"></a></li>
+                    <li data-target="#page-carousel-xs" data-slide-to="2"><a class="dot" href="javascript:void(0)"></a></li>
+                    <li data-target="#page-carousel-xs" data-slide-to="3"><a class="dot" href="javascript:void(0)"></a></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="page_slider_xs">
+                            <img src="images-xs/kp650-slider1-xs.jpg">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="page_slider_xs">
+                            <img src="images-xs/kp650-slider2-xs.jpg">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="page_slider_xs">
+                            <img src="images-xs/kp650-slider3-xs.jpg">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="page_slider_xs">
+                            <img src="images-xs/kp650-slider4-xs.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="arrows arrow-left" href="#page-carousel-xs" role="button" data-slide="prev">
+                <span class="iconfont icon-jiantou1-copy-copy-copy" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="arrows arrow-right" href="#page-carousel-xs" role="button" data-slide="next">
+                <span class="iconfont icon-jiantou1-copy-copy-copy1" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="page-product-cont-xs">
+            <div class="page-xs-div">
+                <div class="container">
+                    <p class="productName">蓝牙麦克风音箱系列  KP650</p>
+                    <p class="productWords">强悍音质，K歌娱乐好帮手</p>
+                    <p class="productPrice">价格：<span class="productMoney">¥1200.00</span><a class="pull-right" href="getDiscount.html"><img class="click-discount" src="images-xs/click-discount-xs.png"></a></p>
+                </div>
+            </div>
+            <div class="page-xs-div">
+                <div class="container">
+                    <p class="page-xs-div-t">颜色</p>
+                    <ul class="chooseColors choose clearfix" id="chooseColor-xs">
+                        <li class="on">
+                            <span class="colorCircle brown"></span>
+                            <span class="colorName">棕色</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-xs-div">
+                <div class="container">
+                    <p class="page-xs-div-t">套餐</p>
+                    <ul class="chooseColors choose clearfix" id="chooseSeries-xs">
+                        <li class="on">
+                            <span class="colorName">官方标配</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-xs-div quantity">
+                <div class="container">
+                    <p class="page-xs-div-t">数量</p>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" onclick="m_subtract(this)"><i class="iconfont icon-jianhao"></i></button>
+                        <input type="text" class="btn btn-default inputBtn" value="1" id="inputNum" onkeyup="NumCheck(this);">
+                        <button type="button" class="btn btn-default" onclick="m_add(this)"><i class="iconfont icon-jiahao1"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="page-xs-buy">
+                <a class="addTo-xs pull-left" id="addToCart" onclick="addCart(this)">加入购物车</a>
+                <a class="addTo-xs buyTo-xs pull-right" id="buyNow" href="#">立即购买</a>
+            </div>
+        </div>
+    </div>
+    <div class="page-detail">
+        <div class="pageNav">
+            <div class="container">
+                <div class="page_scroll_nav">
+                    <ul class="detailNav clearfix">
+                        <li class="active">
+                            <a class="details" href="#proDetail" aria-controls="proDetail" role="tab" data-toggle="tab">商品详情</a>
+                        </li>
+                        <li>
+                            <a class="details" href="#spec" aria-controls="spec" role="tab" data-toggle="tab">规格参数</a>
+                        </li>
+                        <li>
+                            <a class="details" href="#askQ" aria-controls="askQ" role="tab" data-toggle="tab">常见问题</a>
+                        </li>
+                    </ul>
+                    <div class="pagePro_navRight hidden-xs hidden-sm">
+                        <div class="pro_sec_div">
+                            <div class="pro_sec_div_img">
+                                <img class="pro_sec_img" src="images/e1-navigation.png">
+                            </div>
+                            <div class="pro_sec_info">
+                                <p class="pro_sec_name">蓝牙麦克风音箱系列 KP650 <span class="pro_sec_money">¥1200.00</span></p>
+                                <p class="pro_sec_proInfo">已选：<span>棕色</span> <span>官方标配</span> <span>1件</span></p>
+                            </div>
+                        </div>
+                        <a class="addTo scrollBuyTo" href="#">立即购买</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="proDetail">
+                <div class="block block1">
+                    <img class="blockBg hidden-sm hidden-xs" src="images/page-kp650-img1.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img1-xs.jpg">
+                    <div class="block-words block2-div">
+                        <p class="title sdw-animate kp650-title1 hidden-sm hidden-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">强悍音质，K歌娱乐好帮手</p>
+                        <p class="title sdw-animate visible-sm visible-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">强悍音质</p>
+                        <p class="title sdw-animate visible-sm visible-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">K歌娱乐好帮手</p>
+                    </div>
+                </div>
+                <div class="block block2">
+                    <img class="blockBg hidden-xs hidden-sm" src="images/page-kp650-img2.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img2-xs.jpg">
+                    <div class="block-content">
+                        <div class="container">
+                            <div class="block-cont-left">
+                                <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">欧洲古典设计，经典又时尚</p>
+                                <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">
+                                    经典原木外加皮质外套，诠释欧洲传统之美
+                                </p>
+                                <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">
+                                    质感细腻，手感舒适！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block block1">
+                    <img class="blockBg hidden-sm hidden-xs" src="images/page-kp650-img3.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img3-xs.jpg">
+                    <div class="block-words block2-div">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">弧形箱体设计</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">
+                            箱体整体采用弧形设计，优雅经典更是充满艺术感
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">
+                            增添视觉美感
+                        </p>
+                    </div>
+                </div>
+                <div class="block block1">
+                    <img class="blockBg hidden-xs hidden-sm" src="images/page-kp650-img4.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img4-xs.jpg">
+                    <div class="block-words block2-div white_color hidden-xs hidden-sm">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">天然球顶高音单元</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">
+                            天然纤维专业球形振膜高频轻松直达20kHz,音色甜美、细腻
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">
+                            高阶球顶高音具备更甜润的质感更大的输出声压以及更宽范的指向性。
+                        </p>
+                    </div>
+                    <div class="block-words block2-div white_color visible-sm visible-xs">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">天然球顶高音单元</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">
+                            天然纤维专业球形振膜高频轻松直达20kHz,
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">
+                            音色甜美、细腻,高阶球顶高音具备更甜润的质感更大的
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">
+                            输出声压以及更宽范的指向性。
+                        </p>
+                    </div>
+                </div>
+                <div class="block block2">
+                    <img class="blockBg hidden-xs hidden-sm" src="images/page-kp650-img5.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img5-xs.jpg">
+                    <div class="block-words block2-div block2-div-kp650 white_color hidden-xs hidden-sm">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">专业振膜中低音单元</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">
+                            高强度阻尼材料PP振膜，发烧级长冲程大功率
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">
+                            低频线性位移设计，提升低音单元大动态低频输出能力，大幅度降低失真。
+                        </p>
+                    </div>
+                    <div class="block-words block2-div block2-div-kp650 white_color visible-sm visible-xs">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">专业振膜中低音单元</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">
+                            高强度阻尼材料PP振膜，发烧级长冲程
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">
+                            大功率低频线性位移设计，提升低音单元大动态低频
+                        </p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,30px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">
+                            输出能力，大幅度降低失真。
+                        </p>
+                    </div>
+                </div>
+                <div class="block block2">
+                    <img class="blockBg hidden-sm hidden-xs" src="images/page-kp650-img6.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img6-xs.jpg">
+                    <div class="block-words block2-div">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">U盘播歌，蓝牙播歌</p>
+                        <p class="ctxP sdw-animate hidden-sm hidden-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">KP650专业音箱支持U盘播歌，蓝牙播歌，蓝牙信号稳定安全。更加方便自由</p>
+                        <p class="ctxP sdw-animate visible-sm visible-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">KP650专业音箱支持U盘播歌，</p>
+                        <p class="ctxP sdw-animate visible-sm visible-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">蓝牙播歌，蓝牙信号稳定安全。更加方便自由</p>
+                    </div>
+                </div>
+                <div class="block block2">
+                    <img class="blockBg hidden-sm hidden-xs" src="images/page-kp650-img7.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img7-xs.jpg">
+                    <div class="block-words block2-div white_color">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">芯片数字功效</p>
+                        <p class="ctxP sdw-animate hidden-xs hidden-sm" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">专业数字放大芯片，具备DSP和内置EQ，动态凌厉，磅礴大气</p>
+                        <p class="ctxP sdw-animate visible-sm visible-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">专业数字放大芯片，具备DSP和内置EQ</p>
+                        <p class="ctxP sdw-animate visible-sm visible-xs" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">动态凌厉，磅礴大气</p>
+                    </div>
+                </div>
+                <div class="block block2">
+                    <img class="blockBg hidden-sm hidden-xs" src="images/page-kp650-img8.jpg">
+                    <img class="blockBg visible-sm visible-xs" src="images-xs/page-kp650-img8-xs.jpg">
+                    <div class="block-words block2-div hidden-sm hidden-xs">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">支持音频同轴输入</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">支持各种带双声道的设备同轴输出，比如台式电脑、笔记本电脑、</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">DVD播放器等等最新技术，确保音质完好无损。</p>
+                    </div>
+                    <div class="block-words block2-div visible-sm visible-xs">
+                        <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">支持音频同轴输入</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">支持各种带双声道的设备同轴输出，</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.4s" data-occur="1">比如台式电脑、笔记本电脑、DVD播放器等等</p>
+                        <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.6s" data-occur="1">最新技术，确保音质完好无损。</p>
+                    </div>
+                </div>
+                <div class="block block2">
+                    <div class="block_absolute">
+                        <div class="container">
+                            <div class="text-center">
+                                <p class="title sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0s" data-occur="1">按键接口说明</p>
+                                <p class="ctxP sdw-animate" data-start="{&quot;transform&quot;:&quot;translate3d(0,50px,0)&quot;}" data-end="{&quot;transform&quot;:&quot;translate3d(0,0px,0)&quot;}" data-speed="1500"  data-delay="0.2s" data-occur="1">直观易操作，告别复杂繁琐</p>
+                            </div>
+                            <div class="kp650-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="kp650-img hidden-xs hidden-sm">
+                                            <img src="images/page-kp650-img9.png">
+                                        </div>
+                                        <div class="kp650-img visible-sm visible-xs">
+                                            <img src="images-xs/page-kp650-img9-xs.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="kp650-text">
+                                            <ul class="kp650-jk-list">
+                                                <li>A、回声调节</li>
+                                                <li>B、麦克风音量调节</li>
+                                                <li>C、待定</li>
+                                                <li>D、低音音量调节</li>
+                                                <li>E、高音音量调节</li>
+                                                <li>F、音箱音量调节</li>
+                                                <li>G、开/关</li>
+                                                <li>H、歌曲控制</li>
+                                            </ul>
+                                            <ul class="kp650-jk-list">
+                                                <li>I、蓝牙/USB切换</li>
+                                                <li>J、USB插口</li>
+                                                <li>K、有线麦克风连接</li>
+                                                <li>L、音频输入（左声道、右声道）</li>
+                                                <li>M、副音箱接口</li>
+                                                <li>N、电源输入</li>
+                                                <li>O、副音箱输入接口（-）</li>
+                                                <li>P、副音箱输入接口（+）</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="spec">
+                <div class="block block1">
+                    <div class="container">
+                        <div class="specification">
+                            <div class="specification-table">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td>产品型号</td>
+                                        <td>蓝牙麦克风音箱系列  KP650</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">产品尺寸（mm）</td>
+                                        <td>右声道：（宽）220*（高）350*（长）210</td>
+                                    </tr>
+                                    <tr>
+                                        <td>左声道：（宽）220mm*（高）350*（长）210</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">重量（kg）</td>
+                                        <td>右声道：5.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>左声道：5.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">电源</td>
+                                        <td>输入 AC100-220v（50 / 60Hz）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>输出 DC 18V 2A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>功率输出</td>
+                                        <td>25W</td>
+                                    </tr>
+                                    <tr>
+                                        <td>频率输出</td>
+                                        <td>20Hz~20KHz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>阻抗</td>
+                                        <td>8Ω</td>
+                                    </tr>
+                                    <tr>
+                                        <td>扬声器单元</td>
+                                        <td>6.5"（全频）+3"（高音）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>工作温度</td>
+                                        <td>0℃~60℃</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">连接</td>
+                                        <td>Φ6.3mm 有线麦克风，600Ω ± 30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>蓝牙3.0+EDR</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RCA 立体声音频输入</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RCA 左声道输出</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="specification-img hidden-xs hidden-sm">
+                                <img src="images/e1-spec.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="askQ">
+                <div class="block block1">
+                    <div class="container">
+                        <div class="qaBlock">
+                            <ul class="qaList">
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650有哪几种颜色？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，目前KP650系列颜色有黑色、白色、玫瑰金色，请选择您喜欢的颜色购买吧。</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>新疆地区、内蒙古地区、西藏地区等偏远地区可以正常派送吗？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，受安全管控影响，新疆省部分区域将派件延迟或无法派件，下单前请先咨询客服沟通。谢谢！</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650自带的有多少首歌曲，是否高音质？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，KP650自带有4万首歌曲，我们云端歌库，全球歌曲超过30万，全部为正版授权，MIDI高音质歌曲！</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650可以边下载边K歌吗？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，我们采用流媒体技术，您可边下载边K歌，对您的享受K歌不会有任何影响。</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650有什么特色功能？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，KP650对于市面的点歌机，具有主旋律点歌、乐谱点歌、乐器伴奏、实时评分等等特色功能，为您的K歌娱乐添加更多的乐趣。</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650配有几个麦克风？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，KP650配备了2个我们的特色麦克风，集遥控点歌于一体，独乐乐不如众乐乐！</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650有什么保障？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，我们承诺7天无理由包退，30天包换，全国一年联保，免除你售后的后顾之忧</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650可以边下载边K歌吗？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，我们采用流媒体技术，您可边下载边K歌，对您的享受K歌不会有任何影响。</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650有什么特色功能？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，KP650对于市面的点歌机，具有主旋律点歌、乐谱点歌、乐器伴奏、实时评分等等特色功能，为您的K歌娱乐添加更多的乐趣。</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650配有几个麦克风？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，KP650配备了2个我们的特色麦克风，集遥控点歌于一体，独乐乐不如众乐乐！</p>
+                                </li>
+                                <li>
+                                    <p class="questions"><span class="f24-bold">Q：</span>KP650有什么保障？</p>
+                                    <p class="answers"><span class="f24-bolda">A：</span>亲爱的顾客您好，我们承诺7天无理由包退，30天包换，全国一年联保，免除你售后的后顾之忧</p>
+                                </li>
+                            </ul>
+                            <!--<div class="more"><a href="javascript:;">查看更多<br><img src="images/down_img.png"></a></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---通用footer-->
+<footer>
+    <!--pc--footer-->
+    <div  id="footer" class="hidden-sm hidden-xs">
+        <div class="container">
+            <div class="footerOut">
+                <div class="footer_container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="footerSer">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-tianwuliyoubaotui"></i>
+                                            <span class="footerService">7天无理由退货</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-tianbaohuan"></i>
+                                            <span class="footerService">30天包换</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-quanguobaoyou"></i>
+                                            <span class="footerService">全国包邮</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="footer-top">
+                                            <i class="iconfont icon-quanguobaoxiu"></i>
+                                            <span class="footerService">全国联保</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footerLinks">
+                                <ul class="footerList clearfix">
+                                    <li class="footerListLi"><a class="footer_a" href="news/news.html">新闻资讯</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="activity/activity.html">活动中心</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="product.html">音特商城</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="about/about.html">关于我们</a></li>
+                                    <li class="footerListLi"><a class="footer_a" href="contact.html">联系我们</a></li>
+                                    <li class="footerListLi"><a class="footer_a" data-toggle="modal" data-target="#langModal">简体中文</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="footerContact">
+                                <strong class="footer-call">400-119-5555</strong>
+                                <p class="footer-text">( 24小时全国服务热线 )</p>
+                                <div class="footerCodes">
+                                    <i class="iconfont icon-weibo"></i>
+                                    <img class="weibo" src="images/weibo-img.jpg">
+                                    <i class="iconfont icon-weixin2"></i>
+                                    <img class="weixin" src="images/weixin-img.jpg">
+                                    <i class="iconfont icon-qq1"></i>
+                                    <img class="qq" src="images/timg.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerBar">
+            © dameigong.cn 2017 皖ICP备17012709号
+        </div>
+    </div>
+    <div class="toTop" id="toTop">
+        <p><i class="iconfont icon-zhiding"></i></p>
+        <p class="toTopWords">置顶</p>
+    </div>
+</footer>
+<!--addCartModal-->
+<div class="modal myInfoModal" tabindex="-1" role="dialog" id="addCartModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="iconfont icon-close"></span></button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="addSuccess">
+                    <i class="iconfont icon-duigou payOk"></i>
+                    <span class="f-20">商品已成功加入购物车！</span>
+                </div>
+                <div class="addCartBtn">
+                    <a class="addCart_a" href="shop_cart.html">去结算</a>
+                    <a class="goShop_a" href="index.html">再逛逛</a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+<script type="text/javascript" src="js/pic_tab.js"></script>
+<script type="text/javascript" src="js/sdw_hw.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#demo1').banqh({
+            box: "#demo1",//总框架
+            pic: "#ban_pic1",//大图框架
+            pnum: "#ban_num1",//小图框架
+            prev_btn: "#prev_btn1",//小图左箭头
+            next_btn: "#next_btn1",//小图右箭头
+            prev: "#prev1",//大图左箭头
+            next: "#next1",//大图右箭头
+            mhc: ".mhc",//朦灰层
+            autoplay: false,//是否自动播放
+            interTime: 5000,//图片自动切换间隔
+            delayTime: 1,//切换一张图片时间
+            order: 0,//当前显示的图片（从0开始）
+            picdire: true,//大图滚动方向（true为水平方向滚动）
+            mindire: true,//小图滚动方向（true为水平方向滚动）
+            min_picnum: 4,//小图显示数量
+            pop_up: false//大图是否有弹出框
+        });
+        $('.zoom').magnify();//初始化放大镜效果
+
+
+        // 如果轮播图个数大于四，就显示左右切换键，否则将其隐藏
+        var banLiIndex = $('#ban_pic1 ul li').length;
+        if(banLiIndex > 4){
+            $('.prev_next').show();
+        }else{
+            $('.prev_next').hide();
+        }
+        // 点击优惠券，领取并且“立即领取”变成“立即使用”
+        $('.popup_list').click(function () {
+            $(this).find('.popup_list_p').html('已经领取');
+            $('.popup_tips').fadeIn();
+        });
+
+        // 点击领券，弹出优惠券领取视窗
+        $('#js_showDiscount').click(function () {
+            $('.popup').show();
+        });
+        // 点击关闭按钮，关闭优惠券领取视窗
+        $('.popup_close').click(function () {
+            $('.popup').hide();
+        });
+        // 点击页面除视窗和领券按钮外的其他地方关闭弹窗
+        $(document).bind("click",function(e){
+            var target = $(e.target);
+            if(target.closest(".popup").length == 0 && target.closest("#js_showDiscount").length == 0){
+                $(".popup").hide();
+            }
+        })
+    });
+
+
+    // 点击加入购物车，购物车数量和选择的数量一致
+    function addCart(t) {
+        $('#addCartModal').modal();
+        var obj = t.parentNode.getElementsByTagName('input')[0];
+        $('.shopCart_badge').html(obj.value);
+    }
+
+
+    //  点击加号，数字加一
+    function m_subtract(t) {
+        var obj = t.parentNode.getElementsByTagName('input')[0];
+        if (obj.value > 1)
+            obj.value--;
+    }
+    //  点击减号，数字减一
+    function m_add(t) {
+        var obj = t.parentNode.getElementsByTagName('input')[0];
+        obj.value++;
+    }
+    //  点击哪个选项给他一个‘on’类名，其余同类清除‘on’类名
+    $('.chooseColors li').click(function () {
+        if(!$(this).hasClass('disabledChoose')){
+            $(this).addClass('on').siblings().removeClass('on');
+        }
+
+    });
+    //当屏幕向下滚时，导航栏固定在顶部
+    $(window).scroll(function () {
+        var bodyWidth =document.body.clientWidth;//网页可见区域宽
+        var headerXsHeight = $('.header-page-xs').height();
+        var scrollHeight = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        var scrollNavTop = $('#content')[0].offsetTop;
+        if(bodyWidth <= 991){
+            if(scrollHeight >=  scrollNavTop-headerXsHeight){
+                $('.header-page-xs').removeClass('header-page-fixed');
+                $('.pageNav').addClass('scrollNavFixed');
+            }else if (scrollHeight >  0) {
+                $('.header-page-xs').addClass('header-page-fixed');
+                $('.pageNav').removeClass('scrollNavFixed');
+            }else{
+                $('.header-page-xs').removeClass('header-page-fixed');
+                $('.pageNav').removeClass('scrollNavFixed');
+            }
+        }else{
+            if(scrollHeight >=  scrollNavTop-82){
+                $('.header').removeClass('fixed-top');
+                $('.pageNav').addClass('scrollNavFixed');
+                $('.scrollBuyTo').css('visibility','visible');
+            }else if (scrollHeight >  82 ) {
+                $('.header').addClass('fixed-top');
+                $('.pageNav').removeClass('scrollNavFixed');
+                $('.scrollBuyTo').css('visibility','hidden');
+            }else{
+                $('.header').removeClass('fixed-top');
+                $('.pageNav').removeClass('scrollNavFixed');
+            }
+        }
+
+    });
+</script>
+</body>
+</html>

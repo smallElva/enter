@@ -17,25 +17,20 @@
             width: 280px;
             border-bottom: solid 1px silver;
         }
-        .amap_lib_placeSearch_poi {
-            background: url(http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png) no-repeat;
-            height: 31px;
-            width: 19px;
-            cursor: pointer;
-            left: -1px;
-            text-align: center;
-            color: #fff;
-            font: 12px arial,simsun,sans-serif;
-            padding-top: 3px;
+        .amap-geolocation-con{
+            position: absolute;
+            z-index: 9999;
+            right: 290px!important;
+            bottom: 10px!important;
         }
     </style>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.1&key=de5a0c22bfae0dcd9ff695a9e5f89c17&plugin=AMap.CitySearch"></script>
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 </head>
 <body>
 <div id="container"></div>
 <div id="panel"></div>
-<input type="hidden" value="深圳" id="nowCity">
 <script type="text/javascript">
     var city,lng,lat;
     var map = new AMap.Map("container", {
@@ -51,7 +46,6 @@
             buttonPosition:'RB'
         });
 
-        map.addControl(geolocation);
         geolocation.getCurrentPosition();
         AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
         AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
@@ -96,7 +90,6 @@
     }
     function search(){
         AMap.service(["AMap.PlaceSearch"], function() {
-            var nowCity = document.getElementById('nowCity').value;
             var placeSearch = new AMap.PlaceSearch({ //构造地点查询类
                 pageSize: 20,
                 type: 'KTV',

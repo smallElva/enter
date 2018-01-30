@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/about.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/intlTelInput.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/login.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/news.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/person.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/vivo.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/accountInfo.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/app.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/bannerSlider.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/cart.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/cartShop.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/jquery.carousel-1.1.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/jquery.timelinr.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/login.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/main.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/validator.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/sureOrder.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/uploadImg.js" charset="UTF-8" />
   </component>
 </project>
